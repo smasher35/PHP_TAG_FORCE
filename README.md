@@ -1,0 +1,2 @@
+# PHP_TAG_FORCE
+Projecto AINET
