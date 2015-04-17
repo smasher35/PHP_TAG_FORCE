@@ -1,0 +1,19 @@
+.alt1{
+	background-color: #ccc;
+	margin-top: 0px;
+	min-height: 400px;
+}
+
+.jumbotron{
+
+	background-attachment: fixed;
+	min-height: 500px;
+	margin-bottom: 0px;
+
+}
+
+.padding{
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
