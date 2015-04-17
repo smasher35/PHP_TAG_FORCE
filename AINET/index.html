@@ -23,7 +23,7 @@
 
   <body>
   <!-- NAVIGATION BAR -->
-  	<div class="navbar-static-top navbar-inverse">
+  	<div class="navbar-fixed-top navbar-inverse">
   		<div class="container">
   			<div class="navbar-brand">
   				<a href="#">PHP TAG FORCE</a>
@@ -33,7 +33,7 @@
   			</button>
   			<div class="collapse navbar-collapse navHeaderCollapse">
   				<ul class="nav navbar-nav navbar-right">
-  					<li><a href="#">Home</a></li>
+  					<li><a href="#home">Home</a></li>
   					<li><a href="#about">About</a></li>
   					<li><a href="#projects">Projects</a></li>
   					<li><a href="#">Contact</a></li>
@@ -45,7 +45,7 @@
   	</div>
 
   <!-- JUMBOTRON -->
-  	<div class="jumbotron">
+  	<div class="jumbotron" id="home">
   		<div class="container">
   			<h1><b>PROJECT AINET!</b></h1>
   			<p>Aqui há-de nascer o grandioso projecto dos fabulosos PHP TAG FORCE</p>
@@ -103,7 +103,7 @@
                     <img src="Images/Projeto5.jpg" alt="Projecto Laravel" class="img-responsive">
                     <div class="carousel-caption">
                         <h3>Projecto Laravel</h3>
-                        <a href="#" class="btn btn-primary">Tell Me More...</a>
+                        <a href="http://www.laravel.com" class="btn btn-primary">Tell Me More...</a>
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@
     </div>
 
   <!-- 3 COLUMN PROJETCS HIGHLIGHTS -->
-  	<div class="alt1" id="about">
+  	<div class="alt1" id="about" >
 	  	<div class="container">
 	  		<div class="row">
 	  			<div class="col-md-4">
@@ -167,7 +167,7 @@
     </div>
 
   <!-- 2 COLUMN IMAGE AND TEXT -->
-    <div class="container" id="projects">
+    <div class="container padding" id="projects">
     	<div class="row padding">
     		<div class="col-md-6">
     			<img src="images/python.png" class="img-circle img-responsive" alt="Projecto em Python">
@@ -221,7 +221,7 @@
 
     <div class="alt2">
         <div class="container">
-            <footer>&copy; PHP TAH FORCE - 2015<br/> <a href="#">Back To Top</a> </footer>
+            <footer>&copy; PHP TAH FORCE - 2015<br/> <a href="#home">Back To Top</a> </footer>
         </div>
 
     </div>
@@ -231,6 +231,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="Bootstrap/js/bootstrap.min.js"></script>
     <script>
+        /*script que vai permitir que o scroll dentro das âncoras do site seja feito de uma forma suave */
         $(document).ready(function(){
             $('a[href^="#"]').on('click',function (e) {
                 e.preventDefault();
