@@ -6,9 +6,11 @@
 
 .jumbotron{
 
+    background-image: url('../Images/jumbotron.jpg');
 	background-attachment: fixed;
-	min-height: 500px;
+	min-height: 350px;
 	margin-bottom: 0px;
+    box-shadow: #222222;
 
 }
 
