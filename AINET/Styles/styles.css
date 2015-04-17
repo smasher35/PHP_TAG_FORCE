@@ -4,6 +4,14 @@
 	min-height: 400px;
 }
 
+.alt2{
+    background-color: #333;
+    margin-top: 0px;
+    min-height: 150px;
+    color: #fff;
+    text-align: center;
+}
+
 .jumbotron{
 
     background-image: url('../Images/jumbotron.jpg');
