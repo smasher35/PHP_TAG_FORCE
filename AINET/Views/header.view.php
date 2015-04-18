@@ -45,7 +45,7 @@
 		</div>
 	</div>
 </div>
-<div  class="alt3">
+<div  class="alt3" id="home">
 	<div class="container">
 		<div class="row">
 			<form class="well form-search " length="150">

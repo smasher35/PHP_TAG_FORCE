@@ -1,7 +1,7 @@
 
 
 <!-- JUMBOTRON -->
-<div class="jumbotron" id="home">
+<div class="jumbotron">
 	<div class="container">
 		<h1><b>PROJECT AINET!</b></h1>
 		<p>Aqui há-de nascer o grandioso projecto dos fabulosos PHP TAG FORCE</p>
