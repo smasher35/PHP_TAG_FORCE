@@ -28,15 +28,8 @@
 	<div class="container">
 		<div class="navbar-brand">
 			<a href="#">PHP TAG FORCE</a>
-			<div class="input-group col-lg-3 right">
-				<input type="text" class="form-control" placeholder="Search..." maxlength="20" align="right"/>
-			<span class="input-group-btn">
-				<button class="btn btn-primary" type="button">Search</button>
-			</span>
-			</div>
 		</div>
 
-	</div>
 		<button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">
 			Menu
 		</button>
@@ -51,4 +44,17 @@
 			</ul>
 		</div>
 	</div>
+</div>
+<div  class="alt3">
+	<div class="container">
+		<div class="row">
+			<form class="well form-search " length="150">
+				<input type="text" class="span3 search-query" placeholder="Search...">
+				<button class="btn btn-primary">Search</button>
+
+			</form>
+
+		</div>
+	</div>
+
 </div>

@@ -6,11 +6,19 @@
 }
 
 .alt2{
-    background-color: #333;
+     background-color: #333;
+     margin-top: 0px;
+     min-height: 150px;
+     color: #fff;
+     text-align: center;
+ }
+
+.alt3{
+    background-color: #3c3c3c;
     margin-top: 0px;
     min-height: 150px;
     color: #fff;
-    text-align: center;
+    padding-top: 65px;
 }
 
 .jumbotron{
@@ -33,6 +41,6 @@
 
 }
 
-#navSearch{
-    width: 100px;
+.input-group{
+    padding-bottom: 20px;
 }
