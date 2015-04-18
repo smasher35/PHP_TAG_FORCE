@@ -29,6 +29,13 @@
 		<div class="navbar-brand">
 			<a href="#">PHP TAG FORCE</a>
 		</div>
+		<div class="input-group col-lg-3">
+			<input type="text" class="form-control" placeholder="Search..." maxlength="20" align="right"/>
+			<span class="input-group-btn">
+				<button class="btn btn-primary" type="button">Search</button>
+			</span>
+		</div>
+	</div>
 		<button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">
 			Menu
 		</button>
