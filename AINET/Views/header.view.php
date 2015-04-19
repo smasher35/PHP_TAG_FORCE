@@ -23,36 +23,40 @@
 
 <body>
 
-<!-- NAVIGATION BAR -->
-<div class="navbar-fixed-top navbar-inverse">
-	<div class="container">
-		<div class="navbar-brand">
-			<a href="#">PHP TAG FORCE</a>
-		</div>
+<header>
+	<!-- NAVIGATION BAR -->
+	<div class="navbar-fixed-top navbar-inverse" id="navegacao">
+		<div class="container">
+			<div class="row"></div>
+				<div class="navbar-brand">
+					<a href="#">PHP TAG FORCE</a>
+				</div>
 
-		<div class="navbar-form">
-			<div class="container">
-				<form class="form-search " length="150">
-					<input type="text" class="span3 search-query" placeholder="Search...">
-					<button class="btn btn-primary">Search</button>
+				<div class="navbar-form">
+					<div class="container">
+						<form class="form-search " length="150">
+							<input type="text" class="span3 search-query" placeholder="Search...">
+							<button class="btn btn-primary">Search</button>
 
-				</form>
+						</form>
+					</div>
+				</div>
+
+				<button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">
+					Menu
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Sign Up</a></li>
+						<li><a href="#">Login</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-
-		<button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">
-			Menu
-		</button>
-		<div class="collapse navbar-collapse navHeaderCollapse">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#home">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="#">Login</a></li>
-			</ul>
-		</div>
 	</div>
-</div>
-<div id="home">
+</header>
+<div id="home"></div>

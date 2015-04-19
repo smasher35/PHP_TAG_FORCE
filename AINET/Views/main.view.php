@@ -135,7 +135,7 @@
 <div class="container padding" id="projects">
 	<div class="row padding">
 		<div class="col-md-6">
-			<img src="Images/python.png" class="img-circle img-responsive" alt="Projecto em Python">
+			<img src="Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
 		</div>
 		<div class="col-md-6">
 			<p class="text-justify">

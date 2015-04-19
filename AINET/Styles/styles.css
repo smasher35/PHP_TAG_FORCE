@@ -28,6 +28,8 @@
 	min-height: 450px;
 	margin-top:  60px;
     padding-top: 150px;
+    max-height: 1080px;
+    max-width: 1920px;
 
 }
 #pan1{
@@ -43,10 +45,23 @@
 }
 
 
+#navegacao{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    min-height: 100px;
+}
+
+
 .input-group{
     padding-bottom: 20px;
 }
 
 .modal {
     color: #222222;
+}
+
+#imgTable{
+    max-height: 60px;
+    max-width: 60px;
+
 }
