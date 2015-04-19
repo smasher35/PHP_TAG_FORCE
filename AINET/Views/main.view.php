@@ -96,7 +96,7 @@
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
-					<a href="#" class="btn btn-info">Tell Me More...</a>
+					<a href="#" class="btn btn-info btn-block">Tell Me More...</a>
 				</div></div>
 			</div>
 			<div class="col-md-4">
@@ -110,7 +110,7 @@
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</p>
-						<a href="#" class="btn btn-info">Tell Me More...</a>
+						<a href="#" class="btn btn-info btn-block">Tell Me More...</a>
 				</div></div>
 			</div>
 			<div class="col-md-4">
@@ -124,7 +124,7 @@
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</p>
-						<a href="#" class="btn btn-info" >Tell Me More...</a>
+						<a href="#" class="btn btn-info btn-block" >Tell Me More...</a>
 				</div></div>
 			</div>
 		</div>
