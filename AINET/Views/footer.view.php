@@ -3,7 +3,8 @@
 			<div class="container">
 				<footer>
 					<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1">&copy; PHP TAH FORCE - 2015</button>
-					<br/> <a href="#home">Back To Top</a>
+					<br/> <a href="#" class="go-top">Back To Top</a>
+
 
 					<div class="modal fade" id="modal-1">
 						<div class="modal-dialog">
@@ -21,7 +22,7 @@
 										<table class="table">
 											<tr>
 												<td><img src="Images/crew/paulo.jpg" class="img-circle img-responsive" id="imgTable"></td>
-												<td>Paulo Penicheiro</td>
+												<td>Paulo Penicheiro<br>2130628</td>
 											</tr>
 
 											<tr>
@@ -31,7 +32,7 @@
 
 											<tr>
 												<td><img src="Images/crew/alfredo.jpg" class="img-circle img-responsive" id="imgTable"></td>
-												<td>Alfredo</td>
+												<td>Alfredo Rosa</td>
 											</tr>
 
 
@@ -49,7 +50,6 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</footer>
 			</div>

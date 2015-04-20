@@ -79,10 +79,11 @@
 			<span class="icon-next"></span>
 		</a>
 	</div>
+	<a href="" id="about"></a>
 </div>
 
 <!-- 3 COLUMN PROJETCS HIGHLIGHTS -->
-<div class="alt1" id="about" >
+<div class="alt1">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
@@ -129,10 +130,12 @@
 			</div>
 		</div>
 	</div>
+	<a href="" id="projects"></a>
 </div>
 
+
 <!-- 2 COLUMN IMAGE AND TEXT -->
-<div class="container padding" id="projects">
+<div class="container padding">
 	<div class="row padding">
 		<div class="col-md-6">
 			<img src="Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
