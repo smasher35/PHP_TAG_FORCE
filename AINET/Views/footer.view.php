@@ -25,7 +25,7 @@
 											</tr>
 
 											<tr>
-												<td><img src="Images/crew/ruben.png" class="img-circle img-responsive" id="imgTable"></td>
+												<td><img src="Images/crew/ruben.jpg" class="img-circle img-responsive" id="imgTable"></td>
 												<td>Ruben Miguel</td>
 											</tr>
 
