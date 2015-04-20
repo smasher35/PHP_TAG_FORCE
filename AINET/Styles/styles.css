@@ -23,9 +23,8 @@
 
 .jumbotron{
 
-    background-image: url('../Images/jumbotron.jpg');
-	background-attachment: fixed;
-	min-height: 450px;
+    background: url('../Images/jumbotron.jpg') fixed;
+    min-height: 450px;
 	margin-top:  60px;
     padding-top: 150px;
     max-height: 1080px;
@@ -83,4 +82,8 @@
 .go-top:hover{
     background-color: #5bc0de;
     color: #ffffff;
+}
+
+.search-query{
+    width: 350px;
 }

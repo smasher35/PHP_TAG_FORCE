@@ -35,7 +35,7 @@
 
                 <div class="navbar-form">
                     <div class="container">
-                        <form class="form-search " length="150">
+                        <form class="form-search " length="250">
                             <input type="text" class="span3 search-query" placeholder="Search...">
                             <button class="btn btn-primary">Search</button>
 

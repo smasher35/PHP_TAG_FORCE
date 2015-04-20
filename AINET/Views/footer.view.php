@@ -63,9 +63,8 @@
 		<script src="Bootstrap/js/bootstrap.min.js"></script>
 		<script>
 			//chama a função que permite o deslocar suave entre seccções
-			<?=require('support/smoothScrolling.js');?>
-			<?=require('support/goTopButton.js');?>
+			<?=require('javaScript/smoothScrolling.js');?>
+			<?=require('javaScript/goTopButton.js');?>
 		</script>
-
 	</body>
 </html>
