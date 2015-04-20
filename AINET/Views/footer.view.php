@@ -3,7 +3,7 @@
 			<div class="container">
 				<footer>
 					<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1">&copy; PHP TAH FORCE - 2015</button>
-					<br/> <a href="#" class="go-top">Back To Top</a>
+					<br/> <a href="#" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 
 
 					<div class="modal fade" id="modal-1">

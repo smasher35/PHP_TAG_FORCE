@@ -66,3 +66,20 @@
     max-width: 60px;
 
 }
+
+.go-top{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #204d74;
+    font-size: 12px;
+    padding: 1em;
+
+}
+
+.go-top:hover{
+    background-color: #5bc0de;
+    color: #ffffff;
+}
