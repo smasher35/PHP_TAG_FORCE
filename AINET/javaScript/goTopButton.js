@@ -5,6 +5,7 @@
  * Date: 20/04/2015
  * Time: 12:47
  */
+//script que apresenta um botão fixo no fundo de ecrã que permite voltar ao topo
 $(document).ready(function(){
     $(window).scroll(function(){
         if($(this).scrollTop()>200){
