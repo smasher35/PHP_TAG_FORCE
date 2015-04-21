@@ -112,6 +112,10 @@
     text-align: right;
 }
 
+.textAlignCenter{
+    text-align: center;
+}
+
 
 html {
     /*If you had a black or close to black background*/

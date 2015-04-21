@@ -5,6 +5,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/headerFooter" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/signUp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/signup.view.php" />
       <change type="MOVED" beforePath="C:\Users\Paulo\Desktop\AINET\www\PROJECTO\trunk\AINET\Views\footer.view.php" afterPath="$PROJECT_DIR$/Views/headerFooter/footer.view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaScript/goTopButton.js" afterPath="$PROJECT_DIR$/javaScript/goTopButton.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/headerFooter/header.view.php" afterPath="$PROJECT_DIR$/Views/headerFooter/header.view.php" />
@@ -65,8 +66,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Styles/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="2480">
-              <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2560">
+              <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -87,8 +88,8 @@
       <file leaf-file-name="login.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/login.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7413793" vertical-offset="671" max-vertical-offset="1340">
-              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+            <state vertical-scroll-proportion="-7.3965516" vertical-offset="571" max-vertical-offset="1500">
+              <caret line="50" column="82" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -97,18 +98,28 @@
       <file leaf-file-name="header.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/headerFooter/header.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.551723" vertical-offset="600" max-vertical-offset="1460">
-              <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+            <state vertical-scroll-proportion="-18.62069" vertical-offset="600" max-vertical-offset="1460">
+              <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/main.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22503516" vertical-offset="0" max-vertical-offset="3920">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3880">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.view.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Views/signup.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5499297" vertical-offset="1109" max-vertical-offset="1920">
+              <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -119,16 +130,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smoothScrolling.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javaScript/smoothScrolling.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -172,11 +173,12 @@
         <option value="$PROJECT_DIR$/javaScript/goTopButton.js" />
         <option value="$PROJECT_DIR$/signUp.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Views/login.view.php" />
-        <option value="$PROJECT_DIR$/Styles/styles.css" />
-        <option value="$PROJECT_DIR$/Views/headerFooter/header.view.php" />
         <option value="$PROJECT_DIR$/javaScript/smoothPageTransition.js" />
         <option value="$PROJECT_DIR$/Views/main.view.php" />
+        <option value="$PROJECT_DIR$/Views/headerFooter/header.view.php" />
+        <option value="$PROJECT_DIR$/Views/login.view.php" />
+        <option value="$PROJECT_DIR$/Styles/styles.css" />
+        <option value="$PROJECT_DIR$/Views/signup.view.php" />
       </list>
     </option>
   </component>
@@ -502,7 +504,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17100793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -550,14 +552,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Views/main.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="3900">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javaScript/smoothScrolling.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="580">
@@ -904,16 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signUp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="320">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="e#6#108#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.4827585" vertical-offset="0" max-vertical-offset="560">
@@ -921,30 +905,6 @@
           <folding>
             <element signature="e#6#132#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/login.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7413793" vertical-offset="671" max-vertical-offset="1340">
-          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Styles/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1660" max-vertical-offset="2480">
-          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/headerFooter/header.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.551723" vertical-offset="600" max-vertical-offset="1460">
-          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -958,8 +918,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/main.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22503516" vertical-offset="0" max-vertical-offset="3920">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3880">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/headerFooter/header.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.62069" vertical-offset="600" max-vertical-offset="1460">
+          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signUp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="320">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#108#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/login.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3965516" vertical-offset="571" max-vertical-offset="1500">
+          <caret line="50" column="82" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2560">
+          <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/signup.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5499297" vertical-offset="1109" max-vertical-offset="1920">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
           <folding />
         </state>
       </provider>
