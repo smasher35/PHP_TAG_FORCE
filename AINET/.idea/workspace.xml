@@ -60,8 +60,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Styles/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5945946" vertical-offset="420" max-vertical-offset="2280">
-              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.7297297" vertical-offset="360" max-vertical-offset="2340">
+              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -112,7 +112,7 @@
       <file leaf-file-name="main.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/main.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.172414" vertical-offset="1260" max-vertical-offset="3900">
+            <state vertical-scroll-proportion="-11.034483" vertical-offset="1380" max-vertical-offset="3900">
               <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
               <folding />
             </state>
@@ -921,7 +921,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/main.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.172414" vertical-offset="1260" max-vertical-offset="3900">
+        <state vertical-scroll-proportion="-11.034483" vertical-offset="1380" max-vertical-offset="3900">
           <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
           <folding />
         </state>
@@ -929,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Styles/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5945946" vertical-offset="420" max-vertical-offset="2280">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.7297297" vertical-offset="360" max-vertical-offset="2340">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>

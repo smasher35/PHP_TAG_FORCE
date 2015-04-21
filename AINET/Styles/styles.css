@@ -26,7 +26,7 @@
     padding-top: 40px;
     background-color: #ccc;
     margin-top: 0px;
-    min-height: 400px;
+    min-height: 500px;
 }
 
 .jumbotron{
@@ -42,6 +42,8 @@
 #pan1{
     background-color: #cccccc;
     box-shadow: 8px 8px 6px #222222;
+    vertical-align: middle;
+   margin-top: 45px;
 
 }
 
@@ -84,6 +86,7 @@
     font-size: 12px;
     padding: 1em;
     display: none;
+
 
 }
 
