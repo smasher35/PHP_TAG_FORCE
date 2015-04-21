@@ -13,6 +13,9 @@
     <!-- Bootstrap -->
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+	<!-- animsition CSS -->
+	<link rel="stylesheet" href="../dist/css/animsition.min.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,12 +51,12 @@
                 </button>
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.php">Home</a></li>
+                        <li><a class="transition" href="index.php">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Sign Up</a></li>
-                        <li><a href="login.php">Login</a></li>
+                        <li><a class="transition" href="login.php">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,3 +64,4 @@
     </div>
 </header>
 <div id="home"></div>
+
