@@ -39,7 +39,7 @@
 										</table>
 
 										<div class="panel-footer">
-											&copy; PHP TAH FORCE - All rights reserved
+											&copy; PHP TAG FORCE - All rights reserved
 										</div>
 								</div>
 

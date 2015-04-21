@@ -8,7 +8,7 @@
 //script que pertite uma navegação mais suave entre páginas
 $(document).ready(function() {
     $("body").css("display", "none");
-    $("body").fadeIn(1500);
+    $("body").fadeIn(1000);
 
     $("a.transition").click(function(event){
         event.preventDefault();
