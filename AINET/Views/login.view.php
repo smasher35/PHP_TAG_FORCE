@@ -38,7 +38,8 @@
 								</label>
 							</div>
 							<hr>
-							<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+							<a class="btn btn-success" href="index.php"><span class="glyphicon glyphicon-arrow-left" ></span> Back</a>
+							<!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
 							<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span> Login</button>
 						</form>
 
