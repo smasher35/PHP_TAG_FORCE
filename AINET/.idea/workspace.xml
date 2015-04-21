@@ -7,6 +7,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/signUp.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/signup.view.php" />
       <change type="MOVED" beforePath="C:\Users\Paulo\Desktop\AINET\www\PROJECTO\trunk\AINET\Model\roles.php" afterPath="$PROJECT_DIR$/Model/users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/headerFooter/footer.view.php" afterPath="$PROJECT_DIR$/Views/headerFooter/footer.view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaScript/goTopButton.js" afterPath="$PROJECT_DIR$/javaScript/goTopButton.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/headerFooter/header.view.php" afterPath="$PROJECT_DIR$/Views/headerFooter/header.view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
@@ -104,8 +105,8 @@
       <file leaf-file-name="footer.view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/headerFooter/footer.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26863572" vertical-offset="629" max-vertical-offset="1580">
-              <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.11251758" vertical-offset="0" max-vertical-offset="1580">
+              <caret line="4" column="120" selection-start-line="4" selection-start-column="120" selection-end-line="4" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -939,8 +940,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/headerFooter/footer.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26863572" vertical-offset="629" max-vertical-offset="1580">
-          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.11251758" vertical-offset="0" max-vertical-offset="1580">
+          <caret line="4" column="120" selection-start-line="4" selection-start-column="120" selection-end-line="4" selection-end-column="120" />
           <folding />
         </state>
       </provider>
