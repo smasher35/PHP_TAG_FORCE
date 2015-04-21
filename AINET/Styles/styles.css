@@ -8,7 +8,7 @@
 .alt2{
      background-color: #333;
      margin-top: 0px;
-     min-height: 150px;
+     min-height: 300px;
      color: #fff;
      text-align: center;
  }
@@ -19,6 +19,14 @@
     min-height: 150px;
     color: #fff;
     padding-top: 65px;
+}
+
+.alt4{
+    background: url('../Images/php-code_2.png') fixed;
+    padding-top: 40px;
+    background-color: #ccc;
+    margin-top: 0px;
+    min-height: 400px;
 }
 
 .jumbotron{
@@ -32,8 +40,8 @@
 
 }
 #pan1{
-    background-color: transparent;
-    box-shadow: 8px 8px 6px #888888;
+    background-color: #cccccc;
+    box-shadow: 8px 8px 6px #222222;
 
 }
 
