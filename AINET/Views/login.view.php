@@ -12,12 +12,12 @@
 						</div>
 						<form>
 							<div class="form-group">
-								<label for="exampleInputEmail1">Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+								<label for="inputEmail1">Email address</label>
+								<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
 							</div>
 							<div class="form-group">
-								<label for="exampleInputPassword1">Password</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								<label for="inputPassword1">Password</label>
+								<input type="password" class="form-control" id="inputPassword1" placeholder="Password">
 								<a href="#" ><br><p class="textAlignRight">Forgot Password?</p></a>
 							</div>
 
