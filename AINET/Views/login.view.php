@@ -13,13 +13,24 @@
 						<form>
 							<div class="form-group">
 								<label for="inputEmail1">Email address</label>
-								<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+									<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
+								</div>
 							</div>
+
+
+
 							<div class="form-group">
 								<label for="inputPassword1">Password</label>
-								<input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-star"></span></span>
+									<input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+								</div>
 								<a href="#" ><br><p class="textAlignRight">Forgot Password?</p></a>
 							</div>
+
+
 
 							<div class="checkbox">
 								<label>
@@ -27,7 +38,8 @@
 								</label>
 							</div>
 							<hr>
-							<button type="submit" class="btn btn-primary">Log me in</button>
+							<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+							<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span> Login</button>
 						</form>
 
 					</div>
