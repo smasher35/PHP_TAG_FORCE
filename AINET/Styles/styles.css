@@ -111,3 +111,9 @@
 .textAlignRight{
     text-align: right;
 }
+
+
+html {
+    /*If you had a black or close to black background*/
+    background-color: #333;
+}

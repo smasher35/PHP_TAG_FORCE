@@ -17,6 +17,6 @@ spl_autoload_register();
 $users = $controller->listUsers();
 $title = "List users";*/
 
-require('Views/header.view.php');
+require('Views/headerFooter/header.view.php');
 require('Views/main.view.php');
-require('Views/footer.view.php');
+require('Views/headerFooter/footer.view.php');

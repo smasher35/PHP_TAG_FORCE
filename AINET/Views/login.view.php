@@ -1,4 +1,4 @@
-<?php require('Views/header.view.php');?>
+<?php require('Views/headerFooter/header.view.php');?>
 <div class="alt1">
 	<div class="container">
 		<div class="row">
@@ -54,7 +54,7 @@
 </div>
 
 <div class="alt2">
-	<?=require('Views/footer.view.php');?>
+	<?=require('Views/headerFooter/footer.view.php');?>
 </div>
 
 
