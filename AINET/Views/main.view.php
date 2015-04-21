@@ -6,7 +6,7 @@
 		<h1><b>PROJECT AINET!</b></h1>
 		<p>Aqui há-de nascer o grandioso projecto dos fabulosos PHP TAG FORCE</p>
 		<p>Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>
-		<p><a href="http://www.google.pt" class="btn btn-primary btn-lg">Google Me</a></p>
+		<p><a href="http://www.google.pt"  class="btn btn-primary btn-lg">Google Me</a></p>
 	</div>
 </div>
 
