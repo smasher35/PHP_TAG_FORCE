@@ -24,7 +24,7 @@
 							<div class="form-group">
 								<label for="inputPassword1">Password</label>
 								<div class="input-group">
-									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-star"></span></span>
+									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
 									<input type="password" class="form-control" id="inputPassword1" placeholder="Password">
 								</div>
 								<a href="#" ><br><p class="textAlignRight">Forgot Password?</p></a>
