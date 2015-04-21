@@ -99,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/footer.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5894428" vertical-offset="898" max-vertical-offset="1580">
+            <state vertical-scroll-proportion="-6.9310346" vertical-offset="898" max-vertical-offset="1580">
               <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
               <folding>
                 <marker date="1429611304431" expanded="true" signature="2020:2099" placeholder="..." />
@@ -111,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smoothPageTransition.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="smoothPageTransition.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javaScript/smoothPageTransition.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
+            <state vertical-scroll-proportion="0.3783784" vertical-offset="0" max-vertical-offset="740">
               <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
@@ -924,22 +924,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javaScript/smoothPageTransition.js">
+    <entry file="file://$PROJECT_DIR$/Views/footer.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state vertical-scroll-proportion="-6.9310346" vertical-offset="898" max-vertical-offset="1580">
+          <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
           <folding>
-            <element signature="e#0#42#0" expanded="false" />
+            <marker date="1429611304431" expanded="true" signature="2020:2099" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/footer.view.php">
+    <entry file="file://$PROJECT_DIR$/javaScript/smoothPageTransition.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5894428" vertical-offset="898" max-vertical-offset="1580">
-          <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.3783784" vertical-offset="0" max-vertical-offset="740">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
-            <marker date="1429611304431" expanded="true" signature="2020:2099" placeholder="..." />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
