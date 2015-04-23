@@ -87,8 +87,6 @@
     font-size: 12px;
     padding: 1em;
     display: none;
-
-
 }
 
 .go-top:hover{
@@ -98,6 +96,7 @@
 
 .search-query{
     width: 350px;
+    height: 32px;
 }
 
 #logPanel {

@@ -28,7 +28,6 @@
 
 <header>
     <!-- NAVIGATION BAR -->
-    <a id="home">Useful Tips Section</a>
     <div class="navbar-fixed-top navbar-inverse" id="navegacao">
         <div class="container">
             <div class="row">
@@ -38,9 +37,9 @@
                     </div>
 	                <div class="navbar-form">
 	                    <div class="container">
-	                        <form class="form-search " length="250">
+	                        <form class="form-search ">
 	                            <input type="text" class="span3 search-query" placeholder="Search...">
-	                            <button class="btn btn-primary">Search</button>
+	                            <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
 	                        </form>
 	                    </div>
 	                </div>
@@ -62,5 +61,5 @@
         </div>
     </div>
 </header>
-<!--<div id="home"></div>-->
+
 
