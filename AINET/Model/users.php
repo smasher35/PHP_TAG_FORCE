@@ -9,3 +9,6 @@
 
 namespace Ainet\Model;
 
+
+echo 'hello world';
+
