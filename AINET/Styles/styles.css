@@ -1,13 +1,11 @@
 .alt1{
     padding-top: 40px;
 	background-color: #ccc;
-	margin-top: 0px;
 	min-height: 400px;
 }
 
 .alt2{
      background-color: #333;
-     margin-top: 0px;
      min-height: 300px;
      color: #fff;
      text-align: center;
@@ -15,7 +13,6 @@
 
 .alt3{
     background-color: #3c3c3c;
-    margin-top: 0px;
     min-height: 150px;
     color: #fff;
     padding-top: 65px;
@@ -25,16 +22,13 @@
     background: url('../Images/php-code_2.png') fixed;
     padding-top: 40px;
     background-color: #ccc;
-    margin-top: 0px;
     min-height: 500px;
 }
 
 .jumbotron{
-
      background: url('../Images/php-code_2.png') fixed;
      min-height: 450px;
-     margin-top:  60px;
-     padding-top: 50px;
+     padding-top: 10px;
      max-height: 1080px;
      max-width: 1920px;
  }
@@ -42,7 +36,7 @@
 #jumboTronProjetcBrowser{
      background: url('../Images/php-code_2.png') fixed;
      min-height: 250px;
-     padding-top: 50px;
+     padding-top: 30px;
      max-height: 1080px;
      max-width: 1920px;
  }
@@ -50,7 +44,7 @@
     background-color: #cccccc;
     box-shadow: 8px 8px 6px #222222;
     vertical-align: middle;
-   margin-top: 45px;
+
 
 }
 
@@ -61,7 +55,6 @@
 }
 
 #navegacao{
-    margin-bottom: 0px;
     padding-bottom: 0px;
 /*  min-height: 100px;
     max-height:50px;*/

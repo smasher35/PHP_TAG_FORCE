@@ -32,37 +32,35 @@
     <div class="navbar-fixed-top navbar-inverse" id="navegacao">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-6">
                     <div class="navbar-brand">
                         <a href="#">PHP TAG FORCE</a>
                     </div>
-                <div class="navbar-form">
-                    <div class="container">
-                        <form class="form-search " length="250">
-                            <input type="text" class="span3 search-query" placeholder="Search...">
-                            <button class="btn btn-primary">Search</button>
-                        </form>
-                    </div>
+	                <div class="navbar-form">
+	                    <div class="container">
+	                        <form class="form-search " length="250">
+	                            <input type="text" class="span3 search-query" placeholder="Search...">
+	                            <button class="btn btn-primary">Search</button>
+	                        </form>
+	                    </div>
+	                </div>
                 </div>
-                    </div>
                 <div class="col-md-6">
-                <button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">Menu</button>
-                <div class="collapse navbar-collapse navHeaderCollapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="transition" href="index.php">Home</a></li>
-                        <li><a href="#about">Highlights</a></li>
-                        <li><a class="transition" href="projects.php">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a class="transition" href="signUp.php">Sign Up</a></li>
-                        <li><a class="transition" href="login.php">Login</a></li>
-                    </ul>
+	                <button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">Menu</button>
+	                <div class="collapse navbar-collapse navHeaderCollapse">
+	                    <ul class="nav navbar-nav navbar-right">
+	                        <li><a class="transition" href="index.php">Home</a></li>
+	                        <li><a href="#about">Highlights</a></li>
+	                        <li><a class="transition" href="projects.php">Projects</a></li>
+	                        <li><a href="#">Contact</a></li>
+	                        <li><a class="transition" href="signUp.php">Sign Up</a></li>
+	                        <li><a class="transition" href="login.php">Login</a></li>
+	                    </ul>
+	                </div>
                 </div>
-                    </div>
             </div>
-        </div>
         </div>
     </div>
 </header>
-<div id="home"></div>
+<!--<div id="home"></div>-->
 

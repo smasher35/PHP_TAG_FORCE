@@ -8,6 +8,7 @@
 	</div>
 </div>
 
+<div class="row">
 <!-- IMAGES CAROUSEL SLIDER -->
 <div id="myCarousel" class="carousel slide">
 	<ol class="carousel-indicators">
@@ -78,6 +79,7 @@
 		</a>
 	</div>
 	<a href="" id="about"></a>
+</div>
 </div>
 
 <!-- 3 COLUMN PROJETCS HIGHLIGHTS -->
