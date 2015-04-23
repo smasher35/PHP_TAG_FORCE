@@ -39,8 +39,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Styles/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2700">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2840">
+              <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roleController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/roleController.php">
+      <file leaf-file-name="htmlHelper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/support/htmlHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="340">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.551723" vertical-offset="0" max-vertical-offset="640">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
                 <element signature="e#6#132#0#PHP" expanded="true" />
               </folding>
@@ -95,8 +95,8 @@
       <file leaf-file-name="projectsBrowser.view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/projects/projectsBrowser.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5499297" vertical-offset="429" max-vertical-offset="1400">
-              <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.8874824" vertical-offset="589" max-vertical-offset="2160">
+              <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/controllers/roleController.php" />
         <option value="$PROJECT_DIR$/Model/users.php" />
         <option value="$PROJECT_DIR$/projects.php" />
-        <option value="$PROJECT_DIR$/Styles/styles.css" />
         <option value="$PROJECT_DIR$/Views/headerFooter/header.view.php" />
+        <option value="$PROJECT_DIR$/Styles/styles.css" />
         <option value="$PROJECT_DIR$/Views/projects/projectsBrowser.view.php" />
       </list>
     </option>
@@ -565,7 +565,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="520">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
-            <element signature="e#6#132#0#PHP" expanded="true" />
+            <element signature="e#6#132#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -646,7 +646,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="520">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
-            <element signature="e#6#132#0#PHP" expanded="true" />
+            <element signature="e#6#132#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -727,7 +727,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="520">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
-            <element signature="e#6#132#0#PHP" expanded="true" />
+            <element signature="e#6#132#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -876,17 +876,7 @@
         <state vertical-scroll-proportion="-14.4827585" vertical-offset="0" max-vertical-offset="560">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#6#132#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/support/htmlHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5172415" vertical-offset="0" max-vertical-offset="640">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#6#132#0#PHP" expanded="true" />
+            <element signature="e#6#132#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -929,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Styles/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2700">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/headerFooter/header.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.413794" vertical-offset="749" max-vertical-offset="1460">
@@ -971,10 +953,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/support/htmlHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.551723" vertical-offset="0" max-vertical-offset="640">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#6#132#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2840">
+          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Views/projects/projectsBrowser.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5499297" vertical-offset="429" max-vertical-offset="1400">
-          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.8874824" vertical-offset="589" max-vertical-offset="2160">
+          <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
           <folding />
         </state>
       </provider>

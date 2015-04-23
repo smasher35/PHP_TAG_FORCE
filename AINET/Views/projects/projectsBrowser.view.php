@@ -27,7 +27,8 @@
 				<!-- Default panel contents -->
 				<div class="panel-heading"><h3 class="panel-title text-center">Projects List</h3></div>
 
-					<!-- Table -->
+					<!-- Table
+						<!--<?php/*TODO: foreach a percorrer os projectos existentes*/;?> -->
 					<table class="table">
 						<tr>
 							<th class="text-center">Thumb</th>
@@ -44,14 +45,51 @@
 							<td>Alfredo Rosa</td>
 
 						</tr>
+						<tr>
+							<td>Img.png</td>
+							<td>Plataforma de Gestão Informática</td>
+							<td>Programação WEB</td>
+							<td>13.01.2015</td>
+							<td>Paulo Penicheiro</td>
+
+						</tr>
+
+						<tr>
+							<td>Img.png</td>
+							<td>GTA XLI</td>
+							<td>JOGOS PC</td>
+							<td>12.01.2015</td>
+							<td>Ruben Miguel</td>
+
+						</tr>
 
 
 					</table>
 				<div class="panel-footer">
-					<div class="btn-toolbar" role="toolbar" aria-label="...">
-						<div class="btn-group" role="group" aria-label="1">1</div>
-						<div class="btn-group" role="group" aria-label="2">2</div>
-						<div class="btn-group" role="group" aria-label="3">3</div>
+					<div class="btn-toolbar" role="toolbar" align="center">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary">First
+							<button type="button" class="btn btn-primary">Previous
+
+						</div>
+
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary">1
+							<button type="button" class="btn btn-primary">2
+							<button type="button" class="btn btn-primary">3
+							<button type="button" class="btn btn-primary">4
+							<button type="button" class="btn btn-primary">5
+							<button type="button" class="btn btn-primary">6
+							<button type="button" class="btn btn-primary">7
+							<button type="button" class="btn btn-primary">8
+							<button type="button" class="btn btn-primary">9
+							<button type="button" class="btn btn-primary">10
+						</div>
+
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary">Next
+							<button type="button" class="btn btn-primary">Last
+						</div>
 					</div>
 				</div>
 			</div>

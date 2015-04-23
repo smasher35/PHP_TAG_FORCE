@@ -113,6 +113,7 @@
 
 #panelFooter{
     text-align: center;
+    alignment: center;
 }
 
 .textAlignRight{
@@ -127,4 +128,10 @@
 html {
     /*If you had a black or close to black background*/
     background-color: #333;
+}
+
+.btn-Toolbar{
+    align-content: center;
+    text-align: center;
+
 }
