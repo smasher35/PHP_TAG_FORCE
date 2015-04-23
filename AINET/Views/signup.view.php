@@ -21,7 +21,7 @@
 						</div>
 						<form>
 							<div class="form-group">
-								<label for="inputName">Name</label>
+								<label for="inputName">User Name</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
 									<input type="name" class="form-control" id="inputName" placeholder="Enter name">
@@ -34,9 +34,7 @@
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
 									<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
 								</div>
-							</div>
 
-							<div class="form-group">
 								<label for="inputReEmail1">Re-Enter Email address</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
@@ -46,22 +44,21 @@
 
 
 
+
+
 							<div class="form-group">
 								<label for="inputPassword1">Password</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
 									<input type="password" class="form-control" id="inputPassword1" placeholder="Password">
 								</div>
-							</div>
 
-							<div class="form-group">
 								<label for="inputRePassword1">Re-Enter Password</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
 									<input type="repassword" class="form-control" id="inputRePassword1" placeholder="Re-Enter Password">
 								</div>
 							</div>
-
 
 
 							<div class="checkbox">

@@ -6,3 +6,6 @@
  * Date: 18/04/2015
  * Time: 15:47
  */
+
+namespace Ainet\controllers;
+

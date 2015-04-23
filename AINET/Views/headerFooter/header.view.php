@@ -53,7 +53,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="transition" href="index.php">Home</a></li>
                         <li><a href="#about">Highlights</a></li>
-                        <li><a href="#projects">Projects</a></li>
+                        <li><a class="transition" href="projects.php">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a class="transition" href="signUp.php">Sign Up</a></li>
                         <li><a class="transition" href="login.php">Login</a></li>
