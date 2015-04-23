@@ -60,12 +60,13 @@
 
 }
 
-
 #navegacao{
     margin-bottom: 0px;
     padding-bottom: 0px;
-    min-height: 100px;
-    max-height:50px;
+/*  min-height: 100px;
+    max-height:50px;*/
+    min-height: 50px;
+    max-height:200px;
 }
 
 
