@@ -36,44 +36,49 @@
 							<th class="text-center">Area</th>
 							<th class="text-center">Date</th>
 							<th class="text-center">Author</th>
+							<th class="text-center">Details</th>
+
 						</tr>
 						<tr>
-							<td>Img.png</td>
+							<td align="center">Img.png</td>
 							<td>Programação Cuda</td>
 							<td>Computação Gráfica</td>
-							<td>12.01.2015</td>
+							<td align="center">12.01.2015</td>
 							<td>Alfredo Rosa</td>
+							<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
 
 						</tr>
 						<tr>
-							<td>Img.png</td>
+							<td align="center">Img.png</td>
 							<td>Plataforma de Gestão Informática</td>
 							<td>Programação WEB</td>
-							<td>13.01.2015</td>
+							<td align="center">13.01.2015</td>
 							<td>Paulo Penicheiro</td>
+							<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
 
 						</tr>
 
 						<tr>
-							<td>Img.png</td>
+							<td align="center">Img.png</td>
 							<td>GTA XLI</td>
 							<td>JOGOS PC</td>
-							<td>12.01.2015</td>
+							<td align="center">12.01.2015</td>
 							<td>Ruben Miguel</td>
+							<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
 
 						</tr>
 
 
 					</table>
-				<div class="panel-footer">
+				<div class="panel-footer" align="center">
 					<div class="btn-toolbar" role="toolbar" align="center">
-						<div class="btn-group">
+						<div class="btn-group" align="center">
 							<button type="button" class="btn btn-primary">First
 							<button type="button" class="btn btn-primary">Previous
 
 						</div>
 
-						<div class="btn-group">
+						<div class="btn-group" align="center">
 							<button type="button" class="btn btn-primary">1
 							<button type="button" class="btn btn-primary">2
 							<button type="button" class="btn btn-primary">3
@@ -86,7 +91,7 @@
 							<button type="button" class="btn btn-primary">10
 						</div>
 
-						<div class="btn-group">
+						<div class="btn-group" align="center">
 							<button type="button" class="btn btn-primary">Next
 							<button type="button" class="btn btn-primary">Last
 						</div>
