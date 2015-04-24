@@ -16,9 +16,8 @@
 						<label for="inputComment">Message:</label>
 						<textarea class="form-control" rows="5" id="inputComment" placeholder="write your message"></textarea>
 					</div>
-
+					<!-- Sumit Button -->
 					<button class="btn btn-success btn-block"><span class="glyphicon glyphicon-circle-arrow-right"> Submit</span></button>
-
 				</form>
 			</div>
 <!-- SOCIAL NETWORKS -->
