@@ -6,13 +6,14 @@
 			</div>
 
 			<div class="col-md-3">
-				Follow us on Social Networks
-				<div class="container" id="socialNetworksIcons">
-					<a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-					<a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-					<a href="#"><i class="fa fa-google-plus-square fa-2x"></i> </a>
-				</div>
-
+				<p>Follow us on Social Networks</p>
+				<a href="#"><i class="fa fa-facebook-square fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-twitter-square fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-google-plus-square fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-github-square fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-linkedin-square fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-vimeo-square fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-youtube-square fa-2x socialNetworksIcons"></i></a>
 			</div>
 
 			<div class="col-md-3">
@@ -21,6 +22,11 @@
 
 			<div class="col-md-3">
 				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1">&copy; PHP TAG FORCE - 2015</button>
+				</hr>
+				<p>Powered by:</p>
+				<a href="#"><i class="fa fa-html5 fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-css3 fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-windows fa-2x socialNetworksIcons"></i></a>
 				<br/> <a href="#home" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 			</div>
 

@@ -7,11 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>PHP TAG FORCE</title>
 
-	<!-- Font Aewsome - Social Network Icons -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Personal Styles -->
     <link rel="stylesheet" type="text/css" href="Styles/styles.css">
+
+	<!-- Font Aewsome - Social Network Icons -->
+	<link href="fontAewsome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">

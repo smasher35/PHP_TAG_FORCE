@@ -127,7 +127,7 @@ html {
 
 }
 
-#socialNetworksIcons{
-    color: inherit;
+.socialNetworksIcons{
+    color: #cccccc;
     text-decoration: none;
 }
