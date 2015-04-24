@@ -1,5 +1,6 @@
 <div class="alt2">
 		<footer>
+<!-- CONTACT US -->
 			<div class="col-md-3">
 				<p id="contact"><h4>Contact Us </h4></p>
 				<form>
@@ -20,7 +21,7 @@
 
 				</form>
 			</div>
-
+<!-- SOCIAL NETWORKS -->
 			<div class="col-md-3">
 				<p><h4>Follow us on Social Networks</h4></p>
 				<a href="#"><i class="fa fa-facebook-square fa-2x socialNetworksIcons"></i></a>
@@ -30,7 +31,7 @@
 				<a href="#"><i class="fa fa-vimeo-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-youtube-square fa-2x socialNetworksIcons"></i></a>
 			</div>
-
+<!-- THE CREW -->
 			<div class="col-md-3">
 				<p><h4>Newsletter</h4></p>
 				<br>
@@ -44,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-
+<!-- THE CREW -->
 			<div class="col-md-3">
 				<p><h4>The Crew</h4></p>
 				</hr>
@@ -55,8 +56,7 @@
 				<a href="#"><i class="fa fa-css3 fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-github-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-windows fa-2x socialNetworksIcons"></i></a>
-
-
+<!-- BOTÃO GO TOP -->
 				<br/> <a href="#goTop" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 			</div>
 <!-- Janela MODAL -- The Crew -- -->
