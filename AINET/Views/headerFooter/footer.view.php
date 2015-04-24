@@ -16,6 +16,9 @@
 						<label for="inputComment">Comment:</label>
 						<textarea class="form-control" rows="5" id="inputComment" placeholder="write your message"></textarea>
 					</div>
+
+					<button class="btn btn-success btn-block"><span class="glyphicon glyphicon-circle-arrow-right"> Submit</span></button>
+
 				</form>
 			</div>
 
