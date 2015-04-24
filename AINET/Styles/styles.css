@@ -126,3 +126,8 @@ html {
     text-align: center;
 
 }
+
+#socialNetworksIcons{
+    color: inherit;
+    text-decoration: none;
+}
