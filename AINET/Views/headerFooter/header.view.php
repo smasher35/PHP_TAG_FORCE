@@ -57,7 +57,7 @@
 	                        <li><a class="transition" href="index.php">Home</a></li>
 	                        <li><a href="#about">Highlights</a></li>
 	                        <li><a class="transition" href="projects.php">Projects</a></li>
-	                        <li><a href="#">Contact</a></li>
+	                        <li><a href="#contact">Contact</a></li>
 	                        <li><a class="transition" href="signUp.php">Sign Up</a></li>
 	                        <li><a class="transition" href="login.php">Login</a></li>
 	                    </ul>

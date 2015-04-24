@@ -2,31 +2,59 @@
 <div class="alt2">
 		<footer>
 			<div class="col-md-3">
-				Contacts
+				<p id="contact"><h4>Contact Us </h4></p>
+				<form>
+					<div class="form-group">
+						<label for="inputName">Name</label>
+						<input type="name" class="form-control" id="inputName" placeholder="Enter name">
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1">Email address</label>
+						<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<label for="inputComment">Comment:</label>
+						<textarea class="form-control" rows="5" id="inputComment" placeholder="write your message"></textarea>
+					</div>
+				</form>
 			</div>
 
 			<div class="col-md-3">
-				<p>Follow us on Social Networks</p>
+				<p><h4>Follow us on Social Networks</h4></p>
 				<a href="#"><i class="fa fa-facebook-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-twitter-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-google-plus-square fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-github-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-linkedin-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-vimeo-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-youtube-square fa-2x socialNetworksIcons"></i></a>
 			</div>
 
 			<div class="col-md-3">
-				Newsletter
+				<p><h4>Newsletter</h4></p>
+				<br>
+				<div class="form-group">
+					<label for="inputEmail1">Subscribe our Monthly Newsletter</label>
+					<div class="input-group">
+						<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
+						<span class="input-group-btn">
+				                    <button class="btn btn-success"><span class="glyphicon glyphicon-hand-right"></span></button>
+						</span>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-md-3">
-				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1">&copy; PHP TAG FORCE - 2015</button>
+				<p><h4>The Crew</h4></p>
 				</hr>
-				<p>Powered by:</p>
+				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1"><h5>&copy; PHP TAG FORCE 2015</h5> </button>
+				</hr>
+				<p><h5>Powered by:</h5></p>
 				<a href="#"><i class="fa fa-html5 fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-css3 fa-2x socialNetworksIcons"></i></a>
+				<a href="#"><i class="fa fa-github-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-windows fa-2x socialNetworksIcons"></i></a>
+
+
 				<br/> <a href="#home" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 			</div>
 
