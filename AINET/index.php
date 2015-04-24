@@ -10,8 +10,7 @@
 spl_autoload_register();
 
 
-
-//use Ainet\Controllers\UserController;
+use Ainet\controllers\UserController;
 
 /*$controller = new UserController;
 $users = $controller->listUsers();

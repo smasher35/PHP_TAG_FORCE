@@ -43,9 +43,6 @@
 							</div>
 
 
-
-
-
 							<div class="form-group">
 								<label for="inputPassword1">Password</label>
 								<div class="input-group">

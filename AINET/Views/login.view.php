@@ -28,7 +28,6 @@
 							</div>
 
 
-
 							<div class="form-group">
 								<label for="inputPassword1">Password</label>
 								<div class="input-group">
@@ -37,7 +36,6 @@
 								</div>
 								<a href="#" ><p class="textAlignRight">Forgot Password?</p></a>
 							</div>
-
 
 
 							<div class="checkbox">
@@ -64,6 +62,3 @@
 <div class="alt2">
 	<?=require('Views/headerFooter/footer.view.php');?>
 </div>
-
-
-

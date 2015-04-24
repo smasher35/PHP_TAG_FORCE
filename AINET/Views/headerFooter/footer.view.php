@@ -1,4 +1,3 @@
-
 		<div class="alt2">
 			<div class="container">
 				<footer>
@@ -68,6 +67,7 @@
 		<script>
 			//chama a função que permite o deslocar suave entre seccções
 			<?=require('javaScript/smoothScrolling.js');?>
+			//chama a função do botão lateral para ir para o topo
 			<?=require('javaScript/goTopButton.js');?>
 		</script>
 	</body>

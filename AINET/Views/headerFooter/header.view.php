@@ -37,10 +37,12 @@
                     </div>
 	                <div class="navbar-form">
 	                    <div class="container">
-	                        <form class="form-search ">
-	                            <input type="text" class="span3 search-query" placeholder="Search...">
-	                            <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
-	                        </form>
+		                    <div class="input-group">
+			                    <input type="text" class=" form-control form-search span3 search-query" id="search" placeholder="Search...">
+			                    <span class="input-group-btn">
+				                    <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+			                   </span>
+		                    </div>
 	                    </div>
 	                </div>
                 </div>
@@ -61,5 +63,3 @@
         </div>
     </div>
 </header>
-
-
