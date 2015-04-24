@@ -1,4 +1,3 @@
-
 <div class="alt2">
 		<footer>
 			<div class="col-md-3">
@@ -13,7 +12,7 @@
 						<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
 					</div>
 					<div class="form-group">
-						<label for="inputComment">Comment:</label>
+						<label for="inputComment">Message:</label>
 						<textarea class="form-control" rows="5" id="inputComment" placeholder="write your message"></textarea>
 					</div>
 
@@ -58,9 +57,9 @@
 				<a href="#"><i class="fa fa-windows fa-2x socialNetworksIcons"></i></a>
 
 
-				<br/> <a href="#home" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
+				<br/> <a href="#goTop" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 			</div>
-
+<!-- Janela MODAL -- The Crew -- -->
 			<div class="modal fade" id="modal-1">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -102,6 +101,7 @@
 					</div>
 				</div>
 			</div>
+<!-- FIM JANELA MODAL -->
 		</footer>
 </div>
 

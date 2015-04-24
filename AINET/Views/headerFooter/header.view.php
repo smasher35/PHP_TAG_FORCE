@@ -31,6 +31,7 @@
 <body>
 
 <header>
+	<a id="goTop"></a>
     <!-- NAVIGATION BAR -->
     <div class="navbar-fixed-top navbar-inverse" id="navegacao">
         <div class="container">
