@@ -36,7 +36,7 @@
 #jumboTronProjetcBrowser{
      background: url('../Images/php-code_2.png') fixed;
      min-height: 250px;
-     padding-top: 50px;
+     padding-top: 70px;
      max-height: 1080px;
      max-width: 1920px;
  }
@@ -94,7 +94,7 @@
 
 #search{
     width: 350px;
-    
+
 }
 
 #logPanel {
