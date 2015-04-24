@@ -51,13 +51,15 @@
 				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1"><h5>&copy; PHP TAG FORCE 2015</h5> </button>
 				</hr>
 				<p><h5>Powered by:</h5></p>
-				<a href="#"><i class="fa fa-html5 fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-css3 fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-github-square fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-windows fa-2x socialNetworksIcons"></i></a>
+				<i class="fa fa-html5 fa-2x socialNetworksIcons"></i>
+				<i class="fa fa-css3 fa-2x socialNetworksIcons"></i>
+				<i class="fa fa-github-square fa-2x socialNetworksIcons"></i>
+				<i class="fa fa-windows fa-2x socialNetworksIcons"></i>
 <!-- BOTÃO GO TOP -->
 				<br/> <a href="#goTop" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 			</div>
+			<!-- <div class="row" > para dar uma pequena margem -->
+			<div class="row"></div>
 <!-- Janela MODAL -- The Crew -- -->
 			<div class="modal fade" id="modal-1">
 				<div class="modal-dialog">
