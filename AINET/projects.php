@@ -11,5 +11,5 @@
 
 
 
-
+$title = "PHP TAG FORCE - Projects Browser";
 require('Views/projects/projectsBrowser.view.php');

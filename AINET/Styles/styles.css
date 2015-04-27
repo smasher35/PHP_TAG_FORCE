@@ -43,6 +43,14 @@
      max-height: 1080px;
      max-width: 1920px;
  }
+
+#jumboTronAccountsBrowser{
+    background: url('../Images/php-code_2.png') fixed;
+    min-height: 250px;
+    padding-top: 10px;
+    max-height: 1080px;
+    max-width: 1920px;
+}
 #pan1{
     background-color: #cccccc;
     box-shadow: 8px 8px 6px #222222;
@@ -163,5 +171,5 @@ html {
 
 .center {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
 }

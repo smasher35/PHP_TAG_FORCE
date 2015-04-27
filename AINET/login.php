@@ -7,4 +7,7 @@
  */
 
 
+
+
+$title = "PHP TAG FORCE - Login";
 require('Views/login.view.php');

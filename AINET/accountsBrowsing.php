@@ -3,21 +3,19 @@
  * Created by PhpStorm.
  * Group: PHP TAG FORCE
  * User: Paulo Penicheiro - 2130628
- * Date: 18/04/2015
+ * Date: 27/04/2015
  * Time: 15:47
  */
 
 spl_autoload_register();
 
 
-use Ainet\controllers\UserController;
+use Ainet\controllers;
 
 /*$controller = new UserController;
 $users = $controller->listUsers();
 $title = "List users";*/
 
-$title = "PHP TAG FORCE - Home";
+$title = "PHP TAG FORCE - Accounts Browsing";
 
-require('Views/headerFooter/header.view.php');
-require('Views/main.view.php');
-require('Views/headerFooter/footer.view.php');
+require('Views/accountsBrowsing.view.php');

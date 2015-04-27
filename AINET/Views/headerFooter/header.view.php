@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- por causa das resoluções dos ecrãs móveis -->
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>PHP TAG FORCE</title>
+	<title><?= $title ?></title>
 
 
     <!-- Personal Styles -->
@@ -58,6 +58,7 @@
 	                        <li><a class="transition" href="index.php"><strong>Home</strong></a></li>
 	                        <li><a class="transition" href="projects.php"><strong>Projects</strong></a></li>
 	                        <li><a class="transition" href="#"><strong>Dashboard</strong></a></li>
+		                    <li><a class="transition" href="accountsBrowsing.php"><strong>Accounts</strong></a></li>
 	                        <li><a class="transition" href="login.php"><strong>Login</strong></a></li>
 	                    </ul>
 	                </div>

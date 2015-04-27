@@ -16,7 +16,7 @@
 			<div class="col-md-4">
 					<ul class="nav nav-pills">
 						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
-						<li role="presentation"><a href="#myCarousel"><strong id="subNavButtons">Projects</strong></a></li>
+						<li role="presentation"><a href="#projectsList"><strong id="subNavButtons">Projects</strong></a></li>
 						<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
 					</ul>
 			</div>
@@ -37,6 +37,7 @@
 	</div>
 </div>
 
+<a class="padding" id="projectsList"></a>
 <div class="alt1">
 	<div class="row">
 		<div class="container">
