@@ -29,15 +29,16 @@
 .jumbotron{
      background: url('../Images/php-code_2.png') fixed;
      min-height: 450px;
-     padding-top: 10px;
-     max-height: 1080px;
+     padding-top: 5px;
+     max-height: 798px;
      max-width: 1920px;
+    margin-bottom: 0px;
  }
 
 #jumboTronProjetcBrowser{
      background: url('../Images/php-code_2.png') fixed;
      min-height: 250px;
-     padding-top: 70px;
+     padding-top: 10px;
      max-height: 1080px;
      max-width: 1920px;
  }
@@ -137,4 +138,8 @@ html {
 
 .footer {
     padding-bottom: 20px;
+}
+
+#corpo{
+    padding-top: 70px;
 }

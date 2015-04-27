@@ -28,7 +28,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body id="corpo">
 
 <header>
 	<a id="goTop"></a>
@@ -59,7 +59,7 @@
 	                        <li><a href="#about">Highlights</a></li>
 	                        <li><a class="transition" href="projects.php">Projects</a></li>
 	                        <li><a href="#contact">Contact</a></li>
-	                        <li><a class="transition" href="signUp.php">Sign Up</a></li>
+	                        <li><a class="transition" href="#">Dashboard</a></li>
 	                        <li><a class="transition" href="login.php">Login</a></li>
 	                    </ul>
 	                </div>
