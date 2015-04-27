@@ -58,7 +58,7 @@
 <!-- BOTÃO GO TOP -->
 				<br/> <a href="#goTop" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 			</div>
-			<!-- <div class="row" > para dar uma pequena margem -->
+			<!-- <div class="row" > para dar uma pequena margem no fundo  -->
 			<div class="row"></div>
 <!-- Janela MODAL -- The Crew -- -->
 			<div class="modal fade" id="modal-1">

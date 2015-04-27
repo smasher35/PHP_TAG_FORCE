@@ -8,8 +8,24 @@
  -->
 
 <?php require('Views/headerFooter/header.view.php');?>
-
-
+<!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
+<div class="row" id="subNavBar">
+	<div class="container">
+		<div class="center">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+					<ul class="nav nav-pills">
+						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
+						<li role="presentation"><a href="#myCarousel"><strong id="subNavButtons">Projects</strong></a></li>
+						<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
+					</ul>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+</div> <!-- fecha a sub navigation Bar -->
+</div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
+</header>
 
 <!-- JUMBOTRON -->
 <div class="row " id="jumboTronProjetcBrowser">
@@ -25,7 +41,7 @@
 		<div class="container">
 			<div class="panel panel-primary panel-responsive" id="panelProjectsExplorer">
 				<!-- Default panel contents -->
-				<div class="panel-heading"><h3 class="panel-title text-center">Projects List</h3></div>
+				<div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects List </strong></h3></div>
 
 					<!-- Table
 						<!--<?php/*TODO: foreach a percorrer os projectos existentes*/;?> -->

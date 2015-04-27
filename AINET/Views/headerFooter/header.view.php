@@ -55,16 +55,12 @@
 	                <button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">Menu</button>
 	                <div class="collapse navbar-collapse navHeaderCollapse">
 	                    <ul class="nav navbar-nav navbar-right">
-	                        <li><a class="transition" href="index.php">Home</a></li>
-	                        <li><a href="#about">Highlights</a></li>
-	                        <li><a class="transition" href="projects.php">Projects</a></li>
-	                        <li><a href="#contact">Contact</a></li>
-	                        <li><a class="transition" href="#">Dashboard</a></li>
-	                        <li><a class="transition" href="login.php">Login</a></li>
+	                        <li><a class="transition" href="index.php"><strong>Home</strong></a></li>
+	                        <li><a class="transition" href="projects.php"><strong>Projects</strong></a></li>
+	                        <li><a class="transition" href="#"><strong>Dashboard</strong></a></li>
+	                        <li><a class="transition" href="login.php"><strong>Login</strong></a></li>
 	                    </ul>
 	                </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>

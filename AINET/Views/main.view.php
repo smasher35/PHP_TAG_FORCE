@@ -1,3 +1,21 @@
+<!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
+		<div class="row" id="subNavBar">
+			<div class="container">
+				<div class="col-md-3"></div>
+				<div class="col-md-6" align="center">
+					<ul class="nav nav-pills">
+						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
+						<li role="presentation"><a href="#myCarousel"><strong id="subNavButtons">Highlights</strong></a></li>
+						<li role="presentation"><a href="#recentProjects"><strong id="subNavButtons">Recent Projects</strong></a></li>
+						<li role="presentation"><a href="#editorChoice"><strong id="subNavButtons">Editor's Choice</strong></a></li>
+						<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
+					</ul>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div> <!-- fecha a sub navigation Bar -->
+	</div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
+</header>
 <!-- JUMBOTRON -->
 <div class="row" id="jumbotron">
 	<div class="container">
@@ -83,7 +101,7 @@
 </div>
 
 <!-- 3 COLUMN PROJETCS HIGHLIGHTS -->
-<div class="alt4">
+<div class="alt4" id="recentProjects">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
@@ -135,7 +153,7 @@
 
 
 <!-- 2 COLUMN IMAGE AND TEXT -->
-<div class="container padding">
+<div class="container padding" id="editorChoice">
 	<div class="row padding">
 		<div class="col-md-6">
 			<img src="Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
