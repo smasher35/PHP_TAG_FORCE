@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="navbar-brand">
-                        <a href="#">PHP TAG FORCE</a>
+                        <a href="index.php">PHP TAG FORCE</a>
                     </div>
 	                <div class="navbar-form">
 	                    <div class="container">

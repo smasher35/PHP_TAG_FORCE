@@ -1,5 +1,4 @@
 .alt1{
-    padding-top: 40px;
 	background-color: #ccc;
 	min-height: 400px;
 }
@@ -9,7 +8,7 @@
      min-height: 300px;
      color: #fff;
      text-align: center;
-    padding-bottom: 25px;
+     padding-bottom: 25px;
  }
 
 .alt3{
@@ -103,8 +102,9 @@
 }
 
 #logPanel {
-    padding-top: 1px;
+    padding-top: 2px;
     box-shadow: 8px 8px 6px #333;
+    margin-top: 20px;
 }
 
 #panelFooter{
@@ -144,4 +144,8 @@ html {
 
 #corpo{
     padding-top: 70px;
+}
+
+#panelProjectsExplorer{
+    margin-top: 30px;
 }

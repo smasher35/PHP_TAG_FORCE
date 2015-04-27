@@ -12,7 +12,6 @@
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
-				<div class="padding"></div>
 				<div class="panel panel-primary" id="logPanel">
 					<div class="panel-body">
 						<div class="page-header">
@@ -51,7 +50,7 @@
 
 					</div>
 					<div class="panel-footer">
-							<p id="panelFooter">Don't Have an Account? - <a href="signUp.php">Sign Up</a></p>
+							<p id="panelFooter">&copy PHP TAG Force - 2015</a></p>
 					</div>
 				</div>
 			</div>

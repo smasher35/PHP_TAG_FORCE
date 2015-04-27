@@ -23,7 +23,7 @@
 <div class="alt1">
 	<div class="row">
 		<div class="container">
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" id="panelProjectsExplorer">
 				<!-- Default panel contents -->
 				<div class="panel-heading"><h3 class="panel-title text-center">Projects List</h3></div>
 
