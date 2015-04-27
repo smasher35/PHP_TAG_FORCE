@@ -25,6 +25,7 @@
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
 
+<a class="padding" id="goTop"></a>
 <div class="alt1">
 	<div class="container">
 		<div class="row">

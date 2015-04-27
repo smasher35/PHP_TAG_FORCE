@@ -27,6 +27,7 @@
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
 
+<a class="padding" id="goTop"></a>
 <!-- JUMBOTRON -->
 <div class="row " id="jumboTronProjetcBrowser">
 	<div class="container">

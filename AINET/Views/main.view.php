@@ -5,7 +5,7 @@
 				<div class="col-md-6" align="center">
 					<ul class="nav nav-pills">
 						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
-						<li role="presentation"><a href="#myCarousel"><strong id="subNavButtons">Highlights</strong></a></li>
+						<li role="presentation"><a href="#highlights"><strong id="subNavButtons">Highlights</strong></a></li>
 						<li role="presentation"><a href="#recentProjects"><strong id="subNavButtons">Recent Projects</strong></a></li>
 						<li role="presentation"><a href="#editorChoice"><strong id="subNavButtons">Editor's Choice</strong></a></li>
 						<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
@@ -16,6 +16,8 @@
 		</div> <!-- fecha a sub navigation Bar -->
 	</div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
+
+<a class="padding" id="goTop"></a>
 <!-- JUMBOTRON -->
 <div class="row" id="jumbotron">
 	<div class="container">
@@ -26,6 +28,7 @@
 	</div>
 </div>
 
+<a class="padding" id="highlights"></a>
 <div class="row">
 <!-- IMAGES CAROUSEL SLIDER -->
 <div id="myCarousel" class="carousel slide">
@@ -100,8 +103,9 @@
 </div>
 </div>
 
+<a class="padding" id="recentProjects"></a>
 <!-- 3 COLUMN PROJETCS HIGHLIGHTS -->
-<div class="alt4" id="recentProjects">
+<div class="alt4">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
@@ -151,9 +155,9 @@
 	<a href="" id="projects"></a>
 </div>
 
-
+<a class="padding" id="editorChoice"></a>
 <!-- 2 COLUMN IMAGE AND TEXT -->
-<div class="container padding" id="editorChoice">
+<div class="container padding" >
 	<div class="row padding">
 		<div class="col-md-6">
 			<img src="Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
