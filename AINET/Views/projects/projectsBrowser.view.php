@@ -12,7 +12,7 @@
 
 
 <!-- JUMBOTRON -->
-<div class="jumbotron" id="jumboTronProjetcBrowser">
+<div class="row " id="jumboTronProjetcBrowser">
 	<div class="container">
 		<h1><b>Projects Browser!</b></h1>
 		<p>Listagem dos Projectos existentes em base de dados</p>
