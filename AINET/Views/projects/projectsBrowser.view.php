@@ -15,21 +15,21 @@
 <div class="row " id="jumboTronProjetcBrowser">
 	<div class="container">
 		<h1><b>Projects Browser!</b></h1>
-		<p>Listagem dos Projectos existentes em base de dados</p>
-		<p>Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>
+		<p class="lead">Listagem dos Projectos existentes em base de dados</p>
+		<p class="lead">Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>
 	</div>
 </div>
 
 <div class="alt1">
 	<div class="row">
 		<div class="container">
-			<div class="panel panel-primary" id="panelProjectsExplorer">
+			<div class="panel panel-primary panel-responsive" id="panelProjectsExplorer">
 				<!-- Default panel contents -->
 				<div class="panel-heading"><h3 class="panel-title text-center">Projects List</h3></div>
 
 					<!-- Table
 						<!--<?php/*TODO: foreach a percorrer os projectos existentes*/;?> -->
-					<table class="table">
+					<table class="table table-stripped table-hover table-responsive">
 						<tr>
 							<th class="text-center">Thumb</th>
 							<th class="text-center">Title</th>

@@ -1,9 +1,9 @@
 <!-- JUMBOTRON -->
 <div class="row" id="jumbotron">
 	<div class="container">
-		<h1><b>PROJECT AINET!</b></h1>
-		<p>Aqui há-de nascer o grandioso projecto dos fabulosos PHP TAG FORCE</p>
-		<p>Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>
+		<h1><strong>PROJECT AINET!</strong></h1>
+		<p class="lead">Aqui há-de nascer o grandioso projecto dos fabulosos PHP TAG FORCE</p>
+		<p class="lead">Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>
 		<p><a href="http://www.google.pt"  class="btn btn-primary btn-lg">Google Me</a></p>
 	</div>
 </div>
