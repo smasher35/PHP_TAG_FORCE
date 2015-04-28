@@ -12,9 +12,10 @@ spl_autoload_register();
 
 use Ainet\controllers\UserController;
 
-/*$controller = new UserController;
-$users = $controller->listUsers();
-$title = "List users";*/
+/*
+ * $controller = new UserController;
+ * $users = $controller->listUsers();
+*/
 
 $title = "PHP TAG FORCE - Home";
 

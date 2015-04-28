@@ -29,9 +29,7 @@
 </head>
 
 <body id="corpo">
-
 <header>
-
     <!-- NAVIGATION BAR -->
     <div class="navbar-fixed-top navbar-inverse" id="navegacao">
         <div class="container">
