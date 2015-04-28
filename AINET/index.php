@@ -10,7 +10,7 @@
 spl_autoload_register();
 
 
-use Ainet\controllers\UserController;
+use Ainet\controllers;
 
 /*
  * $controller = new UserController;
