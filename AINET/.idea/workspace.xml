@@ -4,8 +4,9 @@
     <list default="true" readonly="true" id="925539b3-8944-40f4-8931-1ede0f00a4b4" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/AuthenticationController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dasnBoards.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javaScript/smoothPageTransition.js" afterPath="$PROJECT_DIR$/javaScript/smoothPageTransition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/user.php" afterPath="$PROJECT_DIR$/Model/user.php" />
     </list>
     <ignored path="AINET.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2542373" vertical-offset="0" max-vertical-offset="708">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="320">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smoothPageTransition.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="smoothPageTransition.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javaScript/smoothPageTransition.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="540">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.40705562" vertical-offset="0" max-vertical-offset="737">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -158,7 +159,6 @@
         <option value="$PROJECT_DIR$/javaScript/goTopButton.js" />
         <option value="$PROJECT_DIR$/signUp.php" />
         <option value="$PROJECT_DIR$/Views/signup.view.php" />
-        <option value="$PROJECT_DIR$/javaScript/smoothPageTransition.js" />
         <option value="$PROJECT_DIR$/controllers/roleController.php" />
         <option value="$PROJECT_DIR$/Model/users.php" />
         <option value="$PROJECT_DIR$/Views/headerFooter/footer.view.php" />
@@ -178,6 +178,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/dasnBoards.php" />
         <option value="$PROJECT_DIR$/Model/user.php" />
+        <option value="$PROJECT_DIR$/javaScript/smoothPageTransition.js" />
       </list>
     </option>
   </component>
@@ -900,14 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javaScript/smoothPageTransition.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/headerFooter/header.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1420">
@@ -968,8 +961,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2542373" vertical-offset="0" max-vertical-offset="708">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="320">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javaScript/smoothPageTransition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40705562" vertical-offset="0" max-vertical-offset="737">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding />
         </state>
       </provider>

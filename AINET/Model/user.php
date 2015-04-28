@@ -12,5 +12,5 @@ namespace Ainet\Model;
 class user {
 
 
-	
+
 }

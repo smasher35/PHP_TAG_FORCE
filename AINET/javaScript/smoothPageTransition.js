@@ -8,12 +8,12 @@
  */
 $(document).ready(function() {
     $("body").css("display", "none");
-    $("body").fadeIn(1300);
+    $("body").fadeIn(650);
 
     $("a.transition").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-        $("body").fadeOut(1000, redirectPage);
+        $("body").fadeOut(500, redirectPage);
     });
 
     function redirectPage() {
