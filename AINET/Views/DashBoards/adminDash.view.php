@@ -28,6 +28,14 @@
 </header>
 
 <a class="padding" id="goTop"></a>
+<!-- JUMBOTRON -->
+<div class="row " id="jumboTronAccountsBrowser">
+	<div class="container">
+		<h1><b>Accounts - User Management!</b></h1>
+		<p class="lead">Gestão das contas e users</p>
+		<p><a href="#"  class="btn btn-primary btn-lg">New Account</a></p>
+	</div>
+</div>
 
 
 <?php require('Views/headerFooter/footer.view.php');?>
