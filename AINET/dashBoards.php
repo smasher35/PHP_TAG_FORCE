@@ -22,5 +22,5 @@ if(!$authController->isAuthenticated()) {
 
 */
 
-require('Dasboards\adminDash.view.php');
+require('Views\DashBoards\adminDash.view.php');
 

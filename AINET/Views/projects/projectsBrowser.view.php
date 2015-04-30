@@ -91,27 +91,27 @@
 				<div class="panel-footer" align="center">
 					<div class="btn-toolbar" role="toolbar" align="center">
 						<div class="btn-group" align="center">
-							<button type="button" class="btn btn-primary">First
-							<button type="button" class="btn btn-primary">Previous
+							<button type="button" class="btn btn-primary btn-sm ">First
+							<button type="button" class="btn btn-primary btn-sm">Previous
 
 						</div>
 
 						<div class="btn-group" align="center">
-							<button type="button" class="btn btn-primary">1
-							<button type="button" class="btn btn-primary">2
-							<button type="button" class="btn btn-primary">3
-							<button type="button" class="btn btn-primary">4
-							<button type="button" class="btn btn-primary">5
-							<button type="button" class="btn btn-primary">6
-							<button type="button" class="btn btn-primary">7
-							<button type="button" class="btn btn-primary">8
-							<button type="button" class="btn btn-primary">9
-							<button type="button" class="btn btn-primary">10
+							<button type="button" class="btn btn-primary btn-sm">1
+							<button type="button" class="btn btn-primary btn-sm">2
+							<button type="button" class="btn btn-primary btn-sm">3
+							<button type="button" class="btn btn-primary btn-sm">4
+							<button type="button" class="btn btn-primary btn-sm">5
+							<button type="button" class="btn btn-primary btn-sm">6
+							<button type="button" class="btn btn-primary btn-sm">7
+							<button type="button" class="btn btn-primary btn-sm">8
+							<button type="button" class="btn btn-primary btn-sm">9
+							<button type="button" class="btn btn-primary btn-sm">10
 						</div>
 
 						<div class="btn-group" align="center">
-							<button type="button" class="btn btn-primary">Next
-							<button type="button" class="btn btn-primary">Last
+							<button type="button" class="btn btn-primary btn-sm">Next
+							<button type="button" class="btn btn-primary btn-sm">Last
 						</div>
 					</div>
 				</div>
