@@ -66,7 +66,6 @@
 							<!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
 							<button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-lock"></span> Login</button>
 						</form>
-
 					</div>
 					<div class="panel-footer">
 							<p id="panelFooter">&copy PHP TAG Force - 2015</a></p>

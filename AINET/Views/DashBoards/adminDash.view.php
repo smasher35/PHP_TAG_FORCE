@@ -8,7 +8,6 @@
 -->
 <?php require('Views/headerFooter/header.view.php');?>
 
-
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 <div class="row" id="subNavBar">
 	<div class="container">
@@ -29,5 +28,6 @@
 </header>
 
 <a class="padding" id="goTop"></a>
+
 
 <?php require('Views/headerFooter/footer.view.php');?>

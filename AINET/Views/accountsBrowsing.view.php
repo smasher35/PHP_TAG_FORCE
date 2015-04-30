@@ -55,6 +55,7 @@
 						<th class="text-center">Position</th>
 						<th class="text-center">Website</th>
 						<th class="text-center">Show Projects</th>
+						<th class="text-center">Contact Me</th>
 
 					</tr>
 					<tr>
@@ -64,6 +65,8 @@
 						<td align="center">Student</td>
 						<td>-</td>
 						<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
+						<td align="center"><button class="btn btn-success small"><span class="glyphicon glyphicon-envelope"></span></button></td>
+
 
 					</tr>
 					<tr>
@@ -73,6 +76,8 @@
 						<td align="center">Student</td>
 						<td>-</td>
 						<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
+						<td align="center"><button class="btn btn-success small"><span class="glyphicon glyphicon-envelope"></span></button></td>
+
 
 					</tr>
 
@@ -83,6 +88,7 @@
 						<td align="center">Student</td>
 						<td>-</td>
 						<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
+						<td align="center"><button class="btn btn-success small"><span class="glyphicon glyphicon-envelope"></span></button></td>
 
 					</tr>
 
