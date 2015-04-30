@@ -63,7 +63,7 @@
 							<td>Computação Gráfica</td>
 							<td align="center">12.01.2015</td>
 							<td>Alfredo Rosa</td>
-							<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
+							<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
 
 						</tr>
 						<tr>
@@ -72,7 +72,7 @@
 							<td>Programação WEB</td>
 							<td align="center">13.01.2015</td>
 							<td>Paulo Penicheiro</td>
-							<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
+							<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
 
 						</tr>
 
@@ -82,7 +82,7 @@
 							<td>JOGOS PC</td>
 							<td align="center">12.01.2015</td>
 							<td>Ruben Miguel</td>
-							<td align="center"><button class="btn btn-default small"><span class="glyphicon glyphicon-book"></span></button></td>
+							<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
 
 						</tr>
 

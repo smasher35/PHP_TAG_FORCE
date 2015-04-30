@@ -49,6 +49,7 @@
 						<!--<?php/*TODO: foreach a percorrer as contas existentes - tabela e botões serão desenhados dentro do foreach*/;?> -->
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
+						<th class="text-center">Select</th>
 						<th class="text-center">User Name</th>
 						<th class="text-center">Institution</th>
 						<th class="text-center">Position</th>
@@ -57,6 +58,7 @@
 					</tr>
 
 					<tr>
+						<td align="center"><input type="checkbox"></td>
 						<td>Aplha.360@hotmail.com</td>
 						<td>IPL- Leiria</td>
 						<td align="center">Student</td>
@@ -70,6 +72,7 @@
 					</tr>
 
 					<tr>
+						<td align="center"><input type="checkbox"></td>
 						<td>smasher35@gmail.com</td>
 						<td>IPL - Leiria</td>
 						<td align="center">Student</td>
@@ -83,6 +86,7 @@
 					</tr>
 
 					<tr>
+						<td align="center"><input type="checkbox"></td>
 						<td>ruben.miguel@gmail.com</td>
 						<td>IPL - Leiria</td>
 						<td align="center">Student</td>

@@ -51,6 +51,7 @@
 				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1"><h5>&copy; PHP TAG FORCE 2015</h5> </button>
 				</hr>
 				<p><h5>Powered by:</h5></p>
+				<!-- class <i> é dos icons do Font Aewsome -->
 				<i class="fa fa-html5 fa-2x socialNetworksIcons"></i>
 				<i class="fa fa-css3 fa-2x socialNetworksIcons"></i>
 				<i class="fa fa-github-square fa-2x socialNetworksIcons"></i>
@@ -116,6 +117,10 @@
 			<?=require('javaScript/smoothScrolling.js');?>
 			//chama a função do botão lateral para ir para o topo
 			<?=require('javaScript/goTopButton.js');?>
+			//inicialização das tooltips por uma questão de performance e optimização
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip()
+			})
 		</script>
 	</body>
 </html>
