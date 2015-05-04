@@ -70,20 +70,19 @@
 
 							<div class="form-group">
 								<label for="inputInstitution">Institution</label>
+
+
 								<div class="input-group">
-									<!--<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-education"> <span class="caret"></span></span></span>-->
-									<div class="input-group-btn">
-										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <span class="glyphicon glyphicon-education"> <span class="caret"></span></button>
-										<ul class="dropdown-menu" role="menu">
-											<li><a href="#">Instituto Politécnico de Leiria - ESTG</a></li>
-											<li><a href="#">Instituto Politécnico de Leiria - ESECS</a></li>
-											<li><a href="#">Instituto Politécnico de Leiria - ESAD.CR</a></li>
-											<li><a href="#">Instituto Politécnico de Leiria - ESTM</a></li>
-											<li class="divider"></li>
-											<li><a href="#">Instituto Politécnico de Tomar</a></li>
-										</ul>
-									</div><!-- /btn-group -->
-									<input type="text" class="form-control" aria-label="..." value="Instituto Politécnico de Leiria - ESTG">
+
+									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-education"></span></span>
+									<select class="form-control">
+										<option>Instituto Politécnico de Leiria - ESTG</option>
+										<option>Instituto Politécnico de Leiria - ESECS</option>
+										<option>Instituto Politécnico de Leiria - ESAD.CR</option>
+										<option>Instituto Politécnico de Leiria - ESTM</option>
+										<option>Instituto Politécnico de Tomar</option>
+									</select>
+
 
 
 								</div>
