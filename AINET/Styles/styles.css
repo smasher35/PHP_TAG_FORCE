@@ -211,6 +211,10 @@ html {
 .col-md-6-rightAlign{
   text-align: right !important;
 }
+.col-md-8-centerAlign{
+    text-align: center !important;
+}
+
 
 .align-center{
     text-align: center !important;

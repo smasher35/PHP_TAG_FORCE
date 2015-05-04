@@ -11,17 +11,17 @@
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 <div class="row" id="subNavBar">
 	<div class="container">
-		<div class="center">
-			<div class="col-md-3"></div>
-			<div class="col-md-6">
-				<ul class="nav nav-pills subNavButtons">
-					<li role="presentation"><a href="addAccount.php"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a></li>
-					<li role="presentation"><a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove Selected</a></li>
-					<li role="presentation"><a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Disable Selected</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3"></div>
+		<div class="col-md-2"></div>
+		<div class="col-md-8 col-md-8-centerAlign">
+
+					<ul class="nav nav-pills subNavButtons ">
+							<li role="presentation"><a href="addAccount.php"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a></li>
+							<li role="presentation"><a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove Selected</a></li>
+							<li role="presentation"><a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Disable Selected</a></li>
+					</ul>
+
 		</div>
+		<div class="col-md-2"></div>
 	</div>
 
 </div> <!-- fecha a sub navigation Bar -->
