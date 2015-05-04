@@ -7,7 +7,7 @@
 	 */
 -->
 <?php require('Views/headerFooter/header.view.php');?>
-<!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
+<!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias-->
 <div class="row" id="subNavBar">
 	<div class="container">
 		<div class="center">
@@ -21,7 +21,8 @@
 			<div class="col-md-4"></div>
 		</div>
 	</div>
-</div> <!-- fecha a sub navigation Bar -->
+
+</div> <!--fecha a sub navigation Bar -->
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
 
@@ -115,9 +116,11 @@
 								<label> <input type="checkbox" id="author" name="author">Author </label>
 							</div>
 							<hr>
-							<a class="btn btn-success" href="dashBoards.php"><span class="glyphicon glyphicon-arrow-left" ></span> Cancel</a>
-							<!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
-							<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span> Submit</button>
+							<div class="col-md-6-rightAlign">
+								<a class="btn btn-success" href="dashBoards.php"><span class="glyphicon glyphicon-arrow-left" ></span> Cancel</a>
+								<!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
+								<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span> Submit</button>
+							</div>
 						</form>
 					</div>
 					<div class="panel-footer">

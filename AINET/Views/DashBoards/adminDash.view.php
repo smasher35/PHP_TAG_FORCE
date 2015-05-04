@@ -14,17 +14,19 @@
 		<div class="center">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
-				<ul class="nav nav-pills">
-					<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
-					<li role="presentation"><a href="#userManagement"><strong id="subNavButtons">User Managment</strong></a></li>
-					<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
+				<ul class="nav nav-pills subNavButtons">
+					<li role="presentation"><a href="addAccount.php"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a></li>
+					<li role="presentation"><a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove Selected</a></li>
+					<li role="presentation"><a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Disable Selected</a></li>
 				</ul>
 			</div>
 			<div class="col-md-3"></div>
 		</div>
 	</div>
+
 </div> <!-- fecha a sub navigation Bar -->
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
+
 </header>
 
 <a class="padding" id="goTop"></a>
@@ -43,9 +45,11 @@
 			<div class="row padding-Top">
 				<div class="col-md-6"></div>
 				<div class="col-md-6 col-md-6-rightAlign" >
+					<!--
 					<a href="addAccount.php"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
 					<a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove Selected</a>
 					<a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Disable Selected</a>
+					-->
 				</div>
 			</div>
 

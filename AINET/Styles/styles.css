@@ -1,6 +1,7 @@
 .alt1{
 	background-color: #ccc;
 	min-height: 400px;
+    margin-top: 0px;
 }
 
 .alt2{
@@ -215,4 +216,7 @@ html {
     text-align: center !important;
 }
 
-
+.subNavButtons{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
