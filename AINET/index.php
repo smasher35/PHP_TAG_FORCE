@@ -14,7 +14,7 @@ use Ainet\controllers;
 
 /*
  * $controller = new UserController;
- * $users = $controller->listUsers();
+ * $accounts = $controller->listUsers();
 */
 
 $title = "PHP TAG FORCE - Home";

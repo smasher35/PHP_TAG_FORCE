@@ -13,8 +13,8 @@ spl_autoload_register();
 use Ainet\controllers;
 
 /*$controller = new UserController;
-$users = $controller->listUsers();
-$title = "List users";*/
+$accounts = $controller->listUsers();
+$title = "List accounts";*/
 
 $title = "PHP TAG FORCE - Accounts Browsing";
 

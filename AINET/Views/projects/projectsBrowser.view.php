@@ -63,8 +63,7 @@
 							<td>Computação Gráfica</td>
 							<td align="center">12.01.2015</td>
 							<td>Alfredo Rosa</td>
-							<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
-
+							<td align="center"><a href="projectTechnicalSheet.php" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-book"></span></a></td>
 						</tr>
 						<tr>
 							<td align="center">Img.png</td>

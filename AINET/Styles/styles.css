@@ -25,6 +25,14 @@
     min-height: 500px;
 }
 
+.alt5{
+    background-color: #333;
+    max-height: 450px;
+    color: #fff;
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
 #jumbotron{
      background: url('../Images/php-code_2.png') fixed;
      min-height: 300px;
@@ -36,12 +44,20 @@
     font-weight: 500px;
  }
 
+#jumbotronSheet{
+    min-height: 150px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    color: #080808;
+}
+
 #jumboTronProjetcBrowser{
      background: url('../Images/php-code_2.png') fixed;
      min-height: 250px;
      padding-top: 10px;
      max-height: 1080px;
      max-width: 1920px;
+
  }
 
 #jumboTronAccountsBrowser{
@@ -61,6 +77,15 @@
 .padding{
 	padding-top: 80px;
 	padding-bottom: 50px;
+
+}
+
+.padding-Top{
+    padding-top: 10px;
+}
+
+.padding-Bottom{
+    padding-bottom: 30px;
 
 }
 
@@ -169,7 +194,25 @@ html {
     color: #ffffff;
 }
 
-.center {
-    margin: 0 auto;
-    width: 80%;
+
+
+.jumbotron{
+
+    padding-top: 5px;
+    padding-bottom: 30px;
 }
+
+.panel{
+
+    margin-top: 10px !important;
+}
+
+.col-md-6-rightAlign{
+  text-align: right !important;
+}
+
+.align-center{
+    text-align: center !important;
+}
+
+
