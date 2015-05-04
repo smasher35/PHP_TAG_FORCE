@@ -26,4 +26,4 @@ list($user,$errors)=$controller->addUser();
 $title = "Add Account";
 
 
-require('Views\accounts\addAccount.php');
+require('Views\accounts\addAccount.view.php');
