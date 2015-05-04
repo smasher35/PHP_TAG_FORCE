@@ -12,4 +12,4 @@
 
 
 $title = "PHP TAG FORCE - Projects Browser";
-require('Views/projects/projectsBrowser.view.php');
+require('Views/projects/projectsBrowser2.view.php');

@@ -1,7 +1,7 @@
 .alt1{
 	background-color: #ccc;
 	min-height: 400px;
-    margin-top: 0px;
+
 }
 
 .alt2{
@@ -34,6 +34,11 @@
     padding-bottom: 25px;
 }
 
+.alt6{
+    background-color: #ffffff;
+    min-height: 400px;
+
+}
 #jumbotron{
      background: url('../Images/php-code_2.png') fixed;
      min-height: 300px;
@@ -92,10 +97,8 @@
 
 #navegacao{
     padding-bottom: 0px;
-/*  min-height: 100px;
-    max-height:50px;*/
     min-height: 50px;
-    max-height:200px;
+    max-height: 70px;
 }
 
 
@@ -215,9 +218,12 @@ html {
     text-align: center !important;
 }
 
-
 .align-center{
     text-align: center !important;
+}
+
+.align-right{
+    text-align: right !important;
 }
 
 .subNavButtons{
