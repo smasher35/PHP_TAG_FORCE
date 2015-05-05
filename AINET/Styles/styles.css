@@ -1,3 +1,4 @@
+
 .alt1{
 	background-color: #ccc;
 	min-height: 400px;
@@ -20,7 +21,7 @@
 }
 
 .alt4{
-    background: url('../Images/php-code_2.png') fixed;
+    background: url('../Images/05.jpg') fixed;
     padding-top: 40px;
     background-color: #ccc;
     min-height: 500px;
@@ -35,17 +36,19 @@
 }
 
 .alt6{
+    background: url('../Images/03.jpg') fixed;
     background-color: #ffffff;
     min-height: 400px;
 
 }
 #jumbotron{
-     background: url('../Images/php-code_2.png') fixed;
-     min-height: 300px;
+    background: url('../Images/04.jpg') fixed;
+     min-height: 400px;
      padding-top: 45px;
      max-height: 798px;
      max-width: 1920px;
     margin-bottom: 0px;
+    color: #9acfea;
     font-size: larger;
     font-weight: 500px;
  }
@@ -226,7 +229,34 @@ html {
     text-align: right !important;
 }
 
+.align-left{
+    text-align: leftt !important;
+}
+
 .subNavButtons{
     padding-bottom: 5px;
     padding-top: 5px;
+}
+
+#tf-contact{
+    padding: 80px 0;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+
+.line {
+    border-top: 4px solid #fcac45;
+    height: 10px;
+    width: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
 }

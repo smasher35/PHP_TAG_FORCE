@@ -1,28 +1,16 @@
 <div class="alt2">
 		<footer>
-<!-- CONTACT US -->
+			<!-- THE CREW -->
 			<div class="col-md-3">
-				<p id="contact"><h4>Contact Us </h4></p>
-				<form>
-					<div class="form-group">
-						<label for="inputName">Name</label>
-						<input type="name" class="form-control" id="inputName" placeholder="Enter name">
-					</div>
-					<div class="form-group">
-						<label for="inputEmail1">Email address</label>
-						<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
-					</div>
-					<div class="form-group">
-						<label for="inputComment">Message:</label>
-						<textarea class="form-control" rows="5" id="inputComment" placeholder="write your message"></textarea>
-					</div>
-					<!-- Sumit Button -->
-					<button class="btn btn-success btn-block"><span class="glyphicon glyphicon-circle-arrow-right"> Submit</span></button>
-				</form>
+				<p><h5>The Crew</h5></p>
+				</hr>
+				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1"><h5>&copy; PHP TAG FORCE 2015</h5> </button>
+				</hr>
 			</div>
+
 <!-- SOCIAL NETWORKS -->
 			<div class="col-md-3">
-				<p><h4>Follow us on Social Networks</h4></p>
+				<p><h5>Follow us on Social Networks</h5></p>
 				<a href="#"><i class="fa fa-facebook-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-twitter-square fa-2x socialNetworksIcons"></i></a>
 				<a href="#"><i class="fa fa-google-plus-square fa-2x socialNetworksIcons"></i></a>
@@ -32,7 +20,7 @@
 			</div>
 <!-- THE CREW -->
 			<div class="col-md-3">
-				<p><h4>Newsletter</h4></p>
+				<p><h5>Newsletter</h5></p>
 				<br>
 				<div class="form-group">
 					<label for="inputEmail1">Subscribe our Monthly Newsletter</label>
@@ -44,18 +32,15 @@
 					</div>
 				</div>
 			</div>
-<!-- THE CREW -->
+<!-- POWERED BY -->
 			<div class="col-md-3">
-				<p><h4>The Crew</h4></p>
-				</hr>
-				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-1"><h5>&copy; PHP TAG FORCE 2015</h5> </button>
-				</hr>
 				<p><h5>Powered by:</h5></p>
 				<!-- class <i> é dos icons do Font Aewsome -->
 				<i class="fa fa-html5 fa-2x socialNetworksIcons"></i>
 				<i class="fa fa-css3 fa-2x socialNetworksIcons"></i>
 				<i class="fa fa-github-square fa-2x socialNetworksIcons"></i>
 				<i class="fa fa-windows fa-2x socialNetworksIcons"></i>
+			</div>
 <!-- BOTÃO GO TOP -->
 				<br/> <a href="#goTop" class="go-top"><h3 class="glyphicon glyphicon-chevron-up"></h3></a>
 			</div>

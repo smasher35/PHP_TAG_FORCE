@@ -82,9 +82,6 @@
 										<option>Instituto Politécnico de Leiria - ESTM</option>
 										<option>Instituto Politécnico de Tomar</option>
 									</select>
-
-
-
 								</div>
 								<label for="inputPassword1">Position </label>
 								<div class="input-group">
