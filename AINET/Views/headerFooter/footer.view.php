@@ -67,12 +67,12 @@
 
 								<tr>
 									<td><img src="Images/crew/ruben.jpg" class="img-circle img-responsive" id="imgTable"></td>
-									<td>Ruben Miguel</td>
+									<td>Ruben Miguel<br>2130664</td>
 								</tr>
 
 								<tr>
 									<td><img src="Images/crew/alfredo.jpg" class="img-circle img-responsive" id="imgTable"></td>
-									<td>Alfredo Rosa</td>
+									<td>Alfredo Rosa<br>2130647</td>
 								</tr>
 
 							</table>

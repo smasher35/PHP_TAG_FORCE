@@ -19,7 +19,7 @@
 </header>
 
 <a class="padding" id="goTop"></a>
-<div class="alt6">
+<div class="alt5">
 	<!-- Page Content -->
 	<div class="container">
 		<!-- Page Heading -->

@@ -1,17 +1,18 @@
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 		<div class="row" id="subNavBar">
 			<div class="container">
-				<div class="col-md-3"></div>
-				<div class="col-md-6" align="center">
+				<div class="col-md-2"></div>
+				<div class="col-md-8" align="center">
 					<ul class="nav nav-pills">
 						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
 						<li role="presentation"><a href="#highlights"><strong id="subNavButtons">Highlights</strong></a></li>
 						<li role="presentation"><a href="#recentProjects"><strong id="subNavButtons">Recent Projects</strong></a></li>
 						<li role="presentation"><a href="#editorChoice"><strong id="subNavButtons">Editor's Choice</strong></a></li>
+						<li role="presentation"><a href="#theTeam"><strong id="subNavButtons">The Crew</strong></a></li>
 						<li role="presentation"><a href="#contactUs"><strong id="subNavButtons">Contact</strong></a></li>
 					</ul>
 				</div>
-				<div class="col-md-3"></div>
+				<div class="col-md-2"></div>
 			</div>
 		</div> <!-- fecha a sub navigation Bar -->
 	</div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
@@ -109,61 +110,116 @@
 </div>
 </div>
 
-<!-- 3 COLUMN PROJETCS HIGHLIGHTS
- =========================================================================-->
+<!-- RECENT PROJECTS
+	==========================================-->
+
 <a class="padding" id="recentProjects"></a>
-<div class="alt4">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-primary" id="pan1">
-					<div class="panel-body">
-					<h2 class="text-center">Projecto 1</h2>
-					<p class="text-justify">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-					<a href="#" class="btn btn-info btn-block">Tell Me More...</a>
-				</div></div>
+<div class="alt5">
+	<div id="tf-services" class="text-center">
+		<div class="container">
+			<div class="center">
+				<h2>Highlights <strong>Recent Projects</strong></h2>
+				<div class="line">
+					<hr>
+				</div>
+				<div class="clearfix"></div>
+				<small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>
 			</div>
-			<div class="col-md-4">
-				<div class="panel panel-primary" id="pan1">
-					<div class="panel-body">
-						<h2 class="text-center">Projecto 2</h2>
-						<p class="text-justify">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<a href="#" class="btn btn-info btn-block">Tell Me More...</a>
-				</div></div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-primary" id="pan1">
-					<div class="panel-body">
-						<h2 class="text-center">Projecto 3</h2>
-						<p class="text-justify">	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-						<a href="#" class="btn btn-info btn-block" >Tell Me More...</a>
-				</div></div>
+			<div class="space"></div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 service">
+					<i class="fa fa-desktop"></i>
+					<h4><strong>Project 1</strong></h4>
+					<a href="#" class="btn btn-primary button-padding">View Project</a>
+					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+				</div>
+
+				<div class="col-md-3 col-sm-6 service">
+					<i class="fa fa-mobile"></i>
+					<h4><strong>Project 2</strong></h4>
+					<a href="#" class="btn btn-primary button-padding">View Project</a>
+					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+				</div>
+
+				<div class="col-md-3 col-sm-6 service">
+					<i class="fa fa-camera"></i>
+					<h4><strong>Project 3</strong></h4>
+					<a href="#" class="btn btn-primary button-padding">View Project</a>
+					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+				</div>
+
+				<div class="col-md-3 col-sm-6 service">
+					<i class="fa fa-bullhorn"></i>
+					<h4><strong>Project 4</strong></h4>
+					<a href="#" class="btn btn-primary button-padding">View Project</a>
+					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<a href="" id="projects"></a>
 </div>
+
+<a class="padding" id="theTeam"></a>
+	<!-- Team Page
+		==========================================-->
+	<div id="tf-team" class="text-center list-inline">
+		<div class="alt7">
+		<div class="overlay">
+			<div class="container">
+				<div class="center">
+					<h2>Meet <strong>The Crew</strong></h2>
+					<div class="line">
+						<hr>
+					</div>
+					<div id="team">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="thumbnail">
+										<img src="Images/crew/paulo.jpg" alt="..." class="img-circle team-img">
+										<div class="caption">
+											<h3>Paulo Penicheiro</h3>
+											<p>PHP TAG FORCE - CEO / Founder</p>
+											<p>Instituto Politécnico de Leiria - ESTG.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<div class="thumbnail">
+										<img src="Images/crew/ruben.jpg" alt="..." class="img-circle team-img">
+										<div class="caption">
+											<h3>Ruben Miguel</h3>
+											<p>PHP TAG FORCE - LAYOUT GURU</p>
+											<p>Instituto Politécnico de Leiria - ESTG.</p>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-md-4">
+									<div class="thumbnail">
+										<img src="Images/crew/alfredo.jpg" alt="..." class="img-circle team-img">
+										<div class="caption">
+											<h3>Alfredo Rosa</h3>
+											<p>PHP TAG FORCE - DATABASE MASTER - BUG SNATCHER</p>
+											<p>Instituto Politécnico de Leiria - ESTG.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
 
 <!-- EDITOR'S CHOICE - 2 COLUMNS
  =====================================================================================-->
+<div class="alt5">
 <a class="padding" id="editorChoice"></a>
 <div class="container padding" >
 	<div class="row padding">
@@ -215,6 +271,7 @@
 		</div>
 	</div>
 	<hr />
+</div>
 </div>
 
 <!-- Contact Section
