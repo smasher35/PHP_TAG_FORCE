@@ -8,7 +8,7 @@
 						<li role="presentation"><a href="#highlights"><strong id="subNavButtons">Highlights</strong></a></li>
 						<li role="presentation"><a href="#recentProjects"><strong id="subNavButtons">Recent Projects</strong></a></li>
 						<li role="presentation"><a href="#editorChoice"><strong id="subNavButtons">Editor's Choice</strong></a></li>
-						<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
+						<li role="presentation"><a href="#contactUs"><strong id="subNavButtons">Contact</strong></a></li>
 					</ul>
 				</div>
 				<div class="col-md-3"></div>
@@ -17,9 +17,11 @@
 	</div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
 
+<!-- JUMBOTRON
+============================================================================-->
 <a class="padding" id="goTop"></a>
 <div class="alt1">
-<!-- JUMBOTRON -->
+
 	<div class="row" id="jumbotron">
 		<div class="container">
 			<h1><strong>PROJECT AINET!</strong></h1>
@@ -30,9 +32,11 @@
 	</div>
 </div>
 
+<!-- IMAGES CAROUSEL SLIDER
+ ============================================================================-->
 <a class="padding" id="highlights"></a>
 <div class="row">
-<!-- IMAGES CAROUSEL SLIDER -->
+
 <div id="myCarousel" class="carousel slide">
 	<ol class="carousel-indicators">
 		<li data-target="#myCarousel" data-slide-to ="0" class="active"></li>
@@ -105,8 +109,9 @@
 </div>
 </div>
 
+<!-- 3 COLUMN PROJETCS HIGHLIGHTS
+ =========================================================================-->
 <a class="padding" id="recentProjects"></a>
-<!-- 3 COLUMN PROJETCS HIGHLIGHTS -->
 <div class="alt4">
 	<div class="container">
 		<div class="row">
@@ -157,8 +162,10 @@
 	<a href="" id="projects"></a>
 </div>
 
+<!-- EDITOR'S CHOICE - 2 COLUMNS
+ =====================================================================================-->
 <a class="padding" id="editorChoice"></a>
-<!-- 2 COLUMN IMAGE AND TEXT -->
+
 <div class="container padding" >
 	<div class="row padding">
 		<div class="col-md-6">
@@ -213,6 +220,7 @@
 
 <!-- Contact Section
     ==========================================-->
+<a id="contactUs"></a>
 <div class="alt6">
 	<div id="tf-contact" class="text-center">
 		<div class="container">

@@ -43,14 +43,14 @@
 }
 #jumbotron{
     background: url('../Images/04.jpg') fixed;
-     min-height: 400px;
-     padding-top: 45px;
-     max-height: 798px;
-     max-width: 1920px;
+    min-height: 400px;
+    padding-top: 45px;
+    max-height: 798px;
+    max-width: 1920px;
     margin-bottom: 0px;
     color: #9acfea;
     font-size: larger;
-    font-weight: 500px;
+    font-weight: 100;
  }
 
 #jumbotronSheet{
