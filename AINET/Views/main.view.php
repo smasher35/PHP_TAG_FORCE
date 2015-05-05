@@ -162,8 +162,8 @@
 <a class="padding" id="theTeam"></a>
 	<!-- Team Page
 		==========================================-->
-	<div id="tf-team" class="text-center list-inline">
-		<div class="alt7">
+<div id="tf-team" class="text-center list-inline">
+	<div class="alt7">
 		<div class="overlay">
 			<div class="container">
 				<div class="center">
@@ -172,49 +172,46 @@
 						<hr>
 					</div>
 					<div id="team">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="thumbnail">
-										<img src="Images/crew/paulo.jpg" alt="..." class="img-circle team-img">
-										<div class="caption">
-											<h3>Paulo Penicheiro</h3>
-											<p>PHP TAG FORCE - CEO / Founder</p>
-											<p>Instituto Politécnico de Leiria - ESTG.</p>
-										</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="thumbnail">
+									<img src="Images/crew/paulo.jpg" alt="..." class="img-circle team-img">
+									<div class="caption">
+										<h3>Paulo Penicheiro</h3>
+										<p>PHP TAG FORCE - CEO / Founder</p>
+										<p>Instituto Politécnico de Leiria - ESTG.</p>
 									</div>
 								</div>
+							</div><!-- col-md-4 -->
 
-								<div class="col-md-4">
-									<div class="thumbnail">
-										<img src="Images/crew/ruben.jpg" alt="..." class="img-circle team-img">
-										<div class="caption">
-											<h3>Ruben Miguel</h3>
-											<p>PHP TAG FORCE - LAYOUT GURU</p>
-											<p>Instituto Politécnico de Leiria - ESTG.</p>
-										</div>
+							<div class="col-md-4">
+								<div class="thumbnail">
+									<img src="Images/crew/ruben.jpg" alt="..." class="img-circle team-img">
+									<div class="caption">
+										<h3>Ruben Miguel</h3>
+										<p>PHP TAG FORCE - LAYOUT GURU</p>
+										<p>Instituto Politécnico de Leiria - ESTG.</p>
 									</div>
 								</div>
+							</div><!-- col-md-4 -->
 
-
-								<div class="col-md-4">
-									<div class="thumbnail">
-										<img src="Images/crew/alfredo.jpg" alt="..." class="img-circle team-img">
-										<div class="caption">
-											<h3>Alfredo Rosa</h3>
-											<p>PHP TAG FORCE - DATABASE MASTER - BUG SNATCHER</p>
-											<p>Instituto Politécnico de Leiria - ESTG.</p>
-										</div>
+							<div class="col-md-4">
+								<div class="thumbnail">
+									<img src="Images/crew/alfredo.jpg" alt="..." class="img-circle team-img">
+									<div class="caption">
+										<h3>Alfredo Rosa</h3>
+										<p>PHP TAG FORCE - DATABASE MASTER - BUG SNATCHER</p>
+										<p>Instituto Politécnico de Leiria - ESTG.</p>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
-		</div>
-	</div>
-</div>
+								</div><!-- thumbnail -->
+							</div><!-- col-md-4 -->
+						</div><!-- row -->
+					</div><!-- team -->
+				</div><!-- center -->
+			</div><!-- container -->
+		</div><!-- overlay -->
+	</div><!-- alt7 -->
+</div> <!-- tf-team -->
 
 
 <!-- EDITOR'S CHOICE - 2 COLUMNS
