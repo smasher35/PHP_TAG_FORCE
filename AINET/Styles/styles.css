@@ -1,16 +1,18 @@
 
 .alt1{
+    /* main jumbotron */
 	background-color: #ccc;
 	min-height: 400px;
 
 }
 
 .alt2{
+    /* footer section */
      background-color: #333;
-     min-height: 300px;
+     min-height: 500px;
      color: #fff;
      text-align: center;
-     padding-bottom: 25px;
+
  }
 
 .alt3{
@@ -21,6 +23,7 @@
 }
 
 .alt4{
+    /* projects highlights */
     background: url('../Images/05.jpg') fixed;
     padding-top: 40px;
     background-color: #ccc;
@@ -36,9 +39,12 @@
 }
 
 .alt6{
+    /* contacts section */
     background: url('../Images/03.jpg') fixed;
     background-color: #ffffff;
-    min-height: 400px;
+    min-height: 500px;
+    padding-bottom: 150px;
+    margin-bottom: 50px;
 
 }
 #jumbotron{
@@ -83,6 +89,10 @@
     margin-top: 40px;
 }
 
+
+/* ==============================
+ * PADDINGS
+ *================================ */
 .padding{
 	padding-top: 80px;
 	padding-bottom: 50px;
@@ -90,12 +100,17 @@
 }
 
 .padding-Top{
-    padding-top: 10px;
+    padding-top: 40px;
 }
 
 .padding-Bottom{
-    padding-bottom: 30px;
+    padding-bottom:60px;
 
+}
+
+.button-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #navegacao{
@@ -230,7 +245,7 @@ html {
 }
 
 .align-left{
-    text-align: leftt !important;
+    text-align: left !important;
 }
 
 .subNavButtons{
@@ -240,6 +255,7 @@ html {
 
 #tf-contact{
     padding: 80px 0;
+    padding-bottom: 90px;
 }
 
 .clearfix:after {
@@ -259,4 +275,15 @@ html {
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
+}
+
+.tf-btn{
+    float: right;
+    background: #FCAC45;
+    border: 0;
+    border-radius: 0;
+    padding: 40px 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+
 }

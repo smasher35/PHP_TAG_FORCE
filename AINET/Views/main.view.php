@@ -165,7 +165,6 @@
 <!-- EDITOR'S CHOICE - 2 COLUMNS
  =====================================================================================-->
 <a class="padding" id="editorChoice"></a>
-
 <div class="container padding" >
 	<div class="row padding">
 		<div class="col-md-6">
@@ -224,7 +223,7 @@
 <div class="alt6">
 	<div id="tf-contact" class="text-center">
 		<div class="container">
-			<div class="row">
+			<div class="row padding-Bottom">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="section-title center">
 						<h2>Feel free to <strong>contact us</strong></h2>
@@ -239,25 +238,31 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="align-left" for="inputEmail1">Email address</label>
+									<div class="text-left">
+										<label class="align-left" for="inputEmail1">Email address</label>
+									</div>
 									<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label for="inputName">Name</label>
+									<div class="text-left">
+										<label for="inputName">Name</label>
+									</div>
 									<input type="password" class="form-control" id="inputName" placeholder="Name">
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="exampleInputEmail1">Message</label>
+							<div class="text-left">
+								<label for="exampleInputEmail1">Message</label>
+							<div class="text-left">
 							<textarea class="form-control" rows="3"></textarea>
 						</div>
-
-						<button type="submit" class="btn tf-btn btn-success">Submit</button>
+						<div class="text-right button-padding">
+							<button type="submit" class="btn tf-btn btn-success">Submit</button>
+						</div>
 					</form>
-
 				</div>
 			</div>
 
