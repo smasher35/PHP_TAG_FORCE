@@ -218,8 +218,16 @@
  =====================================================================================-->
 <div class="alt5">
 <a class="padding" id="editorChoice"></a>
+	<div class="center">
+		<h2 class="text-center">Editor's <strong>Choice</strong></h2>
+		<div class="line">
+			<hr>
+		</div>
+		<div class="clearfix"></div>
+	</div>
 <div class="container padding" >
 	<div class="row padding">
+
 		<div class="col-md-6">
 			<img src="Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
 		</div>
