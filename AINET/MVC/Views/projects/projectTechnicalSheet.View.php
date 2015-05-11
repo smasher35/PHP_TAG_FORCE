@@ -6,7 +6,7 @@
 	 * Time: 15:55
 	 */
 -->
-<?php require('Views/headerFooter/header.view.php');?>
+<?php require('MVC/Views/headerFooter/header.view.php');?>
 
 <div class="alt5">
 	<div class="row" id="jumbotronSheet" align="center">
@@ -54,5 +54,5 @@
 
 
 
-<?php require('Views/headerFooter/footer.view.php');?>
+<?php require('MVC/Views/headerFooter/footer.view.php');?>
 

@@ -7,9 +7,9 @@
  */
 
 
-
+require 'bootStrap.php';
 
 
 
 $title = "PHP TAG FORCE - Projects Browser";
-require('Views/projects/projectsBrowser2.view.php');
+require('MVC/Views/projects/projectsBrowser2.view.php');

@@ -6,7 +6,7 @@
 	* Time: 15:02
 	*/
 -->
-<?php require('Views/headerFooter/header.view.php');?>
+<?php require('MVC/Views/headerFooter/header.view.php');?>
 
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 <div class="row" id="subNavBar">
@@ -144,4 +144,4 @@
 	</div>
 </div>
 
-<?php require('Views/headerFooter/footer.view.php');?>
+<?php require('MVC/Views/headerFooter/footer.view.php');?>

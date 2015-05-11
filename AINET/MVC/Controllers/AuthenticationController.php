@@ -1,4 +1,4 @@
-<?php namespace Ainet\controllers;
+<?php namespace AINET\MVC\controllers;
 
 use Ainet\Support\InputHelper;
 

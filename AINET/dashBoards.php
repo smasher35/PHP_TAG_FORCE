@@ -6,9 +6,9 @@
  * Time: 14:40
  */
 
-spl_autoload_register();
+require 'bootstrap.php';
 
-use Ainet\controllers;
+use AINET\MVC\controllers;
 
 /*
 $authController = new AuthenticationController();
@@ -22,5 +22,5 @@ if(!$authController->isAuthenticated()) {
 
 */
 
-require('Views\DashBoards\adminDash.view.php');
+require('MVC/Views\DashBoards\adminDash.view.php');
 

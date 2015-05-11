@@ -6,7 +6,7 @@
 	 * Time: 12:14
 	 */
  -->
-<?php require('Views/headerFooter/header.view.php');?>
+<?php require('MVC/Views/headerFooter/header.view.php');?>
 
 <div class="alt1">
 	<div class="container">
@@ -81,5 +81,5 @@
 	</div>
 
 <div class="alt2">
-	<?=require('Views/headerFooter/footer.view.php');?>
+	<?=require('MVC/Views/headerFooter/footer.view.php');?>
 </div>

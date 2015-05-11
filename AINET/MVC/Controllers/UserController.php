@@ -1,4 +1,4 @@
-<?php
+<?php namespace AINET\MVC\Controllers;
 /**
  * Created by PhpStorm.
  * Group: PHP TAG FORCE
@@ -7,5 +7,8 @@
  * Time: 15:47
  */
 
-namespace Ainet\controllers;
+Class UserController
+{
+
+}
 

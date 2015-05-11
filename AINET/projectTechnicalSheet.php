@@ -6,6 +6,7 @@
  * Time: 15:56
  */
 
+require 'bootstrap.php';
 
 $title = "PHP TAG FORCE - Projects Technical Sheet";
-require('Views/projects/projectTechnicalSheet.View.php');
+require('MVC/Views/projects/projectTechnicalSheet.View.php');

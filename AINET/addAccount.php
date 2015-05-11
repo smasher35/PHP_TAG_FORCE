@@ -6,10 +6,10 @@
  * Time: 10:48
  */
 
-spl_autoload_register();
+require 'bootstrap.php';
 
-use Ainet\controllers\UserController;
-use Ainet\Controllers\AuthenticationController;
+use AINET\MVC\Controllers\UserController;
+use AINET\MVC\Controllers\AuthenticationController;
 
 /*
 //valida autenticação no site
@@ -26,4 +26,4 @@ list($user,$errors)=$controller->addUser();
 $title = "Add Account";
 
 
-require('Views\accounts\addAccount.view.php');
+require('MVC/Views\accounts\addAccount.view.php');

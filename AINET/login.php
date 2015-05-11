@@ -8,9 +8,9 @@
 
 require 'bootstrap.php';
 
-use AINET\controllers\AuthenticationController;
+use AINET\MVC\Controllers\AuthenticationController;
 
 
 
 $title = "PHP TAG FORCE - Login";
-require('Views/login.view.php');
+require('MVC/Views/login.view.php');

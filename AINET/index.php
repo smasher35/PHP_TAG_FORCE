@@ -7,7 +7,6 @@
  * Time: 15:47
  */
 
-
 /*
 	 *Roles:
 	 *1 - Administrador
@@ -17,8 +16,7 @@
 
 require 'bootstrap.php';
 
-
-use Ainet\controllers;
+use AINET\MVC\controllers;
 
 /*
  * $controller = new UserController;
@@ -27,6 +25,6 @@ use Ainet\controllers;
 
 $title = "PHP TAG FORCE - Home";
 
-require('Views/headerFooter/header.view.php');
-require('Views/main.view.php');
-require('Views/headerFooter/footer.view.php');
+require('MVC/Views/headerFooter/header.view.php');
+require('MVC/Views/main.view.php');
+require('MVC/Views/headerFooter/footer.view.php');

@@ -10,7 +10,7 @@
 spl_autoload_register();
 
 
-use Ainet\controllers;
+use AINET\MVC\Controllers;
 
 /*$controller = new UserController;
 $accounts = $controller->listUsers();
@@ -18,4 +18,4 @@ $title = "List accounts";*/
 
 $title = "PHP TAG FORCE - Accounts Browsing";
 
-require('Views/accountsBrowsing.view.php');
+require('MVC/Views/accountsBrowsing.view.php');
