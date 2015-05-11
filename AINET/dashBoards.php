@@ -8,19 +8,37 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\controllers;
+use AINET\MVC\Controllers\AuthenticationController;
+use AINET\MVC\Controllers\AccountController;
 
-/*
+
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
 	$authController->redirectToLogin();
 }else {
 	$title = "PHP TAG FORCE - DashBoard";
-	//TODO: verificar tipo de utilizador e enviar para o authenticationcontroller
+	$role = $authController->getAccountRole();
+
+if ($role == 1) {
+		require('MVC/Views\DashBoards\adminDash.view.php');
+	}
+
+	if ($role == 2) {
+		require('MVC/Views\DashBoards\editorDash.view.php');
+	}
+
+	if ($role == 3) {
+		require('MVC/Views\DashBoards\authorDash.view.php');
+	}
+
 }
 
 
-*/
 
-require('MVC/Views\DashBoards\adminDash.view.php');
+
+
+
+
+
+
 

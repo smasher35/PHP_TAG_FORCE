@@ -7,7 +7,7 @@
  * Time: 15:47
  */
 
-spl_autoload_register();
+require 'bootstrap.php';
 
 
 use AINET\MVC\Controllers;
