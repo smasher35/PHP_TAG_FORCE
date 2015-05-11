@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Paulo
+ * User: Paulo Penicheiro - 2130628
  * Date: 11/05/2015
  * Time: 10:35
  */
