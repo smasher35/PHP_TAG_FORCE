@@ -7,7 +7,15 @@
  * Time: 15:47
  */
 
-spl_autoload_register();
+
+/*
+	 *Roles:
+	 *1 - Administrador
+	 *2 - Editor
+	 *3 - Autor
+*/
+
+require 'bootstrap.php';
 
 
 use Ainet\controllers;

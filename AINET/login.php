@@ -6,6 +6,9 @@
  * Time: 17:27
  */
 
+require 'bootstrap.php';
+
+use AINET\controllers\AuthenticationController;
 
 
 

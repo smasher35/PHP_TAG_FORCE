@@ -53,10 +53,11 @@
 }
 
 .alt7{
-    /* projects categories */
+    /* The Crew */
     background: url('../Images/05.jpg') fixed;
     padding-top: 40px;
     background-color: #ccc;
+
 
 
 }
@@ -65,7 +66,7 @@
  =========================================================================*/
 #jumbotron{
     background: url('../Images/04.jpg') fixed;
-    min-height: 400px;
+    min-height: 600px;
     padding-top: 45px;
     max-height: 798px;
     max-width: 1920px;
@@ -361,7 +362,7 @@ html {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0); /* IE6-9 */
     background-attachment: fixed;
-    height: inherit;
+
 }
 
 
