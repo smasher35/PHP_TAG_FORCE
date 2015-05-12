@@ -45,19 +45,19 @@ class AuthenticationController {
 
 	static function redirectToLogin()
 	{
-		header('Location: http://192.168.56.101/AINET/login.php');
+		header('Location: http://192.168.56.101/Projecto/trunk/AINET/login.php');
 		exit();
 	}
 
 	static function redirectToHome()
 	{
-		header('Location: http://192.168.56.101/AINET/index.php');
+		header('Location: http://192.168.56.101/Projecto/trunk/AINET/index.php');
 		exit();
 	}
 
 	static function redirectToDashBoard()
 	{
-			header('Location: http://192.168.56.101/AINET/DashBoards.php');
+			header('Location: http://192.168.56.101/Projecto/trunk/AINET/dashBoards.php');
 			exit();
 	}
 
