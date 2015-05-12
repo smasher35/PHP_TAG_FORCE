@@ -9,6 +9,7 @@
 <?php use Ainet\Support\HtmlHelper;?>
 <?php require('MVC/Views/headerFooter/header.view.php');?>
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
+<!--
 <div class="row" id="subNavBar">
 	<div class="container">
 		<div class="center">
@@ -23,11 +24,12 @@
 		</div>
 	</div>
 </div> <!-- fecha a sub navigation Bar -->
+-->
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
 
 <a class="padding" id="goTop"></a>
-<div class="alt1">
+<div class="alt5">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4"></div>
