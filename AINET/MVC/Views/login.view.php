@@ -46,8 +46,7 @@
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
 									<input type="email" class="form-control" id="inputEmail1" value="<?=$user->email?>" placeholder="Enter email">
 								</div>
-								<?=HtmlHelper::error('email',$errors)?>
-
+							</div>
 							<div class="form-group">
 								<label for="inputPassword1">Password</label>
 								<div class="input-group">
@@ -69,7 +68,7 @@
 							<!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
 							<button type="submit" name="login" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-lock"></span> Login</button>
 						</form> <!-- Fecha <div Form> -->
-					</div>
+					</div> <!-- Fecha <div Panel Body> -->
 					<div class="panel-footer">
 							<p id="panelFooter">&copy PHP TAG Force - 2015</p>
 					</div> <!-- Fecha <div panel-footer> -->
