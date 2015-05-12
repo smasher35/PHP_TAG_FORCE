@@ -76,7 +76,7 @@
 
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-education"></span></span>
 									<select class="form-control">
-										<!-- TODO:foreach à tabela das instituições para popular a dropdown -->
+										<!-- TODO: percorrer todas as instituições da base de dados e popular a dropdown list -->
 										<option>Instituto Politécnico de Leiria - ESTG</option>
 										<option>Instituto Politécnico de Leiria - ESECS</option>
 										<option>Instituto Politécnico de Leiria - ESAD.CR</option>

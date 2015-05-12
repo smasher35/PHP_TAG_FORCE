@@ -1,6 +1,6 @@
 <?php namespace AINET\MVC\Controllers;
 
-use Ainet\Support\InputHelper;
+use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
 
 class AuthenticationController {

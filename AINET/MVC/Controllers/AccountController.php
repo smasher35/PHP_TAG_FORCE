@@ -1,6 +1,6 @@
 <?php namespace AINET\MVC\Controllers;
 
-use Ainet\Support\InputHelper;
+use AINET\support\InputHelper;
 
 /**
  * Created by PhpStorm.
