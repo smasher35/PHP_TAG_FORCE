@@ -18,7 +18,7 @@ class HtmlHelper
 	public static function error($key, $errors)
 	{
 		if($errors && array_key_exists($key, $errors)) {
-			return '<span class="error">'.$errors[$key].'</span>';
+			return '<div class="alert alert-danger" role="alert"><span class="error">'.$errors[$key].'</span></div>';
 		}
 	}
 

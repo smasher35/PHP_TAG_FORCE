@@ -23,7 +23,7 @@ class Account extends AbstractModel
 		$result = AbstractModel::dbQuery('select * from users');
 		$users = [];
 		if($result){
-			while($user = $result->fetch_object('Ainet\Models\User')){
+			while($user = $result->fetch_object('AINET\MVC\Model\Account')){
 				array_push($users,$user);
 			}
 		}

@@ -1,6 +1,7 @@
 <?php namespace AINET\MVC\Controllers;
 
 use AINET\support\InputHelper;
+use AINET\MVC\Model\Account;
 
 /**
  * Created by PhpStorm.
@@ -21,13 +22,13 @@ class AccountController
 
 	public function listUsers ()
 	{
-		return \Account::all();
+		return Account::all();
 	}
 
 	public function addAccount()
 	{
 
-		$user = new \Account();
+		$user = new Account();
 		$errors = false;
 
 		if(empty($_POST)) {
@@ -36,7 +37,7 @@ class AccountController
 
 		$errors = $this->validateInput($user);
 		if (empty($errors)){
-			\Account::add($user);
+			Account::add($user);
 		}
 
 		return[$user, $errors];
@@ -52,13 +53,13 @@ class AccountController
 			}
 
 			//como é  a primeira vez não tem erros envia false
-			return [\Account::find($id),false];
+			return [Account::find($id),false];
 		}
 
-		$user = new \Account();
+		$user = new Account();
 		$errors = $this->validateInput($user, false);
 		if (empty($errors)){
-			\Account::save($user);
+			Account::save($user);
 		}
 
 		return[$user, $errors];
