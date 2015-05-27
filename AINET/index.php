@@ -19,8 +19,8 @@ require 'bootstrap.php';
 use AINET\MVC\controllers;
 
 /*
- * $controller = new UserController;
- * $accounts = $controller->listUsers();
+$controller = new UserController;
+$accounts = $controller->listUsers();
 */
 
 $title = "PHP TAG FORCE - Home";

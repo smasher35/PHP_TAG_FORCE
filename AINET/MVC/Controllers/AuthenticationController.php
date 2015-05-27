@@ -65,7 +65,7 @@ class AuthenticationController {
 	{
 		$_SESSION=[];
 		session_destroy();
-		self::redirectToLogin();
+		self::redirectToHome();
 	}
 
 	public function getAccountRole ()

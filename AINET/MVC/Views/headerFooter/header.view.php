@@ -1,3 +1,4 @@
+<?php use \AINET\MVC\Controllers\AuthenticationController;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,18 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title><?= $title ?></title>
 
+	<!-- Controla o menu superior caso esteja login passa a logou e vice-verça -->
+	<?php
+		$controller = new AuthenticationController();
+		$isAuthenticated = $controller->isAuthenticated();
+		if($isAuthenticated){
+			$idSession = 'Logout';
+			$sessionHref = 'logout.php';
+		}else {
+			$idSession = 'Login';
+			$sessionHref = 'login.php';
+		}
+	?>
 
     <!-- Personal Styles -->
     <link rel="stylesheet" type="text/css" href="Styles/styles.css">
@@ -30,6 +43,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 
 <body id="corpo">
@@ -61,7 +75,7 @@
 	                        <li><a class="transition" href="projects.php"><strong>Projects</strong></a></li>
 	                        <li><a class="transition" href="dashBoards.php"><strong>Dashboard</strong></a></li>
 		                    <li><a class="transition" href="accountsBrowsing.php"><strong>Accounts</strong></a></li>
-	                        <li><a class="transition" href="login.php"><strong>Login</strong></a></li>
+	                        <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong></a></li>
 	                    </ul>
 	                </div>
                 </div>
