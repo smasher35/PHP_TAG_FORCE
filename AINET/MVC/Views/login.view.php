@@ -24,7 +24,7 @@
 		</div>
 	</div>
 </div> <!-- fecha a sub navigation Bar -->
--->
+
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
 
@@ -44,14 +44,14 @@
 								<label for="inputEmail1">Email address</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
-									<input type="email" class="form-control" id="inputEmail1" value="<?=$user->email?>" placeholder="Enter email">
+									<input type="email" class="form-control" name="email" id="inputEmail1" value="<?=$user->email?>" placeholder="Enter email">
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputPassword1">Password</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
-									<input type="password" class="form-control" value="<?=$user->password?>" id="inputPassword1" placeholder="Password">
+									<input type="password" class="form-control" name="password" value="<?=$user->password?>" id="inputPassword1" placeholder="Password">
 								</div>
 								<?=HtmlHelper::error('email',$errors)?>
 								<a href="#" ><p class="textAlignRight">Forgot Password?</p></a>
@@ -64,7 +64,6 @@
 								</label>
 							</div>
 							<hr>
-							<a class="btn btn-success btn-block" href="index.php"><span class="glyphicon glyphicon-arrow-left" ></span> Back</a>
 							<!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
 							<button type="submit" name="login" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-lock"></span> Login</button>
 						</form> <!-- Fecha <div Form> -->

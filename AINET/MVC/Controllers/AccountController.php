@@ -49,7 +49,6 @@ class AccountController
 			$id = InputHelper::get('user_id');
 			if($id == null) {
 				header('Location: http://192.168.56.101/AINET/dasboard.php');//manda para a página de user.php
-
 			}
 
 			//como é  a primeira vez não tem erros envia false
