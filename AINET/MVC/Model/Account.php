@@ -63,17 +63,20 @@ class Account extends AbstractModel
 
 	public static function getAccountRole($account)
 	{
-
+		//Query à base de dados combase no email do user logado
 		$result = AbstractModel::dbQuery("select id,email,role from users WHERE email ='$account' ");
 
+		//caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
+		
 		if(!$result){
 			echo 'Bad Connection';
 			exit;
 		}
 
+		//devolve a linha do user encontrado
 		$row = mysqli_fetch_row($result);
 
-
+		//devolve apenas o role do user
 		return $row[2];
 	}
 

@@ -56,8 +56,8 @@
       <file leaf-file-name="dashBoards.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashBoards.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.172414" vertical-offset="74" max-vertical-offset="980">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="980">
+              <caret line="21" column="58" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="58" />
               <folding>
                 <element signature="e#115#166#0#PHP" expanded="true" />
               </folding>
@@ -68,7 +68,7 @@
       <file leaf-file-name="accountsBrowsing.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Views/accountsBrowsing.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.793104" vertical-offset="775" max-vertical-offset="2660">
+            <state vertical-scroll-proportion="-10.5172415" vertical-offset="1015" max-vertical-offset="2660">
               <caret line="66" column="55" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="55" />
               <folding />
             </state>
@@ -88,17 +88,17 @@
       <file leaf-file-name="accountsBrowsing.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accountsBrowsing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="420">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="34" />
+            <state vertical-scroll-proportion="-5.5172415" vertical-offset="0" max-vertical-offset="420">
+              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminDash.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminDash.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21182266" vertical-offset="1328" max-vertical-offset="2840">
+            <state vertical-scroll-proportion="-5.9310346" vertical-offset="1328" max-vertical-offset="2840">
               <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
               <folding />
             </state>
@@ -115,16 +115,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Account.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MVC/Model/Account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.551723" vertical-offset="454" max-vertical-offset="1700">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.63757575" vertical-offset="854" max-vertical-offset="1760">
+              <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
               <folding>
-                <marker date="1432813985972" expanded="true" signature="735:754" placeholder="select * fro..users..." />
-                <marker date="1432813985972" expanded="true" signature="1380:1425" placeholder="select id,em..users..." />
-                <marker date="1432813985972" expanded="true" signature="1380:1435" placeholder="select id,em..users..." />
-                <marker date="1432813985972" expanded="true" signature="1380:1481" placeholder="select id,em..users..." />
+                <marker date="1432843513259" expanded="true" signature="735:754" placeholder="select * fro..users..." />
+                <marker date="1432843513259" expanded="true" signature="1437:1482" placeholder="select id,em..users..." />
+                <marker date="1432843513259" expanded="true" signature="1437:1492" placeholder="select id,em..users..." />
+                <marker date="1432843513259" expanded="true" signature="1437:1637" placeholder="select id,em..users..." />
               </folding>
             </state>
           </provider>
@@ -191,11 +191,11 @@
         <option value="$PROJECT_DIR$/MVC/Views/headerFooter/header.view.php" />
         <option value="$PROJECT_DIR$/MVC/Controllers/AuthenticationController.php" />
         <option value="$PROJECT_DIR$/MVC/Controllers/AccountController.php" />
-        <option value="$PROJECT_DIR$/MVC/Model/Account.php" />
         <option value="$PROJECT_DIR$/accountsBrowsing.php" />
         <option value="$PROJECT_DIR$/MVC/Views/accountsBrowsing.view.php" />
         <option value="$PROJECT_DIR$/dashBoards.php" />
         <option value="$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php" />
+        <option value="$PROJECT_DIR$/MVC/Model/Account.php" />
       </list>
     </option>
   </component>
@@ -577,7 +577,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1512792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -962,27 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Model/Account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.551723" vertical-offset="454" max-vertical-offset="1700">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <marker date="1432813985972" expanded="true" signature="735:754" placeholder="select * fro..users..." />
-            <marker date="1432813985972" expanded="true" signature="1380:1425" placeholder="select id,em..users..." />
-            <marker date="1432813985972" expanded="true" signature="1380:1435" placeholder="select id,em..users..." />
-            <marker date="1432813985972" expanded="true" signature="1380:1481" placeholder="select id,em..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Controllers/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.413793" vertical-offset="234" max-vertical-offset="1480">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectsBrowser2.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.275862" vertical-offset="1668" max-vertical-offset="2920">
@@ -999,37 +978,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.9310346" vertical-offset="1328" max-vertical-offset="2840">
+          <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/accountsBrowsing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="420">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="34" />
+        <state vertical-scroll-proportion="-5.5172415" vertical-offset="0" max-vertical-offset="420">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Views/accountsBrowsing.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.5172415" vertical-offset="1015" max-vertical-offset="2660">
+          <caret line="66" column="55" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashBoards.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.172414" vertical-offset="74" max-vertical-offset="980">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="980">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="58" />
           <folding>
             <element signature="e#115#166#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/accountsBrowsing.view.php">
+    <entry file="file://$PROJECT_DIR$/MVC/Controllers/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.793104" vertical-offset="775" max-vertical-offset="2660">
-          <caret line="66" column="55" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="55" />
+        <state vertical-scroll-proportion="-6.413793" vertical-offset="234" max-vertical-offset="1480">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
+    <entry file="file://$PROJECT_DIR$/MVC/Model/Account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21182266" vertical-offset="1328" max-vertical-offset="2840">
-          <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
-          <folding />
+        <state vertical-scroll-proportion="0.63757575" vertical-offset="854" max-vertical-offset="1760">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <folding>
+            <marker date="1432843513259" expanded="true" signature="735:754" placeholder="select * fro..users..." />
+            <marker date="1432843513259" expanded="true" signature="1437:1482" placeholder="select id,em..users..." />
+            <marker date="1432843513259" expanded="true" signature="1437:1492" placeholder="select id,em..users..." />
+            <marker date="1432843513259" expanded="true" signature="1437:1637" placeholder="select id,em..users..." />
+          </folding>
         </state>
       </provider>
     </entry>
