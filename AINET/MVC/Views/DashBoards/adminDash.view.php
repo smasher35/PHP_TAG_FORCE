@@ -67,77 +67,67 @@
 						<th class="text-center">Operations</th>
 					</tr>
 
-					<tr>
-						<td align="center"><input type="checkbox"></td>
-						<td>Aplha.360@hotmail.com</td>
-						<td>IPL- Leiria</td>
-						<td align="center">Student</td>
-						<td>-</td>
-						<td align="center">
-							<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-							<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-							<button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
-							<button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Disable"><span class="glyphicon glyphicon-ban-circle"></span></button>
-						</td>
-					</tr>
-
-					<tr>
-						<td align="center"><input type="checkbox"></td>
-						<td>smasher35@gmail.com</td>
-						<td>IPL - Leiria</td>
-						<td align="center">Student</td>
-						<td>-</td>
-						<td align="center">
-							<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-							<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-							<button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
-							<button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Disable"><span class="glyphicon glyphicon-ban-circle"></span></button>
-						</td>
-					</tr>
-
-					<tr>
-						<td align="center"><input type="checkbox"></td>
-						<td>ruben.miguel@gmail.com</td>
-						<td>IPL - Leiria</td>
-						<td align="center">Student</td>
-						<td>-</td>
-						<td align="center">
-							<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-							<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-							<button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
-							<button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Disable"><span class="glyphicon glyphicon-ban-circle"></span></button>
-						</td>
-					</tr>
-
-
+					<?php foreach ($users as $user) { ?>
+						<tr>
+							<td align="center"><input type="checkbox"></td>
+							<td><?=$user->email?></td>
+							<td><?=$user->institution_id?></td>
+							<td align="center"><?=$user->position?></td>
+							<td><?=$user->profile_url?></td>
+							<td align="center">
+								<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+								<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+								<button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
+								<button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Disable"><span class="glyphicon glyphicon-ban-circle"></span></button>
+							</td>
+						</tr>
+					<?php } ?>
 				</table>
 				<div class="panel-footer">
-					<div class="text-center">
-						<div class="btn-toolbar pagination-center" role="toolbar">
-							<div class="btn-group align-center" >
-								<button type="button" class="btn btn-primary btn-sm">First
-								<button type="button" class="btn btn-primary btn-sm">Previous
-							</div>
-
-							<div class="btn-group align-center">
-								<button type="button" class="btn btn-primary btn-sm">1
-								<button type="button" class="btn btn-primary btn-sm">2
-								<button type="button" class="btn btn-primary btn-sm">3
-								<button type="button" class="btn btn-primary btn-sm">4
-								<button type="button" class="btn btn-primary btn-sm">5
-								<button type="button" class="btn btn-primary btn-sm">6
-								<button type="button" class="btn btn-primary btn-sm">7
-								<button type="button" class="btn btn-primary btn-sm">8
-								<button type="button" class="btn btn-primary btn-sm">9
-								<button type="button" class="btn btn-primary btn-sm">10
-							</div>
-
-							<div class="btn-group align-center">
-								<button type="button" class="btn btn-primary btn-sm">Next
-									<button type="button" class="btn btn-primary btn-sm">Last
-							</div>
+					<!-- Pagination -->
+					<div class="row text-center">
+						<div class="col-lg-12">
+							<ul class="pagination">
+								<li>
+									<a href="#">&laquo;</a>
+								</li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li>
+									<a href="#">6</a>
+								</li>
+								<li>
+									<a href="#">7</a>
+								</li>
+								<li>
+									<a href="#">8</a>
+								</li>
+								<li>
+									<a href="#">9</a>
+								</li>
+								<li>
+									<a href="#">10</a>
+								</li>
+								<li>
+									<a href="#">&raquo;</a>
+								</li>
+							</ul>
 						</div>
 					</div>
+					<!-- /.row -->
 				</div>
 			</div>
 		</div>

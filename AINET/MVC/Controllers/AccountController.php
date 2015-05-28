@@ -11,8 +11,6 @@ use AINET\MVC\Model\Account;
  */
 
 
-
-
 class AccountController
 {
 	public function __construct()
@@ -23,6 +21,10 @@ class AccountController
 	public function listUsers ()
 	{
 		return Account::all();
+	}
+
+	public function getRole($mail){
+		return Account::getAccountRole($mail);
 	}
 
 	public function addAccount()
@@ -63,4 +65,6 @@ class AccountController
 
 		return[$user, $errors];
 	}
+
+
 }

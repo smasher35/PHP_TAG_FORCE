@@ -10,16 +10,20 @@ require 'bootstrap.php';
 
 use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Model\Account;
 
 
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
 	$authController->redirectToLogin();
 }else {
+	$accountController = new AccountController();
 	$title = "PHP TAG FORCE - DashBoard";
-	$role = $authController->getAccountRole();
+	$role = $accountController->getRole($_SESSION['email']);
+	$users = $accountController->listUsers();
 
-if ($role == 1) {
+
+	if ($role == 1){
 		require('MVC/Views\DashBoards\adminDash.view.php');
 	}
 
@@ -31,8 +35,8 @@ if ($role == 1) {
 		require('MVC/Views\DashBoards\authorDash.view.php');
 	}
 
-}
 
+}
 
 
 

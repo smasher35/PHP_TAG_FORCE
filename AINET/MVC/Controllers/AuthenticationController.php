@@ -32,6 +32,7 @@ class AuthenticationController {
 				$this->authenticated = true;
 				$_SESSION['authenticated']= true;
 				$_SESSION['email'] = $mail;
+				$_SESSION['password']= $pass;
 			}
 		} else {
 			$this->account = new Account();
@@ -69,8 +70,4 @@ class AuthenticationController {
 		self::redirectToHome();
 	}
 
-	public function getAccountRole ()
-	{
-		return $this->account->role;
-	}
 }

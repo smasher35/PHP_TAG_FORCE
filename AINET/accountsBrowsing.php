@@ -12,9 +12,9 @@ require 'bootstrap.php';
 
 use AINET\MVC\Controllers;
 
-/*$controller = new UserController;
-$accounts = $controller->listUsers();
-$title = "List accounts";*/
+$controller = new Controllers\AccountController();
+$users = $controller->listUsers();
+$title = "List accounts";
 
 $title = "PHP TAG FORCE - Accounts Browsing";
 

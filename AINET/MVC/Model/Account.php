@@ -10,12 +10,21 @@
 
 class Account extends AbstractModel
 {
-	public $id;
-	public $email;
-	public $password;
-	public $name;
-	public $registeredAt;
-	public $role;
+	public $id; //int
+	public $name;//varchar(255)
+	public $email;//varchar(255)
+	public $alt_email;//varchar(255)NULL
+	public $password;//varchar(255)
+	public $institution_id;//int(10)unsigned
+	public $position;//varchar(255)
+	public $photo_url;//int(11)NULL
+	public $profile_url;//varchar(255)NULL
+	public $flags;//smallint(6)
+	public $role;//int(10)unsigned
+	public $remember_token;//varchar(100)NULL
+	public $created_at;//timestamp[0000-00-00 00:00:00]
+	public $updated_at;//timestamp[0000-00-00 00:00:00]
+
 
 	public static function all()
 	{
@@ -51,4 +60,21 @@ class Account extends AbstractModel
 		}
 		return null;
 	}
+
+	public static function getAccountRole($account)
+	{
+
+		$result = AbstractModel::dbQuery("select id,email,role from users WHERE email ='$account' ");
+
+		if(!$result){
+			echo 'Bad Connection';
+			exit;
+		}
+
+		$row = mysqli_fetch_row($result);
+
+
+		return $row[2];
+	}
+
 }

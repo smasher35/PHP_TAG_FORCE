@@ -46,8 +46,7 @@
 				<!-- Default panel contents -->
 				<div class="panel-heading"><h3 class="panel-title text-center"><strong>Accounts List </strong></h3></div>
 
-				<!-- Table
-						<!--<?php/*TODO: foreach a percorrer os projectos existentes*/;?> -->
+				<!-- Table -->
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
 						<th class="text-center">Thumb</th>
@@ -57,71 +56,66 @@
 						<th class="text-center">Website</th>
 						<th class="text-center">Show Projects</th>
 						<th class="text-center">Contact Me</th>
-
-					</tr>
-					<tr>
-						<td align="center">Img.png</td>
-						<td>Aplha.360@hotmail.com</td>
-						<td>IPL- Leiria</td>
-						<td align="center">Student</td>
-						<td>-</td>
-						<td align="center"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
-						<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></td>
-
-
-					</tr>
-					<tr>
-						<td align="center">Img.png</td>
-						<td>smasher35@gmail.com</td>
-						<td>IPL - Leiria</td>
-						<td align="center">Student</td>
-						<td>-</td>
-						<td align="center"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
-						<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></td>
-
-
 					</tr>
 
-					<tr>
-						<td align="center">Img.png</td>
-						<td>ruben.miguel@gmail.com</td>
-						<td>IPL - Leiria</td>
-						<td align="center">Student</td>
-						<td>-</td>
-						<td align="center"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
-						<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></td>
+					<?php foreach ($users as $user) { ?>
+						<tr>
+							<td align="center"><?=$user->photo_url?></td>
+							<td><?=$user->email?></td>
+							<td><?=$user->institution_id?></td>
+							<td align="center"><?=$user->position?></td>
+							<td><?=$user->profile_url?></td>
+							<td align="center"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
+							<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						</tr>
+					<?php }?>
+				</table> <!-- Fim da TAbela -->
 
-					</tr>
-
-
-				</table>
 				<div class="panel-footer" align="center">
-					<div class="center">
-						<div class="btn-toolbar" role="toolbar" align="center">
-							<div class="btn-group" align="center">
-								<button type="button" class="btn btn-primary btn-sm">First
-								<button type="button" class="btn btn-primary btn-sm">Previous
-							</div>
-
-							<div class="btn-group" align="center">
-								<button type="button" class="btn btn-primary btn-sm">1
-								<button type="button" class="btn btn-primary btn-sm">2
-								<button type="button" class="btn btn-primary btn-sm">3
-								<button type="button" class="btn btn-primary btn-sm">4
-								<button type="button" class="btn btn-primary btn-sm">5
-								<button type="button" class="btn btn-primary btn-sm">6
-								<button type="button" class="btn btn-primary btn-sm">7
-								<button type="button" class="btn btn-primary btn-sm">8
-								<button type="button" class="btn btn-primary btn-sm">9
-								<button type="button" class="btn btn-primary btn-sm">10
-							</div>
-
-							<div class="btn-group" align="center">
-								<button type="button" class="btn btn-primary btn-sm">Next
-								<button type="button" class="btn btn-primary btn-sm">Last
-							</div>
+					<!-- Pagination -->
+					<div class="row text-center">
+						<div class="col-lg-12">
+							<ul class="pagination">
+								<li>
+									<a href="#">&laquo;</a>
+								</li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li>
+									<a href="#">6</a>
+								</li>
+								<li>
+									<a href="#">7</a>
+								</li>
+								<li>
+									<a href="#">8</a>
+								</li>
+								<li>
+									<a href="#">9</a>
+								</li>
+								<li>
+									<a href="#">10</a>
+								</li>
+								<li>
+									<a href="#">&raquo;</a>
+								</li>
+							</ul>
 						</div>
 					</div>
+					<!-- /.row -->
 				</div>
 			</div>
 		</div>
