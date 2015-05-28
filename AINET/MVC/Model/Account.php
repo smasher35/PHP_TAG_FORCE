@@ -39,12 +39,14 @@ class Account extends AbstractModel
 		return null;
 	}
 
-	public static function findByEmail($email)
+	public static function findByEmail($email,$pass)
 	{
 		$users = self::all();
 		foreach($users as $id => $user) {
 			if($user->email==$email) {
-				return $user;
+				if($user->password ==$pass){
+					return $user;
+				}
 			}
 		}
 		return null;

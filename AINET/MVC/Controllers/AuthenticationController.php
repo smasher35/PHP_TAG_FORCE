@@ -12,17 +12,18 @@ class AuthenticationController {
 	{
 
 		if(isset($_SESSION['authenticated'])) {
-			$user = Account::findByEmail($_SESSION['email']);
+			$user = Account::findByEmail($_SESSION['email'],['password']);
 			$this->authenticated=true;
 		}
 		elseif(!empty($_POST)) {
 			$mail = InputHelper::post('email');
 			$pass = InputHelper::post('password');
-			$user = Account::findByEmail($mail);
+			$user = Account::findByEmail($mail,$pass);
 
 			if (is_null($user)) {
 				$this->account = new Account();
 				$this->account->email = $mail;
+				$this->account->password = $pass;
 				$this->errors = ['email' => 'Invalid user or password'];
 				return;
 			}
