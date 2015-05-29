@@ -13,7 +13,7 @@ use AINET\MVC\Controllers\AuthenticationController;
 $controller = new AuthenticationController();
 
 if($controller->isAuthenticated()) {
-	$controller->redirectToHome();
+	$controller->redirectToDashBoard();
 }
 
 $user = $controller->account;

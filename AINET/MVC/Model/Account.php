@@ -67,7 +67,6 @@ class Account extends AbstractModel
 		$result = AbstractModel::dbQuery("select id,email,role from users WHERE email ='$account' ");
 
 		//caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
-		
 		if(!$result){
 			echo 'Bad Connection';
 			exit;

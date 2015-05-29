@@ -11,12 +11,12 @@
 <!-- SOCIAL NETWORKS -->
 			<div class="col-md-3">
 				<p><h5>Follow us on Social Networks</h5></p>
-				<a href="#"><i class="fa fa-facebook-square fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-twitter-square fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-google-plus-square fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-linkedin-square fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-vimeo-square fa-2x socialNetworksIcons"></i></a>
-				<a href="#"><i class="fa fa-youtube-square fa-2x socialNetworksIcons"></i></a>
+				<a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook-square fa-2x socialNetworksIcons"></i></a>
+				<a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter-square fa-2x socialNetworksIcons"></i></a>
+				<a href="http://www.googleplus.com" target="_blank"><i class="fa fa-google-plus-square fa-2x socialNetworksIcons"></i></a>
+				<a href="http://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square fa-2x socialNetworksIcons"></i></a>
+				<a href="http://www.vimeo.com" target="_blank"><i class="fa fa-vimeo-square fa-2x socialNetworksIcons"></i></a>
+				<a href="https://pt.foursquare.com/" target="_blank"><i class="fa fa-youtube-square fa-2x socialNetworksIcons"></i></a>
 			</div>
 <!-- THE CREW -->
 			<div class="col-md-3">
