@@ -75,14 +75,14 @@
 								<div class="input-group">
 
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-education"></span></span>
-									<select class="form-control">
-										<!-- TODO: percorrer todas as instituições da base de dados e popular a dropdown list -->
-										<option>Instituto Politécnico de Leiria - ESTG</option>
-										<option>Instituto Politécnico de Leiria - ESECS</option>
-										<option>Instituto Politécnico de Leiria - ESAD.CR</option>
-										<option>Instituto Politécnico de Leiria - ESTM</option>
-										<option>Instituto Politécnico de Tomar</option>
-									</select>
+
+										<select class="form-control">
+											<!-- TODO: percorrer todas as instituições da base de dados e popular a dropdown list -->
+											<?php foreach ($institutions as $institution) { ?>
+												<option><?= $institution->name?></option>
+											<?php } ?>
+										</select>
+
 								</div>
 								<label for="inputPassword1">Position </label>
 								<div class="input-group">
@@ -92,10 +92,16 @@
 							</div>
 
 							<div class="form-group">
+
+								<label for="inputUrl">Photo URL</label>
+								<div class="input-group">
+									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-picture"></span></span>
+									<input type="name" class="form-control" id="phototUrl" placeholder="Enter Photo Url">
+								</div>
 								<label for="inputUrl">Personal WebPage</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-globe"></span></span>
-									<input type="name" class="form-control" id="inputUrl" placeholder="Enter Url">
+									<input type="name" class="form-control" id="inputUrl" placeholder="Enter Personal Webpage Url">
 								</div>
 
 								<label for="inputOptionalEmail1">Alternative Email</label>
@@ -106,11 +112,21 @@
 							</div>
 
 							<hr>
-							<p><h4>Account Roles</h4></p>
-							<div class="checkbox">
-								<label> <input type="checkbox" id="admin" name="admin">Administrator </label>
-								<label> <input type="checkbox" id="editor" name="editor">Editor </label>
-								<label> <input type="checkbox" id="author" name="author">Author </label>
+							<div class="row">
+								<div class="col-md-6">
+									<p><h4>Account Roles</h4></p>
+									<div class="checkbox">
+										<label> <input type="checkbox" id="admin" name="admin">Administrator </label>
+										<label> <input type="checkbox" id="editor" name="editor">Editor </label>
+										<label> <input type="checkbox" id="author" name="author">Author </label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<p class="text-center"><h4>Account Initial Status</h4></p>
+									<label class="radio-inline"><input type="radio" name="statusRadio">Active </label>
+									<label class="radio-inline"><input type="radio" name="statusRadio">Disabled </label>
+
+								</div>
 							</div>
 							<hr>
 							<div class="col-md-6-rightAlign">

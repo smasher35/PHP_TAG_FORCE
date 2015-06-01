@@ -8,10 +8,11 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\UserController;
+use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\AuthenticationController;
+use AINET\MVC\Controllers\InstitutionController;
 
-/*
+
 //valida autenticação no site
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
@@ -20,9 +21,11 @@ if(!$authController->isAuthenticated()) {
 
 $authenticated = true;
 
-$controller = new UserController();
-list($user,$errors)=$controller->addUser();
-*/
+$accountController = new AccountController();
+$institutionController = new InstitutionController();
+//list($user,$errors)=$accountController->addUser();
+$institutions = $institutionController->listInstitutions();
+
 $title = "Add Account";
 
 
