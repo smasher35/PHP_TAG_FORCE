@@ -10,6 +10,7 @@ require 'bootstrap.php';
 
 use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\InstitutionController;
 
 
 
@@ -17,10 +18,12 @@ $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
 	$authController->redirectToLogin();
 }else {
+	$institutionController = new InstitutionController();
 	$accountController = new AccountController();
 	$title = "PHP TAG FORCE - DashBoard";
 	$role = $accountController->getRole($_SESSION['email']);
 	$users = $accountController->listUsers();
+
 
 
 	if ($role == 1){

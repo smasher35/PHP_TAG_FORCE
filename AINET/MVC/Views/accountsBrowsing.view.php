@@ -62,7 +62,7 @@
 						<tr>
 							<td align="center"><?=$user->photo_url?></td>
 							<td><?=$user->email?></td>
-							<td><?=$user->institution_id?></td>
+							<td><?= $institutionController->getInstitutionName($user->institution_id)?></td>
 							<td align="center"><?=$user->position?></td>
 							<td><?=$user->profile_url?></td>
 							<td align="center"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>

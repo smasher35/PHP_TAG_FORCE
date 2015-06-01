@@ -76,7 +76,7 @@
 										<tr>
 											<td align="center"><input type="checkbox"></td>
 											<td><?=$user->email?></td>
-											<td><?=$user->institution_id?></td>
+											<td><?= $institutionController->getInstitutionName($user->institution_id)?></td>
 											<td align="center"><?=$user->position?></td>
 											<td><?=$user->role?></td>
 											<td align="center">

@@ -39,10 +39,10 @@ class Institution extends AbstractModel {
 	}
 
 	//devolve o nome da instituição mediante a respectiva ID
-	public function getName($id)
+	public static function getName($id)
 	{
 		//Query à base de dados combase no email do user logado
-		$result = AbstractModel::dbQuery("select id,name from institutions WHERE name ='$id' ");
+		$result = AbstractModel::dbQuery("select id,name from institutions WHERE id ='$id' ");
 
 		//caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
 		if(!$result){
