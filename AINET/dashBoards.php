@@ -11,7 +11,7 @@ require 'bootstrap.php';
 use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\InstitutionController;
-
+use AINET\MVC\Controllers\ProjectController;
 
 
 $authController = new AuthenticationController();
@@ -20,10 +20,12 @@ if(!$authController->isAuthenticated()) {
 }else {
 	$institutionController = new InstitutionController();
 	$accountController = new AccountController();
-	$title = "PHP TAG FORCE - DashBoard";
+    $projectControler = new ProjectController();
+    $projects = $projectControler->listProjects();
 	$role = $accountController->getRole($_SESSION['email']);
 	$users = $accountController->listUsers();
 
+    $title = "PHP TAG FORCE - DashBoard";
 
 
 	if ($role == 1){

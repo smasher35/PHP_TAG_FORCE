@@ -93,42 +93,18 @@
 									<div class="row text-center">
 										<div class="col-lg-12">
 											<ul class="pagination">
-												<li>
-													<a href="#">&laquo;</a>
-												</li>
-												<li class="active">
-													<a href="#">1</a>
-												</li>
-												<li>
-													<a href="#">2</a>
-												</li>
-												<li>
-													<a href="#">3</a>
-												</li>
-												<li>
-													<a href="#">4</a>
-												</li>
-												<li>
-													<a href="#">5</a>
-												</li>
-												<li>
-													<a href="#">6</a>
-												</li>
-												<li>
-													<a href="#">7</a>
-												</li>
-												<li>
-													<a href="#">8</a>
-												</li>
-												<li>
-													<a href="#">9</a>
-												</li>
-												<li>
-													<a href="#">10</a>
-												</li>
-												<li>
-													<a href="#">&raquo;</a>
-												</li>
+												<li><a href="#">&laquo;</a></li>
+												<li class="active"><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">5</a></li>
+												<li><a href="#">6</a></li>
+												<li><a href="#">7</a></li>
+												<li><a href="#">8</a></li>
+												<li><a href="#">9</a></li>
+												<li><a href="#">10</a></li>
+												<li><a href="#">&raquo;</a></li>
 											</ul>
 										</div>
 									</div>
@@ -164,14 +140,13 @@
 											<th class="text-center">Operations</th>
 										</tr>
 
-										<!-- TODO: substituir pelo foeach a percorrer os projectos existentes -->
-										<?php foreach ($users as $user) { ?>
+										<?php foreach ($projects as $project) { ?>
 											<tr>
 												<td align="center"><input type="checkbox"></td>
-												<td><?=$user->email?></td>
-												<td><?=$user->institution_id?></td>
-												<td align="center"><?=$user->position?></td>
-												<td><?=$user->role?></td>
+												<td><?=$project->name?></td>
+                                                <td><?=$project->type?></td>
+                                                <td><?=$project->theme?></td>
+                                                <td><?=$accountController->getUserName($project->created_by)?></td>
 												<td align="center">
 													<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
 													<button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
@@ -186,42 +161,18 @@
 										<div class="row text-center">
 											<div class="col-lg-12">
 												<ul class="pagination">
-													<li>
-														<a href="#">&laquo;</a>
-													</li>
-													<li class="active">
-														<a href="#">1</a>
-													</li>
-													<li>
-														<a href="#">2</a>
-													</li>
-													<li>
-														<a href="#">3</a>
-													</li>
-													<li>
-														<a href="#">4</a>
-													</li>
-													<li>
-														<a href="#">5</a>
-													</li>
-													<li>
-														<a href="#">6</a>
-													</li>
-													<li>
-														<a href="#">7</a>
-													</li>
-													<li>
-														<a href="#">8</a>
-													</li>
-													<li>
-														<a href="#">9</a>
-													</li>
-													<li>
-														<a href="#">10</a>
-													</li>
-													<li>
-														<a href="#">&raquo;</a>
-													</li>
+													<li><a href="#">&laquo;</a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+													<li><a href="#">2</a></li>
+													<li><a href="#">3</a></li>
+													<li><a href="#">4</a></li>
+													<li><a href="#">5</a></li>
+													<li><a href="#">6</a></li>
+													<li><a href="#">7</a></li>
+													<li><a href="#">8</a></li>
+													<li><a href="#">9</a></li>
+													<li><a href="#">10</a></li>
+													<li><a href="#">&raquo;</a></li>
 												</ul>
 											</div>
 										</div>
@@ -258,62 +209,38 @@
 													</tr>
 
 													<!-- TODO: substituir pelo foeach a percorrer os projectos existentes -->
-													<?php foreach ($users as $user) { ?>
-														<tr>
-															<td align="center"><input type="checkbox"></td>
-															<td><?=$user->email?></td>
-															<td><?=$user->institution_id?></td>
-															<td align="center"><?=$user->position?></td>
-															<td><?=$user->role?></td>
-															<td align="center">
-																<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
-																<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-																<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
-															</td>
-														</tr>
-													<?php } ?>
+                                                    <?php foreach ($projects as $project) { ?>
+                                                        <tr>
+                                                            <td align="center"><input type="checkbox"></td>
+                                                            <td><?=$project->name?></td>
+                                                            <td><?=$project->type?></td>
+                                                            <td><?=$project->theme?></td>
+                                                            <td><?=$accountController->getUserName($project->created_by)?></td>
+                                                            <td align="center">
+                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
 													<div class="row text-center">
 														<div class="col-lg-12">
 															<ul class="pagination">
-																<li>
-																	<a href="#">&laquo;</a>
-																</li>
-																<li class="active">
-																	<a href="#">1</a>
-																</li>
-																<li>
-																	<a href="#">2</a>
-																</li>
-																<li>
-																	<a href="#">3</a>
-																</li>
-																<li>
-																	<a href="#">4</a>
-																</li>
-																<li>
-																	<a href="#">5</a>
-																</li>
-																<li>
-																	<a href="#">6</a>
-																</li>
-																<li>
-																	<a href="#">7</a>
-																</li>
-																<li>
-																	<a href="#">8</a>
-																</li>
-																<li>
-																	<a href="#">9</a>
-																</li>
-																<li>
-																	<a href="#">10</a>
-																</li>
-																<li>
-																	<a href="#">&raquo;</a>
-																</li>
+																<li><a href="#">&laquo;</a></li>
+																<li class="active"><a href="#">1</a></li>
+																<li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+																<li><a href="#">4</a></li>
+																<li><a href="#">5</a></li>
+																<li><a href="#">6</a></li>
+																<li><a href="#">7</a></li>
+																<li><a href="#">8</a></li>
+																<li><a href="#">9</a></li>
+																<li><a href="#">10</a></li>
+																<li><a href="#">&raquo;</a></li>
 															</ul><!-- Fecha div class pagination -->
 														</div><!-- Fecha div class col-md-12 -->
 													</div><!-- Fecha div class row text-center -->
@@ -339,62 +266,37 @@
 														<th class="text-center">Operations</th>
 													</tr>
 
-													<!-- TODO: substituir pelo foeach a percorrer os projectos e mostrar somente os apagados -->
-													<?php foreach ($users as $user) { ?>
-														<tr>
-															<td align="center"><input type="checkbox"></td>
-															<td><?=$user->email?></td>
-															<td><?=$user->institution_id?></td>
-															<td align="center"><?=$user->position?></td>
-															<td><?=$user->role?></td>
-															<td align="center">
-																<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
-																<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
-															</td>
-														</tr>
-													<?php } ?>
+                                                    <?php foreach ($projects as $project) { ?>
+                                                        <tr>
+                                                            <td align="center"><input type="checkbox"></td>
+                                                            <td><?=$project->name?></td>
+                                                            <td><?=$project->type?></td>
+                                                            <td><?=$project->theme?></td>
+                                                            <td><?=$accountController->getUserName($project->created_by)?></td>
+                                                            <td align="center">
+                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
 													<div class="row text-center">
 														<div class="col-lg-12">
 															<ul class="pagination">
-																<li>
-																	<a href="#">&laquo;</a>
-																</li>
-																<li class="active">
-																	<a href="#">1</a>
-																</li>
-																<li>
-																	<a href="#">2</a>
-																</li>
-																<li>
-																	<a href="#">3</a>
-																</li>
-																<li>
-																	<a href="#">4</a>
-																</li>
-																<li>
-																	<a href="#">5</a>
-																</li>
-																<li>
-																	<a href="#">6</a>
-																</li>
-																<li>
-																	<a href="#">7</a>
-																</li>
-																<li>
-																	<a href="#">8</a>
-																</li>
-																<li>
-																	<a href="#">9</a>
-																</li>
-																<li>
-																	<a href="#">10</a>
-																</li>
-																<li>
-																	<a href="#">&raquo;</a>
-																</li>
+																<li><a href="#">&laquo;</a>	</li>
+																<li class="active"><a href="#">1</a></li>
+																<li><a href="#">2</a></li>
+																<li><a href="#">3</a></li>
+																<li><a href="#">4</a></li>
+																<li><a href="#">5</a></li>
+																<li><a href="#">6</a></li>
+																<li><a href="#">7</a></li>
+																<li><a href="#">8</a></li>
+																<li><a href="#">9</a></li>
+																<li><a href="#">10</a></li>
+																<li><a href="#">&raquo;</a></li>
 															</ul> <!-- Fecha div class pagination -->
 														</div><!-- Fecha div class col-md-12 -->
 													</div><!-- Fecha div class row text-center -->
@@ -454,42 +356,18 @@
 									<div class="row text-center">
 										<div class="col-lg-12">
 											<ul class="pagination">
-												<li>
-													<a href="#">&laquo;</a>
-												</li>
-												<li class="active">
-													<a href="#">1</a>
-												</li>
-												<li>
-													<a href="#">2</a>
-												</li>
-												<li>
-													<a href="#">3</a>
-												</li>
-												<li>
-													<a href="#">4</a>
-												</li>
-												<li>
-													<a href="#">5</a>
-												</li>
-												<li>
-													<a href="#">6</a>
-												</li>
-												<li>
-													<a href="#">7</a>
-												</li>
-												<li>
-													<a href="#">8</a>
-												</li>
-												<li>
-													<a href="#">9</a>
-												</li>
-												<li>
-													<a href="#">10</a>
-												</li>
-												<li>
-													<a href="#">&raquo;</a>
-												</li>
+												<li><a href="#">&laquo;</a>	</li>
+												<li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">5</a></li>
+												<li><a href="#">6</a></li>
+												<li><a href="#">7</a></li>
+												<li><a href="#">8</a></li>
+												<li><a href="#">9</a></li>
+												<li><a href="#">10</a></li>
+												<li><a href="#">&raquo;</a></li>
 											</ul>
 										</div>
 									</div>
@@ -543,42 +421,18 @@
 													<div class="row text-center">
 														<div class="col-lg-12">
 															<ul class="pagination">
-																<li>
-																	<a href="#">&laquo;</a>
-																</li>
-																<li class="active">
-																	<a href="#">1</a>
-																</li>
-																<li>
-																	<a href="#">2</a>
-																</li>
-																<li>
-																	<a href="#">3</a>
-																</li>
-																<li>
-																	<a href="#">4</a>
-																</li>
-																<li>
-																	<a href="#">5</a>
-																</li>
-																<li>
-																	<a href="#">6</a>
-																</li>
-																<li>
-																	<a href="#">7</a>
-																</li>
-																<li>
-																	<a href="#">8</a>
-																</li>
-																<li>
-																	<a href="#">9</a>
-																</li>
-																<li>
-																	<a href="#">10</a>
-																</li>
-																<li>
-																	<a href="#">&raquo;</a>
-																</li>
+																<li><a href="#">&laquo;</a></li>
+																<li class="active"><a href="#">1</a></li>
+																<li><a href="#">2</a></li>
+																<li><a href="#">3</a></li>
+																<li><a href="#">4</a></li>
+																<li><a href="#">5</a></li>
+																<li><a href="#">6</a></li>
+																<li><a href="#">7</a></li>
+																<li><a href="#">8</a></li>
+																<li><a href="#">9</a></li>
+																<li><a href="#">10</a></li>
+																<li><a href="#">&raquo;</a></li>
 															</ul><!-- Fecha div class pagination -->
 														</div><!-- Fecha div class col-md-12 -->
 													</div><!-- Fecha div class row text-center -->
@@ -621,42 +475,18 @@
 													<div class="row text-center">
 														<div class="col-lg-12">
 															<ul class="pagination">
-																<li>
-																	<a href="#">&laquo;</a>
-																</li>
-																<li class="active">
-																	<a href="#">1</a>
-																</li>
-																<li>
-																	<a href="#">2</a>
-																</li>
-																<li>
-																	<a href="#">3</a>
-																</li>
-																<li>
-																	<a href="#">4</a>
-																</li>
-																<li>
-																	<a href="#">5</a>
-																</li>
-																<li>
-																	<a href="#">6</a>
-																</li>
-																<li>
-																	<a href="#">7</a>
-																</li>
-																<li>
-																	<a href="#">8</a>
-																</li>
-																<li>
-																	<a href="#">9</a>
-																</li>
-																<li>
-																	<a href="#">10</a>
-																</li>
-																<li>
-																	<a href="#">&raquo;</a>
-																</li>
+																<li><a href="#">&laquo;</a></li>
+																<li class="active"><a href="#">1</a></li>
+																<li><a href="#">2</a></li>
+																<li><a href="#">3</a></li>
+																<li><a href="#">4</a></li>
+																<li><a href="#">5</a></li>
+																<li><a href="#">6</a></li>
+																<li><a href="#">7</a></li>
+																<li><a href="#">8</a></li>
+																<li><a href="#">9</a></li>
+																<li>a href="#">10</a></li>
+																<li><a href="#">&raquo;</a></li>
 															</ul> <!-- Fecha div class pagination -->
 														</div><!-- Fecha div class col-md-12 -->
 													</div><!-- Fecha div class row text-center -->
