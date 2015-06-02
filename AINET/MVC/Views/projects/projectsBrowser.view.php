@@ -33,7 +33,7 @@
         <?php foreach($projects as $project) {  ?>
             <div class="row ">
                 <div class="col-md-4 text-center">
-                    <img class=" img-circle img-responsive" src="http://cdn.slashgear.com/wp-content/uploads/2015/05/case-top@2x.png" alt="thumbnail">
+                    <img class="img-circle img-responsive thumbnail" src="http://cdn.slashgear.com/wp-content/uploads/2015/05/case-top@2x.png" alt="thumbnail">
                 </div>
                 <div class="col-md-8">
                     <h3><?= $project->name ?></h3>
@@ -42,7 +42,6 @@
                     <a class="btn btn-success" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
-
             <hr>
         <?php } ?>
 		 <!-- Pagination -->
