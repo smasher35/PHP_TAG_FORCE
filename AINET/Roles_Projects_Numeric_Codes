@@ -1,0 +1,10 @@
+User Roles
+1 - Administrator
+2 - Editor
+3 - Author
+
+Project State
+1 - Pending
+2 - Approved
+3 - Rejected
+4 - Deleted

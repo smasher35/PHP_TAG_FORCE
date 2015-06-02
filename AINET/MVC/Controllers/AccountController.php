@@ -107,5 +107,9 @@ class AccountController
 
 		return $errors;
 	}
+    public function getUserName($id)
+    {
+        return Account::getName($id);
+    }
 
 }

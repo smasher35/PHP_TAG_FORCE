@@ -6,10 +6,16 @@
  * Time: 11:58
  */
 
+use AINET\MVC\Controllers\ProjectController;
+use AINET\MVC\Controllers\AccountController;
 
 require 'bootStrap.php';
+
+$projectController = new ProjectController();
+$projects = $projectController->listProjects();
+$accountController = new AccountController();
 
 
 
 $title = "PHP TAG FORCE - Projects Browser";
-require('MVC/Views/projects/projectsBrowser2.view.php');
+require('MVC/Views/projects/projectsBrowser.view.php');

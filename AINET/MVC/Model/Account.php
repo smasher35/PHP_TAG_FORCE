@@ -98,4 +98,23 @@ class Account extends AbstractModel
 
 	}
 
+    //devolve o nome do user mediante a respectiva ID
+    public static function getName($id)
+    {
+        //Query à base de dados combase no email do user logado
+        $result = AbstractModel::dbQuery("select id, name from users WHERE id ='$id' ");
+
+        //caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
+        if(!$result){
+            echo 'Bad Connection';
+            exit;
+        }
+
+        //devolve a linha do user encontrado
+        $row = mysqli_fetch_row($result);
+
+        //devolve apenas o role do user
+        return $row[1];
+    }
+
 }

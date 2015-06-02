@@ -28,7 +28,7 @@
 
 .alt4{
     /* projects highlights */
-    background: url('../Images/05.jpg') fixed;
+    background: url('../Storage/Images/05.jpg') fixed;
     padding-top: 40px;
     background-color: #ccc;
     min-height: 500px;
@@ -44,7 +44,7 @@
 
 .alt6{
     /* contacts section */
-    background: url('../Images/03.jpg') fixed;
+    background: url('../Storage/Images/03.jpg') fixed;
     background-color: #ffffff;
     min-height: 500px;
     padding-bottom: 150px;
@@ -54,7 +54,7 @@
 
 .alt7{
     /* The Crew */
-    background: url('../Images/05.jpg') fixed;
+    background: url('../Storage/Images/05.jpg') fixed;
     padding-top: 40px;
     background-color: #ccc;
 
@@ -65,7 +65,7 @@
 /* Formatação dos Jumbotrons - Destaque de informção
  =========================================================================*/
 #jumbotron{
-    background: url('../Images/04.jpg') fixed;
+    background: url('../Storage/Images/04.jpg') fixed;
     min-height: 600px;
     padding-top: 45px;
     max-height: 798px;
@@ -84,7 +84,7 @@
 }
 
 #jumboTronProjetcBrowser{
-     background: url('../Images/php-code_2.png') fixed;
+     background: url('../Storage/Images/php-code_2.png') fixed;
      min-height: 250px;
      padding-top: 10px;
      max-height: 1080px;
@@ -93,7 +93,7 @@
  }
 
 #jumboTronAccountsBrowser{
-    background: url('../Images/php-code_2.png') fixed;
+    background: url('../Storage/Images/php-code_2.png') fixed;
     min-height: 250px;
     padding-top: 10px;
     max-height: 1080px;

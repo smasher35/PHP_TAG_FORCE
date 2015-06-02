@@ -121,7 +121,6 @@
 		</div>
 	</div>
 </div>
-
 <div>
 	<?php require('MVC/Views/headerFooter/footer.view.php');?>
 </div>
