@@ -485,7 +485,7 @@
 																<li><a href="#">7</a></li>
 																<li><a href="#">8</a></li>
 																<li><a href="#">9</a></li>
-																<li>a href="#">10</a></li>
+																<li><a href="#">10</a></li>
 																<li><a href="#">&raquo;</a></li>
 															</ul> <!-- Fecha div class pagination -->
 														</div><!-- Fecha div class col-md-12 -->
