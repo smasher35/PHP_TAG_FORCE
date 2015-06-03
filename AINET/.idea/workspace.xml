@@ -31,16 +31,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MVC/Controllers/AccountController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2034" max-vertical-offset="2142">
-              <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="startScript.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/startScript.sql">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,11 +63,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminDash.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminDash.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.5085325" vertical-offset="0" max-vertical-offset="9216">
+            <state vertical-scroll-proportion="-179.33333" vertical-offset="0" max-vertical-offset="9216">
               <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.view.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MVC/Views/main.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.24914676" vertical-offset="4971" max-vertical-offset="6066">
+              <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -138,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/signUp.php" />
         <option value="$PROJECT_DIR$/Views/signup.view.php" />
         <option value="$PROJECT_DIR$/controllers/roleController.php" />
         <option value="$PROJECT_DIR$/Model/users.php" />
@@ -189,6 +188,7 @@
         <option value="$PROJECT_DIR$/dashBoards.php" />
         <option value="$PROJECT_DIR$/MVC/Views/DashBoards/editorDash.view.php" />
         <option value="$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php" />
+        <option value="$PROJECT_DIR$/MVC/Views/main.view.php" />
       </list>
     </option>
   </component>
@@ -528,7 +528,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1512792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -773,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/main.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="6740">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SQL/create-tables.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2280" max-vertical-offset="4100">
@@ -968,8 +961,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.5085325" vertical-offset="0" max-vertical-offset="9216">
+        <state vertical-scroll-proportion="-179.33333" vertical-offset="0" max-vertical-offset="9216">
           <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Views/main.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24914676" vertical-offset="4971" max-vertical-offset="6066">
+          <caret line="264" column="30" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="30" />
           <folding />
         </state>
       </provider>
