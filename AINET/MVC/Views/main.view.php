@@ -126,14 +126,17 @@
 			</div>
 			<div class="space"></div>
 			<div class="row">
-				<div class="col-md-3 col-sm-6 service">
-					<i class="fa fa-desktop"></i>
-					<h4><strong>Project 1</strong></h4>
-					<a href="#" class="btn btn-primary button-padding">View Project</a>
-					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-				</div>
 
-				<div class="col-md-3 col-sm-6 service">
+                <?php foreach($recentProjects as $project) { ?>
+                    <div class="col-md-3 col-sm-6 service">
+                    <i class="fa fa-desktop"></i>
+                    <h4><strong><?= $project->name?></strong></h4>
+                    <a href="#" class="btn btn-primary button-padding">View Project</a>
+                    <p><?= $project->description?></p>
+                    </div>
+                <?php }?>
+
+				<!--<div class="col-md-3 col-sm-6 service">
 					<i class="fa fa-mobile"></i>
 					<h4><strong>Project 2</strong></h4>
 					<a href="#" class="btn btn-primary button-padding">View Project</a>
@@ -152,7 +155,7 @@
 					<h4><strong>Project 4</strong></h4>
 					<a href="#" class="btn btn-primary button-padding">View Project</a>
 					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>

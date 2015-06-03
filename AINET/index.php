@@ -16,12 +16,11 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\controllers;
 
-/*
-$controller = new UserController;
-$accounts = $controller->listUsers();
-*/
+use AINET\MVC\Controllers\ProjectController;
+
+$projectController = new ProjectController();
+$recentProjects = $projectController->listRecentProjects();
 
 $title = "PHP TAG FORCE - Home";
 

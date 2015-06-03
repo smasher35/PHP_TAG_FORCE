@@ -53,6 +53,7 @@
 						<th class="text-center">User Name</th>
 						<th class="text-center">Institution</th>
 						<th class="text-center">Position</th>
+                        <th class="text-center">Role</th>
 						<th class="text-center">Website</th>
 						<th class="text-center">Show Projects</th>
 						<th class="text-center">Contact Me</th>
@@ -63,10 +64,11 @@
 							<td align="center"><?=$user->photo_url?></td>
 							<td><?=$user->email?></td>
 							<td><?= $institutionController->getInstitutionName($user->institution_id)?></td>
-							<td align="center"><?=$user->position?></td>
+                            <td align="center"><?=$user->position?></td>
+                            <td align="center"><?=$accountController->getRoleName($user->role)?></td>
 							<td><?=$user->profile_url?></td>
 							<td align="center"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
-							<td align="center"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></td>
+							<td align="center"><a href="mailto:'<?=$user->email?>'"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></a></td>
 						</tr>
 					<?php }?>
 				</table> <!-- Fim da TAbela -->

@@ -28,7 +28,7 @@ class Project extends AbstractModel {
 
     public static function all()
     {
-        $result = AbstractModel::dbQuery('select * from projects');
+        $result = AbstractModel::dbQuery('SELECT * FROM projects');
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
@@ -38,4 +38,41 @@ class Project extends AbstractModel {
         return $projects;
     }
 
+    //REJECTED STATE = 3
+    public static function getListRejected()
+    {
+        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 3');
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    //DELETED STATE = 4
+    public static function getListDeleted()
+    {
+        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 4');
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    public static function getListRecentProjects()
+    {
+        $result = AbstractModel::dbQuery('SELECT * FROM projects ORDER BY created_at DESC LIMIT 4 OFFSET 0');
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
 }

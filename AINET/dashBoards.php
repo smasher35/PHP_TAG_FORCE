@@ -24,6 +24,8 @@ if(!$authController->isAuthenticated()) {
     $projects = $projectControler->listProjects();
 	$role = $accountController->getRole($_SESSION['email']);
 	$users = $accountController->listUsers();
+    $projectsRejected = $projectControler->listRejectedProjects();
+    $projectsDeleted = $projectControler->listDeletedProjects();
 
     $title = "PHP TAG FORCE - DashBoard";
 

@@ -78,7 +78,7 @@
 											<td><?=$user->email?></td>
 											<td><?= $institutionController->getInstitutionName($user->institution_id)?></td>
 											<td align="center"><?=$user->position?></td>
-											<td><?=$user->role?></td>
+											<td align="center"><?=$accountController->getRoleName($user->role)?></td>
 											<td align="center">
 												<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 												<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
@@ -148,7 +148,7 @@
                                                 <td><?=$project->theme?></td>
                                                 <td><?=$accountController->getUserName($project->created_by)?></td>
 												<td align="center">
-													<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+													<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
 													<button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
 													<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 													<button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
@@ -209,7 +209,7 @@
 													</tr>
 
 													<!-- TODO: substituir pelo foeach a percorrer os projectos existentes -->
-                                                    <?php foreach ($projects as $project) { ?>
+                                                    <?php foreach ($projectsRejected as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -217,7 +217,7 @@
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                                 <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
                                                             </td>
@@ -266,7 +266,7 @@
 														<th class="text-center">Operations</th>
 													</tr>
 
-                                                    <?php foreach ($projects as $project) { ?>
+                                                    <?php foreach ($projectsDeleted as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -274,7 +274,7 @@
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
                                                                 <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
                                                             </td>
                                                         </tr>
@@ -344,7 +344,7 @@
 											<td><?=$user->institution_id?></td>
 											<td align="center"><?=$user->position?></td>
 											<td align="center">
-												<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+												<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
 												<button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
 												<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 											</td>
@@ -410,7 +410,7 @@
 															<td><?=$user->institution_id?></td>
 															<td align="center"><?=$user->position?></td>
 															<td align="center">
-																<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+																<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
 																<button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 															</td>
 														</tr>
@@ -465,7 +465,7 @@
 															<td><?=$user->institution_id?></td>
 															<td align="center"><?=$user->position?></td>
 															<td align="center">
-																<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-book"></span></button>
+																<button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
 															</td>
 														</tr>
 													<?php } ?>

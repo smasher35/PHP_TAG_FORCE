@@ -116,5 +116,19 @@ class Account extends AbstractModel
         //devolve apenas o role do user
         return $row[1];
     }
+    public static function getAccountRoleName($id)
+    {
+        switch($id) {
+            case 1:
+                return "Administrator";
+                break;
+            case 2:
+                return "Editor";
+                break;
+            case 3:
+                return "Author";
+        }
+
+    }
 
 }

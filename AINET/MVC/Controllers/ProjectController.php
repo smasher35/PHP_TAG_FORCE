@@ -10,6 +10,19 @@ class ProjectController {
     {
         return Project::all();
     }
+    public function listRejectedProjects()
+    {
+        return Project::getListRejected();
+    }
+    public function listDeletedProjects()
+    {
+        return Project::getListDeleted();
+    }
+
+    public function listRecentProjects()
+    {
+        return Project::getListRecentProjects();
+    }
 
 
 }

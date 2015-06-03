@@ -111,5 +111,9 @@ class AccountController
     {
         return Account::getName($id);
     }
+    public function getRoleName($roleId)
+    {
+        return Account::getAccountRoleName($roleId);
+    }
 
 }
