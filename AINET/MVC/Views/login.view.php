@@ -54,6 +54,7 @@
 									<input type="password" class="form-control" name="password" value="<?=$user->password?>" id="inputPassword1" placeholder="Password">
 								</div>
 								<?=HtmlHelper::error('email',$errors)?>
+                                <?=HtmlHelper::error('flags',$errors)?>
 								<a href="#" ><p class="textAlignRight">Forgot Password?</p></a>
 							</div>
 

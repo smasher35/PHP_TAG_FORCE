@@ -28,6 +28,15 @@ class AuthenticationController {
 				return;
 			}
 			else {
+
+                if($user->flags != 1){
+                    $this->errors = ['flags' => 'Disabled User - Contact the Administrator'];
+                    $this->account = new Account();
+                    $this->account->email = $mail;
+                    $this->account->password = $pass;
+                    return;
+
+                }
 				$this->account = $user;
 				$this->authenticated = true;
 				$_SESSION['authenticated']= true;
