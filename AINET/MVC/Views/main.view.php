@@ -7,7 +7,7 @@
 						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
 						<li role="presentation"><a href="#highlights"><strong id="subNavButtons">Highlights</strong></a></li>
 						<li role="presentation"><a href="#recentProjects"><strong id="subNavButtons">Recent Projects</strong></a></li>
-						<li role="presentation"><a href="#editorChoice"><strong id="subNavButtons">Editor's Choice</strong></a></li>
+						<li role="presentation"><a href="#lastUpdate"><strong id="subNavButtons">Last Updates</strong></a></li>
 						<li role="presentation"><a href="#theTeam"><strong id="subNavButtons">The Crew</strong></a></li>
 						<li role="presentation"><a href="#contactUs"><strong id="subNavButtons">Contact</strong></a></li>
 					</ul>
@@ -50,7 +50,7 @@
 
 	<div class="carousel-inner">
 		<div class="item active">
-			<img src="Storage/Images/Projeto1.jpg" alt="Projecto Hardware" class="img-responsive">
+			<img src="storage/Images/Projeto1.jpg" alt="Projecto Hardware" class="img-responsive">
 			<div class="carousel-caption">
 				<h3>Projecto Hardware</h3>
 				<a href="#" class="btn btn-primary">Tell Me More...</a>
@@ -59,7 +59,7 @@
 		</div>
 
 		<div class="item">
-			<img src="Storage/Images/Projeto2.jpg" alt="Projecto Kano" class="img-responsive">
+			<img src="storage/Images/Projeto2.jpg" alt="Projecto Kano" class="img-responsive">
 			<div class="carousel-caption">
 				<h3>Projecto Kano</h3>
 				<a href="#" class="btn btn-primary">Tell Me More...</a>
@@ -67,7 +67,7 @@
 		</div>
 
 		<div class="item">
-			<img src="Storage/Images/Projeto3.jpg" alt="Projecto HTML5" class="img-responsive">
+			<img src="storage/Images/Projeto3.jpg" alt="Projecto HTML5" class="img-responsive">
 			<div class="carousel-caption">
 				<h3>Projecto HTML5</h3>
 				<a href="#" class="btn btn-primary">Tell Me More...</a>
@@ -75,7 +75,7 @@
 		</div>
 
 		<div class="item">
-			<img src="Storage/Images/Projeto4.jpg" alt="Projecto CSS3" class="img-responsive">
+			<img src="storage/Images/Projeto4.jpg" alt="Projecto CSS3" class="img-responsive">
 			<div class="carousel-caption">
 				<h3>Projecto CSS3</h3>
 				<a href="#" class="btn btn-primary">Tell Me More...</a>
@@ -83,7 +83,7 @@
 		</div>
 
 		<div class="item">
-			<img src="Storage/Images/Projeto5.jpg" alt="Projecto Laravel" class="img-responsive">
+			<img src="storage/Images/Projeto5.jpg" alt="Projecto Laravel" class="img-responsive">
 			<div class="carousel-caption">
 				<h3>Projecto Laravel</h3>
 				<a href="http://www.laravel.com" class="btn btn-primary">Tell Me More...</a>
@@ -91,7 +91,7 @@
 		</div>
 
 		<div class="item">
-			<img src="Storage/Images/Projeto6.jpg" alt="Projecto PHP" class="img-responsive">
+			<img src="storage/Images/Projeto6.jpg" alt="Projecto PHP" class="img-responsive">
 			<div class="carousel-caption">
 				<h3>Projecto PHP + MySQL</h3>
 				<a href="#" class="btn btn-primary">Tell Me More...</a>
@@ -130,8 +130,10 @@
                 <?php foreach($recentProjects as $project) { ?>
                     <div class="col-md-3 col-sm-6 service">
                     <i class="fa fa-desktop"></i>
-                    <h4><strong><?= $project->name?></strong></h4>
+                    <br>
                     <a href="#" class="btn btn-primary button-padding">View Project</a>
+                    <h4><strong><?= $project->name?></strong></h4>
+
                     <p><?= $project->description?></p>
                     </div>
                 <?php }?>
@@ -177,7 +179,7 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div class="thumbnail">
-									<img src="Storage/Images/crew/paulo.jpg" alt="..." class="img-circle team-img">
+									<img src="storage/Images/crew/paulo.jpg" alt="..." class="img-circle team-img">
 									<div class="caption">
 										<h3>Paulo Penicheiro</h3>
 										<p>PHP TAG FORCE - CEO / Founder</p>
@@ -188,7 +190,7 @@
 
 							<div class="col-md-4">
 								<div class="thumbnail">
-									<img src="Storage/Images/crew/ruben.jpg" alt="..." class="img-circle team-img">
+									<img src="storage/Images/crew/ruben.jpg" alt="..." class="img-circle team-img">
 									<div class="caption">
 										<h3>Ruben Miguel</h3>
 										<p>PHP TAG FORCE - LAYOUT GURU</p>
@@ -199,7 +201,7 @@
 
 							<div class="col-md-4">
 								<div class="thumbnail">
-									<img src="Storage/Images/crew/alfredo.jpg" alt="..." class="img-circle team-img">
+									<img src="storage/Images/crew/alfredo.jpg" alt="..." class="img-circle team-img">
 									<div class="caption">
 										<h3>Alfredo Rosa</h3>
 										<p>PHP TAG FORCE - DATABASE MASTER - BUG SNATCHER</p>
@@ -220,9 +222,9 @@
  =====================================================================================-->
 	<!-- TODO: query à base de dados e recolher 3 projectos indicados pelo Editor -->
 <div class="alt5">
-<a class="padding" id="editorChoice"></a>
+<a class="padding" id="lastUpdate"></a>
 	<div class="center">
-		<h2 class="text-center">Editor's <strong>Choice</strong></h2>
+		<h2 class="text-center">Last Updated <strong>Projects</strong></h2>
 		<div class="line">
 			<hr>
 		</div>
@@ -232,7 +234,7 @@
 	<div class="row padding">
 
 		<div class="col-md-6">
-			<img src="Storage/Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
+			<img src="storage/Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
 		</div>
 		<div class="col-md-6">
 			<p class="text-justify">
@@ -259,13 +261,13 @@
 			</p>
 		</div>
 		<div class="col-md-6">
-			<img src="Storage/Images/cube.jpg" class="img-circle img-responsive img-center" alt="Projecto em C#">
+			<img src="storage/Images/cube.jpg" class="img-circle img-responsive img-center" alt="Projecto em C#">
 		</div>
 	</div>
 	<hr />
 	<div class="row padding">
 		<div class="col-md-6">
-			<img src="Storage/Images/php.jpeg" class="img-circle img-responsive" alt="Projecto em Php">
+			<img src="storage/Images/php.jpeg" class="img-circle img-responsive" alt="Projecto em Php">
 		</div>
 		<div class="col-md-6">
 			<p class="text-justify">

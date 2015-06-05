@@ -30,15 +30,15 @@ if(!$authController->isAuthenticated()) {
     $title = "PHP TAG FORCE - DashBoard";
 
 
-	if ($role == 1){
+	if ($role == 4){
 		require('MVC/Views\DashBoards\adminDash.view.php');
 	}
 
-	if ($role == 2) {
+	if ($role == 1) {
 		require('MVC/Views\DashBoards\editorDash.view.php');
 	}
 
-	if ($role == 3) {
+	if ($role == 2) {
 		require('MVC/Views\DashBoards\authorDash.view.php');
 	}
 

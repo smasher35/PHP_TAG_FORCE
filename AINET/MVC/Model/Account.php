@@ -53,7 +53,12 @@ class Account extends AbstractModel
 		$users = self::all();
 		foreach($users as $id => $user) {
 			if($user->email==$email) {
-				if($user->password ==$pass){
+                //$storedPass = $user->password;
+                //$password = md5($pass);
+                //echo ("STORED PASS ".$storedPass." - PASS: ".$password);//debug only
+				//if(password_verify($storedPass,$password)) {
+                if($user->password== $pass) {
+                    echo "ESTIVE AQUI";//debug only
 					return $user;
 				}
 			}
@@ -119,13 +124,13 @@ class Account extends AbstractModel
     public static function getAccountRoleName($id)
     {
         switch($id) {
-            case 1:
+            case 4:
                 return "Administrator";
                 break;
-            case 2:
+            case 1:
                 return "Editor";
                 break;
-            case 3:
+            case 2:
                 return "Author";
         }
 

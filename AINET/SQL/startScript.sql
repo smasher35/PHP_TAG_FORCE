@@ -246,8 +246,6 @@ CREATE TABLE `users` (
 -- 2015-05-07 08:32:42
 
 
-INSERT INTO institutions (name)
-VALUES ("ESTG - Instituto Politécnico de Leiria"),("ESTM - Instituto Politécnico de Leiria"),("ESECS - Instituto Politécnico de Leiria"),("ESAD.CR - Instituto Politécnico de Leiria"),("ESSLei - Instituto Politécnico de Leiria");
 
 INSERT INTO users (name, email, alt_email, password, institution_id, position, photo_url, profile_url, flags, role, remember_token, created_at, updated_at)
 VALUES ("ruben", "2130664@my.ipleiria.pt", NULL, "admin", 1, "student", NULL, NULL, 1, 1, NULL, NOW(), NOW()),
@@ -256,9 +254,3 @@ VALUES ("ruben", "2130664@my.ipleiria.pt", NULL, "admin", 1, "student", NULL, NU
 ("admin", "admin@my.ipleiria.pt", NULL, "admin", 1, "other", NULL, NULL, 1, 1, NULL, NOW(), NOW()),
 ("editor", "editor@my.ipleiria.pt", NULL, "editor", 1, "other", NULL, NULL, 1, 2, NULL, NOW(), NOW()),
 ("autor", "autor@my.ipleiria.pt", NULL, "autor", 1, "other", NULL, NULL, 1, 3, NULL, NOW(), NOW());
-
-INSERT INTO projects (name, acronym, description, type, theme, keywords, started_at, finished_at, created_by, updated_by, approved_by, used_software, used_hardware, observations, featured_until, replaces_id, state, refusal_msg, deleted_at, created_at, updated_at)
-VALUES ("Kano - The Computer Kit", "Kano", "Kano is a computer you build and code yourself. Lego simple, Raspberry Pi powerful, and hugely fun.", "hardware", "hardware", "hardware, computer, raspberry, pi2, linux", NOW(), NOW(), 6, 6, 1, "GNU/Linux", "RaspberiPi2, DIY Speaker, WiFi_Dongle", "Ships Free To Most Countries", NOW(), NULL, 1, NULL, NULL, NOW(), NOW()),
-("Laravel", "Lar", "Laravel is a free, open-source PHP web application framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern.", "software", "framework", "web, framework, php, bootstap html5", NOW(), NOW(), 5, 5, 5, "GNU/Linux, Windows MacOS", "PC, MAC", "a clean and classy framework for PHP web development", NOW(), NULL, 2, NULL, NULL, NOW(), NOW()),
-("Multimedia Project", "MMP", "Multimedia promotional video, to promote our Computer Engineer Course at IPLeiria", "video", "multimedia", "multimedia, video, 3d, sound, image, vectorial, design", NOW(), NOW(), 1, 1, 1, "Blender3d, Inkscape, GIMP, Audacity, VSDC", "PC, MAC", "Nothing to show", NOW(), NULL, 2, NULL, NULL, NOW(), NOW()),
-("By Invitation Only", "BIO", "Conference Agenda Viewer and Users Networking Provider", "android", "management", "BIO, conference, android, mobile, network", NOW(), NOW(), 1, 1, 1, "Android Studio", "PC, MAC", "Nothing to show", NOW(), NULL, 2, NULL, NULL, NOW(), NOW());

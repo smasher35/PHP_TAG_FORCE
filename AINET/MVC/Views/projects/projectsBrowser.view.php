@@ -25,7 +25,14 @@
 		<!-- Page Heading -->
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="page-header">Projects Browser <small>List</small> </h1>
+				<div class="center">
+				    <hr>
+                    <h2 class="text-center">Projects <strong>Browser</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="clearfix"></div>
+	            </div>
 			</div>
 		</div>
 		<!-- /.row -->
