@@ -21,11 +21,20 @@ if(!$authController->isAuthenticated()) {
 	$institutionController = new InstitutionController();
 	$accountController = new AccountController();
     $projectControler = new ProjectController();
-    $projects = $projectControler->listProjects();
+
+    //----------------ACCOUNTS--------------//
 	$role = $accountController->getRole($_SESSION['email']);
 	$users = $accountController->listUsers();
+    $usersActive = $accountController->getListActiveAcounts();
+    $usersDisabled = $accountController->getListDisabledAccounts();
+    $usersDeleted = $accountController->getListDeletedAccounts();
+
+    //----------------PROJECTS--------------//
+    $projects = $projectControler->listProjects();
     $projectsRejected = $projectControler->listRejectedProjects();
     $projectsDeleted = $projectControler->listDeletedProjects();
+    $projectsPending = $projectControler->listPendingProjects();
+    $projectsAproved = $projectControler->listAprovedProjects();
 
     $title = "PHP TAG FORCE - DashBoard";
 

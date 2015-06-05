@@ -38,32 +38,6 @@ class Project extends AbstractModel {
         return $projects;
     }
 
-    //REJECTED STATE = 3
-    public static function getListRejected()
-    {
-        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 3');
-        $projects = [];
-        if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
-                array_push($projects, $project);
-            }
-        }
-        return $projects;
-    }
-
-    //DELETED STATE = 4
-    public static function getListDeleted()
-    {
-        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 4');
-        $projects = [];
-        if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
-                array_push($projects, $project);
-            }
-        }
-        return $projects;
-    }
-
     public static function getListRecentProjects()
     {
         $result = AbstractModel::dbQuery('SELECT * FROM projects ORDER BY created_at DESC LIMIT 4 OFFSET 0');
@@ -75,4 +49,72 @@ class Project extends AbstractModel {
         }
         return $projects;
     }
+
+    //PENDING STATE = 0
+    public static function getListPendingProjects()
+    {
+        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 0');
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    //APROVED STATE = 1
+    public static function getListAprovedProjects()
+    {
+        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 1');
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    //REJECTED STATE = 2
+    public static function getListRejectedProjects()
+    {
+        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 2');
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    //DELETED STATE = 3
+    public static function getListDeletedProjects()
+    {
+        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 3');
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getState($id)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE id = '$id'");
+        $project=$result->fetch_object('AINET\MVC\Model\Project');
+        return $project->state;
+    }
+
+    public static function setState($id, $state)
+    {
+        AbstractModel::dbQuery("UPDATE projects SET state = '$state' WHERE id = '$id'");
+    }
+
 }

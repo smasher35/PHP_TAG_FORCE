@@ -74,7 +74,7 @@
 													</tr>
 
 													<!-- TODO: substituir pelo foeach a percorrer os projectos existentes e filtrar por Pending -->
-													<?php foreach ($projects as $project) { ?>
+													<?php foreach ($projectsPending as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -142,7 +142,7 @@
 													</tr>
 
 													<!-- TODO: substituir pelo foeach a percorrer os projectos existentes e filtrar por aprovados -->
-													<?php foreach ($projects as $project) { ?>
+													<?php foreach ($projectsAproved as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -206,7 +206,7 @@
 													</tr>
 
 													<!-- TODO: substituir pelo foeach a percorrer os projectos existentes -->
-													<?php foreach ($projects as $project) { ?>
+													<?php foreach ($projectsRejected as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -270,7 +270,7 @@
 													</tr>
 
 													<!-- TODO: substituir pelo foeach a percorrer os projectos e mostrar somente os apagados -->
-													<?php foreach ($projects as $project) { ?>
+													<?php foreach ($projectsDeleted as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>

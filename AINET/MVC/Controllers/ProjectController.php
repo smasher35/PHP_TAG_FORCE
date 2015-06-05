@@ -12,16 +12,45 @@ class ProjectController {
     }
     public function listRejectedProjects()
     {
-        return Project::getListRejected();
+        return Project::getListRejectedProjects();
     }
     public function listDeletedProjects()
     {
-        return Project::getListDeleted();
+        return Project::getListDeletedProjects();
     }
 
     public function listRecentProjects()
     {
         return Project::getListRecentProjects();
+    }
+
+    public function listPendingProjects()
+    {
+        return Project::getListPendingProjects();
+    }
+
+    public function listAprovedProjects()
+    {
+        return Project::getListAprovedProjects();
+    }
+    public function getProjctState($id)
+    {
+        return Project::getState($id);
+    }
+    public function setAprovedProject($id)
+    {
+        Project::setState($id, 1);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#projAproved');
+    }
+
+    public function setDeletedProject($id)
+    {
+        Project::setState($id, 3);
+    }
+
+    public function setRejectedProject($id)
+    {
+        Project::setState($id, 2);
     }
 
 

@@ -143,4 +143,50 @@ class Account extends AbstractModel
 
     }
 
+    //DISABLED = 0
+    public static function getDisabledAccounts()
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 0");
+        $users = [];
+        if ($result) {
+            while($user = $result -> fetch_object('AINET\MVC\Model\Account')) {
+                array_push($users, $user);
+            }
+        }
+        return $users;
+    }
+
+    //ACTIVE = 1
+    public static function getActiveAccounts()
+    {
+        $currentUser = $_SESSION['email'];
+        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 AND email != '$currentUser'");
+        $users = [];
+        if ($result) {
+            while($user = $result -> fetch_object('AINET\MVC\Model\Account')) {
+                array_push($users, $user);
+            }
+        }
+        return $users;
+    }
+
+    //DELETED = 2
+    public static function getDeletedAccounts()
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 2");
+        $users = [];
+        if ($result) {
+            while($user = $result -> fetch_object('AINET\MVC\Model\Account')) {
+                array_push($users, $user);
+            }
+        }
+        return $users;
+    }
+
+    public static function setState($id, $flag)
+    {
+        AbstractModel::dbQuery("UPDATE users SET flags = '$flag' WHERE id = '$id'");
+    }
+
+
 }

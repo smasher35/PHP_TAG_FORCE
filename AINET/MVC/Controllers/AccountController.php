@@ -1,7 +1,9 @@
 <?php namespace AINET\MVC\Controllers;
 
+use AINET\MVC\Model\Project;
 use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
+
 
 /**
  * Created by PhpStorm.
@@ -114,6 +116,41 @@ class AccountController
     public function getRoleName($roleId)
     {
         return Account::getAccountRoleName($roleId);
+    }
+
+    public function getListActiveAcounts()
+    {
+        return Account::getActiveAccounts();
+    }
+
+    public function getListDisabledAccounts()
+    {
+        return Account::getDisabledAccounts();
+    }
+
+    public function getListDeletedAccounts()
+    {
+        return Account::getDeletedAccounts();
+    }
+
+    public function setDisabledAccount($id)
+    {
+        var_dump($id);
+        Account::setState($id, 0);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#accountsManagement');
+    }
+
+    public function setEnabledAccount($id)
+    {
+        Account::setState($id, 1);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#accountsManagement');
+    }
+
+
+    public function setDeletedAccount($id)
+    {
+        Account::setState($id, 2);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#accountsManagement');
     }
 
 }

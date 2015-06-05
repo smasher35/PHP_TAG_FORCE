@@ -83,8 +83,7 @@
                                                             <th class="text-center">Operations</th>
                                                         </tr>
 
-                                                        <!-- TODO: substituir pelo foeach a percorrer os projectos existentes e filtrar por status active -->
-                                                        <?php foreach ($users as $user) { ?>
+                                                        <?php foreach ($usersActive as $user) { ?>
                                                             <tr>
                                                                 <td align="center"><input type="checkbox"></td>
                                                                 <td><?=$user->email?></td>
@@ -92,8 +91,8 @@
                                                                 <td align="center"><?=$user->position?></td>
                                                                 <td align="center"><?=$accountController->getRoleName($user->role)?></td>
                                                                 <td align="center">
-                                                                    <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Disable"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                                                    <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                    <a href="disableAccount.php?account_id=<?=$user->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Disable"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
+                                                                    <a href="deleteAccount.php?account_id=<?=$user->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                     <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
                                                                     <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
 
@@ -150,8 +149,7 @@
                                                             <th class="text-center">Operations</th>
                                                         </tr>
 
-                                                        <!-- TODO: substituir pelo foeach a percorrer os projectos existentes e filtrar por status Disabled -->
-                                                        <?php foreach ($users as $user) { ?>
+                                                        <?php foreach ($usersDisabled as $user) { ?>
                                                             <tr>
                                                                 <td align="center"><input type="checkbox"></td>
                                                                 <td><?=$user->email?></td>
@@ -159,8 +157,9 @@
                                                                 <td align="center"><?=$user->position?></td>
                                                                 <td align="center"><?=$accountController->getRoleName($user->role)?></td>
                                                                 <td align="center">
-                                                                    <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Activate"><span class="glyphicon glyphicon-ok"></span></button>
-                                                                    <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+
+                                                                    <a href="enableAccount.php?account_id=<?=$user->id?>"> <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Activate"><span class="glyphicon glyphicon-ok"></span></button></a>
+                                                                    <a href="deleteAccount.phpAccount.php?account_id=<?=$user->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                     <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
 
                                                                 </td>
@@ -201,7 +200,6 @@
                                                     <div class="col-md-12 align-center inline">
                                                         <br>
                                                         <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
-                                                        <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Activate Selected</a>
 
                                                         <hr>
                                                     </div>
@@ -216,8 +214,7 @@
                                                             <th class="text-center">Operations</th>
                                                         </tr>
 
-                                                        <!-- TODO: substituir pelo foeach a percorrer os projectos existentes e filtrar por status Disabled -->
-                                                        <?php foreach ($users as $user) { ?>
+                                                        <?php foreach ($usersDeleted as $user) { ?>
                                                             <tr>
                                                                 <td align="center"><input type="checkbox"></td>
                                                                 <td><?=$user->email?></td>
@@ -225,7 +222,6 @@
                                                                 <td align="center"><?=$user->position?></td>
                                                                 <td align="center"><?=$accountController->getRoleName($user->role)?></td>
                                                                 <td align="center">
-                                                                    <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Activate"><span class="glyphicon glyphicon-ok"></span></button>
                                                                     <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
 
                                                                 </td>
@@ -300,8 +296,7 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os projectos existentes e filtrar por Pending -->
-                                                    <?php foreach ($projects as $project) { ?>
+                                                    <?php foreach ($projectsPending as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -309,9 +304,9 @@
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
+                                                                <a href="rejectProject.php?project_id=<?=$project->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
+                                                                <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                 <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
                                                             </td>
                                                         </tr>
@@ -367,8 +362,7 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os projectos existentes e filtrar por aprovados -->
-                                                    <?php foreach ($projects as $project) { ?>
+                                                    <?php foreach ($projectsAproved as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -376,8 +370,8 @@
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                <a href="rejectProject.php?project_id=<?=$project->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
+                                                                <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                 <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
                                                             </td>
                                                         </tr>
@@ -431,8 +425,7 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os projectos existentes -->
-                                                    <?php foreach ($projects as $project) { ?>
+                                                    <?php foreach ($projectsRejected as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -440,8 +433,8 @@
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
+                                                                <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                                 <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
                                                             </td>
                                                         </tr>
@@ -494,8 +487,7 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os projectos e mostrar somente os apagados -->
-                                                    <?php foreach ($projects as $project) { ?>
+                                                    <?php foreach ($projectsDeleted as $project) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
@@ -503,7 +495,6 @@
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
                                                                 <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
                                                             </td>
                                                         </tr>
