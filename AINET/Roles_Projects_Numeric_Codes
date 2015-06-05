@@ -1,10 +1,17 @@
-User Roles
+USER ROLES (role)
 4 - Administrator
 1 - Editor
 2 - Author
 
-Project State
-1 - Pending
-2 - Approved
-3 - Rejected
-4 - Deleted
+USER STATUS (flags)
+0 - Disabled Accounts
+1 - Active Accounts
+2 - Deleted
+
+PROJECT STATUS (state)
+0 - Pending
+1 - Approved
+2 - Rejected
+3 - Deleted
+
+
