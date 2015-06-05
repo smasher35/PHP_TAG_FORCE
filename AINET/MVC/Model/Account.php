@@ -50,21 +50,29 @@ class Account extends AbstractModel
 
 	public static function findByEmail($email,$pass)
 	{
-		$users = self::all();
-		foreach($users as $id => $user) {
-			if($user->email==$email) {
-                //$storedPass = $user->password;
-                //$password = md5($pass);
-                //echo ("STORED PASS ".$storedPass." - PASS: ".$password);//debug only
-				//if(password_verify($storedPass,$password)) {
-                if($user->password== $pass) {
-                    echo "ESTIVE AQUI";//debug only
-					return $user;
-				}
-			}
-		}
+
+
+        $user = self::getUserbyMail($email);
+
+        if ($user != null){
+            $storedPass = $user->password;
+
+            if(password_verify($pass,$storedPass)) {
+                return $user;
+            }
+        }
 		return null;
 	}
+
+    private static function  getUserbyMail($mail){
+
+        $row = AbstractModel::dbQuery("SELECT * FROM users WHERE email = '$mail'");
+
+        //devolve a linha do user encontrado
+        $user = mysqli_fetch_object($row);
+
+        return $user;
+    }
 
 	public static function getAccountRole($account)
 	{
@@ -87,14 +95,13 @@ class Account extends AbstractModel
 	public static function add($account)
 	{
 		//INSERIR NA BD
-
 		$query = 'insert into users (name,email,al_email,password,institution_id,position,photo_url,profile_url,flags,role,remember_token,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,?,2,2)';
 		$conn = self::dbConnection();
 		$stm = $conn->prepare($query);
 		if ($stm) {
 			$stm->bind_param("ssssisisiisdd",$account->name,$account->email,$account->al_email,$account->password,$account->institution_id,$account->position,$account->photo_url,$account->profile_url,$account->flags,$account->role,$account->remember_token,$account->created_at,$account->updated_at);
 			if ($stm->execute()) {
-				header('Location: http://192.168.56.101/ficha06/dashBoards.php');
+				header('Location: http://192.168.56.101/php_tag_force/AINET/dashBoards.php');
 				exit(0);
 			}else {
 				//return error

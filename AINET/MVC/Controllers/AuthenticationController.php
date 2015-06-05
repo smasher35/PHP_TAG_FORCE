@@ -12,7 +12,7 @@ class AuthenticationController {
 	{
 
 		if(isset($_SESSION['authenticated'])) {
-			$user = Account::findByEmail($_SESSION['email'],['password']);
+			$user = Account::findByEmail($_SESSION['email'],$_SESSION['password']);
 			$this->authenticated=true;
 		}
 		elseif(!empty($_POST)) {
