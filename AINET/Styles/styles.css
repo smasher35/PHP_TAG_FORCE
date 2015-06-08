@@ -451,4 +451,8 @@ img.img-circle.techSheet-img {
         color: #ffffff;
 }
 
+.img-profile-thumbnail{
+    max-height: 50px;
+    max-width: 50px;
+}
 

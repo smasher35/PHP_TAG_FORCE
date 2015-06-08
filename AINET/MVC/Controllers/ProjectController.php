@@ -6,6 +6,12 @@ use AINET\MVC\Model\Project;
 
 class ProjectController {
 
+    /**********Criar novo Projeto**********/
+    public function createProject($uploadedFile)
+    {
+        Project::addProject($uploadedFile);
+    }
+
 
     public function listProjectByid($id){
         return Project::getListProjectById($id);
@@ -62,6 +68,8 @@ class ProjectController {
     {
         return Project::all();
     }
+
+
 
 
 }
