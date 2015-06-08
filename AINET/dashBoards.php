@@ -12,6 +12,7 @@ use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\InstitutionController;
 use AINET\MVC\Controllers\ProjectController;
+use AINET\MVC\Controllers\CommentController;
 
 
 $authController = new AuthenticationController();
@@ -21,6 +22,7 @@ if(!$authController->isAuthenticated()) {
 	$institutionController = new InstitutionController();
 	$accountController = new AccountController();
     $projectControler = new ProjectController();
+    $commentsController = new CommentController();
 
     //----------------ACCOUNTS--------------//
 	$role = $accountController->getRole($_SESSION['email']);
@@ -35,6 +37,16 @@ if(!$authController->isAuthenticated()) {
     $projectsDeleted = $projectControler->listDeletedProjects();
     $projectsPending = $projectControler->listPendingProjects();
     $projectsAproved = $projectControler->listAprovedProjects();
+
+    //---------------- COMMENTS --------------//
+    $comments = $commentsController->listComments();
+    $commentsApproved = $commentsController->listAprovedComments();
+    $commentsPending = $commentsController->listPendingComments();
+    $commentsRejected = $commentsController->listRejectedComments();
+    $commentsDeleted = $commentsController->listDeletedComments();
+
+
+
 
     $title = "PHP TAG FORCE - DashBoard";
 

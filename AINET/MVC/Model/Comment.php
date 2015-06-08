@@ -58,5 +58,31 @@ class Comment extends AbstractModel {
 
     }
 
+    public static function listRejectedComments(){
+        $result = AbstractModel::dbQuery('SELECT * FROM comments WHERE state = 2');
+        $comments = [];
+        if ($result) {
+            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+                array_push($comments, $comment);
+            }
+        }
+        return $comments;
+
+    }
+
+    public static function listDeletedComments(){
+        $result = AbstractModel::dbQuery('SELECT * FROM comments WHERE state = 3');
+        $comments = [];
+        if ($result) {
+            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+                array_push($comments, $comment);
+            }
+        }
+        return $comments;
+
+    }
+
+
+
 
 }

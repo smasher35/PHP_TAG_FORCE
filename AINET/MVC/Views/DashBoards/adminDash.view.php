@@ -569,13 +569,13 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os comentários existentes -->
-                                                    <?php foreach ($users as $user) { ?>
+
+                                                    <?php foreach ($commentsPending as $comment) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
-                                                            <td><?=$user->email?></td>
-                                                            <td><?=$user->institution_id?></td>
-                                                            <td align="center"><?=$user->position?></td>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$comment->comment?></td>
+                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
                                                                 <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
@@ -631,13 +631,13 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os comentários existentes -->
-                                                    <?php foreach ($users as $user) { ?>
+
+                                                    <?php foreach ($commentsApproved as $comment) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
-                                                            <td><?=$user->email?></td>
-                                                            <td><?=$user->institution_id?></td>
-                                                            <td align="center"><?=$user->position?></td>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$comment->comment?></td>
+                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
@@ -692,13 +692,12 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os comentários existentes -->
-                                                    <?php foreach ($users as $user) { ?>
+                                                    <?php foreach ($commentsRejected as $comment) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
-                                                            <td><?=$user->email?></td>
-                                                            <td><?=$user->institution_id?></td>
-                                                            <td align="center"><?=$user->position?></td>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$comment->comment?></td>
+                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
@@ -753,14 +752,15 @@
                                                     </tr>
 
                                                     <!-- TODO: substituir pelo foeach a percorrer os comentários e mostrar somente os apagados -->
-                                                    <?php foreach ($users as $user) { ?>
+                                                    <?php foreach ($commentsDeleted as $comment) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
-                                                            <td><?=$user->email?></td>
-                                                            <td><?=$user->institution_id?></td>
-                                                            <td align="center"><?=$user->position?></td>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$comment->comment?></td>
+                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
                                                         </tr>
                                                     <?php } ?>

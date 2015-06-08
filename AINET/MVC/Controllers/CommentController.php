@@ -23,4 +23,13 @@ class CommentController {
     public function listAprovedComments() {
         return Comment::listAprovedComments();
     }
+
+    public function listRejectedComments() {
+
+        return Comment::listRejectedComments();
+    }
+
+    public function listDeletedComments() {
+         return Comment::listDeletedComments();
+    }
 }
