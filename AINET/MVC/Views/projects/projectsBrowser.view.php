@@ -3,15 +3,14 @@
 <div class="row" id="subNavBar">
 	<div class="container">
 		<div class="center">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
+			<div class="col-md-12 col-lg-offset-5">
 					<ul class="nav nav-pills">
 						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
 						<li role="presentation"><a href="#projectsList"><strong id="subNavButtons">Projects</strong></a></li>
 						<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
 					</ul>
 			</div>
-			<div class="col-md-4"></div>
+
 		</div>
 	</div>
 </div> <!-- fecha a sub navigation Bar -->

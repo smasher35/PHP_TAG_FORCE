@@ -8,8 +8,15 @@
 
 require 'bootstrap.php';
 
-$title = "PHP TAG FORCE - Projects Technical Sheet";
+use AINET\MVC\Controllers\ProjectController;
+use AINET\MVC\Controllers\AccountController;
 
+
+$projectController = new ProjectController();
+$projects = $projectController->listProjects();
+$accountController = new AccountController();
+
+$title = "PHP TAG FORCE - Projects Technical Sheet";
 
 
 require('MVC/Views/projects/projectDetails.view.php');

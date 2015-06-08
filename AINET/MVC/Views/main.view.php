@@ -1,8 +1,7 @@
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 		<div class="row" id="subNavBar">
 			<div class="container">
-				<div class="col-md-2"></div>
-				<div class="col-md-8" align="center">
+				<div class="col-md-12 col-lg-offset-3" align="center">
 					<ul class="nav nav-pills">
 						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
 						<li role="presentation"><a href="#highlights"><strong id="subNavButtons">Highlights</strong></a></li>
@@ -12,7 +11,6 @@
 						<li role="presentation"><a href="#contactUs"><strong id="subNavButtons">Contact</strong></a></li>
 					</ul>
 				</div>
-				<div class="col-md-2"></div>
 			</div>
 		</div> <!-- fecha a sub navigation Bar -->
 	</div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->

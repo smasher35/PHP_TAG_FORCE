@@ -12,12 +12,14 @@
 <div class="row" id="subNavBar">
 	<div class="container">
 		<div class="center">
-			<div class="col-md-4"></div>
-			<div class="col-md-4"></div>
-			<div class="col-md-4"></div>
+			<div class="col-md-12 col-lg-offset-6">
+                <ul class="nav nav-pills">
+                    <li role="presentation"><a href="#goTop"><strong id="subNavButtons"> </strong></a></li>
+                </ul>
+            </div>
+
 		</div>
 	</div>
-
 </div> <!-- fecha a sub navigation Bar -->
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 
