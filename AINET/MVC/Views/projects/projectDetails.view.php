@@ -84,8 +84,9 @@
                         Acronym: <?=$actualproject->acronym?> <br>
                         Theme: <?=$actualproject->theme?> <br>
                         Type: <?=$actualproject->type?> <br>
-                        Name: <?=$actualproject->name?><br>
+                        Name: <h3><strong><?=$actualproject->name?><br></strong></h3>
                         Author: <?=$actualproject->created_by?><br>
+                        <hr>
                         Description: <?=$actualproject->description?><br>
                     </p>
                 </div><!-- fecha center --->
@@ -203,12 +204,11 @@
                             </tr>
 
                             <!-- TODO: substituir pelo foeach a percorrer os comentários existentes -->
-                            <?php foreach ($users as $user) { ?>
+                            <?php foreach ($commentsList as $comment) { ?>
                                 <tr>
                                     <td align="center"><input type="checkbox"></td>
-                                    <td><?=$user->email?></td>
-                                    <td><?=$user->institution_id?></td>
-                                    <td align="center"><?=$user->position?></td>
+                                    <td><?=$comment->comment?></td>
+                                    <td><?=$comment->user_name?></td>
                                     <td align="center">
                                         <button class="btn  btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
                                         <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>

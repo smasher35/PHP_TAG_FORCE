@@ -10,14 +10,16 @@ require 'bootstrap.php';
 
 use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\CommentController;
 
 
 $projectController = new ProjectController();
 $accountController = new AccountController();
+$commentController = new CommentController();
 
 $projectid = $_GET['project_id'];
 
-
+$commentsList = $commentController->listComments();
 $actualproject = $projectController->listProjectByid($projectid);
 $title = "PHP TAG FORCE - Projects Technical Sheet";
 
