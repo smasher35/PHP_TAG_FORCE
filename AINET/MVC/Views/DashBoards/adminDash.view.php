@@ -574,7 +574,7 @@
                                                         <tr>
                                                             <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
-                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
@@ -636,7 +636,7 @@
                                                         <tr>
                                                             <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
-                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
@@ -696,7 +696,7 @@
                                                         <tr>
                                                             <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
-                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
@@ -751,12 +751,11 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <!-- TODO: substituir pelo foeach a percorrer os comentários e mostrar somente os apagados -->
                                                     <?php foreach ($commentsDeleted as $comment) { ?>
                                                         <tr>
                                                             <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
-                                                            <td><?=$comment->project_id?></td>
+                                                            <td><?=$projectControler->getProjctState($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>

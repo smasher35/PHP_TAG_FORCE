@@ -37,6 +37,11 @@ class ProjectController {
     {
         return Project::getState($id);
     }
+
+    public function getProjectName($id)
+    {
+        return Project::getProjectName($id);
+    }
     public function setAprovedProject($id)
     {
         Project::setState($id, 1);

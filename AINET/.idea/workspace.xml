@@ -31,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="adminDash.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminDash.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44314185" vertical-offset="13392" max-vertical-offset="14580">
-              <caret line="765" column="62" selection-start-line="765" selection-start-column="62" selection-end-line="765" selection-end-column="62" />
+            <state vertical-scroll-proportion="-30.25926" vertical-offset="13637" max-vertical-offset="14562">
+              <caret line="803" column="58" selection-start-line="803" selection-start-column="58" selection-end-line="803" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -44,8 +44,8 @@
       <file leaf-file-name="ProjectController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Controllers/ProjectController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1206">
-              <caret line="14" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.074074" vertical-offset="340" max-vertical-offset="1296">
+              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -54,18 +54,19 @@
       <file leaf-file-name="Project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Model/Project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.333334" vertical-offset="0" max-vertical-offset="2376">
-              <caret line="38" column="5" selection-start-line="28" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+            <state vertical-scroll-proportion="-18.074074" vertical-offset="1636" max-vertical-offset="2502">
+              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
               <folding>
-                <marker date="1433724862432" expanded="true" signature="1067:1089" placeholder="SELECT * FRO..projects..." />
-                <marker date="1433724862432" expanded="true" signature="1428:1492" placeholder="SELECT * FRO..projects..." />
-                <marker date="1433724862432" expanded="true" signature="1856:1894" placeholder="SELECT * FRO..projects..." />
-                <marker date="1433724862432" expanded="true" signature="2258:2296" placeholder="SELECT * FRO..projects..." />
-                <marker date="1433724862432" expanded="true" signature="2662:2700" placeholder="SELECT * FRO..projects..." />
-                <marker date="1433724862432" expanded="true" signature="3064:3102" placeholder="SELECT * FRO..projects..." />
-                <marker date="1433724862432" expanded="true" signature="3468:3507" placeholder="SELECT * FRO..projects..." />
-                <marker date="1433724862432" expanded="true" signature="3704:3757" placeholder="UPDATE proje..." />
-                <marker date="1433724862432" expanded="true" signature="3867:3906" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="1067:1089" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="1428:1492" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="1856:1894" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="2258:2296" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="2662:2700" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="3064:3102" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="3468:3507" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="3712:3751" placeholder="SELECT * FRO..projects..." />
+                <marker date="1433803432306" expanded="true" signature="3947:4000" placeholder="UPDATE proje..." />
+                <marker date="1433803432306" expanded="true" signature="4110:4149" placeholder="SELECT * FRO..projects..." />
               </folding>
             </state>
           </provider>
@@ -86,8 +87,8 @@
       <file leaf-file-name="dashBoards.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashBoards.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.666666" vertical-offset="0" max-vertical-offset="1386">
-              <caret line="45" column="66" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1386">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="20" />
               <folding>
                 <element signature="e#115#166#0#PHP" expanded="true" />
               </folding>
@@ -129,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editorDash.view.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editorDash.view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/editorDash.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25926" vertical-offset="9353" max-vertical-offset="10548">
-              <caret line="544" column="62" selection-start-line="534" selection-start-column="3" selection-end-line="544" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10548">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -199,10 +200,8 @@
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectTechnicalSheet.View.php" />
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectTechnicalSheet.view.php" />
         <option value="$PROJECT_DIR$/MVC/Views/main.view.php" />
-        <option value="$PROJECT_DIR$/MVC/Model/Project.php" />
         <option value="$PROJECT_DIR$/Styles/styles.css" />
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectsBrowser.view.php" />
-        <option value="$PROJECT_DIR$/MVC/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/MVC/Controllers/CommentsController.php" />
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php" />
         <option value="$PROJECT_DIR$/projectDetails.php" />
@@ -210,8 +209,10 @@
         <option value="$PROJECT_DIR$/MVC/Model/Comment.php" />
         <option value="$PROJECT_DIR$/MVC/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/dashBoards.php" />
-        <option value="$PROJECT_DIR$/MVC/Views/DashBoards/editorDash.view.php" />
+        <option value="$PROJECT_DIR$/MVC/Model/Project.php" />
+        <option value="$PROJECT_DIR$/MVC/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php" />
+        <option value="$PROJECT_DIR$/MVC/Views/DashBoards/editorDash.view.php" />
       </list>
     </option>
   </component>
@@ -649,7 +650,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295699" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20364584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1009,32 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1206">
-          <caret line="14" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Model/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.333334" vertical-offset="0" max-vertical-offset="2376">
-          <caret line="38" column="5" selection-start-line="28" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <marker date="1433724862432" expanded="true" signature="1067:1089" placeholder="SELECT * FRO..projects..." />
-            <marker date="1433724862432" expanded="true" signature="1428:1492" placeholder="SELECT * FRO..projects..." />
-            <marker date="1433724862432" expanded="true" signature="1856:1894" placeholder="SELECT * FRO..projects..." />
-            <marker date="1433724862432" expanded="true" signature="2258:2296" placeholder="SELECT * FRO..projects..." />
-            <marker date="1433724862432" expanded="true" signature="2662:2700" placeholder="SELECT * FRO..projects..." />
-            <marker date="1433724862432" expanded="true" signature="3064:3102" placeholder="SELECT * FRO..projects..." />
-            <marker date="1433724862432" expanded="true" signature="3468:3507" placeholder="SELECT * FRO..projects..." />
-            <marker date="1433724862432" expanded="true" signature="3704:3757" placeholder="UPDATE proje..." />
-            <marker date="1433724862432" expanded="true" signature="3867:3906" placeholder="SELECT * FRO..projects..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.148148" vertical-offset="3299" max-vertical-offset="4518">
@@ -1088,28 +1063,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.074074" vertical-offset="340" max-vertical-offset="1296">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Model/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.074074" vertical-offset="1636" max-vertical-offset="2502">
+          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+          <folding>
+            <marker date="1433803432306" expanded="true" signature="1067:1089" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="1428:1492" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="1856:1894" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="2258:2296" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="2662:2700" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="3064:3102" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="3468:3507" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="3712:3751" placeholder="SELECT * FRO..projects..." />
+            <marker date="1433803432306" expanded="true" signature="3947:4000" placeholder="UPDATE proje..." />
+            <marker date="1433803432306" expanded="true" signature="4110:4149" placeholder="SELECT * FRO..projects..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dashBoards.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.666666" vertical-offset="0" max-vertical-offset="1386">
-          <caret line="45" column="66" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+        <state vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="1386">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="20" />
           <folding>
             <element signature="e#115#166#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/editorDash.view.php">
+    <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25926" vertical-offset="9353" max-vertical-offset="10548">
-          <caret line="544" column="62" selection-start-line="534" selection-start-column="3" selection-end-line="544" selection-end-column="62" />
+        <state vertical-scroll-proportion="-30.25926" vertical-offset="13637" max-vertical-offset="14562">
+          <caret line="803" column="58" selection-start-line="803" selection-start-column="58" selection-end-line="803" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
+    <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/editorDash.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44314185" vertical-offset="13392" max-vertical-offset="14580">
-          <caret line="765" column="62" selection-start-line="765" selection-start-column="62" selection-end-line="765" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10548">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
