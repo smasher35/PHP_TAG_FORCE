@@ -131,33 +131,12 @@
                     <div class="col-md-3 col-sm-6 service">
                     <i class="fa fa-desktop"></i>
                     <br>
-                    <a href="#" class="btn btn-primary button-padding">View Project</a>
+                    <a href="projectDetails.php" class="btn btn-primary button-padding">View Project</a>
                     <h4><strong><?= $project->name?></strong></h4>
 
                     <p><?= $project->description?></p>
                     </div>
                 <?php }?>
-
-				<!--<div class="col-md-3 col-sm-6 service">
-					<i class="fa fa-mobile"></i>
-					<h4><strong>Project 2</strong></h4>
-					<a href="#" class="btn btn-primary button-padding">View Project</a>
-					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-				</div>
-
-				<div class="col-md-3 col-sm-6 service">
-					<i class="fa fa-camera"></i>
-					<h4><strong>Project 3</strong></h4>
-					<a href="#" class="btn btn-primary button-padding">View Project</a>
-					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-				</div>
-
-				<div class="col-md-3 col-sm-6 service">
-					<i class="fa fa-bullhorn"></i>
-					<h4><strong>Project 4</strong></h4>
-					<a href="#" class="btn btn-primary button-padding">View Project</a>
-					<p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-				</div>-->
 			</div>
 		</div>
 	</div>
@@ -193,7 +172,7 @@
 									<img src="storage/Images/crew/ruben.jpg" alt="..." class="img-circle team-img">
 									<div class="caption">
 										<h3>Ruben Miguel</h3>
-										<p>PHP TAG FORCE - LAYOUT GURU</p>
+										<p>PHP TAG FORCE CEO - LAYOUT GURU</p>
 										<p>Instituto Politécnico de Leiria - ESTG.</p>
 									</div>
 								</div>
@@ -204,7 +183,7 @@
 									<img src="storage/Images/crew/alfredo.jpg" alt="..." class="img-circle team-img">
 									<div class="caption">
 										<h3>Alfredo Rosa</h3>
-										<p>PHP TAG FORCE - DATABASE MASTER - BUG SNATCHER</p>
+										<p>PHP TAG FORCE CEO - DATABASE MASTER - BUG SNATCHER</p>
 										<p>Instituto Politécnico de Leiria - ESTG.</p>
 									</div>
 								</div><!-- thumbnail -->
@@ -218,7 +197,7 @@
 </div> <!-- tf-team -->
 
 
-<!-- EDITOR'S CHOICE - 2 COLUMNS
+<!-- LAST UPDATE PROJECTS - 2 COLUMNS
  =====================================================================================-->
 	<!-- TODO: query à base de dados e recolher 3 projectos indicados pelo Editor -->
 <div class="alt5">

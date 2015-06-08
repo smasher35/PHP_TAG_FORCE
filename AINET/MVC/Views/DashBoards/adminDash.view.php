@@ -67,7 +67,7 @@
                                                     <div class="panel-heading"><h3 class="panel-title text-center"><strong>Active Accounts </strong></h3></div>
                                                     <div class="col-md-12 align-center inline">
                                                         <br>
-                                                        <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
+                                                        <a href="addAccount.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
                                                         <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Disable Selected</a>
                                                         <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                         <hr>
@@ -133,7 +133,7 @@
                                                     <div class="panel-heading"><h3 class="panel-title text-center"><strong>Disabled Accounts </strong></h3></div>
                                                     <div class="col-md-12 align-center inline">
                                                         <br>
-                                                        <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
+                                                        <a href="addAccount.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
                                                         <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Activate Selected</a>
                                                         <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                         <hr>
@@ -199,7 +199,7 @@
                                                     <div class="panel-heading"><h3 class="panel-title text-center"><strong>Deleted Accounts </strong></h3></div>
                                                     <div class="col-md-12 align-center inline">
                                                         <br>
-                                                        <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
+                                                        <a href="addAccount.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Account</a>
 
                                                         <hr>
                                                     </div>
@@ -604,8 +604,8 @@
                                                     </div><!-- Fecha div class row text-center -->
                                                     <!-- /.row -->
                                                 </div><!-- fecha panel footer -->
-                                            </div><!-- Fecha Painel Comments Aproved-->
-                                        </div><!-- Fecha o Tab-pane Comments Aproved-->
+                                            </div><!-- Fecha Painel Comments pending-->
+                                        </div><!-- Fecha o Tab-pane Comments pending-->
 
 
 <!-------------------------------------------------------------- COMMENTS APROVED ---------------------------------------------------------------------------------->

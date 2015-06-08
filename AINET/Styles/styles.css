@@ -7,7 +7,6 @@
     /* main jumbotron */
 	background-color: #ccc;
 	min-height: 400px;
-
 }
 
 .alt2{
@@ -60,6 +59,31 @@
 
 
 
+}
+
+.alt8{
+    padding-top: 30px;
+     background-color: #ccc;
+     max-height:50px;
+ }
+
+
+.alt9{
+    /* project technical Sheet - TABBED ROW */
+    background-color: #222222;
+
+}
+
+.alt10{
+    /* project technical Sheet - Tittle*/
+    background-color: #ffffff;
+    min-height: 200px;
+    text-align: center;
+
+}
+
+.alt11{
+    background-color: #ffffff;
 }
 
 /* Formatação dos Jumbotrons - Destaque de informção
@@ -381,6 +405,13 @@ img.img-circle.team-img {
     border: 4px solid transparent;
     transition: all 0.5s;
 }
+
+img.img-circle.techSheet-img {
+    width: 300px;
+    height:300px;
+    border: 4px solid transparent;
+    transition: all 0.5s;
+}
 #tf-team .thumbnail:hover>img.img-circle.team-img{
     border: 4px solid #245580;
 }
@@ -398,3 +429,25 @@ img.img-circle.team-img {
     font-size: x-large;
 
 }
+
+.techSheetHeader {
+    font-size: 85%;
+    font-weight: bold;
+}
+
+.techSheetDetails {
+    font-size:120%;
+    font-weight: bold;
+}
+
+.tagsKewywords {
+    font-size: 85%;
+    font-weight: bold;
+
+}
+.techSheetTabs{
+    padding-top: 10px;
+        color: #ffffff;
+}
+
+

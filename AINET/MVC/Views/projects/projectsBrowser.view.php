@@ -40,13 +40,13 @@
         <?php foreach($projects as $project) {  ?>
             <div class="row ">
                 <div class="col-md-4 text-center">
-                    <img class="img-circle img-responsive thumbnail" src="http://cdn.slashgear.com/wp-content/uploads/2015/05/case-top@2x.png" alt="thumbnail">
+                    <img class="img-circle techSheet-img img-responsive" src="http://cdn.slashgear.com/wp-content/uploads/2015/05/case-top@2x.png" alt="thumbnail">
                 </div>
                 <div class="col-md-8">
                     <h3><?= $project->name ?></h3>
                     <h4><?= $accountController->getUserName($project->created_by)?></h4>
                     <p><?= $project->description ?></p>
-                    <a class="btn btn-success" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn btn-success" href="projectDetails.php">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
             <hr>
@@ -55,42 +55,18 @@
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">6</a>
-                    </li>
-                    <li>
-                        <a href="#">7</a>
-                    </li>
-                    <li>
-                        <a href="#">8</a>
-                    </li>
-                    <li>
-                        <a href="#">9</a>
-                    </li>
-                    <li>
-                        <a href="#">10</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
+                    <li><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">&raquo;</a></li>
                 </ul>
             </div>
         </div>
