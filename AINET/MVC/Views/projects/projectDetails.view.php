@@ -206,14 +206,8 @@
                             <!-- TODO: substituir pelo foeach a percorrer os comentários existentes -->
                             <?php foreach ($commentsList as $comment) { ?>
                                 <tr>
-                                    <td align="center"><input type="checkbox"></td>
                                     <td><?=$comment->comment?></td>
                                     <td><?=$comment->user_name?></td>
-                                    <td align="center">
-                                        <button class="btn  btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
-                                        <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                        <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-                                    </td>
                                 </tr>
                             <?php } ?>
                         </table>
