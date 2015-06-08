@@ -45,7 +45,7 @@
                     <h3><?= $project->name ?></h3>
                     <h4><?= $accountController->getUserName($project->created_by)?></h4>
                     <p><?= $project->description ?></p>
-                    <a class="btn btn-success" href="projectDetails.php">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="btn btn-success" href="projectDetails.php?project_id=<?=$project->id?>">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
             </div>
             <hr>

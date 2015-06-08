@@ -53,5 +53,10 @@ class ProjectController {
         Project::setState($id, 2);
     }
 
+    public function listProjects()
+    {
+        return Project::all();
+    }
+
 
 }

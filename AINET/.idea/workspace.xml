@@ -34,8 +34,18 @@
       <file leaf-file-name="main.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Views/main.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.666666" vertical-offset="1692" max-vertical-offset="5742">
-              <caret line="128" column="59" selection-start-line="128" selection-start-column="59" selection-end-line="128" selection-end-column="59" />
+            <state vertical-scroll-proportion="-22.666666" vertical-offset="1746" max-vertical-offset="5742">
+              <caret line="131" column="76" selection-start-line="131" selection-start-column="47" selection-end-line="131" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectsBrowser.view.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectsBrowser.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.62355655" vertical-offset="306" max-vertical-offset="1512">
+              <caret line="47" column="100" selection-start-line="47" selection-start-column="100" selection-end-line="47" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -74,8 +84,8 @@
       <file leaf-file-name="ProjectController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Controllers/ProjectController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7407408" vertical-offset="88" max-vertical-offset="1098">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+            <state vertical-scroll-proportion="-27.407408" vertical-offset="268" max-vertical-offset="1188">
+              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -101,26 +111,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminDash.view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.333334" vertical-offset="1026" max-vertical-offset="14580">
-              <caret line="95" column="121" selection-start-line="95" selection-start-column="95" selection-end-line="95" selection-end-column="121" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="504">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="projectDetails.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectDetails.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,13 +123,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectDetails.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projectDetails.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3587339" vertical-offset="1836" max-vertical-offset="4626">
+            <state vertical-scroll-proportion="-11.333333" vertical-offset="1836" max-vertical-offset="4626">
               <caret line="119" column="55" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
               <folding>
                 <element signature="e#4898#4920#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="378">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#89#133#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,14 +195,14 @@
         <option value="$PROJECT_DIR$/projectTechnicalSheet.php" />
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectTechnicalSheet.View.php" />
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectTechnicalSheet.view.php" />
-        <option value="$PROJECT_DIR$/MVC/Views/projects/projectsBrowser.view.php" />
         <option value="$PROJECT_DIR$/MVC/Views/DashBoards/adminDash.view.php" />
         <option value="$PROJECT_DIR$/MVC/Views/main.view.php" />
-        <option value="$PROJECT_DIR$/MVC/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/MVC/Model/Project.php" />
         <option value="$PROJECT_DIR$/projectDetails.php" />
         <option value="$PROJECT_DIR$/Styles/styles.css" />
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php" />
+        <option value="$PROJECT_DIR$/MVC/Controllers/ProjectController.php" />
+        <option value="$PROJECT_DIR$/MVC/Views/projects/projectsBrowser.view.php" />
       </list>
     </option>
   </component>
@@ -961,29 +963,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectsBrowser.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="1512">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MVC/Views/accounts/addAccount.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="2880">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#89#133#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -999,14 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="504">
           <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/main.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.666666" vertical-offset="1692" max-vertical-offset="5742">
-          <caret line="128" column="59" selection-start-line="128" selection-start-column="59" selection-end-line="128" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -1045,14 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7407408" vertical-offset="88" max-vertical-offset="1098">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projectDetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="450">
@@ -1073,11 +1041,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3587339" vertical-offset="1836" max-vertical-offset="4626">
+        <state vertical-scroll-proportion="-11.333333" vertical-offset="1836" max-vertical-offset="4626">
           <caret line="119" column="55" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
           <folding>
             <element signature="e#4898#4920#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.407408" vertical-offset="268" max-vertical-offset="1188">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#89#133#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Views/main.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.666666" vertical-offset="1746" max-vertical-offset="5742">
+          <caret line="131" column="76" selection-start-line="131" selection-start-column="47" selection-end-line="131" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectsBrowser.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62355655" vertical-offset="306" max-vertical-offset="1512">
+          <caret line="47" column="100" selection-start-line="47" selection-start-column="100" selection-end-line="47" selection-end-column="100" />
+          <folding />
         </state>
       </provider>
     </entry>
