@@ -117,4 +117,11 @@ class Project extends AbstractModel {
         AbstractModel::dbQuery("UPDATE projects SET state = '$state' WHERE id = '$id'");
     }
 
+    public static function getListProjectById($id)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE id = '$id'");
+        $project=$result->fetch_object('AINET\MVC\Model\Project');
+        return $project;
+    }
+
 }

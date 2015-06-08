@@ -438,6 +438,7 @@ img.img-circle.techSheet-img {
 .techSheetDetails {
     font-size:120%;
     font-weight: bold;
+    text-align: justify;
 }
 
 .tagsKewywords {

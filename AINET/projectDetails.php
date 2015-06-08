@@ -13,9 +13,12 @@ use AINET\MVC\Controllers\AccountController;
 
 
 $projectController = new ProjectController();
-$projects = $projectController->listProjects();
 $accountController = new AccountController();
 
+$projectid = $_GET['project_id'];
+
+
+$actualproject = $projectController->listProjectByid($projectid);
 $title = "PHP TAG FORCE - Projects Technical Sheet";
 
 

@@ -6,9 +6,9 @@ use AINET\MVC\Model\Account;
 
 class ProjectController {
 
-    public function listProjects()
-    {
-        return Project::all();
+
+    public function listProjectByid($id){
+        return Project::getListProjectById($id);
     }
     public function listRejectedProjects()
     {

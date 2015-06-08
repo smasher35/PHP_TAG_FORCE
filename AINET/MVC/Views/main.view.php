@@ -129,7 +129,7 @@
                     <div class="col-md-3 col-sm-6 service">
                     <i class="fa fa-desktop"></i>
                     <br>
-                    <a href="projectDetails.php" class="btn btn-primary button-padding">View Project</a>
+                    <a href="projectDetails.php?project_id=<?=$project->id?>" class="btn btn-primary button-padding">View Project</a>
                     <h4><strong><?= $project->name?></strong></h4>
 
                     <p><?= $project->description?></p>

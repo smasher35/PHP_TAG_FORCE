@@ -23,7 +23,7 @@
     <div class="row techSheetHeader">
         <div class="container">
             <div class="col-md-12">
-                <p>Created: | Updated At: | Started at:  | Finished at: | Aproved by: </p>
+                <p>Created: <?=$actualproject->created_at?> | Updated At: <?=$actualproject->updated_at?> | Started at: <?=$actualproject->started_at?>  | Finished at: <?=$actualproject->finished_at?> | Aproved by: <?=$actualproject->approved_by?> </p>
             </div>
         </div>
     </div>
@@ -68,10 +68,10 @@
                 <hr>
                 <div class="row align-left tagsKeywords">
                     <p>
-                        Keywords:
+                        Keywords:<?=$actualproject->keywords?>
                         <br>
                         <br>
-                        Tags:
+                        Tags: --> ligar à tabela project_tags <--
 
                     </p>
                 </div>
@@ -79,14 +79,14 @@
 
             <!---------------------------------------------------------- DADOS GERAIS ------------------------------------------------------------------------------->
             <div class="col-md-6">
-                <div class="center">
+                <div class="left">
                     <p class="techSheetDetails">
-                        Acronym: <br>
-                        Theme: <br>
-                        Type: <br>
-                        Name: <br>
-                        Author: <br>
-                        Description: <br>
+                        Acronym: <?=$actualproject->acronym?> <br>
+                        Theme: <?=$actualproject->theme?> <br>
+                        Type: <?=$actualproject->type?> <br>
+                        Name: <?=$actualproject->name?><br>
+                        Author: <?=$actualproject->created_by?><br>
+                        Description: <?=$actualproject->description?><br>
                     </p>
                 </div><!-- fecha center --->
             </div><!-- fecha dados gerais --->
@@ -117,50 +117,23 @@
                     <li><a href="#observations" data-toggle="tab">Obervations</a></li>
                 </ul>
                 <div class="tab-content techSheetTabs">
-                        <div class="tab-pane fade in active" id="software">
-                             <div class="align-center" style="color: #ffffff">
-                                <h2>SOFTWARE <strong>SPECIFICATIONS</strong></h2>
-                            <div class="line"></div>
-                        </div>
+                    <div class="tab-pane fade in active" id="software">
                         <p class="padding">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <?=$actualproject->used_software?>
                         </p>
 
                     </div><!-- fecha tab-pane software --->
 
                     <div class="tab-pane fade in " id="hardware">
-                            <div class="align-center" style="color: #ffffff">
-                                <h2>HARDWARE <strong>SPECIFICATIONS</strong></h2>
-                                <div class="line"></div>
-                            </div>
                         <p class="padding">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <?=$actualproject->used_hardware?>
                         </p>
 
                     </div><!-- fecha tab-pane hardware --->
 
                     <div class="tab-pane fade in" id="observations">
-                            <div class="align-center" style="color: #ffffff">
-                                <h2>PROJECT <strong>OBSERVATIONS</strong></h2>
-                                <div class="line"></div>
-                            </div>
                         <p class="padding">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <?=$actualproject->observations?>
                         </p>
                     </div><!-- fecha tab-pane observations--->
                 </div><!-- fecha tab-container --->
