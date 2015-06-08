@@ -39,7 +39,7 @@
 						<div class="page-header">
 							<h3>New Account</h3>
 						</div>
-						<form action="" >
+						<form action="addAccount.php">
 							<div class="form-group">
 								<label for="inputName"><span><b class="asterisco">*</b> Name</h3></span></label>
 								<div class="input-group">
@@ -112,9 +112,9 @@
 										<div class="input-group">
 											<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-sunglasses"></span></span>
 											<select class="form-control" name="role" id="role">
-													<option>Administrador</option>
-													<option>Editor</option>
-													<option>Autor</option>
+													<option value="4">Administrador</option>
+													<option value="1">Editor</option>
+													<option value="2">Autor</option>
 											</select>
 										</div>
 								</div>

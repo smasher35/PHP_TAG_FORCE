@@ -124,4 +124,21 @@ class Project extends AbstractModel {
         return $project;
     }
 
+    /*public static function addProject($uploadedFile)
+    {
+        //INSERIR NA BD
+        $query = 'insert into projets (name,acronym,description,type,theme,keywords,started_at,finished_at,created_by,updated_by,approved_by,used_software,used_hardware,observations,featured_until,replaces_id,state,refusal_msg,deleted_at,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+        $conn = self::dbConnection();
+        $stm = $conn->prepare($query);
+        if ($stm) {
+            $stm->bind_param("ssssssddiiisssdiisddd",$account->name,$account->email,$account->al_email,$account->password,$account->institution_id,$account->position,$account->photo_url,$account->profile_url,$account->flags,$account->role,$account->remember_token,$account->created_at,$account->updated_at);
+            if ($stm->execute()) {
+                header('Location: http://192.168.56.101/php_tag_force/AINET/dashBoards.php');
+                exit(0);
+            }else {
+                //return error
+            }
+        }
+    }*/
+
 }

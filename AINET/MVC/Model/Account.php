@@ -188,5 +188,19 @@ class Account extends AbstractModel
         AbstractModel::dbQuery("UPDATE users SET flags = '$flag' WHERE id = '$id'");
     }
 
+    public static function getProfileImg($id)
+    {
+        $profileImgURL = './Storage/app/profiles/';
+        $profileImgName =  AbstractModel::dbQuery("SELECT photo_url FROM users WHERE id = '$id'");
+
+        $profileImgName = mysqli_fetch_row($profileImgName);
+        $profileImgName = $profileImgName[0];
+
+
+        $profileImgURL = $profileImgURL . $profileImgName;
+
+        return $profileImgURL;
+    }
+
 
 }

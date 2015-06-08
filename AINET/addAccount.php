@@ -1,32 +1,23 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Paulo Penicheiro - 2130628
- * Date: 04/05/2015
- * Time: 10:48
+ * User: Ruben
+ * Date: 08-06-2015
+ * Time: 17:13
  */
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\AuthenticationController;
-use AINET\MVC\Controllers\InstitutionController;
+use AINET\MVC\Controllers\AccountController;
 
-
-//valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
-	$authController->redirectToLogin();
+$accountController = new AccountController();
+$role = $accountController->getRole($_SESSION['email']);
+
+if ($role == 4){
+
+    $accountController->addAccount();
+
 }
 
-$authenticated = true;
-
-$accountController = new AccountController();
-$institutionController = new InstitutionController();
-//list($user,$errors)=$accountController->addUser();
-$institutions = $institutionController->listInstitutions();
-
-$title = "Add Account";
-
-
-require('MVC/Views\accounts\addAccount.view.php');

@@ -61,7 +61,7 @@
 
 					<?php foreach ($users as $user) { ?>
 						<tr>
-							<td align="center"><?=$user->photo_url?></td>
+                            <td align="center"><img  class="img-circle img-profile-thumbnail" src="<?=$accountController->getProfileImgUrl($user->id)?>"></td>
 							<td><?=$user->email?></td>
 							<td><?= $institutionController->getInstitutionName($user->institution_id)?></td>
                             <td align="center"><?=$user->position?></td>
