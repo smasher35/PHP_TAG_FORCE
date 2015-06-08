@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectDetails.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="projectDetails.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projectDetails.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="486">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.4364896" vertical-offset="0" max-vertical-offset="866">
+              <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
               <folding>
                 <element signature="e#136#180#0#PHP" expanded="true" />
               </folding>
@@ -103,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectDetails.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projectDetails.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5427902" vertical-offset="3299" max-vertical-offset="4518">
+            <state vertical-scroll-proportion="-17.148148" vertical-offset="3299" max-vertical-offset="4518">
               <caret line="209" column="69" selection-start-line="209" selection-start-column="69" selection-end-line="209" selection-end-column="69" />
               <folding>
                 <element signature="e#4953#4975#0#HTML" expanded="true" />
@@ -118,8 +118,8 @@
       <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Controllers/CommentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="324">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="468">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding>
                 <element signature="e#39#120#0#PHP" expanded="false" />
               </folding>
@@ -130,11 +130,13 @@
       <file leaf-file-name="Comment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MVC/Model/Comment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.333334" vertical-offset="0" max-vertical-offset="684">
-              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+            <state vertical-scroll-proportion="-24.74074" vertical-offset="124" max-vertical-offset="1116">
+              <caret line="49" column="80" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
               <folding>
                 <element signature="e#33#114#0#PHP" expanded="false" />
-                <marker date="1433733621318" expanded="true" signature="721:743" placeholder="SELECT * FRO..comments..." />
+                <marker date="1433741515207" expanded="true" signature="721:743" placeholder="SELECT * FRO..comments..." />
+                <marker date="1433741515207" expanded="true" signature="1075:1113" placeholder="SELECT * FRO..comments..." />
+                <marker date="1433741515207" expanded="true" signature="1446:1484" placeholder="SELECT * FRO..comments..." />
               </folding>
             </state>
           </provider>
@@ -204,10 +206,10 @@
         <option value="$PROJECT_DIR$/MVC/Views/projects/projectsBrowser.view.php" />
         <option value="$PROJECT_DIR$/MVC/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/MVC/Controllers/CommentsController.php" />
+        <option value="$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php" />
+        <option value="$PROJECT_DIR$/MVC/Model/Comment.php" />
         <option value="$PROJECT_DIR$/MVC/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/projectDetails.php" />
-        <option value="$PROJECT_DIR$/MVC/Model/Comment.php" />
-        <option value="$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php" />
       </list>
     </option>
   </component>
@@ -635,7 +637,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1512792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1062,10 +1064,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.148148" vertical-offset="3299" max-vertical-offset="4518">
+          <caret line="209" column="69" selection-start-line="209" selection-start-column="69" selection-end-line="209" selection-end-column="69" />
+          <folding>
+            <element signature="e#4953#4975#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MVC/Model/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.74074" vertical-offset="124" max-vertical-offset="1116">
+          <caret line="49" column="80" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
+          <folding>
+            <element signature="e#33#114#0#PHP" expanded="false" />
+            <marker date="1433741515207" expanded="true" signature="721:743" placeholder="SELECT * FRO..comments..." />
+            <marker date="1433741515207" expanded="true" signature="1075:1113" placeholder="SELECT * FRO..comments..." />
+            <marker date="1433741515207" expanded="true" signature="1446:1484" placeholder="SELECT * FRO..comments..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MVC/Controllers/CommentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="324">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="468">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="e#39#120#0#PHP" expanded="false" />
           </folding>
@@ -1074,31 +1099,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectDetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="486">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.4364896" vertical-offset="0" max-vertical-offset="866">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
           <folding>
             <element signature="e#136#180#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Model/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.333334" vertical-offset="0" max-vertical-offset="684">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding>
-            <element signature="e#33#114#0#PHP" expanded="false" />
-            <marker date="1433733621318" expanded="true" signature="721:743" placeholder="SELECT * FRO..comments..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MVC/Views/projects/projectDetails.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5427902" vertical-offset="3299" max-vertical-offset="4518">
-          <caret line="209" column="69" selection-start-line="209" selection-start-column="69" selection-end-line="209" selection-end-column="69" />
-          <folding>
-            <element signature="e#4953#4975#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

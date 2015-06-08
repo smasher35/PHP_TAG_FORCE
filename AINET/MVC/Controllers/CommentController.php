@@ -15,4 +15,12 @@ class CommentController {
         return Comment::all();
     }
 
+
+    public function listPendingComments() {
+        return Comment::listPendingComments();
+    }
+
+    public function listAprovedComments() {
+        return Comment::listAprovedComments();
+    }
 }

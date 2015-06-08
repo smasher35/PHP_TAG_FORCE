@@ -19,7 +19,7 @@ $commentController = new CommentController();
 
 $projectid = $_GET['project_id'];
 
-$commentsList = $commentController->listComments();
+$commentsList = $commentController->listAprovedComments();
 $actualproject = $projectController->listProjectByid($projectid);
 $title = "PHP TAG FORCE - Projects Technical Sheet";
 
