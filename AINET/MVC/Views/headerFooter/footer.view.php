@@ -55,23 +55,21 @@
 						</div>
 						<div class="modal-body">
 							<div class="panel panel-primary">
-								<div class="panel-heading"<h3 class="panel-title">
-									The Programmers</h3>
-								</div>
+								<div class="panel-heading"<h3 class="panel-title">The Programmers</h3></div>
 
 							<table class="table">
 								<tr>
-									<td><img src="Images/crew/paulo.jpg" class="img-circle img-responsive" id="imgTable"></td>
+									<td><img src="Storage/Images/crew/paulo.jpg" class="img-circle img-responsive" id="imgTable"></td>
 									<td>Paulo Penicheiro<br>2130628</td>
 								</tr>
 
 								<tr>
-									<td><img src="Images/crew/ruben.jpg" class="img-circle img-responsive" id="imgTable"></td>
+									<td><img src="Storage/Images/crew/ruben.jpg" class="img-circle img-responsive" id="imgTable"></td>
 									<td>Ruben Miguel<br>2130664</td>
 								</tr>
 
 								<tr>
-									<td><img src="Images/crew/alfredo.jpg" class="img-circle img-responsive" id="imgTable"></td>
+									<td><img src="Storage/Images/crew/alfredo.jpg" class="img-circle img-responsive" id="imgTable"></td>
 									<td>Alfredo Rosa<br>2130647</td>
 								</tr>
 
