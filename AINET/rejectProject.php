@@ -25,5 +25,5 @@ $projectController = new ProjectController();
 $projectId = $_GET['project_id'];
 
 
-$projectController->setRejectedProject($projectId);
+$projectController->setRejectedProject($projectId,null);
 
