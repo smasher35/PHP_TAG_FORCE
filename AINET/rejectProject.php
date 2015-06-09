@@ -22,8 +22,15 @@ $authenticated = true;
 
 $projectController = new ProjectController();
 
-$projectId = $_GET['project_id'];
+
+$projectId = $_POST['project_id'];
+$refusal_msg = $_POST['refusalMessage'];
+
+var_dump($projectId);
+var_dump($refusal_msg);
 
 
-$projectController->setRejectedProject($projectId,null);
+
+
+$projectController->setRejectedProject($projectId,$refusal_msg);
 

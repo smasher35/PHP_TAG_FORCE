@@ -314,8 +314,9 @@
                                                         </tr>
 
                                                         <!-- JANELA MODAL REJECTED PROJECT -->
-                                                        <form action="rejectProject.php" method="post">
+
                                                             <div class="modal fade" id="modalProjectRejected" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                                            <form action="rejectProject.php" method="post">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
@@ -324,17 +325,19 @@
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <label for="refusalMessage" >Refusal Message</label>
+                                                                            <input type="hidden" name="project_id" value="<?=$project->id?>" />
                                                                             <textarea  id="refusalMessage" name="refusalMessage" rows="3" class="form-control"></textarea>
 
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                            <a href="rejectProject.php?project_id=<?=$project->id?>"><button type="button" class="btn btn-primary">Submit</button></a>
+                                                                            <button type="submit" class="btn btn-primary">Submit</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </form>
                                                             </div>
-                                                        </form>
+
                                                         <!-- FECHA JANELA MODAL PROJECT REJECTED -->
                                                     <?php } ?>
                                                 </table>
