@@ -64,7 +64,7 @@
         <div class="row align-center padding">
             <!-- imagem, keywords e tags -->
             <div class="col-md-6">
-                <img  class="img-circle techSheet-img img-responsive" src="http://cdn.slashgear.com/wp-content/uploads/2015/05/case-top@2x.png" alt="thumbnail">
+                 <td align="center"><img  class="img-circle img-project-details" src="<?=$projectController->getProjectImage($actualproject->id)?>"></td>
                 <hr>
                 <div class="row align-left tagsKeywords">
                     <p>
