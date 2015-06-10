@@ -50,7 +50,7 @@
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
 						<th class="text-center">Thumb</th>
-						<th class="text-center">User Name</th>
+						<th class="text-center">Name</th>
 						<th class="text-center">Institution</th>
 						<th class="text-center">Position</th>
                         <th class="text-center">Role</th>
@@ -62,7 +62,7 @@
 					<?php foreach ($users as $user) { ?>
 						<tr>
                             <td align="center"><img  class="img-circle img-profile-thumbnail" src="<?=$accountController->getProfileImgUrl($user->id)?>"></td>
-							<td><?=$user->email?></td>
+							<td><?=$user->name?></td>
 							<td><?= $institutionController->getInstitutionName($user->institution_id)?></td>
                             <td align="center"><?=$user->position?></td>
                             <td align="center"><?=$accountController->getRoleName($user->role)?></td>
