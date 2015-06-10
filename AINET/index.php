@@ -19,6 +19,8 @@ require 'bootstrap.php';
 
 use AINET\MVC\Controllers\ProjectController;
 
+$owner_id=0;
+
 $projectController = new ProjectController();
 $recentProjects = $projectController->listRecentProjects();
 

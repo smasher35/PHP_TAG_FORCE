@@ -38,6 +38,18 @@ class Project extends AbstractModel {
         return $projects;
     }
 
+    public static function listProjectsByOwner($owner_id)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id'");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
     public static function getListRecentProjects()
     {
         $result = AbstractModel::dbQuery('SELECT * FROM projects ORDER BY created_at DESC LIMIT 4 OFFSET 0');

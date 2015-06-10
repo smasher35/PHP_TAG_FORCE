@@ -13,9 +13,14 @@ require 'bootstrap.php';
 use AINET\MVC\Controllers;
 use AINET\MVC\Controllers\InstitutionController;
 
+global $owner_id;
+
+$projectController= new Controllers\ProjectController();
 $accountController = new Controllers\AccountController();
 $users = $accountController->listUsers();
 $institutionController = new InstitutionController();
+
+
 
 $title = "PHP TAG FORCE - Accounts Browsing";
 

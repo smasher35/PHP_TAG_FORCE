@@ -13,8 +13,14 @@ class ProjectController {
     }
 
 
-    public function listProjectByid($id){
+    public function listProjectByid($id)
+    {
         return Project::getListProjectById($id);
+    }
+
+    public function listProjectsByOwner($owner_id)
+    {
+        return Project::listProjectsByOwner($owner_id);
     }
     public function listRejectedProjects()
     {

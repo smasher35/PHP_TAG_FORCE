@@ -11,9 +11,21 @@ use AINET\MVC\Controllers\AccountController;
 
 require 'bootStrap.php';
 
+global $owner_id;
+
 $projectController = new ProjectController();
-$projects = $projectController->listProjects();
 $accountController = new AccountController();
+
+
+$owner_id =$_GET['owner_id'];
+
+if ($owner_id == 1){
+    $projects = $projectController->listProjects();
+}else {
+    $owner =$_GET['owner_id'];
+    $projects = $projectController->listProjectsByOwner($owner);
+}
+
 
 
 

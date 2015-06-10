@@ -163,9 +163,9 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <div class="text-left">
-                                <label class="align-left" for="inputComment">Email address</label>
+                                <label class="align-left" for="inputYourEmail">Email address</label>
                             </div>
-                                <input type="email" class="form-control" id="inputComment" placeholder="Enter Comment">
+                                <input type="email" class="form-control" id="inputYourEmail" name="inputYourEmail" placeholder="Enter email">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -173,15 +173,15 @@
                             <div class="text-left">
                                 <label for="inputYourName">Name</label>
                             </div>
-                                <input type="password" class="form-control" id="inputYourName" placeholder="yourName">
+                                <input type="text" class="form-control" id="inputYourName" name="inputYourName" placeholder="yourName">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="text-left">
-                        <label for="exampleInputEmail1">Your Comment</label>
+                        <label for="yourMessage">Your Comment</label>
                         <div class="text-left">
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea class="form-control" id="yourMessage" name="yourMessage" rows="3"></textarea>
 						</div>
 						<div class="text-right button-padding">
 							<button type="submit" class="btn tf-btn btn-success">Submit</button>

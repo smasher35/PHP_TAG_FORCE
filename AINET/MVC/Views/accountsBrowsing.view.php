@@ -67,7 +67,8 @@
                             <td align="center"><?=$user->position?></td>
                             <td align="center"><?=$accountController->getRoleName($user->role)?></td>
 							<td><?=$user->profile_url?></td>
-							<td align="center"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
+
+							<td align="center"><a href="projects.php?owner_id=<?=$user->id?>" <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
 							<td align="center"><a href="mailto:'<?=$user->email?>'"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></a></td>
 						</tr>
 					<?php }?>
