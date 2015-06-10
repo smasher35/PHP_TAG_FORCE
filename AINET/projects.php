@@ -19,7 +19,7 @@ $accountController = new AccountController();
 
 $owner_id =$_GET['owner_id'];
 
-if ($owner_id == 1){
+if ($owner_id == 0){
     $projects = $projectController->listProjects();
 }else {
     $owner =$_GET['owner_id'];
