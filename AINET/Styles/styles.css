@@ -452,7 +452,12 @@ img.img-circle.techSheet-img {
 }
 
 .img-profile-thumbnail{
-    max-height: 50px;
-    max-width: 50px;
+     max-height: 50px;
+     max-width: 50px;
+ }
+
+.img-project-thumbnail{
+    max-height: 150px;
+    max-width: 150px;
 }
 

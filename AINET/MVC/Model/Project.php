@@ -143,6 +143,20 @@ class Project extends AbstractModel {
         return $project;
     }
 
+    public static function getProjectImg($id)
+    {
+        $projectImgURL = './Storage/app/';
+        $projectImgName =  AbstractModel::dbQuery("SELECT int_file FROM media WHERE project_id = '$id'");
+
+        $projectImgName = mysqli_fetch_row($projectImgName);
+        $projectImgName = $projectImgName[0];
+
+
+        $projectImgURL = $projectImgURL . $projectImgName;
+
+        return $projectImgURL;
+    }
+
     /*public static function addProject($uploadedFile)
     {
         //INSERIR NA BD

@@ -76,7 +76,12 @@ class ProjectController {
         return Project::all();
     }
 
+    public function getProjectImage($id)
+    {
+        $userProfileImgUrl = Project::getProjectImg($id);
 
+        return $userProfileImgUrl;
+    }
 
 
 }
