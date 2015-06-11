@@ -163,38 +163,22 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <div class="text-left">
-<<<<<<< HEAD
+
                                 <label for="inputYourName">Name</label>
                             </div>
                                 <input type="hidden" name="project_id" value="<?=$actualproject->id?>" />
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Input Your Name">
-=======
-                                <label class="align-left" for="inputYourEmail">Email address</label>
-                            </div>
-                                <input type="email" class="form-control" id="inputYourEmail" name="inputYourEmail" placeholder="Enter email">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <div class="text-left">
-                                <label for="inputYourName">Name</label>
-                            </div>
-                                <input type="text" class="form-control" id="inputYourName" name="inputYourName" placeholder="yourName">
->>>>>>> origin/master
+
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="text-left">
-<<<<<<< HEAD
+
                         <label for="comment">Your Comment</label>
                         <div class="text-left">
 							<textarea class="form-control" rows="3" name="comment" id="comment"></textarea>
-=======
-                        <label for="yourMessage">Your Comment</label>
-                        <div class="text-left">
-							<textarea class="form-control" id="yourMessage" name="yourMessage" rows="3"></textarea>
->>>>>>> origin/master
+
 						</div>
 						<div class="text-right button-padding">
 							<button type="submit" class="btn tf-btn btn-success">Submit</button>
