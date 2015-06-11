@@ -31,6 +31,7 @@ if(!$authController->isAuthenticated()) {
     $usersDisabled = $accountController->getListDisabledAccounts();
     $usersDeleted = $accountController->getListDeletedAccounts();
 
+
     //----------------PROJECTS--------------//
     $projects = $projectControler->listProjects();
     $projectsRejected = $projectControler->listRejectedProjects();

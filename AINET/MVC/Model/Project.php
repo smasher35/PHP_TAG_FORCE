@@ -38,6 +38,18 @@ class Project extends AbstractModel {
         return $projects;
     }
 
+    public static function listProjectsByOwner($owner_id)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id'");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
     public static function getListRecentProjects()
     {
         $result = AbstractModel::dbQuery('SELECT * FROM projects ORDER BY created_at DESC LIMIT 4 OFFSET 0');
@@ -129,6 +141,20 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE id = '$id'");
         $project=$result->fetch_object('AINET\MVC\Model\Project');
         return $project;
+    }
+
+    public static function getProjectImg($id)
+    {
+        $projectImgURL = './Storage/app/';
+        $projectImgName =  AbstractModel::dbQuery("SELECT int_file FROM media WHERE project_id = '$id'");
+
+        $projectImgName = mysqli_fetch_row($projectImgName);
+        $projectImgName = $projectImgName[0];
+
+
+        $projectImgURL = $projectImgURL . $projectImgName;
+
+        return $projectImgURL;
     }
 
     /*public static function addProject($uploadedFile)

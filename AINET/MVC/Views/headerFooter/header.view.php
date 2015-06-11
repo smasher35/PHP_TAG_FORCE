@@ -73,7 +73,7 @@
 	                <div class="collapse navbar-collapse navHeaderCollapse">
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <li><a class="transition" href="index.php"><strong>Home</strong></a></li>
-	                        <li><a class="transition" href="projects.php"><strong>Projects</strong></a></li>
+	                        <li><a class="transition" href="projects.php?owner_id=<?=0?>"><strong>Projects</strong></a></li>
 	                        <li><a class="transition" href="dashBoards.php"><strong>Dashboard</strong></a></li>
 		                    <li><a class="transition" href="accountsBrowsing.php"><strong>Accounts</strong></a></li>
 	                        <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong></a></li>

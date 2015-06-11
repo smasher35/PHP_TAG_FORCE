@@ -39,7 +39,7 @@
         <?php foreach($projects as $project) {  ?>
             <div class="row ">
                 <div class="col-md-4 text-center">
-                    <img class="img-circle techSheet-img img-responsive" src="http://cdn.slashgear.com/wp-content/uploads/2015/05/case-top@2x.png" alt="thumbnail">
+                    <td align="center"><img  class="img-circle img-project-thumbnail" src="<?=$projectController->getProjectImage($project->id)?>"></td>
                 </div>
                 <div class="col-md-8">
                     <h3><?= $project->name ?></h3>
