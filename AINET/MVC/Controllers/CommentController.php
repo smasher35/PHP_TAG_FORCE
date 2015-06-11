@@ -32,4 +32,9 @@ class CommentController {
     public function listDeletedComments() {
          return Comment::listDeletedComments();
     }
+    public function leaveComment($projectId, $name, $comment){
+        Comment::leaveComment($projectId, $name, $comment, null);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/projects.php');
+    }
+
 }

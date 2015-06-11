@@ -82,6 +82,27 @@ class Comment extends AbstractModel {
 
     }
 
+    public static function leaveComment($projectId, $name, $comment, $userId=null){
+
+        AbstractModel::dbQuery("INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES ('$comment', '$projectId', '$name', null, null, null, 0, null, NOW(), NOW())");
+
+        //INSERIR NA BD
+        /*$query = "INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES (?,?,?,null,null,null,0,null,NOW(),NOW())";
+        $conn = self::dbConnection();
+        $stm = $conn->prepare($query);
+        //FALTA DAQUI PARA BAIXO
+        if ($stm) {
+            $stm->bind_param("ssssisisiisdd",$account->name,$account->email,$account->al_email,$account->password,$account->institution_id,$account->position,$account->photo_url,$account->profile_url,$account->flags,$account->role,$account->remember_token,$account->created_at,$account->updated_at);
+            if ($stm->execute()) {
+                header('Location: http://192.168.56.101/php_tag_force/AINET/dashBoards.php');
+                exit(0);
+            }else {
+                //return error
+            }
+        }*/
+
+    }
+
 
 
 

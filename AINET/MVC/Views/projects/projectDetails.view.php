@@ -158,30 +158,23 @@
                 <h3>Please leave your  <strong>Comment</strong></h3>
             </div>
 
-            <form>
+            <form action="leaveComment.php" method="post">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <div class="text-left">
-                                <label class="align-left" for="inputComment">Email address</label>
-                            </div>
-                                <input type="email" class="form-control" id="inputComment" placeholder="Enter Comment">
-                        </div>
-                    </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <div class="text-left">
                                 <label for="inputYourName">Name</label>
                             </div>
-                                <input type="password" class="form-control" id="inputYourName" placeholder="yourName">
+                                <input type="hidden" name="project_id" value="<?=$actualproject->id?>" />
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Input Your Name">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="text-left">
-                        <label for="exampleInputEmail1">Your Comment</label>
+                        <label for="comment">Your Comment</label>
                         <div class="text-left">
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea class="form-control" rows="3" name="comment" id="comment"></textarea>
 						</div>
 						<div class="text-right button-padding">
 							<button type="submit" class="btn tf-btn btn-success">Submit</button>
@@ -211,27 +204,7 @@
                                 </tr>
                             <?php } ?>
                         </table>
-                        <div class="panel-footer">
-                            <!-- Pagination -->
-                            <div class="row text-center">
-                                <div class="col-lg-12">
-                                    <ul class="pagination">
-                                        <li><a href="#">&laquo;</a>	</li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">6</a></li>
-                                        <li><a href="#">7</a></li>
-                                        <li><a href="#">8</a></li>
-                                        <li><a href="#">9</a></li>
-                                        <li><a href="#">10</a></li>
-                                        <li><a href="#">&raquo;</a></li>
-                                    </ul><!-- Fecha div class pagination -->
-                                </div><!-- Fecha div class col-md-12 -->
-                            </div><!-- Fecha div class row text-center -->
-                        </div><!-- fecha panel footer -->
+
                 </div>
             </div><!-- Fecha Painel Comments pending-->
         </div><!-- fecha row -->
