@@ -16,9 +16,11 @@ global $owner_id;
 $projectController = new ProjectController();
 $accountController = new AccountController();
 
-
 $owner_id =$_GET['owner_id'];
 
+
+
+//owner-id == 0 mostra todos os  projectos
 if ($owner_id == 0){
     $projects = $projectController->listProjects();
 }else {

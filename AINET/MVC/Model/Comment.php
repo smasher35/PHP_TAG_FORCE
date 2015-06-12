@@ -82,9 +82,9 @@ class Comment extends AbstractModel {
 
     }
 
-    public static function leaveComment($projectId, $name, $comment, $userId=null){
+    public static function leaveComment($projectId, $name, $comment, $userId=0){
 
-        AbstractModel::dbQuery("INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES ('$comment', '$projectId', '$name', null, null, null, 0, null, NOW(), NOW())");
+        AbstractModel::dbQuery("INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES ('$comment', '$projectId', '$name', '$userId', null, null, 0, null, NOW(), NOW())");
 
         //INSERIR NA BD
         /*$query = "INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES (?,?,?,null,null,null,0,null,NOW(),NOW())";

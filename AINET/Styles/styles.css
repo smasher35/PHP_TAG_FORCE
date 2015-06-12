@@ -6,7 +6,7 @@
 .alt1{
     /* main jumbotron */
 	background-color: #ccc;
-	min-height: 400px;
+	min-height: 450px;
 }
 
 .alt2{
@@ -90,7 +90,7 @@
  =========================================================================*/
 #jumbotron{
     background: url('../storage/Images/04.jpg') fixed;
-    min-height: 600px;
+    min-height: 450px;
     padding-top: 45px;
     max-height: 798px;
     max-width: 1920px;

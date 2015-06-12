@@ -34,7 +34,8 @@ class CommentController {
     }
     public function leaveComment($projectId, $name, $comment){
         Comment::leaveComment($projectId, $name, $comment, null);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/projects.php');
+        $redirect ='Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/projectDetails.php?project_id='.$projectId;
+        header($redirect);
     }
 
 }
