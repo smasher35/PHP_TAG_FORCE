@@ -22,7 +22,7 @@
 <div class="alt8">
     <div class="row techSheetHeader">
         <div class="container">
-            <div class="col-md-12">
+            <div class="col-md-12 col-md-offset-2">
                 <p>Created: <?=$actualproject->created_at?> | Updated At: <?=$actualproject->updated_at?> | Started at: <?=$actualproject->started_at?>  | Finished at: <?=$actualproject->finished_at?> | Aproved by: <?=$accountController->getUserName($actualproject->approved_by) ?> </p>
             </div>
         </div>
@@ -71,7 +71,11 @@
                         Keywords:<?=$actualproject->keywords?>
                         <br>
                         <br>
-                        Tags: --> ligar à tabela project_tags <--
+                        <?php $tags = $projectTagsController->listTagsByProject($actualproject->id)?>
+                        <strong> Tags: </strong>
+                        <?php foreach ($tags as $tag) { ?>
+                            #<?=$tagsController->getTagName($tag->tag_id)?>, 
+                        <?php }?>
 
                     </p>
                 </div>
