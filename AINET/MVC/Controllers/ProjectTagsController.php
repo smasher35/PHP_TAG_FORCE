@@ -16,4 +16,32 @@ class ProjectTagsController {
 
         return ProjectTag::listTagsByProject($projectId);
     }
+
+
+    public function listAllTags()
+    {
+        return ProjectTag::all();
+    }
+
+    public function listPendingTags()
+    {
+        return ProjectTag::listPendingTags();
+    }
+
+    public function listAprovedTags()
+    {
+        return ProjectTag::listAprovedtags();
+    }
+
+    public function listRejectedTags()
+    {
+        return ProjectTag::listRejectedTags();
+    }
+
+    public function listDeletedTags()
+    {
+        return ProjectTag::listDeletedTags();
+    }
+
+
 }

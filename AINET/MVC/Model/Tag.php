@@ -15,6 +15,8 @@ class Tag extends AbstractModel {
     public $tag; //varchar(255) NOT NULL
 
 
+
+
     public static function getTagtName($id)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM tags WHERE id = '$id'");

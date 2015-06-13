@@ -207,15 +207,15 @@
                                     $userName = $comment->user_name;
                                 }
                                 ?>
-                        <div class="container">
-                            <div class="row">
-                                <p>(<?=$timeHelper->humanTiming(strtotime($comment->created_at))?> ago) <b><?=$userName?></b>  said:</p>
+                            <div class="container">
+                                <div class="row">
+                                    <p>(<?=$timeHelper->humanTiming(strtotime($comment->created_at))?> ago) <b><?=$userName?></b>  said:</p>
+                                </div>
+                                <div class="row">
+                                    <p><?= $comment->comment ?></p>
+                                </div>
                             </div>
-                            <div class="row">
-                                <p><?= $comment->comment ?></p>
-                            </div>
-                        </div>
-                        <hr>
+                            <hr>
                         <?php } ?>
                 </div>
             </div><!-- Fecha Painel Comments pending-->

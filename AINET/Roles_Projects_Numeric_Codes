@@ -22,3 +22,11 @@ Comments State (state)
 1 - Approved
 2 - Rejected
 3 - Deleted
+
+
+Project_Tag State (state)
+
+0 - Pending
+1 - Approved
+2 - Rejected
+3 - Deleted

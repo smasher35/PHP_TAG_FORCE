@@ -625,6 +625,6 @@
 				</div><!-- FECHA div class Row dentro do container -->
 		</div><!-- FECHA div class container -->
 	</div><!-- FECHA div class Row fora do container -->
-</div><!-- FECHA  div class alt5 do corpo do project Management -->
+</div><!-- FECHA  div class alt5 do corpo do projects and Comment Management -->
 
 <?php require('MVC/Views/headerFooter/footer.view.php');?>
