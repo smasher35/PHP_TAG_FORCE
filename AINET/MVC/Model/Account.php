@@ -64,6 +64,8 @@ class Account extends AbstractModel
 		return null;
 	}
 
+
+
     private static function  getUserbyMail($mail){
 
         $row = AbstractModel::dbQuery("SELECT * FROM users WHERE email = '$mail'");
@@ -202,5 +204,22 @@ class Account extends AbstractModel
         return $profileImgURL;
     }
 
+    public static function getUserInstitutionId($id)
+    {
+        //Query à base de dados combase no email do user logado
+        $result = AbstractModel::dbQuery("select id,institution_id, name from users WHERE id ='$id' ");
 
+        //caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
+        if(!$result){
+            echo 'Bad Connection';
+            exit;
+        }
+
+        //devolve a linha do user encontrado
+        $row = mysqli_fetch_row($result);
+
+        //devolve apenas a id da instituição do user
+        return $row[1];
+
+    }
 }

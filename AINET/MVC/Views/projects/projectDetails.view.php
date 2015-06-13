@@ -99,7 +99,7 @@
     </div><!-- fecha container -->
 </div><!-- fecha GENERAL DATA --->
 
-<!---------------------------------------------------------- SOFTWARE, HARDWARE, OBS ----------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------- SOFTWARE, HARDWARE, OBS, TEAM ELEMENTS ----------------------------------------------------------------------------------------------->
 <a class="padding" id="specifications"></a>
 <div class="alt9">
     <div class="row">
@@ -119,9 +119,11 @@
                 <ul class="nav nav-pills nav-justified orange">
                     <li class="activeAccounts active"><a href="#software" data-toggle="tab">Software</a></li>
                     <li><a href="#hardware" data-toggle="tab">Hardware</a></li>
+                    <li><a href="#teamElements" data-toggle="tab">Team Elements</a></li>
                     <li><a href="#observations" data-toggle="tab">Obervations</a></li>
                 </ul>
                 <div class="tab-content techSheetTabs">
+                    <!----------------- SOFTWARE ------------------------------>
                     <div class="tab-pane fade in active" id="software">
                         <p class="padding">
                             <?=$actualproject->used_software?>
@@ -129,6 +131,7 @@
 
                     </div><!-- fecha tab-pane software --->
 
+                     <!----------------- HARDWARE ------------------------------>
                     <div class="tab-pane fade in " id="hardware">
                         <p class="padding">
                             <?=$actualproject->used_hardware?>
@@ -136,6 +139,30 @@
 
                     </div><!-- fecha tab-pane hardware --->
 
+                     <!----------------- TEAM ELEMENTS ------------------------------>
+                     <div class="tab-pane fade in" id="teamElements">
+                        <table class="table table-stripped table-hover table-responsive">
+                            <tr>
+                                <th>Name</th>
+                                <th>Institution</th>
+                            </tr>
+                            <?php $teamMembers = $projectTeamMembersController->listTeamMembersByProject($actualproject->id)?>
+                            <?php foreach ($teamMembers as $user) {?>
+                                <tr>
+                                    <td><?=$accountController->getUserName($user->user_id)?></td>
+                                    <?php $insitutionID = $accountController->getUserInstitutionId($user->user_id)?>
+                                    <td><?=$institutionController->getInstitutionName($insitutionID)?></td>
+
+                                </tr>
+                            <?php }?>
+
+                        </table>
+
+
+                    </div><!-- fecha tab-pane teamElements --->
+
+
+                     <!----------------- OBSERVATIONS ------------------------------>
                     <div class="tab-pane fade in" id="observations">
                         <p class="padding">
                             <?=$actualproject->observations?>

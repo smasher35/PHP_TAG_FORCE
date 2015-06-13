@@ -11,7 +11,9 @@ require 'bootstrap.php';
 use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\CommentController;
+use AINET\MVC\Controllers\InstitutionController;
 use AINET\MVC\Controllers\ProjectTagsController;
+use AINET\MVC\Controllers\ProjectTeamMembersController;
 use AINET\MVC\Controllers\TagsController;
 use Ainet\Support\TimeHelper;
 
@@ -20,6 +22,8 @@ $projectController = new ProjectController();
 $accountController = new AccountController();
 $commentController = new CommentController();
 $projectTagsController = new ProjectTagsController();
+$projectTeamMembersController = new ProjectTeamMembersController();
+$institutionController = new InstitutionController();
 $tagsController = new TagsController();
 $timeHelper = new TimeHelper();
 
