@@ -50,11 +50,11 @@
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
 						<th class="text-center">Thumb</th>
-						<th class="text-center">Name</th>
-						<th class="text-center">Institution</th>
-						<th class="text-center">Position</th>
-                        <th class="text-center">Role</th>
-						<th class="text-center">Website</th>
+						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Name</th>
+						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Institution</th>
+						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Position</th>
+                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Role</th>
+						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Website</th>
 						<th class="text-center">Show Projects</th>
 						<th class="text-center">Contact Me</th>
 					</tr>
