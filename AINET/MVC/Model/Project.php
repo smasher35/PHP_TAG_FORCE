@@ -28,7 +28,7 @@ class Project extends AbstractModel {
 
     public static function all($limit, $offset)
     {
-        $result = AbstractModel::dbQuery("SELECT * FROM projects LIMIT $limit OFFSET $offset");
+        $result = AbstractModel::dbQuery("SELECT * FROM projects where state = 1 LIMIT  $limit OFFSET $offset");
 
         $projects = [];
         if ($result) {

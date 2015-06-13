@@ -23,7 +23,7 @@
     <div class="row techSheetHeader">
         <div class="container">
             <div class="col-md-12">
-                <p>Created: <?=$actualproject->created_at?> | Updated At: <?=$actualproject->updated_at?> | Started at: <?=$actualproject->started_at?>  | Finished at: <?=$actualproject->finished_at?> | Aproved by: <?=$actualproject->approved_by?> </p>
+                <p>Created: <?=$actualproject->created_at?> | Updated At: <?=$actualproject->updated_at?> | Started at: <?=$actualproject->started_at?>  | Finished at: <?=$actualproject->finished_at?> | Aproved by: <?=$accountController->getUserName($actualproject->approved_by) ?> </p>
             </div>
         </div>
     </div>

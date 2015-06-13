@@ -206,7 +206,7 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-<div class="container padding" >
+<div class="container" >
     <?php foreach ($lastUpdatedProjects as $project) { ?>
 	<div class="row padding">
         <div class="col-md-2">
@@ -217,6 +217,8 @@
 		</div>
 		<div class="col-md-4">
 			<p class="text-justify">
+                <h3><strong><?=$project->name?></strong></h3>
+                <hr>
 				<?= $project->description ?>
                 <form action="projectDetails.php" method="get">
                 <input type="hidden" name="project_id" id="project_id" value="<?=$project->id?>">
