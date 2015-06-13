@@ -14,6 +14,16 @@ use AINET\MVC\Controllers\InstitutionController;
 use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\CommentController;
 
+if (isset ($_GET['page'])) {
+    $page = $_GET['page'];
+    $limit = $page * 10;
+    $offset = $limit - 10;
+}
+else {
+    $page = 1;
+    $limit = $page * 10;
+    $offset = $limit - 10;
+}
 
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
@@ -33,7 +43,7 @@ if(!$authController->isAuthenticated()) {
 
 
     //----------------PROJECTS--------------//
-    $projects = $projectControler->listProjects();
+    $projects = $projectControler->listProjects($limit, $offset);
     $projectsRejected = $projectControler->listRejectedProjects();
     $projectsDeleted = $projectControler->listDeletedProjects();
     $projectsPending = $projectControler->listPendingProjects();
