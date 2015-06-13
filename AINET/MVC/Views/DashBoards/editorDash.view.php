@@ -33,6 +33,7 @@
 					<ul class="nav nav-tabs nav-justified">
 						<li class="active"><a href="#projectManagement" data-toggle="tab">Project Management</a></li>
 						<li><a href="#commentsManagement" data-toggle="tab">Comments Management</a></li>
+						<li><a href="#tagsManagement" data-toggle="tab">Tags Management</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -621,6 +622,267 @@
 								</div> <!-- Fecha div class Container -->
 							</div><!-- Fecha div class row -->
 						</div> <!-- Fecha div tab-pane Comments Management -->
+
+						<!--------------------------------------------------------- TAGS MANAGEMENT -------------------------------------------------------------------------------------->
+
+                        <div class="tab-pane fade " id="tagsManagement">
+                            <!---------------------------------------------- LIST OF TAGS APROVED REJECTED AND DELETED ------------------------------------------------------------------>
+                            <div class="row padding-Top">
+                                <div class="container">
+                                    <ul class="nav nav-pills  nav-justified">
+                                        <!-- Declaração das Réguas -->
+                                        <li class="active"><a href="#tagsPending" data-toggle="tab">Tags Pending</a></li>
+                                        <li><a href="#tagsAproved" data-toggle="tab">Tags Aproved</a></li>
+                                        <li><a href="#tagsRejected" data-toggle="tab">tags Rejected</a></li>
+                                        <li><a href="#tagsDeleted" data-toggle="tab">tags Deleted</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <!-------------------------------------------------------------- TAGS PENDING ---------------------------------------------------------------------------------->
+                                        <div class="tab-pane fade in active" id="tagsPending">
+                                            <div class="panel panel-primary panel-responsive" id="panelTagssPending">
+                                                <!-- Default panel contents -->
+                                                <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Pending Aproval</strong></h3></div>
+                                                <div class="col-md-12 align-center inline">
+                                                    <br>
+                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
+                                                    <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
+                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
+                                                    <hr>
+                                                </div>
+                                                <!-- Table -->
+                                                <table class="table table-stripped table-hover table-responsive">
+                                                    <tr>
+                                                        <th class="text-center"><input type="checkbox"> Select</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
+                                                        <th class="text-center">Operations</th>
+                                                    </tr>
+
+
+                                                    <?php foreach ($tagsPending as $tag) { ?>
+                                                        <tr>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
+                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
+                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
+                                                            <td align="center">
+                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </table>
+                                                <div class="panel-footer">
+                                                    <!-- Pagination -->
+                                                    <div class="row text-center">
+                                                        <div class="col-lg-12">
+                                                            <ul class="pagination">
+                                                                <li><a href="#">&laquo;</a>	</li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li><a href="#">6</a></li>
+                                                                <li><a href="#">7</a></li>
+                                                                <li><a href="#">8</a></li>
+                                                                <li><a href="#">9</a></li>
+                                                                <li><a href="#">10</a></li>
+                                                                <li><a href="#">&raquo;</a></li>
+                                                            </ul><!-- Fecha div class pagination -->
+                                                        </div><!-- Fecha div class col-md-12 -->
+                                                    </div><!-- Fecha div class row text-center -->
+                                                    <!-- /.row -->
+                                                </div><!-- fecha panel footer -->
+                                            </div><!-- Fecha Painel Comments pending-->
+                                        </div><!-- Fecha o Tab-pane Comments pending-->
+
+
+                                        <!-------------------------------------------------------------- TAGS APROVED ---------------------------------------------------------------------------------->
+                                        <div class="tab-pane fade in" id="tagsAproved">
+                                            <div class="panel panel-primary panel-responsive" id="panelTagsAproved">
+                                                <!-- Default panel contents -->
+                                                <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Aproved </strong></h3></div>
+                                                <div class="col-md-12 align-center inline">
+                                                    <br>
+                                                    <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
+                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove Selected</a>
+                                                    <hr>
+                                                </div>
+                                                <!-- Table -->
+                                                <table class="table table-stripped table-hover table-responsive">
+                                                    <tr>
+                                                        <th class="text-center"><input type="checkbox"> Select</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
+                                                        <th class="text-center">Operations</th>
+                                                    </tr>
+
+                                                    <?php foreach ($tagsApproved as $tag) { ?>
+                                                        <tr>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
+                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
+                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
+                                                            <td align="center">
+                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </table>
+                                                <div class="panel-footer">
+                                                    <!-- Pagination -->
+                                                    <div class="row text-center">
+                                                        <div class="col-lg-12">
+                                                            <ul class="pagination">
+                                                                <li><a href="#">&laquo;</a>	</li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li><a href="#">6</a></li>
+                                                                <li><a href="#">7</a></li>
+                                                                <li><a href="#">8</a></li>
+                                                                <li><a href="#">9</a></li>
+                                                                <li><a href="#">10</a></li>
+                                                                <li><a href="#">&raquo;</a></li>
+                                                            </ul><!-- Fecha div class pagination -->
+                                                        </div><!-- Fecha div class col-md-12 -->
+                                                    </div><!-- Fecha div class row text-center -->
+                                                    <!-- /.row -->
+                                                </div><!-- fecha panel footer -->
+                                            </div><!-- Fecha Painel Comments Aproved-->
+                                        </div><!-- Fecha o Tab-pane Comments Aproved-->
+
+
+                                        <!-------------------------------------------------------------- TAGS REJECTED ---------------------------------------------------------------------------------->
+                                        <div class="tab-pane fade in" id="tagsRejected">
+                                            <div class="panel panel-primary panel-responsive" id="panelTagsRejected">
+                                                <!-- Default panel contents -->
+                                                <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Rejected </strong></h3></div>
+                                                <div class="col-md-12 align-center inline">
+                                                    <br>
+                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
+                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
+                                                    <hr>
+                                                </div>
+                                                <!-- Table -->
+                                                <table class="table table-stripped table-hover table-responsive">
+                                                    <tr>
+                                                        <th class="text-center"><input type="checkbox"> Select</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
+                                                        <th class="text-center">Operations</th>
+                                                    </tr>
+
+                                                    <?php foreach ($tagsRejected as $tag) { ?>
+                                                        <tr>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
+                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
+                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
+                                                            <td align="center">
+                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </table>
+                                                <div class="panel-footer">
+                                                    <!-- Pagination -->
+                                                    <div class="row text-center">
+                                                        <div class="col-lg-12">
+                                                            <ul class="pagination">
+                                                                <li><a href="#">&laquo;</a>	</li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li><a href="#">6</a></li>
+                                                                <li><a href="#">7</a></li>
+                                                                <li><a href="#">8</a></li>
+                                                                <li><a href="#">9</a></li>
+                                                                <li><a href="#">10</a></li>
+                                                                <li><a href="#">&raquo;</a></li>
+                                                            </ul><!-- Fecha div class pagination -->
+                                                        </div><!-- Fecha div class col-md-12 -->
+                                                    </div><!-- Fecha div class row text-center -->
+                                                    <!-- /.row -->
+                                                </div><!-- fecha panel footer -->
+                                            </div><!-- Fecha Painel Projects Rejected-->
+                                        </div><!-- Fecha o Tab-pane Projects Rejected-->
+
+                                        <!---------------------- TAGS DELETED ------------------------------------------------------------------------------------------->
+
+                                        <div class="tab-pane fade" id="tagsDeleted">
+                                            <div class="panel panel-primary panel-responsive" id="panelTagsDeleted">
+                                                <!-- Default panel contents -->
+                                                <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Deleted </strong></h3></div>
+                                                <div class="col-md-12 align-center inline">
+                                                    <br>
+                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
+                                                    <hr>
+                                                </div>
+                                                <!-- Table -->
+                                                <table class="table table-stripped table-hover table-responsive">
+                                                    <tr>
+                                                        <th class="text-center"><input type="checkbox"> Select</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
+                                                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
+                                                        <th class="text-center">Operations</th>
+                                                    </tr>
+
+                                                    <?php foreach ($tagsDeleted as $tag) { ?>
+                                                        <tr>
+                                                            <th class="text-center"><input type="checkbox"></th>
+                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
+                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
+                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
+                                                            <td align="center">
+                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                            </td>
+                                                        </tr>
+                                                    <?php } ?>
+                                                </table>
+                                                <div class="panel-footer">
+                                                    <!-- Pagination -->
+                                                    <div class="row text-center">
+                                                        <div class="col-lg-12">
+                                                            <ul class="pagination">
+                                                                <li><a href="#">&laquo;</a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li><a href="#">6</a></li>
+                                                                <li><a href="#">7</a></li>
+                                                                <li><a href="#">8</a></li>
+                                                                <li><a href="#">9</a></li>
+                                                                <li><a href="#">10</a></li>
+                                                                <li><a href="#">&raquo;</a></li>
+                                                            </ul> <!-- Fecha div class pagination -->
+                                                        </div><!-- Fecha div class col-md-12 -->
+                                                    </div><!-- Fecha div class row text-center -->
+                                                    <!-- /.row -->
+                                                </div> <!-- fecha panel footer -->
+                                            </div><!-- Fecha Painel tags Deleted-->
+                                        </div><!-- Fecha o Tab-pane tags Delected-->
+                                    </div> <!-- Fecha o Tab-content tags rejected e deleted-->
+                                </div> <!-- Fecha div class Container -->
+                            </div><!-- Fecha div class row -->
+                        </div> <!-- Fecha div tab-pane Tags Management -->
+<!------------------------------------------------------------ END TAGS MANAGEMENT --------------------------------------------------------------------------->
+
 					</div><!-- FECHA div clas tab-content -->
 				</div><!-- FECHA div class Row dentro do container -->
 		</div><!-- FECHA div class container -->

@@ -261,6 +261,8 @@
                                 </div><!-- Fecha Container -->
                             </div><!-- Fecha Row -->
 						</div><!-- Fecha div tab-pane accounts Management -->
+<!---------------------------------------------------------------- END ACCOUNTS MANAGEMENT -------------------------------------------------------------------------------------->
+
 
 <!----------------------------------------------------- PROJECTS MANAGEMENT ------------------------------------------------------------------------------------------------------>
                         <div class="tab-pane fade in " id="projectManagement">
@@ -584,6 +586,7 @@
                                 </div> <!-- Fecha div class Container -->
                             </div><!-- Fecha div class row -->
                         </div> <!-- Fecha div tab-pane Projects Management -->
+<!------------------------------------------------------------ END PROJECTS MANAGEMENT --------------------------------------------------------------------------->
 
 
 
@@ -846,6 +849,7 @@
                                 </div> <!-- Fecha div class Container -->
                             </div><!-- Fecha div class row -->
                         </div> <!-- Fecha div tab-pane Comments Management -->
+<!------------------------------------------------------------ END COMMENTS MANAGEMENT --------------------------------------------------------------------------->
 
 <!--------------------------------------------------------- TAGS MANAGEMENT -------------------------------------------------------------------------------------->
 
@@ -1105,7 +1109,7 @@
                                 </div> <!-- Fecha div class Container -->
                             </div><!-- Fecha div class row -->
                         </div> <!-- Fecha div tab-pane Tags Management -->
-
+<!------------------------------------------------------------ END TAGS MANAGEMENT --------------------------------------------------------------------------->
 
                     </div> <!-- Fecha Tab Connten das Secções Todas-->
                </div><!-- Fecha div class row -->
