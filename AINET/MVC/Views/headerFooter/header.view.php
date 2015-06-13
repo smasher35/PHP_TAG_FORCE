@@ -60,10 +60,12 @@
 	                <div class="navbar-form">
 	                    <div class="container">
 		                    <div class="input-group">
-			                    <input type="text" class=" form-control form-search span3 search-query" id="search" placeholder="Search...">
-			                    <span class="input-group-btn">
-				                    <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
-			                   </span>
+                                <form action="searchProjects.php" method="get">
+			                        <input type="text" name="search" id="search" class=" form-control form-search span3 search-query"  placeholder="Search Project...">
+			                        <span class="input-group-btn">
+				                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+			                        </span>
+                                </form>
 		                    </div>
 	                    </div>
 	                </div>

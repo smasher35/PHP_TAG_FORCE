@@ -23,6 +23,7 @@ $owner_id=0;
 
 $projectController = new ProjectController();
 $recentProjects = $projectController->listRecentProjects();
+$lastUpdatedProjects = $projectController->listLastUpdatedProjects();
 
 $title = "PHP TAG FORCE - Home";
 

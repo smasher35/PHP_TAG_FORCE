@@ -85,7 +85,7 @@
                         Theme: <?=$actualproject->theme?> <br>
                         Type: <?=$actualproject->type?> <br>
                         Name: <h3><strong><?=$actualproject->name?><br></strong></h3>
-                        Author: <?=$actualproject->created_by?><br>
+                        Author: <?=$accountController->getUserName($actualproject->created_by)?><br>
                         <hr>
                         Description: <?=$actualproject->description?><br>
                     </p>
@@ -194,6 +194,25 @@
                     <!-- Default panel contents -->
                     <div class="panel-heading"><h3 class="panel-title text-center"><strong>List of Comments</strong></h3></div>
                         <!-- Table -->
+                        <?php foreach ($commentsList as $comment) { ?>
+                            <?php
+                                if($comment->user_name == null) {
+                                    $userName = "Anonymous";
+                                }
+                                else {
+                                    $userName = $comment->user_name;
+                                }
+                        ?>
+                        <div class="container">
+                            <div class="row">
+                                <p>(<?=$timeHelper->humanTiming(strtotime($comment->created_at))?> ago) <b><?=$userName?></b>  said:</p>
+                            </div>
+                            <div class="row">
+                                <p><?= $comment->comment ?></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <?php } ?>
                         <table class="table table-stripped table-hover table-responsive">
                             <tr>
                                 <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
@@ -201,12 +220,7 @@
                             </tr>
 
                             <!-- TODO: substituir pelo foeach a percorrer os comentários existentes -->
-                            <?php foreach ($commentsList as $comment) { ?>
-                                <tr>
-                                    <td><?=$comment->comment?></td>
-                                    <td><?=$comment->user_name?></td>
-                                </tr>
-                            <?php } ?>
+
                         </table>
 
                 </div>

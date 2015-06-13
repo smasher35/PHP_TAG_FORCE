@@ -79,4 +79,9 @@ class AuthenticationController {
 		self::redirectToHome();
 	}
 
+    public static function getAuthenticatedUser() {
+       //TODO retorar o user autenticado
+    }
+
+
 }

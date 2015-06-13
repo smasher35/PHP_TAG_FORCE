@@ -8,17 +8,33 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Model\CommentController;
+use AINET\MVC\Controllers\CommentController;
+use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\AuthenticationController;
 
-$commentController = new \AINET\MVC\Controllers\CommentController();
+$commentController = new CommentController();
+$accountController = new AccountController();
+$authenticationController = new AuthenticationController();
+
+
 
 $projectId = $_POST['project_id'];
-//$email = $_POST['email'];
-$name = $_POST['name'];
+
 $comment = $_POST['comment'];
 
-/*var_dump($projectId);
-var_dump($name);
-var_dump($comment);*/
+if (isset($_POST['name'])) {
+    $name = $_POST['name'];
+}
+else {
+    $name = null;
+}
+/*if ($authenticationController->isAuthenticated()) {
+    $currentUser = $authenticationController->getAuthenticatedUser();
+    $curretUserId = $currentUser->id;
+}
+else {
+    $currentUserId = null;
+} */
 
-$commentController->leaveComment($projectId, $name, $comment);
+$currentUserId = null;
+$commentController->leaveComment($projectId, $name, $comment, $currentUserId);

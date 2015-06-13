@@ -32,10 +32,11 @@ class CommentController {
     public function listDeletedComments() {
          return Comment::listDeletedComments();
     }
-    public function leaveComment($projectId, $name, $comment){
-        Comment::leaveComment($projectId, $name, $comment, null);
-        $redirect ='Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/projectDetails.php?project_id='.$projectId;
-        header($redirect);
+    public function leaveComment($projectId, $name, $comment, $currentUserId){
+        Comment::setComment($projectId, $name, $comment, $currentUserId);
+    }
+    public function listAprovedCommentsByProject($projectId) {
+        return Comment::getAprovedCommentsByProject($projectId);
     }
 
 }

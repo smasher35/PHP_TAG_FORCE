@@ -82,25 +82,42 @@ class Comment extends AbstractModel {
 
     }
 
-    public static function leaveComment($projectId, $name, $comment, $userId=0){
+    public static function setComment($projectId, $name, $comment, $currentUserId)
+    {
 
-        AbstractModel::dbQuery("INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES ('$comment', '$projectId', '$name', '$userId', null, null, 0, null, NOW(), NOW())");
+        //AbstractModel::dbQuery("INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES ('$comment', '$projectId', '$name', '$userId', null, null, 0, null, NOW(), NOW())");
 
         //INSERIR NA BD
-        /*$query = "INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES (?,?,?,null,null,null,0,null,NOW(),NOW())";
-        $conn = self::dbConnection();
+       /* $query = "INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES (?,?,?,?,null,null,0,null,NOW(),NOW())";*/
+        $query = "INSERT INTO comments (comment, project_id, user_name, user_id, state, created_at, updated_at) VALUES (?,?,?,?,0,NOW(), NOW())";
+        $conn = AbstractModel::dbConnection();
         $stm = $conn->prepare($query);
         //FALTA DAQUI PARA BAIXO
         if ($stm) {
-            $stm->bind_param("ssssisisiisdd",$account->name,$account->email,$account->al_email,$account->password,$account->institution_id,$account->position,$account->photo_url,$account->profile_url,$account->flags,$account->role,$account->remember_token,$account->created_at,$account->updated_at);
+            $stm->bind_param("sisi", $comment, $projectId, $name, $currentUserId );
             if ($stm->execute()) {
-                header('Location: http://192.168.56.101/php_tag_force/AINET/dashBoards.php');
+
+                $redirect ='Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/projectDetails.php?project_id='.$projectId;
+                header($redirect);
                 exit(0);
             }else {
                 //return error
             }
-        }*/
 
+     }
+
+    }
+
+    public static function getAprovedCommentsByProject($projectId)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE state = 1 AND project_id ='$projectId' ");
+        $comments = [];
+        if ($result) {
+            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+                array_push($comments, $comment);
+            }
+        }
+        return $comments;
     }
 
 

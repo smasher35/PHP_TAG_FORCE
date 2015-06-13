@@ -465,4 +465,8 @@ img.img-circle.techSheet-img {
     max-height: 450px;
     max-width: 400px;
 }
+.img-large-thumbnail{
+    max-height: 200px;
+    max-width: 200px;
+}
 

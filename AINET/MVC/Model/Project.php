@@ -26,9 +26,10 @@ class Project extends AbstractModel {
     public $created_at; //timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
     public $updated_at;
 
-    public static function all()
+    public static function all($limit, $offset)
     {
-        $result = AbstractModel::dbQuery('SELECT * FROM projects');
+        $result = AbstractModel::dbQuery("SELECT * FROM projects LIMIT $limit OFFSET $offset");
+
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
@@ -38,9 +39,9 @@ class Project extends AbstractModel {
         return $projects;
     }
 
-    public static function listProjectsByOwner($owner_id)
+    public static function listProjectsByOwner($owner_id, $limit, $offset)
     {
-        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id'");
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
@@ -155,6 +156,45 @@ class Project extends AbstractModel {
         $projectImgURL = $projectImgURL . $projectImgName;
 
         return $projectImgURL;
+    }
+
+    public static function getLastUpdatedProjects()
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects ORDER BY updated_at DESC LIMIT 3 OFFSET 0");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+
+        //var_dump($projects);
+        return $projects;
+    }
+
+    public static function searchProject($searchString)
+    {
+        $searchString = "%".$searchString."%";
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString'");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+
+        //var_dump($projects);
+        return $projects;
+    }
+
+    public static function getNumberOfProjects()
+    {
+        return mysqli_num_rows(AbstractModel::dbQuery('SELECT * FROM projects'));
+    }
+
+    public static function getNumberOfProjectsByOwner($owner_id)
+    {
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by = '$owner_id' "));
     }
 
     /*public static function addProject($uploadedFile)

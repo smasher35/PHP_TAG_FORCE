@@ -1,5 +1,5 @@
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
-		<div class="row" id="subNavBar">
+<div class="row" id="subNavBar" xmlns="http://www.w3.org/1999/html">
 			<div class="container">
 				<div class="col-md-12 col-lg-offset-3" align="center">
 					<ul class="nav nav-pills">
@@ -207,56 +207,28 @@
 		<div class="clearfix"></div>
 	</div>
 <div class="container padding" >
+    <?php foreach ($lastUpdatedProjects as $project) { ?>
 	<div class="row padding">
-
-		<div class="col-md-6">
-			<img src="storage/Images/python.png" class="img-circle img-responsive img-block" alt="Projecto em Python">
+        <div class="col-md-2">
+           <p></p>
+            </div>
+		<div class="col-md-4">
+			<img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle img-responsive img-block img-large-thumbnail" alt="<?=$project->name?>">
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<p class="text-justify">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<?= $project->description ?>
+                <form action="projectDetails.php" method="get">
+                <input type="hidden" name="project_id" id="project_id" value="<?=$project->id?>">
+                <button type="submit" class="btn btn-primary button-padding">View Project</button>
+            </form>
 			</p>
 		</div>
+        <div class="col-md-2">
+            <p></p>
+        </div>
 	</div>
-	<hr />
-
-	<div class="row padding">
-		<div class="col-md-6">
-			<p class="text-justify">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
-		<div class="col-md-6">
-			<img src="storage/Images/cube.jpg" class="img-circle img-responsive img-center" alt="Projecto em C#">
-		</div>
-	</div>
-	<hr />
-	<div class="row padding">
-		<div class="col-md-6">
-			<img src="storage/Images/php.jpeg" class="img-circle img-responsive" alt="Projecto em Php">
-		</div>
-		<div class="col-md-6">
-			<p class="text-justify">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
-	</div>
-	<hr />
+    <?php } ?>
 </div>
 </div>
 

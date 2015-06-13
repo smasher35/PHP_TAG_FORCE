@@ -18,9 +18,9 @@ class ProjectController {
         return Project::getListProjectById($id);
     }
 
-    public function listProjectsByOwner($owner_id)
+    public function listProjectsByOwner($owner_id, $limit, $offset)
     {
-        return Project::listProjectsByOwner($owner_id);
+        return Project::listProjectsByOwner($owner_id, $limit, $offset);
     }
     public function listRejectedProjects()
     {
@@ -71,9 +71,9 @@ class ProjectController {
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#projAproved');
     }
 
-    public function listProjects()
+    public function listProjects($limit, $offset)
     {
-        return Project::all();
+        return Project::all($limit, $offset);
     }
 
     public function getProjectImage($id)
@@ -81,6 +81,26 @@ class ProjectController {
         $userProfileImgUrl = Project::getProjectImg($id);
 
         return $userProfileImgUrl;
+    }
+
+    public function listLastUpdatedProjects()
+    {
+        return Project::getLastUpdatedProjects();
+    }
+
+    public function searchProjects($searchString)
+    {
+        return Project::searchProject($searchString);
+    }
+
+    public function countProjects()
+    {
+        return Project::getNumberOfProjects();
+    }
+
+    public function countProjectsByOwner($owner_id)
+    {
+        return Project::getNumberOfProjectsByOwner($owner_id);
     }
 
 

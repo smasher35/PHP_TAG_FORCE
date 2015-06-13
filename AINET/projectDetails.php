@@ -11,15 +11,17 @@ require 'bootstrap.php';
 use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\CommentController;
+use Ainet\Support\TimeHelper;
 
 
 $projectController = new ProjectController();
 $accountController = new AccountController();
 $commentController = new CommentController();
+$timeHelper = new TimeHelper();
 
 $projectid = $_GET['project_id'];
 
-$commentsList = $commentController->listAprovedComments();
+$commentsList = $commentController->listAprovedCommentsByProject($projectid);
 $actualproject = $projectController->listProjectByid($projectid);
 $title = "PHP TAG FORCE - Projects Technical Sheet";
 
