@@ -74,7 +74,7 @@
                         <?php $tags = $projectTagsController->listTagsByProject($actualproject->id)?>
                         <strong> Tags: </strong>
                         <?php foreach ($tags as $tag) { ?>
-                            #<?=$tagsController->getTagName($tag->tag_id)?>, 
+                            #<?=$tagsController->getTagName($tag->tag_id)?>,
                         <?php }?>
 
                     </p>
@@ -206,7 +206,7 @@
                                 else {
                                     $userName = $comment->user_name;
                                 }
-                        ?>
+                                ?>
                         <div class="container">
                             <div class="row">
                                 <p>(<?=$timeHelper->humanTiming(strtotime($comment->created_at))?> ago) <b><?=$userName?></b>  said:</p>
@@ -217,16 +217,6 @@
                         </div>
                         <hr>
                         <?php } ?>
-                        <table class="table table-stripped table-hover table-responsive">
-                            <tr>
-                                <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
-                                <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
-                            </tr>
-
-                            <!-- TODO: substituir pelo foeach a percorrer os comentários existentes -->
-
-                        </table>
-
                 </div>
             </div><!-- Fecha Painel Comments pending-->
         </div><!-- fecha row -->
