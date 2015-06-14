@@ -635,11 +635,39 @@
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalCommentRejected" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip"  data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
                                                         </tr>
+
+                                                        <!-- JANELA MODAL REJECTED COMMENT -->
+
+                                                        <div class="modal fade" id="modalCommentRejected" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                                            <form action="rejectComment.php" method="post">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                            <h4 class="modal-title" id="myModalLabel">Refusal Reason</h4>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <label for="refusalMessage" >Refusal Message</label>
+                                                                            <input type="hidden" name="comment_id" value="<?=$comment->id?>" />
+                                                                            <textarea  id="refusalMessage" name="refusalMessage" rows="3" class="form-control"></textarea>
+
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+
                                                     <?php } ?>
+
+
                                                 </table>
                                                 <div class="panel-footer">
                                                     <!-- Pagination -->
@@ -696,10 +724,35 @@
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalCommentRejected2" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
                                                         </tr>
+
+                                                        <!-- JANELA MODAL REJECTED COMMENT -->
+
+                                                        <div class="modal fade" id="modalCommentRejected2" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                                            <form action="rejectComment.php" method="post">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                            <h4 class="modal-title" id="myModalLabel">Refusal Reason</h4>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <label for="refusalMessage" >Refusal Message</label>
+                                                                            <input type="hidden" name="comment_id" value="<?=$comment->id?>" />
+                                                                            <textarea  id="refusalMessage" name="refusalMessage" rows="3" class="form-control"></textarea>
+
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
                                                     <?php } ?>
                                                 </table>
                                                 <div class="panel-footer">

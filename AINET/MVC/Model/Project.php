@@ -134,7 +134,7 @@ class Project extends AbstractModel {
 
     public static function setState($id, $state, $refusalMsg, $userId)
     {
-        AbstractModel::dbQuery("UPDATE projects SET state = '$state', refusal_msg='$refusalMsg', approved_by='$userId' WHERE id = '$id'");
+        return AbstractModel::dbQuery("UPDATE projects SET state = '$state', refusal_msg='$refusalMsg', approved_by='$userId' WHERE id = '$id'");
     }
 
     public static function getListProjectById($id)

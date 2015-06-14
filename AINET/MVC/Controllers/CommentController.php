@@ -45,4 +45,12 @@ class CommentController {
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
 
+
+    public function setRejectedComment($id, $refusalMsg)
+    {
+
+        Comment::setState($id, 2, $refusalMsg,null);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#commentsManagement');
+    }
+
 }
