@@ -402,7 +402,7 @@
                                                             <td><?=$project2->theme?></td>
                                                             <td><?=$accountController->getUserName($project2->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalProjectRejected2" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <button class="btn btn-warning btn-xs" data-toggle="modal" data-id="$project2->id" data-target="#modalProjectRejected2" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
                                                                 <a href="deleteProject.php?project_id=<?=$project2->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                 <a href="projectDetails.php?project_id=<?=$project2->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                             </td>
