@@ -633,8 +633,8 @@
                                         <!-- Declaração das Réguas -->
                                         <li class="active"><a href="#tagsPending" data-toggle="tab">Tags Pending</a></li>
                                         <li><a href="#tagsAproved" data-toggle="tab">Tags Aproved</a></li>
-                                        <li><a href="#tagsRejected" data-toggle="tab">tags Rejected</a></li>
-                                        <li><a href="#tagsDeleted" data-toggle="tab">tags Deleted</a></li>
+                                        <li><a href="#tagsRejected" data-toggle="tab">Tags Rejected</a></li>
+                                        <li><a href="#tagsDeleted" data-toggle="tab">Tags Deleted</a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <!-------------------------------------------------------------- TAGS PENDING ---------------------------------------------------------------------------------->
@@ -667,7 +667,7 @@
                                                             <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                             <td><?=$accountController->getUserName($tag->added_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <a href="aproveTag.php?tag_id=<?=$tag->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                                 <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
@@ -788,7 +788,7 @@
                                                             <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                             <td><?=$accountController->getUserName($tag->added_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <a href="aproveTag.php?tag_id=<?=$tag->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
                                                         </tr>
@@ -847,8 +847,7 @@
                                                             <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                             <td><?=$accountController->getUserName($tag->added_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                <a href="aproveTag.php?tag_id=<?=$tag->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                             </td>
                                                         </tr>
                                                     <?php } ?>
