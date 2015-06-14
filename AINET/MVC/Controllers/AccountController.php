@@ -176,6 +176,11 @@ class AccountController
         return $userProfileImgUrl;
     }
 
+    public function getUserId($email)
+    {
+        return Account::getUserId($email);
+    }
+
     public function getUserInstitutionId($id)
     {
         return Account::getUserInstitutionId($id);

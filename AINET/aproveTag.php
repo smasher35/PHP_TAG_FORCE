@@ -10,7 +10,7 @@ require 'bootstrap.php';
 
 use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
-use AINET\MVC\Controllers\CommentController;
+use AINET\MVC\Controllers\ProjectTagsController;
 
 
 //valida autenticação no site
@@ -21,11 +21,11 @@ if(!$authController->isAuthenticated()) {
 
 $authenticated = true;
 
-$commentController = new CommentController();
+$projectTagController = new ProjectTagsController();
 $accountController = new AccountController();
 $currentUserID = $accountController->getUserId($_SESSION['email']);
 
-$commentId = $_GET['comment_id'];
+$tagId = $_GET['tag_id'];
 
-$commentController->setAprovedComments($commentId, $currentUserID);
+$projectTagController->setAprovedTags($tagId, $currentUserID);
 

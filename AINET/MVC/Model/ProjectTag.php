@@ -92,4 +92,9 @@ class ProjectTag  extends AbstractModel {
         return $projectTags;
     }
 
+    public static function setState($id, $state, $userId)
+    {
+        AbstractModel::dbQuery("UPDATE project_tag SET state = '$state', approved_by='$userId' WHERE id = '$id'");
+    }
+
 }

@@ -9,6 +9,7 @@ require 'bootstrap.php';
  */
 
 use AINET\MVC\Controllers\AuthenticationController;
+use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\ProjectController;
 
 
@@ -21,8 +22,11 @@ if(!$authController->isAuthenticated()) {
 $authenticated = true;
 
 $projectController = new ProjectController();
+$accountController = new AccountController();
+
+$currentUserID = $accountController->getUserId($_SESSION['email']);
 
 $projectId = $_GET['project_id'];
 
-$projectController->setAprovedProject($projectId);
+$projectController->setAprovedProject($projectId, $currentUserID);
 

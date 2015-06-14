@@ -24,4 +24,6 @@ class Tag extends AbstractModel {
         return $tag->tag;
     }
 
+
+
 }

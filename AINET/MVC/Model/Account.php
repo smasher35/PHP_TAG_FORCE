@@ -50,8 +50,6 @@ class Account extends AbstractModel
 
 	public static function findByEmail($email,$pass)
 	{
-
-
         $user = self::getUserbyMail($email);
 
         if ($user != null){
@@ -64,7 +62,14 @@ class Account extends AbstractModel
 		return null;
 	}
 
+    public static function getUserId($email)
+    {
+        $user = self::getUserbyMail($email);
 
+        if ($user != null){
+                return $user->id;
+        }
+    }
 
     private static function  getUserbyMail($mail){
 

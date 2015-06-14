@@ -55,20 +55,20 @@ class ProjectController {
         return Project::getProjectName($id);
     }
 
-    public function setAprovedProject($id)
+    public function setAprovedProject($id, $userId)
     {
-        Project::setState($id, 1, null);
+        Project::setState($id, 1, null,$userId);
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#projAproved');
     }
 
     public function setDeletedProject($id)
     {
-        Project::setState($id, 3, null);
+        Project::setState($id, 3, null,null);
     }
 
     public function setRejectedProject($id, $refusalMsg)
     {
-        Project::setState($id, 2, $refusalMsg);
+        Project::setState($id, 2, $refusalMsg,null);
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#projAproved');
     }
 

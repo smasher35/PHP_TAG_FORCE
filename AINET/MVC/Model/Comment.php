@@ -120,9 +120,9 @@ class Comment extends AbstractModel {
         return $comments;
     }
 
-    public static function setState($id, $state, $refusalMsg)
+    public static function setState($id, $state, $refusalMsg,$userId)
     {
-        AbstractModel::dbQuery("UPDATE comments SET state = '$state', refusal_msg='$refusalMsg' WHERE id = '$id'");
+        AbstractModel::dbQuery("UPDATE comments SET state = '$state', refusal_msg='$refusalMsg', approved_by='$userId' WHERE id = '$id'");
     }
 
 

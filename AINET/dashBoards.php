@@ -31,6 +31,7 @@ $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
 	$authController->redirectToLogin();
 }else {
+
 	$institutionController = new InstitutionController();
 	$accountController = new AccountController();
     $projectControler = new ProjectController();
@@ -44,6 +45,8 @@ if(!$authController->isAuthenticated()) {
     $usersActive = $accountController->getListActiveAcounts();
     $usersDisabled = $accountController->getListDisabledAccounts();
     $usersDeleted = $accountController->getListDeletedAccounts();
+    $currentUserID = $accountController->getUserId($_SESSION['email']);
+
 
 
     //----------------PROJECTS--------------//
