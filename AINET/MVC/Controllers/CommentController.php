@@ -49,7 +49,7 @@ class CommentController {
     public function setRejectedComment($id, $refusalMsg)
     {
 
-        Comment::setState($id, 2, $refusalMsg,null);
+        Comment::setRejectedState($id, 2, $refusalMsg);
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#commentsManagement');
     }
 

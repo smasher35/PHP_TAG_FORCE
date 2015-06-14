@@ -26,7 +26,7 @@ $projectController = new ProjectController();
 $projectId = $_POST['project_id'];
 $refusal_msg = $_POST['refusalMessage'];
 
-
+var_dump($projectId);
 
 $projectController->setRejectedProject($projectId,$refusal_msg);
 

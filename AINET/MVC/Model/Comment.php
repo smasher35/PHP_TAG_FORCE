@@ -122,13 +122,14 @@ class Comment extends AbstractModel {
 
     public static function setState($id, $state, $refusalMsg,$userId)
     {
-        /*
-            var_dump($id);
-            var_dump($state);
-            var_dump($refusalMsg);
-            var_dump($userId);
-        */
+
         AbstractModel::dbQuery("UPDATE comments SET state = '$state', refusal_msg='$refusalMsg', approved_by='$userId' WHERE id = '$id'");
+    }
+
+    public static function setRejectedState($id, $state, $refusalMsg)
+    {
+
+        AbstractModel::dbQuery("UPDATE comments SET state = '$state', refusal_msg='$refusalMsg' WHERE id = '$id'");
     }
 
 

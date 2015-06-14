@@ -394,17 +394,17 @@
                                                         <th class="text-center">Operations</th>
                                                     </tr>
 
-                                                    <?php foreach ($projectsAproved as $project) { ?>
+                                                    <?php foreach ($projectsAproved as $project2) { ?>
                                                         <tr>
                                                             <td align="center"><input type="checkbox"></td>
-                                                            <td><?=$project->name?></td>
-                                                            <td><?=$project->type?></td>
-                                                            <td><?=$project->theme?></td>
-                                                            <td><?=$accountController->getUserName($project->created_by)?></td>
+                                                            <td><?=$project2->name?></td>
+                                                            <td><?=$project2->type?></td>
+                                                            <td><?=$project2->theme?></td>
+                                                            <td><?=$accountController->getUserName($project2->created_by)?></td>
                                                             <td align="center">
                                                                 <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalProjectRejected2" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                                                <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
-                                                                <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button></a>
+                                                                <a href="deleteProject.php?project_id=<?=$project2->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
+                                                                <a href="projectDetails.php?project_id=<?=$project2->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                             </td>
                                                         </tr>
                                                         <!-- JANELA MODAL REJECTED PROJECT -->
@@ -419,7 +419,7 @@
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <label for="refusalMessage" >Refusal Message</label>
-                                                                            <input type="hidden" name="project_id" value="<?=$project->id?>" />
+                                                                            <input type="hidden" name="project_id" value="<?=$project2->id?>" />
                                                                             <textarea  id="refusalMessage" name="refusalMessage" rows="3" class="form-control"></textarea>
 
                                                                         </div>
