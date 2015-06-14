@@ -39,4 +39,10 @@ class CommentController {
         return Comment::getAprovedCommentsByProject($projectId);
     }
 
+    public function setAprovedComments($id)
+    {
+        Comment::setState($id, 1, null);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+    }
+
 }

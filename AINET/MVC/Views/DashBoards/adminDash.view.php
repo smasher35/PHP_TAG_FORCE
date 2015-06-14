@@ -634,7 +634,7 @@
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                                 <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
@@ -756,7 +756,7 @@
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
+                                                                <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
                                                         </tr>
@@ -815,8 +815,7 @@
                                                             <td><?=$projectControler->getProjctState($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                             </td>
                                                         </tr>
                                                     <?php } ?>

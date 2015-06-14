@@ -141,10 +141,10 @@
 
                      <!----------------- TEAM ELEMENTS ------------------------------>
                      <div class="tab-pane fade in" id="teamElements">
-                        <table class="table table-stripped table-hover table-responsive">
+                        <table class="table table-stripped table-responsive">
                             <tr>
-                                <th>Name</th>
-                                <th>Institution</th>
+                                <th><h3><strong>Name</strong></h3></th>
+                                <th><h3><strong>Institution</strong></h3></th>
                             </tr>
                             <?php $teamMembers = $projectTeamMembersController->listTeamMembersByProject($actualproject->id)?>
                             <?php foreach ($teamMembers as $user) {?>
