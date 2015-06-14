@@ -74,7 +74,7 @@ class ProjectController {
     public function setAprovedProject($id, $userId)
     {
         Project::setState($id, 1, null,$userId);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#projAproved');
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
 
     public function setDeletedProject($id)
@@ -86,7 +86,7 @@ class ProjectController {
     public function setRejectedProject($id, $refusalMsg)
     {
         Project::setRejectedState($id, 2, $refusalMsg);
-        //header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#projAproved');
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
 
     public function listProjects($limit, $offset)
