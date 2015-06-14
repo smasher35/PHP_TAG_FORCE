@@ -79,7 +79,8 @@ class ProjectController {
 
     public function setDeletedProject($id)
     {
-        Project::setState($id, 3, null,null);
+        Project::setDeleteState($id, 3, null);
+        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
 
     public function setRejectedProject($id, $refusalMsg)
