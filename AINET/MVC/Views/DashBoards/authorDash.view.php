@@ -68,6 +68,7 @@
                                                         <td><?=$project->theme?></td>
                                                         <td align="center">
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
                                                         </td>
                                                     </tr>
@@ -187,6 +188,7 @@
                                                         <td><?=$project->refusal_msg?></td>
                                                         <td align="center">
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
                                                         </td>
                                                     </tr>
@@ -259,6 +261,7 @@
                                                         <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                         <td align="center">
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
@@ -366,6 +369,7 @@
                                                         <td><?=$comment->refusal_msg?></td>
                                                         <td align="center">
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
@@ -437,6 +441,7 @@
                                                         <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                         <td align="center">
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
@@ -543,6 +548,7 @@
 
                                                         <td align="center">
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
