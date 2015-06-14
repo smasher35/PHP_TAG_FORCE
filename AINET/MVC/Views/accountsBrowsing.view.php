@@ -57,6 +57,7 @@
 						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Website</th>
 						<th class="text-center">Show Projects</th>
 						<th class="text-center">Contact Me</th>
+                        <th class="text-center">Details</th>
 					</tr>
 
 					<?php foreach ($users as $user) { ?>
@@ -70,6 +71,7 @@
 
 							<td align="center"><a href="projects.php?owner_id=<?=$user->id?>" <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
 							<td align="center"><a href="mailto:'<?=$user->email?>'"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></a></td>
+                            <td><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Account"><span class="glyphicon glyphicon-book"></span></button></td>
 						</tr>
 					<?php }?>
 				</table> <!-- Fim da TAbela -->
