@@ -53,4 +53,24 @@ class CommentController {
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#commentsManagement');
     }
 
+    /**
+     * @param $currentUserID
+     * @param $limit
+     * @param $offset
+     */
+    public function listCommentsByOwnerPending($currentUserID, $limit, $offset)
+    {
+        return Comment::listCommentsByOwnerPending($currentUserID, $limit, $offset);
+    }
+
+    public function listCommentsByOwnerAproved($currentUserID, $limit, $offset)
+    {
+        return Comment::listCommentsByOwnerAproved($currentUserID, $limit, $offset);
+    }
+
+    public function listCommentsByOwnerRejected($currentUserID, $limit, $offset)
+    {
+        return Comment::listCommentsByOwnerRejected($currentUserID, $limit, $offset);
+    }
+
 }

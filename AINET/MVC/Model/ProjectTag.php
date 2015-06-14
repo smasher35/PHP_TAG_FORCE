@@ -97,4 +97,43 @@ class ProjectTag  extends AbstractModel {
         AbstractModel::dbQuery("UPDATE project_tag SET state = '$state', approved_by='$userId' WHERE id = '$id'");
     }
 
+    public static function listTagsByOwnerPending($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM project_tag where added_by='$currentUserID' AND state=0");
+        $tags = [];
+        if ($result) {
+            while($tag = $result -> fetch_object('AINET\MVC\Model\ProjectTag')) {
+                array_push($tags, $tag);
+            }
+        }
+        return $tags;
+
+    }
+
+    public static function listTagsByOwnerAproved($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM project_tag where added_by='$currentUserID' AND state=1");
+        $tags = [];
+        if ($result) {
+            while($tag = $result -> fetch_object('AINET\MVC\Model\ProjectTag')) {
+                array_push($tags, $tag);
+            }
+        }
+        return $tags;
+
+    }
+
+    public static function listTagsByOwnerRejected($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM project_tag where added_by='$currentUserID' AND state=2");
+        $tags = [];
+        if ($result) {
+            while($tag = $result -> fetch_object('AINET\MVC\Model\ProjectTag')) {
+                array_push($tags, $tag);
+            }
+        }
+        return $tags;
+
+    }
+
 }

@@ -39,6 +39,18 @@ if(!$authController->isAuthenticated()) {
     $tagsController = new TagsController();
     $projectTagsController = new ProjectTagsController();
 
+    if (isset ($_GET['page'])) {
+        $page = $_GET['page'];
+        $limit = $page * 10;
+        $offset = $limit - 10;
+    }
+    else {
+        $page = 1;
+        $limit = $page * 10;
+        $offset = $limit - 10;
+    }
+
+
     //----------------ACCOUNTS--------------//
 	$role = $accountController->getRole($_SESSION['email']);
 	$users = $accountController->listUsers();
@@ -55,6 +67,9 @@ if(!$authController->isAuthenticated()) {
     $projectsDeleted = $projectControler->listDeletedProjects();
     $projectsPending = $projectControler->listPendingProjects();
     $projectsAproved = $projectControler->listAprovedProjects();
+    $projectsByOwnerPending = $projectControler->listProjectsByOwnerPending($currentUserID,$limit,$offset);
+    $projectsByOwnerAproved = $projectControler->listProjectsByOwnerAproved($currentUserID,$limit,$offset);
+    $projectsByOwnerRejected = $projectControler->listProjectsByOwnerRejected($currentUserID,$limit,$offset);
 
     //---------------- COMMENTS --------------//
     $comments = $commentsController->listComments();
@@ -62,6 +77,9 @@ if(!$authController->isAuthenticated()) {
     $commentsPending = $commentsController->listPendingComments();
     $commentsRejected = $commentsController->listRejectedComments();
     $commentsDeleted = $commentsController->listDeletedComments();
+    $commentsByOwnerPending = $commentsController->listCommentsByOwnerPending($currentUserID,$limit,$offset);
+    $commentsByOwnerAproved = $commentsController->listCommentsByOwnerAproved($currentUserID,$limit,$offset);
+    $commentsByOwnerRejected = $commentsController->listCommentsByOwnerRejected($currentUserID,$limit,$offset);
 
     //---------------- TAGS --------------//
 
@@ -72,6 +90,9 @@ if(!$authController->isAuthenticated()) {
     $tagsPending = $projectTagsController->listPendingTags();
     $tagsRejected = $projectTagsController->listRejectedTags();
     $tagsDeleted = $projectTagsController->listDeletedTags();
+    $tagsByOwnerPending = $projectTagsController->listTagsByOwnerPending($currentUserID,$limit,$offset);
+    $tagsByOwnerAproved = $projectTagsController->listTagsByOwnerAproved($currentUserID,$limit,$offset);
+    $tagsByOwnerRejected = $projectTagsController->listTagsByOwnerRejected($currentUserID,$limit,$offset);
 
 
     $title = "PHP TAG FORCE - DashBoard";

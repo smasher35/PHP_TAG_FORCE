@@ -22,6 +22,22 @@ class ProjectController {
     {
         return Project::listProjectsByOwner($owner_id, $limit, $offset);
     }
+
+    public function listProjectsByOwnerPending($owner_id,$limit,$offset)
+    {
+        return Project::listProjectsByOwnerPending($owner_id,$limit,$offset);
+    }
+
+    public function listProjectsByOwnerAproved($owner_id,$limit,$offset)
+    {
+        return Project::listProjectsByOwnerAproved($owner_id,$limit,$offset);
+    }
+
+    public function listProjectsByOwnerRejected($owner_id,$limit,$offset)
+    {
+        return Project::listProjectsByOwnerRejected($owner_id,$limit,$offset);
+    }
+
     public function listRejectedProjects()
     {
         return Project::getListRejectedProjects();

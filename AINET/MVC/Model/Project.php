@@ -51,6 +51,42 @@ class Project extends AbstractModel {
         return $projects;
     }
 
+    public static function listProjectsByOwnerPending($owner_id, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' AND state=0 LIMIT $limit OFFSET $offset");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    public static function listProjectsByOwnerAproved($owner_id, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' AND state=1 LIMIT $limit OFFSET $offset");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
+    public static function listProjectsByOwnerRejected($owner_id, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' AND state=2 LIMIT $limit OFFSET $offset");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
     public static function getListRecentProjects()
     {
         $result = AbstractModel::dbQuery('SELECT * FROM projects ORDER BY created_at DESC LIMIT 4 OFFSET 0');

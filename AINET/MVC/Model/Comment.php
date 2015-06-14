@@ -132,5 +132,44 @@ class Comment extends AbstractModel {
         AbstractModel::dbQuery("UPDATE comments SET state = '$state', refusal_msg='$refusalMsg' WHERE id = '$id'");
     }
 
+    public static function listCommentsByOwnerPending($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID' AND state = 0");
+        $comments = [];
+        if ($result) {
+            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+                array_push($comments, $comment);
+            }
+        }
+        return $comments;
+
+    }
+
+    public static function listCommentsByOwnerAproved($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID' AND state=1");
+        $comments = [];
+        if ($result) {
+            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+                array_push($comments, $comment);
+            }
+        }
+        return $comments;
+
+    }
+
+    public static function listCommentsByOwnerRejected($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID' AND state = 2");
+        $comments = [];
+        if ($result) {
+            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+                array_push($comments, $comment);
+            }
+        }
+        return $comments;
+
+    }
+
 
 }

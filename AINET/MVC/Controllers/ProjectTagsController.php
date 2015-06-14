@@ -48,4 +48,19 @@ class ProjectTagsController {
         ProjectTag::setState($id, 1,$userId);
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
+
+    public function listTagsByOwnerPending($currentUserID, $limit, $offset)
+    {
+        return ProjectTag::listTagsByOwnerPending($currentUserID, $limit, $offset);
+    }
+
+    public function listTagsByOwnerAproved($currentUserID, $limit, $offset)
+    {
+        return ProjectTag::listTagsByOwnerAproved($currentUserID, $limit, $offset);
+    }
+
+    public function listTagsByOwnerRejected($currentUserID, $limit, $offset)
+    {
+       return ProjectTag::listTagsByOwnerRejected($currentUserID, $limit, $offset);
+    }
 }

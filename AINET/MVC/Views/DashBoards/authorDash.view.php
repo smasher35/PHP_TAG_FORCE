@@ -60,7 +60,7 @@
                                                 </tr>
 
 
-                                                <?php foreach ($projectsPending as $project) { ?>
+                                                <?php foreach ($projectsByOwnerPending as $project) { ?>
                                                     <tr>
                                                         <td align="center"><input type="checkbox"></td>
                                                         <td><?=$project->name?></td>
@@ -122,7 +122,7 @@
                                                 </tr>
 
 
-                                                <?php foreach ($projectsAproved as $project) { ?>
+                                                <?php foreach ($projectsByOwnerAproved as $project) { ?>
                                                     <tr>
                                                         <td align="center"><input type="checkbox"></td>
                                                         <td><?=$project->name?></td>
@@ -180,7 +180,7 @@
                                                 </tr>
 
 
-                                                <?php foreach ($projectsRejected as $project) { ?>
+                                                <?php foreach ($projectsByOwnerRejected as $project) { ?>
                                                     <tr>
                                                         <td align="center"><input type="checkbox"></td>
                                                         <td><?=$project->name?></td>
@@ -252,7 +252,7 @@
                                                     <th class="text-center">Operations</th>
                                                 </tr>
 
-                                                <?php foreach ($commentsPending as $comment) { ?>
+                                                <?php foreach ($commentsByOwnerPending as $comment) { ?>
                                                     <tr>
                                                         <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$comment->comment?></td>
@@ -305,7 +305,7 @@
                                                 </tr>
 
 
-                                                <?php foreach ($commentsApproved as $comment) { ?>
+                                                <?php foreach ($commentsByOwnerAproved as $comment) { ?>
                                                     <tr>
                                                         <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$comment->comment?></td>
@@ -358,7 +358,7 @@
                                                     <th class="text-center">Operations</th>
                                                 </tr>
 
-                                                <?php foreach ($commentsRejected as $comment) { ?>
+                                                <?php foreach ($commentsByOwnerRejected as $comment) { ?>
                                                     <tr>
                                                         <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$comment->comment?></td>
@@ -430,8 +430,7 @@
                                                     <th class="text-center">Operations</th>
                                                 </tr>
 
-
-                                                <?php foreach ($tagsPending as $tag) { ?>
+                                                <?php foreach ($tagsByOwnerPending as $tag) { ?>
                                                     <tr>
                                                         <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$tagsController->getTagName($tag->tag_id)?></td>
@@ -483,7 +482,7 @@
                                                     <th class="text-center">Operations</th>
                                                 </tr>
 
-                                                <?php foreach ($tagsApproved as $tag) { ?>
+                                                <?php foreach ($tagsByOwnerAproved as $tag) { ?>
                                                     <tr>
                                                         <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$tagsController->getTagName($tag->tag_id)?></td>
@@ -536,7 +535,7 @@
                                                     <th class="text-center">Operations</th>
                                                 </tr>
 
-                                                <?php foreach ($tagsRejected as $tag) { ?>
+                                                <?php foreach ($tagsByOwnerRejected as $tag) { ?>
                                                     <tr>
                                                         <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$tagsController->getTagName($tag->tag_id)?></td>
