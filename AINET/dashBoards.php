@@ -26,6 +26,18 @@ else {
     $limit = $page * 10;
     $offset = $limit - 10;
 }
+if (isset($_GET['order_by'])) {
+    $orderBy = $_GET['order_by'];
+}
+else {
+    $orderBy = "name";
+}
+if (isset($_GET['order'])) {
+    $order = $_GET['order'];
+}
+else {
+    $order = "ASC";
+}
 
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
@@ -62,7 +74,7 @@ if(!$authController->isAuthenticated()) {
 
 
     //----------------PROJECTS--------------//
-    $projects = $projectControler->listProjects($limit, $offset);
+    $projects = $projectControler->listProjects($orderBy, $order,$limit, $offset);
     $projectsRejected = $projectControler->listRejectedProjects();
     $projectsDeleted = $projectControler->listDeletedProjects();
     $projectsPending = $projectControler->listPendingProjects();
