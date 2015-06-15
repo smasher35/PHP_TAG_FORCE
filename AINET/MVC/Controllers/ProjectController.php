@@ -18,9 +18,9 @@ class ProjectController {
         return Project::getListProjectById($id);
     }
 
-    public function listProjectsByOwner($owner_id, $limit, $offset)
+    public function listProjectsByOwner($owner_id, $orderBy, $order, $limit, $offset)
     {
-        return Project::listProjectsByOwner($owner_id, $limit, $offset);
+        return Project::listProjectsByOwner($owner_id, $orderBy, $order, $limit, $offset);
     }
 
     public function listProjectsByOwnerPending($owner_id,$limit,$offset)
@@ -79,19 +79,19 @@ class ProjectController {
 
     public function setDeletedProject($id)
     {
-        Project::setDeleteState($id, 3, null);
+        Project::setDeleteState($id);
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
 
     public function setRejectedProject($id, $refusalMsg)
     {
-        Project::setRejectedState($id, 2, $refusalMsg);
+        Project::setRejectedState($id, $refusalMsg);
         header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
 
-    public function listProjects($limit, $offset)
+    public function listProjects($orderBy, $order, $limit, $offset)
     {
-        return Project::all($limit, $offset);
+        return Project::all($orderBy, $order, $limit, $offset);
     }
 
     public function getProjectImage($id)
@@ -106,19 +106,29 @@ class ProjectController {
         return Project::getLastUpdatedProjects();
     }
 
-    public function searchProjects($searchString)
+    public function searchProjects($searchString, $limit, $offset)
     {
-        return Project::searchProject($searchString);
+        return Project::searchProject($searchString, $limit, $offset);
     }
 
-    public function countProjects()
+    public function countAprovedProjects()
     {
-        return Project::getNumberOfProjects();
+        return Project::getNumberOfAprovedProjects();
     }
 
     public function countProjectsByOwner($owner_id)
     {
         return Project::getNumberOfProjectsByOwner($owner_id);
+    }
+
+    public function countFoundedProjects($searchString)
+    {
+        return Project::getNumberOfFoundedProjects($searchString);
+    }
+
+    public function listProjectsOrderByOwner($order, $limit, $offset)
+    {
+        return Project::getProjectsOrderByOwner($order, $limit, $offset);
     }
 
 

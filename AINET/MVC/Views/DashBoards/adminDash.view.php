@@ -292,14 +292,14 @@
                                                 </div>
                                                 <!-- Table -->
                                                 <table class="table table-stripped table-hover table-responsive">
-                                                    <tr>
+                                                   <thead>
                                                         <th class="text-center"><input type="checkbox"> Select</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Type</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Theme</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Author</th>
                                                         <th class="text-center">Operations</th>
-                                                    </tr>
+                                                    </thead>
 
                                                     <?php foreach ($projectsPending as $project) { ?>
                                                         <tr>
@@ -318,7 +318,7 @@
 
                                                         <!-- JANELA MODAL REJECTED PROJECT -->
 
-                                                            <div class="modal fade" id="modalProjectRejected" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                                           <div class="modal fade" id="modalProjectRejected" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                                                             <form action="rejectProject.php" method="post">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
@@ -342,7 +342,16 @@
                                                             </div>
 
                                                         <!-- FECHA JANELA MODAL PROJECT REJECTED -->
-                                                    <?php } ?>
+                                                   <?php } ?>
+
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-field="state" data-checkbox="true"></th>
+                                                        <th data-field="id" data-align="right" data-sortable="true">Item ID</th>
+                                                        <th data-field="name" data-align="center" data-sortable="true">Item Name</th>
+                                                        <th data-field="price" data-sortable="true">Item Price</th>
+                                                    </tr>
+                                                    </thead>
                                                 </table>
                                                 <div class="panel-footer">
                                                     <!-- Pagination -->

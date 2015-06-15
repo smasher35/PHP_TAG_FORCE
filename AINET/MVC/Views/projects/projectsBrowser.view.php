@@ -69,6 +69,21 @@
         </div>
         <!-- /.row -->
 
+        <div>
+			    <form action="projects.php" method="get">
+                <select name="orderBy">
+                    <option <?php if ($orderBy == "name") {echo "selected";}?> value="name">Name</option>
+                    <option <?php if ($orderBy == "created_by") {echo "selected";}?> value="created_by">Author</option>
+                </select>
+                <select name="order">
+                    <option <?php if ($order == "ASC") {echo "selected";}?> value="ASC">Ascendent</option>
+                    <option <?php if ($order == "DESC") {echo "selected";}?> value="DESC">Descendent</option>
+                </select>
+                <input type="submit" value="Submit">
+                </form>
+
+            </div>
+
         <hr>
 
 	</div>

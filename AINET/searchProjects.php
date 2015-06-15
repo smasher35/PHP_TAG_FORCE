@@ -20,7 +20,23 @@ $accountController = new AccountController();
 
 $searchString = $_GET['search'];
 
-$projects = $projectController->searchProjects($searchString);
+
+
+
+if (isset ($_GET['page'])) {
+    $page = $_GET['page'];
+    $limit = $page * 10;
+    $offset = $limit - 10;
+}
+else {
+    $page = 1;
+    $limit = $page * 10;
+    $offset = $limit - 10;
+}
+$numberOfFoundedProjects = $projectController->countFoundedProjects($searchString);
+$lastPage = ceil($numberOfFoundedProjects/10);
+
+$projects = $projectController->searchProjects($searchString, $limit, $offset);
 
 
 

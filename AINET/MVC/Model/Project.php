@@ -26,9 +26,9 @@ class Project extends AbstractModel {
     public $created_at; //timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
     public $updated_at;
 
-    public static function all($limit, $offset)
+    public static function all($orderBy, $order, $limit, $offset)
     {
-        $result = AbstractModel::dbQuery("SELECT * FROM projects where state = 1 LIMIT  $limit OFFSET $offset");
+        $result = AbstractModel::dbQuery("SELECT * FROM projects where state = 1 ORDER BY $orderBy $order LIMIT  $limit OFFSET $offset");
 
         $projects = [];
         if ($result) {
@@ -39,9 +39,9 @@ class Project extends AbstractModel {
         return $projects;
     }
 
-    public static function listProjectsByOwner($owner_id, $limit, $offset)
+    public static function listProjectsByOwner($owner_id, $orderBy, $order, $limit, $offset)
     {
-        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' LIMIT $limit OFFSET $offset");
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' ORDER BY $orderBy $order LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
@@ -173,14 +173,14 @@ class Project extends AbstractModel {
         return AbstractModel::dbQuery("UPDATE projects SET state = '$state', refusal_msg='$refusalMsg', approved_by='$userId' WHERE id = '$id'");
     }
 
-    public static function setRejectedState($id, $state, $refusalMsg)
+    public static function setRejectedState($id, $refusalMsg)
     {
-        return AbstractModel::dbQuery("UPDATE projects SET state = '$state', refusal_msg='$refusalMsg' WHERE id = '$id'");
+        return AbstractModel::dbQuery("UPDATE projects SET state = 2, refusal_msg='$refusalMsg' WHERE id = '$id'");
     }
 
-    public static function setDeleteState($id, $state, $refusalMsg)
+    public static function setDeleteState($id)
     {
-        return AbstractModel::dbQuery("UPDATE projects SET state = '$state', refusal_msg='$refusalMsg' WHERE id = '$id'");
+        return AbstractModel::dbQuery("UPDATE projects SET state = 3 WHERE id = '$id'");
     }
 
     public static function getListProjectById($id)
@@ -218,10 +218,10 @@ class Project extends AbstractModel {
         return $projects;
     }
 
-    public static function searchProject($searchString)
+    public static function searchProject($searchString, $limit, $offset)
     {
         $searchString = "%".$searchString."%";
-        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString'");
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString' LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
@@ -233,14 +233,32 @@ class Project extends AbstractModel {
         return $projects;
     }
 
-    public static function getNumberOfProjects()
+    public static function getNumberOfAprovedProjects()
     {
-        return mysqli_num_rows(AbstractModel::dbQuery('SELECT * FROM projects'));
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE state=1"));
     }
 
     public static function getNumberOfProjectsByOwner($owner_id)
     {
         return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by = '$owner_id' "));
+    }
+
+    public static function getNumberOfFoundedProjects($searchString)
+    {
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE state = 1 name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString'"));
+    }
+
+    public static function getProjectsOrderByOwner($order, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT p.* FROM projects p JOIN users u ON p.created_by=u.id WHERE p.state = 1  ORDER BY u.name $order LIMIT $limit OFFSET $offset");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+
+        return $projects;
     }
 
     /*public static function addProject($uploadedFile)
