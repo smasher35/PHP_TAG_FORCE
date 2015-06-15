@@ -21,5 +21,9 @@ $authController = new AuthenticationController();
 if($authController->isAuthenticated()) {
     $actualUser = $accountControler->getUserId($_SESSION['email']) ;
     $actualUserName = $accountControler->getUserName($actualUser);
+    $actualUserRole = $accountControler->getRole($_SESSION['email']);
     $isAuthenticated = true;
+}
+else {
+    $actualUserRole = -1;
 }

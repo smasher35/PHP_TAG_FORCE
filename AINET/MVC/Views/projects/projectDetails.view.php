@@ -43,11 +43,11 @@
                 </div>
             </div><!-- fecha col-md-12 -->
             <div class="col-md-12 padding-Top">
-                <?php if ($actualproject->state == 0) {?>
+                <?php if ($actualproject->state == 0 && ($actualUserRole == 1 || $actualUserRole == 4)) {?>
                     <button class="btn btn-block btn-warning btn-lg">PROJECT PENDING APROVAL</button>
-                <?php } elseif ($actualproject->state ==1) { ?>
+                <?php } elseif ($actualproject->state == 1 && ($actualUserRole == 1 || $actualUserRole == 4)) { ?>
                     <button class="btn btn-block btn-success btn-lg">PROJECT APROVED</button>
-                <?php } else {?>
+                <?php } else if ($actualUserRole == 1 || $actualUserRole == 4) {?>
                     <button class="btn btn-block btn-danger btn-lg">PROJECT REJECTED OR DELETED</button>
                 <?php }?>
             </div>
