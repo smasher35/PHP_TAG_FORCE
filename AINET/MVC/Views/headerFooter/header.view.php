@@ -79,6 +79,10 @@
 	                        <li><a class="transition" href="dashBoards.php"><strong>Dashboard</strong></a></li>
 		                    <li><a class="transition" href="accountsBrowsing.php"><strong>Accounts</strong></a></li>
 	                        <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong></a></li>
+                            <br>
+                            <?php if ($isAuthenticated) {?>
+                                <li class="welcomeTag">Welcome: <?=$actualUserName?></li>
+                            <?php }?>
 	                    </ul>
 	                </div>
                 </div>
