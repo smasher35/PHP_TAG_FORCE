@@ -86,7 +86,7 @@ class ProjectController {
     public function setRejectedProject($id, $refusalMsg)
     {
         Project::setRejectedState($id, $refusalMsg);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+        //header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
     }
 
     public function listProjects($orderBy, $order, $limit, $offset)

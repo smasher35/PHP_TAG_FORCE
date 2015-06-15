@@ -52,23 +52,47 @@ else {
 }
 
 
-
-//owner-id == 0 mostra todos os  projectos
-if ($owner_id == 0){
-    if ($orderBy == "created_by") {
-        $projects = $projectController->listProjectsOrderByOwner($order, $limit, $offset);
+if(isset($_GET['search'])) {
+    $searchString = $_GET['search'];
+    if (isset ($_GET['page'])) {
+        $page = $_GET['page'];
+        $limit = $page * 10;
+        $offset = $limit - 10;
     }
     else {
-        $projects = $projectController->listProjects($orderBy, $order, $limit, $offset);
+        $page = 1;
+        $limit = $page * 10;
+        $offset = $limit - 10;
+    }
+    $numberOfFoundedProjects = $projectController->countFoundedProjects($searchString);
+    $lastPage = ceil($numberOfFoundedProjects/10);
+
+    $projects = $projectController->searchProjects($searchString, $limit, $offset);
+}else {
+    //owner-id == 0 mostra todos os  projectos
+    if ($owner_id == 0){
+        if ($orderBy == "created_by") {
+            $projects = $projectController->listProjectsOrderByOwner($order, $limit, $offset);
+        }
+        else {
+            $projects = $projectController->listProjects($orderBy, $order, $limit, $offset);
+        }
+
+        $numberOfProjects = $projectController->countAprovedProjects();
+        $lastPage = ceil($numberOfProjects/10);
+    }else {
+        $projects = $projectController->listProjectsByOwner($owner_id, $orderBy, $order, $limit, $offset);
+        $numberOfProjects = $projectController->countProjectsByOwner($owner_id);
+        $lastPage = ceil($numberOfProjects/10);
     }
 
-    $numberOfProjects = $projectController->countAprovedProjects();
-    $lastPage = ceil($numberOfProjects/10);
-}else {
-    $projects = $projectController->listProjectsByOwner($owner_id, $orderBy, $order, $limit, $offset);
-    $numberOfProjects = $projectController->countProjectsByOwner($owner_id);
-    $lastPage = ceil($numberOfProjects/10);
 }
+
+
+
+
+
+
 
 
 

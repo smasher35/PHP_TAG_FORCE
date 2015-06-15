@@ -308,17 +308,17 @@
                                                             <td><?=$project->type?></td>
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
+
                                                             <td align="center">
                                                                 <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                               <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalProjectRejected" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                               <button onclick="<?php$project->id?>" class="btn btn-warning btn-xs" data-toggle="modal"  data-target="#modalProjectRejected" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
                                                                 <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                 <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
                                                             </td>
                                                         </tr>
 
                                                         <!-- JANELA MODAL REJECTED PROJECT -->
-
-                                                           <div class="modal fade" id="modalProjectRejected" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                                        <div class="modal fade" id="modalProjectRejected" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                                                             <form action="rejectProject.php" method="post">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
@@ -328,6 +328,7 @@
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <label for="refusalMessage" >Refusal Message</label>
+                                                                            <input type="text"  value="<?=$project->id?>"/>
                                                                             <input type="hidden" name="project_id" value="<?=$project->id?>" />
                                                                             <textarea  id="refusalMessage" name="refusalMessage" rows="3" class="form-control"></textarea>
 
@@ -339,10 +340,13 @@
                                                                     </div>
                                                                 </div>
                                                             </form>
-                                                            </div>
+                                                        </div>
 
                                                         <!-- FECHA JANELA MODAL PROJECT REJECTED -->
+
                                                    <?php } ?>
+
+
 
                                                     <thead>
                                                     <tr>

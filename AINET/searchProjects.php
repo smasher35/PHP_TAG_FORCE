@@ -21,6 +21,22 @@ $accountController = new AccountController();
 $searchString = $_GET['search'];
 
 
+//------------Parametro Order By-------------------//
+if (isset ($_GET['orderBy'])) {
+    $orderBy = $_GET['orderBy'];
+
+}
+else {
+    $orderBy = "name";
+}
+//------------Parametro Order-------------------//
+if (isset ($_GET['order'])) {
+    $order = $_GET['order'];
+}
+else {
+    $order = "ASC";
+}
+
 
 
 if (isset ($_GET['page'])) {

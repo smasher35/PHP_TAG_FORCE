@@ -221,7 +221,7 @@ class Project extends AbstractModel {
     public static function searchProject($searchString, $limit, $offset)
     {
         $searchString = "%".$searchString."%";
-        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString' LIMIT $limit OFFSET $offset");
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE state = 1 AND name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString' LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
@@ -245,7 +245,7 @@ class Project extends AbstractModel {
 
     public static function getNumberOfFoundedProjects($searchString)
     {
-        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE state = 1 name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString'"));
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE state = 1 AND name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString'"));
     }
 
     public static function getProjectsOrderByOwner($order, $limit, $offset)
