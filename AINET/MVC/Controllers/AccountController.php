@@ -32,28 +32,12 @@ class AccountController
 	public function addAccount()
 	{
 
-        $uName = $_POST['name'];
-        $uEmail = $_POST['email'];
-        $uPass = $_POST['password'];
-        $uRtPassword = $_POST['retypePass'];
-        $uInstitution = $_POST['institution'];
-        $uPosition = $_POST['position'];
-        $uProfileUrl = $_POST['inputUrl'];
-        $uAltEmail = $_POST ['altEmail'];
-        $uRole = $_POST['role'];
-        $uInitialStatus = $_POST['statusRadio'];
-
-
 		$user = new Account();
 		$errors = false;
 
 		if(empty($_POST)) {
 			return[$user, false];
 		}
-        else
-        {
-
-        }
 
 		$errors = $this->validateInput($user);
 		if (empty($errors)){
@@ -100,7 +84,7 @@ class AccountController
 
 		$errors = [];
 
-		if($account->fullname) {
+		if($account->name) {
 			if(!preg_match("/^[a-zA-Z ]+$/",$account->name)) {
 				$errors['fullname'] = 'Invalid Name';
 			}

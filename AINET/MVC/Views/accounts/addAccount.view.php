@@ -39,7 +39,7 @@
 						<div class="page-header">
 							<h3>New Account</h3>
 						</div>
-						<form action="addAccount.php">
+						<form action="addAccount.php" method="post" >
 							<div class="form-group">
 								<label for="inputName"><span><b class="asterisco">*</b> Name</h3></span></label>
 								<div class="input-group">
