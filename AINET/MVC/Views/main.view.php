@@ -266,7 +266,7 @@
 									<div class="text-left">
 										<label for="inputName">Name</label>
 									</div>
-									<input type="password" class="form-control" id="inputName" placeholder="Name">
+									<input type="text" class="form-control" id="inputName" placeholder="Name">
 								</div>
 							</div>
 						</div>
