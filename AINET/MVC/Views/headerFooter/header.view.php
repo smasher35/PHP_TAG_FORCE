@@ -59,7 +59,7 @@
                     </div>
 	                <div class="navbar-form">
 	                    <div class="container">
-		                    <div class="input-group">
+		                    <div class="input-group padding-Top-Nav">
                                 <form action="projects.php" method="get">
 			                        <input type="text" name="search" id="search" class=" form-control form-search span3 search-query"  placeholder="Search Project...">
 			                        <span class="input-group-btn">

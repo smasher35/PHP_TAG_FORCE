@@ -1,5 +1,5 @@
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
-<div class="row" id="subNavBar" xmlns="http://www.w3.org/1999/html">
+<div class="row noPadding" id="subNavBar" xmlns="http://www.w3.org/1999/html">
 			<div class="container">
 				<div class="col-md-12 col-lg-offset-3" align="center">
 					<ul class="nav nav-pills">
