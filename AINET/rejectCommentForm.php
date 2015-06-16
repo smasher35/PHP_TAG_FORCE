@@ -1,15 +1,11 @@
 <?php
 
 require 'bootstrap.php';
-/**
- * Created by PhpStorm.
- * User: Ruben
- * Date: 05-06-2015
- * Time: 22:15
- */
+
 
 use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\CommentController;
+
 
 
 //valida autenticação no site
@@ -21,13 +17,10 @@ if(!$authController->isAuthenticated()) {
 $authenticated = true;
 
 
+
 $commentController = new CommentController();
 
 
-$commentId = $_POST['comment_id'];
-$refusal_msg = $_POST['refusalMessage'];
+$commentId = $_GET['comment_id'];
 
-
-
-$commentController->setRejectedComment($commentId,$refusal_msg);
-
+require 'MVC/Views/Dashboards/rejectComment.View.php';

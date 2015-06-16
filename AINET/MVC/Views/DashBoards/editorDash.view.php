@@ -87,36 +87,12 @@
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
                                                                 <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalProjectRejected" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <a href="rejectProjectForm.php?project_id=<?=$project->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip"  data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
                                                                 <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                 <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                             </td>
                                                         </tr>
 
-                                                        <!-- JANELA MODAL REJECTED PROJECT -->
-
-                                                        <div class="modal fade" id="modalProjectRejected" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-                                                            <form action="rejectProject.php" method="post">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                            <h4 class="modal-title" id="myModalLabel">Refusal Reason</h4>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <label for="refusalMessage" >Refusal Message</label>
-                                                                            <input type="hidden" name="project_id" value="<?=$project->id?>" />
-                                                                            <textarea  id="refusalMessage" name="refusalMessage" rows="3" class="form-control"></textarea>
-
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
                                                     <?php } ?>
 												</table>
 												<div class="panel-footer">
@@ -179,36 +155,12 @@
                                                             <td><?=$project->theme?></td>
                                                             <td><?=$accountController->getUserName($project->created_by)?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalProjectRejected2" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <a href="rejectProjectForm.php?project_id=<?=$project->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip"  data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
                                                                 <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
                                                                 <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                             </td>
                                                         </tr>
 
-                                                        <!-- JANELA MODAL REJECTED PROJECT -->
-
-                                                        <div class="modal fade" id="modalProjectRejected2" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-                                                            <form action="rejectProject.php" method="post">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                            <h4 class="modal-title" id="myModalLabel">Refusal Reason</h4>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <label for="refusalMessage" >Refusal Message</label>
-                                                                            <input type="hidden" name="project_id" value="<?=$project->id?>" />
-                                                                            <textarea  id="refusalMessage" name="refusalMessage" rows="3" class="form-control"></textarea>
-
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
                                                     <?php } ?>
 												</table>
 												<div class="panel-footer">
@@ -411,7 +363,7 @@
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
                                                                 <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <a href="rejectCommentForm.php?comment_id=<?=$comment->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
                                                         </tr>
@@ -472,7 +424,7 @@
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
                                                             <td align="center">
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
+                                                                <a href="rejectCommentForm.php?comment_id=<?=$comment->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
                                                                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
                                                             </td>
                                                         </tr>

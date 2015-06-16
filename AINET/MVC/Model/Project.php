@@ -89,7 +89,7 @@ class Project extends AbstractModel {
 
     public static function getListRecentProjects()
     {
-        $result = AbstractModel::dbQuery('SELECT * FROM projects ORDER BY created_at DESC LIMIT 4 OFFSET 0');
+        $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 1 ORDER BY created_at DESC LIMIT 4 OFFSET 0');
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {

@@ -475,6 +475,10 @@ img.img-circle.techSheet-img {
     color: #ffffff;
     text-align: right;
     font-weight: bold;
+}
 
+.noPadding{
+    padding-top: 0px;
+    margin-top: 0px;
 }
 

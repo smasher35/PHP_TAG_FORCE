@@ -171,5 +171,12 @@ class Comment extends AbstractModel {
 
     }
 
+    public static function getComment($id)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE id = '$id'");
+        $comment=$result->fetch_object('AINET\MVC\Model\Comment');
+        return $comment->comment;
+    }
+
 
 }
