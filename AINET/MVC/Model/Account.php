@@ -241,11 +241,4 @@ class Account extends AbstractModel
         return $row[1];
 
     }
-
-    public static function getUserById($account_id)
-    {
-        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE id ='$account_id'");
-        $account = $result->fetch_object('AINET\MVC\Model\Account');
-        return $account;
-    }
 }

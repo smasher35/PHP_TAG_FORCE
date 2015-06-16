@@ -156,9 +156,4 @@ class AccountController
     {
         return Account::getUserInstitutionId($id);
     }
-
-    public function getUserById($account_id)
-    {
-        return Account::getUserById($account_id);
-    }
 }
