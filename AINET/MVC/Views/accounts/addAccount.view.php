@@ -79,7 +79,7 @@
                                             <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-education"></span></span>
                                             <select class="form-control" name="institution" id="institution">
                                                 <?php foreach ($institutions as $institution) { ?>
-                                                    <option><?= $institution->name?></option>
+                                                    <option value="<?= $institution->id?>"><?= $institution->name?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -126,23 +126,14 @@
 
 
                                         <p class="text-center"><h4><span><b class="asterisco">*</b> Account Initial Status</span></h4></p>
-                                        <label class="radio-inline"><input type="radio" name="statusRadio">Active </label>
-                                        <label class="radio-inline"><input type="radio" name="statusRadio">Disabled </label>
-
-
-                                    <hr>
+                                        <label class="radio-inline"><input type="radio" name="statusRadio" value="1">Active </label>
+                                        <label class="radio-inline"><input type="radio" name="statusRadio" value="0">Disabled </label><hr>
 
 
                                 </div>
 
                             </div>
                             <!-- FIM AREA DIREITA -->
-
-
-
-
-
-
 							<hr>
                             <div class="row">
                                 <div class="col-md-12 col-md-offset-1">
