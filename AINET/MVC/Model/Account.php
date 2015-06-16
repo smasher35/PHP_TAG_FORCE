@@ -101,16 +101,30 @@ class Account extends AbstractModel
 
 	public static function add($account)
 	{
+        $photoUrl = $account['photoUrl'];
+        $altEmail = $account['altEmail'];
+        $profileUrl = $account['inputUrl'];
+
+        if ($photoUrl == "") {
+            $photoUrl = null;
+        }
+        if ($altEmail == "") {
+            $altEmail = null;
+        }
+        if ($profileUrl == "") {
+            $profileUrl = null;
+        }
 		//INSERIR NA BD
-		$query = 'insert into users (name,email,al_email,password,institution_id,position,photo_url,profile_url,flags,role,remember_token,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,?,2,2)';
+		$query = 'INSERT INTO users (name,email,alt_email,password,institution_id,position,photo_url,profile_url,flags,role,remember_token,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,null,NOW(),NOW())';
 		$conn = self::dbConnection();
 		$stm = $conn->prepare($query);
 		if ($stm) {
-			$stm->bind_param("ssssisisiisdd",$account->name,$account->email,$account->al_email,$account->password,$account->institution_id,$account->position,$account->photo_url,$account->profile_url,$account->flags,$account->role,$account->remember_token,$account->created_at,$account->updated_at);
+            $stm->bind_param("ssssisssii", $account['name'], $account['email'], $altEmail, $account['password'], $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
 			if ($stm->execute()) {
 				header('Location: http://192.168.56.101/php_tag_force/AINET/dashBoards.php');
 				exit(0);
 			}else {
+                echo $stm->error;
 				//return error
 			}
 		}

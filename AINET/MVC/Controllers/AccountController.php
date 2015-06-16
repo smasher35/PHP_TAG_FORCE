@@ -29,22 +29,9 @@ class AccountController
 		return Account::getAccountRole($mail);
 	}
 
-	public function addAccount()
+	public function addAccount($account)
 	{
-
-		$user = new Account();
-		$errors = false;
-
-		if(empty($_POST)) {
-			return[$user, false];
-		}
-
-		$errors = $this->validateInput($user);
-		if (empty($errors)){
-			Account::add($user);
-		}
-
-		return[$user, $errors];
+		Account::add($account);
 	}
 
 	public function editAccount(){
