@@ -55,8 +55,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
 
 
     if ($role == 4) {
-        if (md5($password) == md5($retypePass)) {
-            $password = md5($password);
+        if ($password == $retypePass) {
+            $password = password_hash($password, PASSWORD_BCRYPT);
             $role = intval($role);
             $status = intval($status);
             $account = compact("name", "email", "password", "institution", "position", "role", "status", "photoUrl", "inputUrl", "altEmail");
