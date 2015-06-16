@@ -127,10 +127,7 @@
 
                                         <p class="text-center"><h4><span><b class="asterisco">*</b> Account Initial Status</span></h4></p>
                                         <label class="radio-inline"><input type="radio" name="statusRadio" value="1">Active </label>
-                                        <label class="radio-inline"><input type="radio" name="statusRadio" value="0">Disabled </label><hr>
-
-
-                                </div>
+                                        <label class="radio-inline"><input type="radio" name="statusRadio" value="0">Disabled </label><hr></div>
 
                             </div>
                             <!-- FIM AREA DIREITA -->
