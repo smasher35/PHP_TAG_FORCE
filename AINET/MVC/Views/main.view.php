@@ -43,64 +43,38 @@
 		<li data-target="#myCarousel" data-slide-to ="5"></li>
 	</ol>
 
-	<div class="carousel-inner">
-		<div class="item active">
-			<img src="storage/Images/Projeto1.jpg" alt="Projecto Hardware" class="img-responsive">
-			<div class="carousel-caption">
-				<h3>Projecto Hardware</h3>
-				<a href="#" class="btn btn-primary">Tell Me More...</a>
-			</div>
+        <div class="carousel-inner">
+            <?php $carrousellCounter =0?>
+            <?php foreach($recentProjects as $project) { ?>
+                <?php if ($carrousellCounter == 0) { ?>
+                    <div class="item active">
+                        <img src="<?=$projectController->getProjectImage($project->id)?>" class="carousel-inner img-responsive block" alt="<?=$project->name?> Image">
+                        <div class="carousel-caption">
+                            <h3><?=$project->name?></h3>
+                            <a href="projectDetails.php?project_id=<?=$project->id?>" class="btn btn-primary button-padding">View Project</a>
+                        </div>
+                    </div>
+                <?php } else {?><!-- fecha if -->
+                    <div class="item">
+                        <img src="<?=$projectController->getProjectImage($project->id)?>" class=" carousel-inner img-responsive" alt="<?=$project->name?> Image">
+                        <div class="carousel-caption">
+                            <h3><?=$project->name?></h3>
+                            <a href="projectDetails.php?project_id=<?=$project->id?>" class="btn btn-primary button-padding">View Project</a>
+                        </div>
+                    </div>
+                <?php }?><!-- fecha else -->
+                <?php $carrousellCounter++ ?>
+            <?php }?><!-- fecha for -->
+                <a class="carousel-control left" href="#myCarousel" data-slide = "prev">
+                    <span class="icon-prev"></span>
+                </a>
 
-		</div>
+                <a class="carousel-control right" href="#myCarousel" data-slide = "next">
+                    <span class="icon-next"></span>
+                </a>
 
-		<div class="item">
-			<img src="storage/Images/Projeto2.jpg" alt="Projecto Kano" class="img-responsive">
-			<div class="carousel-caption">
-				<h3>Projecto Kano</h3>
-				<a href="#" class="btn btn-primary">Tell Me More...</a>
-			</div>
-		</div>
+        </div>
 
-		<div class="item">
-			<img src="storage/Images/Projeto3.jpg" alt="Projecto HTML5" class="img-responsive">
-			<div class="carousel-caption">
-				<h3>Projecto HTML5</h3>
-				<a href="#" class="btn btn-primary">Tell Me More...</a>
-			</div>
-		</div>
-
-		<div class="item">
-			<img src="storage/Images/Projeto4.jpg" alt="Projecto CSS3" class="img-responsive">
-			<div class="carousel-caption">
-				<h3>Projecto CSS3</h3>
-				<a href="#" class="btn btn-primary">Tell Me More...</a>
-			</div>
-		</div>
-
-		<div class="item">
-			<img src="storage/Images/Projeto5.jpg" alt="Projecto Laravel" class="img-responsive">
-			<div class="carousel-caption">
-				<h3>Projecto Laravel</h3>
-				<a href="http://www.laravel.com" class="btn btn-primary">Tell Me More...</a>
-			</div>
-		</div>
-
-		<div class="item">
-			<img src="storage/Images/Projeto6.jpg" alt="Projecto PHP" class="img-responsive">
-			<div class="carousel-caption">
-				<h3>Projecto PHP + MySQL</h3>
-				<a href="#" class="btn btn-primary">Tell Me More...</a>
-			</div>
-		</div>
-
-		<a class="carousel-control left" href="#myCarousel" data-slide = "prev">
-			<span class="icon-prev"></span>
-		</a>
-
-		<a class="carousel-control right" href="#myCarousel" data-slide = "next">
-			<span class="icon-next"></span>
-		</a>
-	</div>
 	<a href="#" id="about"></a>
 </div>
 

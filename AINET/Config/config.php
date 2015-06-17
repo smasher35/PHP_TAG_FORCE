@@ -12,3 +12,5 @@ $database=[
 	'password'=>'123',
 	'database' => 'php_tag_force'
 ];
+
+$baseUrl='http://192.168.56.101/PHP_TAG_FORCE/AINET/';

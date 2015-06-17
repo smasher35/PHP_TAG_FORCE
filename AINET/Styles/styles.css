@@ -511,5 +511,12 @@ img.img-circle.techSheet-img {
 }
 
 
+.carousel-inner > .item  > img {
+    display: block !important;
+    max-width: 100% !important;
+    height: 750px;
+    max-height: 760px !important;
+    /*clip: rect(100px,75px,100px,75px)!important;*/
+}
 
 
