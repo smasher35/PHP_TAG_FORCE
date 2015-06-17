@@ -16,7 +16,7 @@
 				<a href="http://www.googleplus.com" target="_blank"><i class="fa fa-google-plus-square fa-2x socialNetworksIcons"></i></a>
 				<a href="http://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square fa-2x socialNetworksIcons"></i></a>
 				<a href="http://www.vimeo.com" target="_blank"><i class="fa fa-vimeo-square fa-2x socialNetworksIcons"></i></a>
-				<a href="https://pt.foursquare.com/" target="_blank"><i class="fa fa-youtube-square fa-2x socialNetworksIcons"></i></a>
+				<a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-square fa-2x socialNetworksIcons"></i></a>
 			</div>
 <!-- THE CREW -->
 			<div class="col-md-3">

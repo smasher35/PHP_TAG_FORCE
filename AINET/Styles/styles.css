@@ -12,7 +12,7 @@
 .alt2{
     /* footer section */
      background-color: #333;
-     min-height: 500px;
+     min-height: 250px;
      color: #fff;
      text-align: center;
 
@@ -42,13 +42,11 @@
 }
 
 .alt6{
-    /* contacts section */
+    /* Contacts section */
     background: url('../storage/Images/03.jpg') fixed;
     background-color: #ffffff;
     min-height: 500px;
-    padding-bottom: 150px;
-    margin-bottom: 50px;
-
+    max-height: 1000px;
 }
 
 .alt7{
