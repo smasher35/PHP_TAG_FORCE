@@ -248,4 +248,9 @@ class Account extends AbstractModel
         $account = $result->fetch_object('AINET\MVC\Model\Account');
         return $account;
     }
+
+    public static function setPassword($password, $accountId)
+    {
+        AbstractModel::dbQuery("UPDATE users SET password = '$password' WHERE id = '$accountId'");
+    }
 }

@@ -46,13 +46,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
     }
     if (isset($_POST['altEmail'])) {
         $altEmail = $_POST['altEmail'];
-
     }
-
-
-
-
-
 
     if ($role == 4) {
         if ($password == $retypePass) {

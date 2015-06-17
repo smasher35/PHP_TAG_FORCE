@@ -30,14 +30,10 @@
 						    <div class="col-md-10 align-left">
 						        <h3>Edit Account</h3>
 						    </div>
-						    <div class="col-md-2 align-right">
-						        <div class="input-group">
-						            <img src="<?= $accountController->getProfileImgUrl($account->id)?>" class="img-thumbnail">
-                                </div>
-                            </div>
+
 
 						</div>
-						<form action="editAccount.php" method="post" >
+						<form action="editAccount.php" method="post">
                             <!-- FORM AREA ESQUERDA -->
                             <div class="col-md-5">
                                 <div class="form-group">
@@ -52,22 +48,8 @@
                                         <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
                                         <input type="email" class="form-control" name="email" id="inputEmail1" value="<?= $account->email?>" placeholder="Enter email">
                                     </div>
-
-
-
-
-                                    <label for="inputPassword"><span><b class="asterisco">*</b> Password</span></label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
-                                        <input type="password" class="form-control" name="password" id="inputPassword" value="<?= $account->email?>" placeholder="Password">
-                                    </div>
-                                    <label for="inputretypePassword"><span><b class="asterisco">*</b> Retype Password</span></label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
-                                        <input type="password" class="form-control" name="retypePass" id="inputretypePassword" placeholder="retype Password">
-                                    </div>
                                 </div>
-
+                                <a href="changePasswordPage.php?account_id=<?=$account->id?>"><div class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span>Change Password</div></a>
                             </div>
                             <!-- FIM AREA ESQUERDA -->
 
@@ -130,6 +112,15 @@
                                         <label class="radio-inline"><input type="radio" name="statusRadio" value="0" <?php if ($account->flags == 0){echo "checked";}?>>Disabled </label><hr></div>
 
                             </div>
+
+                            <div class="col-md-3">
+                                <div class="row">
+                                 <p><h4><span>Profile Image</span></h4></p>
+                                    <div class="input-group">
+                                        <img src="<?= $accountController->getProfileImgUrl($account->id)?>" class="img-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
                             <!-- FIM AREA DIREITA -->
 							<hr>
                             <div class="row">
@@ -143,7 +134,8 @@
 								<!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
 								<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span> Submit</button>
 							</div>
-						</form>
+
+                        </form>
 					</div>
 					<div class="panel-footer">
 						<p id="panelFooter">&copy PHP TAG Force - 2015</a></p>

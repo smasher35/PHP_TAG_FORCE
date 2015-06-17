@@ -13,7 +13,7 @@ class MediaController {
 
     public function uploadFile()
     {
-        $target_dir = "uploads/";
+        $target_dir = "Storage/app";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

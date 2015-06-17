@@ -161,4 +161,10 @@ class AccountController
     {
         return Account::getUserById($account_id);
     }
+
+    public function changePassword($password, $accountId)
+    {
+        Account::setPassword($password, $accountId);
+        header("Location: editAccountPage.php?account_id=$accountId");
+    }
 }
