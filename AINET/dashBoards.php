@@ -111,15 +111,15 @@ if(!$authController->isAuthenticated()) {
 
 
 	if ($role == 4){
-		require('MVC/Views\DashBoards\adminDash.view.php');
+		require('MVC\Views\DashBoards\adminDash.view.php');
 	}
 
 	if ($role == 1) {
-		require('MVC/Views\DashBoards\editorDash.view.php');
+		require('MVC\Views\DashBoards\editorDash.view.php');
 	}
 
 	if ($role == 2) {
-		require('MVC/Views\DashBoards\authorDash.view.php');
+		require('MVC\Views\DashBoards\authorDash.view.php');
 	}
 
 
