@@ -24,15 +24,17 @@ $authController = new AuthenticationController();
 $accountController = new AccountController();
 $role = $accountController->getRole($_SESSION['email']);
 
-if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['retypePass']) && isset($_POST['institution']) && isset($_POST['position']) && isset($_POST['role']) && isset($_POST['statusRadio'])) {
+if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['institution']) && isset($_POST['position']) && isset($_POST['role']) && isset($_POST['statusRadio'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $retypePass = $_POST['retypePass'];
     $institution = $_POST['institution'];
     $position = $_POST['position'];
     $role = $_POST['role'];
+    $accountId = $_POST['account_id'];
     $status = $_POST['statusRadio'];
+
+    $role = intval($role);
+    $status = intval($status);
 
 
 //TODO retornar os erros
@@ -48,17 +50,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
         $altEmail = $_POST['altEmail'];
     }
 
-    if ($role == 4) {
-        if ($password == $retypePass) {
-            $password = password_hash($password, PASSWORD_BCRYPT);
-            $role = intval($role);
-            $status = intval($status);
-            $account = compact("name", "email", "password", "institution", "position", "role", "status", "photoUrl", "inputUrl", "altEmail");
-            $accountController->addAccount($account);
-        } else {
-            echo "Passwords nao coincidem";
-            //TODO Mensagem de que as passwords nao coincidem
-        }
-    }
+    $account = compact("accountId", "name", "email", "institution", "position", "role", "status", "photoUrl", "inputUrl", "altEmail");
+    $accountController->editAccount($account);
+
+
 
 }

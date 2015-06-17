@@ -253,4 +253,38 @@ class Account extends AbstractModel
     {
         AbstractModel::dbQuery("UPDATE users SET password = '$password' WHERE id = '$accountId'");
     }
+
+    public static function save($account)
+    {
+        $photoUrl = $account['photoUrl'];
+        $altEmail = $account['altEmail'];
+        $profileUrl = $account['inputUrl'];
+        $accountId = $account['accountId'];
+
+        if ($photoUrl == "") {
+            $photoUrl = null;
+        }
+        if ($altEmail == "") {
+            $altEmail = null;
+        }
+        if ($profileUrl == "") {
+            $profileUrl = null;
+        }
+        //INSERIR NA BD
+        $query = "UPDATE users SET name = ?, email = ?, alt_email = ?, institution_id = ?, position = ?, photo_url = ?, profile_url = ?, flags = ?, role = ?, updated_at = NOW() WHERE id='$accountId'";
+        $conn = self::dbConnection();
+        $stm = $conn->prepare($query);
+        if ($stm) {
+            $stm->bind_param("sssisssii", $account['name'], $account['email'], $altEmail, $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
+            if ($stm->execute()) {
+
+                $redirect = "Location: http://192.168.56.101/php_tag_force/AINET/editAccountPage.php?account_id=" . $accountId;
+                header($redirect);
+                exit(0);
+            }else {
+                echo $stm->error;
+                //return error
+            }
+        }
+    }
 }

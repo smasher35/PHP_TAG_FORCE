@@ -92,7 +92,7 @@ use \AINET\MVC\Controllers\AuthenticationController;
                                     <?=$actualUserName?><span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="myAccountActions">
-                                        <li><a href="projects.php?owner_id=<?=$actualUser?>">My Projects <span class="glyphicon glyphicon-book"></span></li></a>
+                                        <li><a href="projects.php?owner_id=<?=$actualUser?>">My Projects Browser <span class="glyphicon glyphicon-book"></span></li></a>
                                         <li><a href="editAccountPage.php?account_id=<?=$actualUser?>">Edit My Account <span class="glyphicon glyphicon-cog"></span></a></li>
                                         <li><hr></li>
                                         <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong> <span class="glyphicon glyphicon-log-out"></span></a></li>

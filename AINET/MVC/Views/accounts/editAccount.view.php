@@ -34,6 +34,7 @@
 
 						</div>
 						<form action="editAccount.php" method="post">
+						<input type="hidden" name="account_id" id="account_id" value="<?=$account->id?>"/>
                             <!-- FORM AREA ESQUERDA -->
                             <div class="col-md-5">
                                 <div class="form-group">
@@ -72,6 +73,8 @@
 
                                                 <input type="text" class="form-control" name="position" id="inputPosition" value="<?= $account->position?>" placeholder="Position in the institution">
                                             </div>
+                                        <?php } else {  ?>
+                                            <input type="hidden" value="<?=$account->position?>" name="position">
                                         <?php } ?>
 
                                     <label for="phototUrl">Photo URL</label>
@@ -118,6 +121,9 @@
                                     </div>
 
                                 </div>
+                            <?php } else {  ?>
+                                <input type="hidden" value="<?=$account->role?>" name="role">
+                                <input type="hidden" value="<?=$account->flags?>" name="statusRadio">
                             <?php } ?>
 
 
