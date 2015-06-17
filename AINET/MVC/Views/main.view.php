@@ -22,16 +22,18 @@
     <div class="alt1">
         <div class="row" id="jumbotron">
             <div class="container">
-                <h1><strong>PROJECT AINET!</strong></h1>
-                <p class="lead">Aqui há-de nascer o grandioso projecto dos fabulosos PHP TAG FORCE</p>
-                <p class="lead">Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>
-                <p><a href="http://www.google.pt"  class="btn btn-primary btn-lg">Google Me</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- IMAGES CAROUSEL SLIDER
- ============================================================================-->
+                <h1><strong>Project Portfolio Platform</strong></h1>
+                <!--<p class="lead">Share your view of the world</p>-->
+                <p class="lead">Model your ideas, share your View, Control the world.</p>
+                <!-- <p class="lead">Aqui há-de nascer o grandioso projecto dos fabulosos PHP TAG FORCE</p>-->
+                 <!-- <p class="lead">Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>-->
+                 <!-- <p><a href="http://www.google.pt"  class="btn btn-primary btn-lg">Google Me</a></p>-->
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- IMAGES CAROUSEL SLIDER
+   ============================================================================-->
 <a class="padding" id="highlights"></a>
 <div class="row">
 
