@@ -97,7 +97,7 @@ class Comment extends AbstractModel {
             $stm->bind_param("sisi", $comment, $projectId, $name, $currentUserId );
             if ($stm->execute()) {
 
-                $redirect ='Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/projectDetails.php?project_id='.$projectId;
+                $redirect = urlHelper::urlBuilder("projectDetails.php?project_id=") . $projectId;
                 header($redirect);
                 exit(0);
             }else {

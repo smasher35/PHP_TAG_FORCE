@@ -1,6 +1,7 @@
 <?php namespace AINET\MVC\Controllers;
 
 use AINET\MVC\Model\Project;
+use Ainet\Support\urlHelper;
 
 
 
@@ -74,19 +75,22 @@ class ProjectController {
     public function setAprovedProject($id, $userId)
     {
         Project::setState($id, 1, null,$userId);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
     }
 
     public function setDeletedProject($id)
     {
         Project::setDeleteState($id);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
     }
 
     public function setRejectedProject($id, $refusalMsg)
     {
         Project::setRejectedState($id, $refusalMsg);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
     }
 
     public function listProjects($orderBy, $order, $limit, $offset)

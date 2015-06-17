@@ -1,6 +1,7 @@
 <?php namespace AINET\MVC\Controllers;
 
 use AINET\MVC\Model\Institution;
+use Ainet\Support\urlHelper;
 
 class InstitutionController
 {

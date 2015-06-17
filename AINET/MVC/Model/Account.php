@@ -1,4 +1,6 @@
 <?php namespace AINET\MVC\Model;
+use Ainet\Support\urlHelper;
+
 /**
  * Created by PhpStorm.
  * User: Paulo
@@ -121,7 +123,8 @@ class Account extends AbstractModel
 		if ($stm) {
             $stm->bind_param("ssssisssii", $account['name'], $account['email'], $altEmail, $account['password'], $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
 			if ($stm->execute()) {
-				header('Location: http://192.168.56.101/php_tag_force/AINET/dashBoards.php');
+                $redirect = urlHelper::urlBuilder("dashBoards.php");
+				header($redirect);
 				exit(0);
 			}else {
                 echo $stm->error;
@@ -278,7 +281,7 @@ class Account extends AbstractModel
             $stm->bind_param("sssisssii", $account['name'], $account['email'], $altEmail, $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
             if ($stm->execute()) {
 
-                $redirect = "Location: http://192.168.56.101/php_tag_force/AINET/editAccountPage.php?account_id=" . $accountId;
+                $redirect = urlHelper::urlBuilder("editAccountPage.php?account_id=") .  $accountId;
                 header($redirect);
                 exit(0);
             }else {

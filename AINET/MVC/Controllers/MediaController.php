@@ -8,6 +8,7 @@
  */
 
 use AINET\MVC\Model\Media;
+use Ainet\Support\urlHelper;
 
 class MediaController {
 

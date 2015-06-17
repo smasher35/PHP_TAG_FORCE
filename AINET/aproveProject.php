@@ -13,6 +13,7 @@ use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\ProjectController;
 
 
+
 //valida autenticação no site
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {

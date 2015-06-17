@@ -4,6 +4,7 @@ use AINET\MVC\Model\AbstractModel;
 use AINET\MVC\Model\Project;
 use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
+use Ainet\Support\urlHelper;
 
 
 /**
@@ -16,6 +17,8 @@ use AINET\MVC\Model\Account;
 
 class AccountController
 {
+    public $errorsPass = false;
+
 
 	public function listUsers ()
 	{
@@ -102,22 +105,24 @@ class AccountController
 
     public function setDisabledAccount($id)
     {
-        var_dump($id);
         Account::setState($id, 0);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#accountsManagement');
+        $redirect = urlHelper::urlBuilder("dashBoards.php#accountsManagement");
+        header($redirect);
     }
 
     public function setEnabledAccount($id)
     {
         Account::setState($id, 1);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#accountsManagement');
+        $redirect = urlHelper::urlBuilder("dashBoards.php#accountsManagement");
+        header($redirect);
     }
 
 
     public function setDeletedAccount($id)
     {
         Account::setState($id, 2);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php#accountsManagement');
+        $redirect = urlHelper::urlBuilder("dashBoards.php#accountsManagement");
+        header($redirect);
     }
 
     public function getProfileImgUrl($id)
@@ -142,10 +147,21 @@ class AccountController
         return Account::getUserById($account_id);
     }
 
-    public function changePassword($password, $accountId)
+    public function changePassword($password, $retypePassword, $accountId)
     {
-        Account::setPassword($password, $accountId);
-        header("Location: editAccountPage.php?account_id=$accountId");
+        if ($password == $retypePassword)
+        {
+            $password = password_hash($password, PASSWORD_BCRYPT);
+            Account::setPassword($password, $accountId);
+            header("Location: editAccountPage.php?account_id=$accountId");
+        }
+        else {
+            $redirect = urlHelper::urlBuilder("changePasswordPage.php?account_id=") . $accountId . "&code=-1";
+            header($redirect);
+        }
+
+
+
     }
 
     public function countActiveDisableAccounts()

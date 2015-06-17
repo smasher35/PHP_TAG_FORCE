@@ -2,6 +2,7 @@
 
 use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
+use Ainet\Support\urlHelper;
 
 class AuthenticationController {
 	public $account;
@@ -56,20 +57,24 @@ class AuthenticationController {
 
 	static function redirectToLogin()
 	{
-		header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/login.php');
+        $redirect = urlHelper::urlBuilder("login.php");
+        header($redirect);
 		exit();
 	}
 
 	static function redirectToHome()
 	{
-		header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/index.php');
+        $redirect = urlHelper::urlBuilder("index.php");
+        header($redirect);
 		exit();
 	}
 
 	static function redirectToDashBoard()
 	{
-			header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
-			exit();
+
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
+        exit();
 	}
 
 	public static function  logout()

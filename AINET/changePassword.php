@@ -30,14 +30,9 @@ $accountId = $_POST['account_id'];
 $password = $_POST['password'];
 $retypePassword = $_POST['retypePass'];
 
-if ($password == $retypePassword) {
-    $password = password_hash($password, PASSWORD_BCRYPT);
-    $accountController->changePassword($password, $accountId);
-}
-else {
-    echo "Passwords don't match";
-    //TODO GERAR ERROS
-}
+
+    $accountController->changePassword($password, $retypePassword, $accountId);
+
 
 
 

@@ -14,6 +14,8 @@ use AINET\MVC\Controllers\AuthenticationController;
 set_include_path(get_include_path().PATH_SEPARATOR.realpath('..'));
 spl_autoload_register();
 
+
+
 session_start();
 
 $accountControler = new AccountController();

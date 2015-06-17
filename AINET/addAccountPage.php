@@ -13,6 +13,7 @@ use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\InstitutionController;
 
 
+
 //valida autenticação no site
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {

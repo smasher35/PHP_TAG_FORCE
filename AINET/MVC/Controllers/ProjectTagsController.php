@@ -7,6 +7,7 @@
  */
 
 use AINET\MVC\Model\ProjectTag;
+use Ainet\Support\urlHelper;
 
 
 class ProjectTagsController {
@@ -46,7 +47,8 @@ class ProjectTagsController {
     public function setAprovedTags($id, $userId)
     {
         ProjectTag::setState($id, 1,$userId);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
     }
 
     public function listTagsByOwnerPending($currentUserID, $limit, $offset)

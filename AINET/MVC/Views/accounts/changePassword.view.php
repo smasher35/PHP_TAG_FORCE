@@ -1,3 +1,4 @@
+<?php use Ainet\Support\HtmlHelper;?>
 <?php require('MVC/Views/headerFooter/header.view.php');?>
 <!--/**
  * Created by PhpStorm.
@@ -31,6 +32,9 @@
                                     <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
                                     <input type="password" class="form-control" name="retypePass" id="inputretypePassword" placeholder="retype Password">
                                 </div>
+
+                                <div class="alert-warning"><?=HtmlHelper::error('missMatchPassword',$errorsPass)?></div>
+
                                 <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span>Change Password</button>
                         </form>
 					</div> <!-- Fecha <div Panel Body> -->

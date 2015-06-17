@@ -7,6 +7,7 @@
  */
 
 use AINET\MVC\Model\Comment;
+use Ainet\Support\urlHelper;
 
 
 class CommentController {
@@ -42,7 +43,8 @@ class CommentController {
     public function setAprovedComments($id, $userId)
     {
         Comment::setState($id, 1, null,$userId);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
     }
 
 
@@ -50,7 +52,8 @@ class CommentController {
     {
 
         Comment::setRejectedState($id, 2, $refusalMsg);
-        header('Location: http://192.168.56.101/PHP_TAG_FORCE/AINET/dashBoards.php');
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
     }
 
     /**

@@ -12,6 +12,8 @@ use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
 
 
+
+
 //valida autenticação no site
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {

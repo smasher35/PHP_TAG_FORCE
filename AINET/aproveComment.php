@@ -13,6 +13,7 @@ use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\CommentController;
 
 
+
 //valida autenticação no site
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
