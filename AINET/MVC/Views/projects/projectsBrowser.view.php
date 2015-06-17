@@ -3,22 +3,45 @@
 <div class="row" id="subNavBar">
 	<div class="container">
 		<div class="center">
-			<div class="col-md-12 col-lg-offset-5">
-					<ul class="nav nav-pills">
-						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
-						<li role="presentation"><a href="#projectsList"><strong id="subNavButtons">Projects</strong></a></li>
-						<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
-					</ul>
-			</div>
+			<div class="container">
+			    <div class="row">
+			    <div class="col-md-4 align-right"></div>
+                    <div class="col-md-4 align-center">
+                        <div class="nav">
+                            <?php if(isset($_GET['search'])) { ?>
+                                <h4 class="text-center"><strong>Showing:</strong> <?=count($projects)?> <strong>results for: <?=$searchString?></strong></h4>
+                            <?php } ?>
+			            </div>
+                    </div>
 
-		</div>
+			        <div class="col-md-4 align-right">
+						<form action="projects.php"method="get">
+                            <h5 class="sort-elements">
+                                <select name="orderBy">
+                                    <option <?php if ($orderBy == "name") {echo "selected";}?> value="name">Name</option>
+                                    <option <?php if ($orderBy == "created_by") {echo "selected";}?> value="created_by">Author</option>
+                                </select>
+
+                                <select name="order">
+                                    <option <?php if ($order == "ASC") {echo "selected";}?> value="ASC">Ascendent</option>
+                                    <option <?php if ($order == "DESC") {echo "selected";}?> value="DESC">Descendent</option>
+                                </select>
+
+                                 <button type="submit" class="btn btn-success btn-sm">Sort <span class="glyphicon glyphicon-triangle-right"></span></button>
+                             </h5>
+
+                        </form>
+					 </div>
+                </div>
+            </div>
+        </div>
 	</div>
 </div> <!-- fecha a sub navigation Bar -->
 </div> <!-- Fecha a Navegation Bar principal localizada no ficheiro header.php-->
 </header>
 
 <a class="padding" id="goTop"></a>
-<div class="alt5">
+<div class="alt5 padding">
 	<!-- Page Content -->
 	<div class="container">
 		<!-- Page Heading -->
@@ -69,20 +92,6 @@
         </div>
         <!-- /.row -->
 
-        <div>
-			    <form action="projects.php" method="get">
-                <select name="orderBy">
-                    <option <?php if ($orderBy == "name") {echo "selected";}?> value="name">Name</option>
-                    <option <?php if ($orderBy == "created_by") {echo "selected";}?> value="created_by">Author</option>
-                </select>
-                <select name="order">
-                    <option <?php if ($order == "ASC") {echo "selected";}?> value="ASC">Ascendent</option>
-                    <option <?php if ($order == "DESC") {echo "selected";}?> value="DESC">Descendent</option>
-                </select>
-                <input type="submit" value="Submit">
-                </form>
-
-            </div>
 
         <hr>
 

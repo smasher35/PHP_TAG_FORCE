@@ -17,8 +17,55 @@ global $owner_id;
 
 $projectController= new Controllers\ProjectController();
 $accountController = new Controllers\AccountController();
-$users = $accountController->listUsers();
+
 $institutionController = new InstitutionController();
+
+//-------Parametro para Paginação---------//
+if (isset ($_GET['page'])) {
+    $page = $_GET['page'];
+    $limit = 10;
+    $offset = $page * $limit - 10;
+}
+else {
+    $page = 1;
+    $limit = 10;
+    $offset = $page * $limit - 10;
+}
+
+//------------Parametro Order By-------------------//
+if (isset ($_GET['orderBy'])) {
+    $orderBy = $_GET['orderBy'];
+
+}
+else {
+    $orderBy = "name";
+}
+//------------Parametro Order-------------------//
+if (isset ($_GET['order'])) {
+    $order = $_GET['order'];
+}
+else {
+    $order = "ASC";
+}
+
+
+$numberOfAccounts = $accountController->countActiveDisableAccounts();
+$lastPage = ceil($numberOfAccounts/10);
+
+
+
+$users = $accountController->listActiveAndDisableAccounts($limit, $offset);
+
+/*if ($orderBy == "name") {
+    $accounts = $projectController->listProjectsOrderByOwner($order, $limit, $offset);
+}
+else {
+    $projects = $projectController->listProjects($orderBy, $order, $limit, $offset);
+}
+
+$numberOfProjects = $projectController->countAprovedProjects();
+$lastPage = ceil($numberOfProjects/10);*/
+
 
 
 

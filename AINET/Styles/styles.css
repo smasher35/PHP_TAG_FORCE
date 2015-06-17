@@ -162,7 +162,7 @@
 #navegacao{
     padding-bottom: 0px;
     min-height: 50px;
-    max-height: 70px;
+    max-height: 90px;
 }
 
 
@@ -205,7 +205,7 @@
 /* Formatação da caixa de search no cabeçalho
 =====================================================================*/
 #search{
-    width: 350px;
+    max-width: 260px;
 
 }
 
@@ -481,11 +481,35 @@ img.img-circle.techSheet-img {
     text-align: right;
     font-weight: bold;
 }
-
 .noPadding{
     padding: 0px;
     margin: 0px;
 }
+.btn-actual-user{
+    font-weight: bold !important;
+    color: #ffffff;;
+    background-color:#7c7c7c;
+}
+.btn-actual-user:hover{
+
+    background-color:#5CB85C;
+}
+.navbar-links{
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+.navbar-links:hover{
+    color: #286090 !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+.inline{
+    display: inline;
+}
+.sort-elements{
+    color: #000000;
+}
+
 
 
 

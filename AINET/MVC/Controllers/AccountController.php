@@ -1,5 +1,6 @@
 <?php namespace AINET\MVC\Controllers;
 
+use AINET\MVC\Model\AbstractModel;
 use AINET\MVC\Model\Project;
 use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
@@ -15,10 +16,6 @@ use AINET\MVC\Model\Account;
 
 class AccountController
 {
-	public function __construct()
-	{
-
-	}
 
 	public function listUsers ()
 	{
@@ -149,5 +146,15 @@ class AccountController
     {
         Account::setPassword($password, $accountId);
         header("Location: editAccountPage.php?account_id=$accountId");
+    }
+
+    public function countActiveDisableAccounts()
+    {
+        return Account::getNumberOfActiveAndDisabledAccounts();
+    }
+
+    public static function listActiveAndDisableAccounts($limit, $offset)
+    {
+      return Account::getActiveAndDisabledAccounts($limit, $offset);
     }
 }

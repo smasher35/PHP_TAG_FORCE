@@ -26,13 +26,13 @@ else {
 //-------Parametro para Paginação---------//
 if (isset ($_GET['page'])) {
     $page = $_GET['page'];
-    $limit = $page * 10;
-    $offset = $limit - 10;
+    $limit = 10;
+    $offset = $page * $limit - 10;
 }
 else {
     $page = 1;
-    $limit = $page * 10;
-    $offset = $limit - 10;
+    $limit = 10;
+    $offset = $page * $limit - 10;
 }
 
 //------------Parametro Order By-------------------//
@@ -56,13 +56,13 @@ if(isset($_GET['search'])) {
     $searchString = $_GET['search'];
     if (isset ($_GET['page'])) {
         $page = $_GET['page'];
-        $limit = $page * 10;
-        $offset = $limit - 10;
+        $limit = 10;
+        $offset = $page * $limit - 10;
     }
     else {
         $page = 1;
-        $limit = $page * 10;
-        $offset = $limit - 10;
+        $limit = 10;
+        $offset = $page * $limit - 10;
     }
     $numberOfFoundedProjects = $projectController->countFoundedProjects($searchString);
     $lastPage = ceil($numberOfFoundedProjects/10);

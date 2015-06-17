@@ -245,7 +245,7 @@ class Project extends AbstractModel {
 
     public static function getNumberOfFoundedProjects($searchString)
     {
-        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE state = 1 AND name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString'"));
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM projects WHERE state=1 AND (name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString' OR used_software LIKE '$searchString')"));
     }
 
     public static function getProjectsOrderByOwner($order, $limit, $offset)

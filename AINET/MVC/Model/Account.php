@@ -29,7 +29,7 @@ class Account extends AbstractModel
 	public static function all()
 	{
 
-		$result = AbstractModel::dbQuery('select * from users');
+		$result = AbstractModel::dbQuery("select * from users");
 		$users = [];
 		if($result){
 			while($user = $result->fetch_object('AINET\MVC\Model\Account')){
@@ -286,5 +286,22 @@ class Account extends AbstractModel
                 //return error
             }
         }
+    }
+
+    public static function getNumberOfActiveAndDisabledAccounts()
+    {
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 0 OR flags = 1"));
+    }
+
+    public static function getActiveAndDisabledAccounts($limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 OR flags = 0 ORDER BY name ASC LIMIT $limit OFFSET $offset");
+        $users = [];
+        if($result){
+            while($user = $result->fetch_object('AINET\MVC\Model\Account')){
+                array_push($users,$user);
+            }
+        }
+        return $users;
     }
 }

@@ -80,28 +80,27 @@ use \AINET\MVC\Controllers\AuthenticationController;
 	                <button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">Menu</button>
 	                <div class="collapse navbar-collapse navHeaderCollapse">
 	                    <ul class="nav navbar-nav navbar-right">
-	                        <li><a class="transition" href="index.php"><strong>Home</strong></a></li>
-	                        <li><a class="transition" href="projects.php?owner_id=<?=0?>"><strong>Projects</strong></a></li>
-	                        <li><a class="transition" href="dashBoards.php"><strong>Dashboard</strong></a></li>
-		                    <li><a class="transition" href="accountsBrowsing.php"><strong>Accounts</strong></a></li>
+	                        <li><a class="transition navbar-links" href="index.php">Home</a></li>
+	                        <li><a class="transition navbar-links" href="projects.php?owner_id=<?=0?>">Projects</a></li>
+	                        <li><a class="transition navbar-links" href="dashBoards.php">Dashboard</a></li>
+		                    <li><a class="transition navbar-links" href="accountsBrowsing.php">Accounts</a></li>
 
                             <?php if ($isAuthenticated) {?>
-                            <li class="dropdown">
-
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="myAccountActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <?=$actualUserName?><span class="caret"></span>
+                            <li class="dropdown padding-Top-Nav">
+                                    <button class="btn btn-actual-user dropdown-toggle" type="button" id="myAccountActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <?=$actualUserName?>  <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="myAccountActions">
                                         <li><a href="projects.php?owner_id=<?=$actualUser?>">My Projects Browser <span class="glyphicon glyphicon-book"></span></li></a>
                                         <li><a href="editAccountPage.php?account_id=<?=$actualUser?>">Edit My Account <span class="glyphicon glyphicon-cog"></span></a></li>
                                         <li><hr></li>
-                                        <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong> <span class="glyphicon glyphicon-log-out"></span></a></li>
+                                        <li><a class="transition" href="<?=$sessionHref?>"><strong><?=$idSession?></strong> <span class="glyphicon glyphicon-log-out"></span></a></li>
                                     </ul>
 
                             </li>
                                 <br>
                             <?php } else { ?>
-                            <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong></a></li><br>
+                            <li><a class="transition" href="<?=$sessionHref?>"><strong><?=$idSession?></strong></a></li><br>
                             <?php } ?>
 	                    </ul>
 	                </div>

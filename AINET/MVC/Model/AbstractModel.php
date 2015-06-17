@@ -8,8 +8,7 @@
 class AbstractModel {
 	private static $conn;
 
-
-	protected static function dbConnection()
+    protected static function dbConnection()
 	{
 		global $database;
 		if(!isset(self::$conn)) {
