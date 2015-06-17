@@ -483,7 +483,9 @@ img.img-circle.techSheet-img {
 }
 
 .noPadding{
-    padding-top: 0px;
-    margin-top: 0px;
+    padding: 0px;
+    margin: 0px;
 }
+
+
 

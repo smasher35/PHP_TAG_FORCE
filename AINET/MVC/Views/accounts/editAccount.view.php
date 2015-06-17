@@ -65,11 +65,14 @@
                                                 <?php } ?>
                                             </select>
                                         </div>
-                                        <label for="inputPosition"><span><b class="asterisco">*</b> Position</span> </label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-briefcase"></span></span>
-                                            <input type="text" class="form-control" name="position" id="inputPosition" value="<?= $account->position?>" placeholder="Position in the institution">
-                                        </div>
+                                        <?php if($actualUserRole == 4) { ?>
+                                            <label for="inputPosition"><span><b class="asterisco">*</b> Position</span> </label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-briefcase"></span></span>
+
+                                                <input type="text" class="form-control" name="position" id="inputPosition" value="<?= $account->position?>" placeholder="Position in the institution">
+                                            </div>
+                                        <?php } ?>
 
                                     <label for="phototUrl">Photo URL</label>
                                     <div class="input-group">
@@ -93,25 +96,30 @@
                             <!-- FIM AREA CENTRAL -->
 
                             <!-- FORM AREA DIREITA -->
-                            <div class="col-md-3">
-                                <div class="row">
+                            <?php if($actualUserRole == 4) { ?>
+                                <div class="col-md-3">
 
-                                        <p><h4><span><b class="asterisco">*</b> Account Roles</span></h4></p>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-sunglasses"></span></span>
-                                            <select class="form-control" name="role" id="role">
-                                                <option value="4" <?php if ($account->role == 4){echo "selected";}?>>Administrador</option>
-                                                <option value="1" <?php if ($account->role == 1){echo "selected";}?>>Editor</option>
-                                                <option value="2" <?php if ($account->role == 1){echo "selected";}?>>Autor</option>
-                                            </select>
-                                        </div>
+                                    <div class="row">
+
+                                            <p><h4><span><b class="asterisco">*</b> Account Roles</span></h4></p>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-sunglasses"></span></span>
+                                                <select class="form-control" name="role" id="role">
+                                                    <option value="4" <?php if ($account->role == 4){echo "selected";}?>>Administrador</option>
+                                                    <option value="1" <?php if ($account->role == 1){echo "selected";}?>>Editor</option>
+                                                    <option value="2" <?php if ($account->role == 1){echo "selected";}?>>Autor</option>
+                                                </select>
+                                            </div>
 
 
-                                        <p class="text-center"><h4><span><b class="asterisco">*</b> Account Status</span></h4></p>
-                                        <label class="radio-inline"><input type="radio" name="statusRadio" value="1" <?php if ($account->flags == 1){echo "checked";}?>>Active </label>
-                                        <label class="radio-inline"><input type="radio" name="statusRadio" value="0" <?php if ($account->flags == 0){echo "checked";}?>>Disabled </label><hr></div>
+                                            <p class="text-center"><h4><span><b class="asterisco">*</b> Account Status</span></h4></p>
+                                            <label class="radio-inline"><input type="radio" name="statusRadio" value="1" <?php if ($account->flags == 1){echo "checked";}?>>Active </label>
+                                            <label class="radio-inline"><input type="radio" name="statusRadio" value="0" <?php if ($account->flags == 0){echo "checked";}?>>Disabled </label><hr>
+                                    </div>
 
-                            </div>
+                                </div>
+                            <?php } ?>
+
 
                             <div class="col-md-3">
                                 <div class="row">

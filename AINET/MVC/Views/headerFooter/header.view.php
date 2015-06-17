@@ -1,4 +1,8 @@
-<?php use \AINET\MVC\Controllers\AuthenticationController;?>
+<?php
+
+use \AINET\MVC\Controllers\AuthenticationController;
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +16,8 @@
 	<?php
 		$controller = new AuthenticationController();
 		$isAuthenticated = $controller->isAuthenticated();
+
+
 		if($isAuthenticated){
 			$idSession = 'Logout';
 			$sessionHref = 'logout.php';
@@ -52,16 +58,16 @@
     <!-- NAVIGATION BAR -->
     <div class="navbar-fixed-top navbar-inverse" id="navegacao">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row noPadding">
+                <div class="col-md-4">
                     <div class="navbar-brand">
-                        <a href="index.php"><img CLASS="noPadding" src="Storage/Images/logo.png" alt="logo"></a>
+                        <a href="index.php"><img src="Storage/Images/logo.png" alt="logo"></a>
                     </div>
 	                <div class="navbar-form">
 	                    <div class="container">
 		                    <div class="input-group padding-Top-Nav">
                                 <form action="projects.php" method="get">
-			                        <input type="text" name="search" id="search" class=" form-control form-search span3 search-query"  placeholder="Search Project...">
+			                        <input type="text" name="search" id="search" class="form-control form-search  search-query"  placeholder="Search Projects...">
 			                        <span class="input-group-btn">
 				                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
 			                        </span>
@@ -70,7 +76,7 @@
 	                    </div>
 	                </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
 	                <button class="navbar-toggle " data-toggle="collapse" data-target =".navHeaderCollapse">Menu</button>
 	                <div class="collapse navbar-collapse navHeaderCollapse">
 	                    <ul class="nav navbar-nav navbar-right">
@@ -78,11 +84,25 @@
 	                        <li><a class="transition" href="projects.php?owner_id=<?=0?>"><strong>Projects</strong></a></li>
 	                        <li><a class="transition" href="dashBoards.php"><strong>Dashboard</strong></a></li>
 		                    <li><a class="transition" href="accountsBrowsing.php"><strong>Accounts</strong></a></li>
-	                        <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong></a></li>
-                            <br>
+
                             <?php if ($isAuthenticated) {?>
-                                <li class="welcomeTag">Welcome: <?=$actualUserName?></li>
-                            <?php }?>
+                            <li class="dropdown">
+
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="myAccountActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <?=$actualUserName?><span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="myAccountActions">
+                                        <li><a href="projects.php?owner_id=<?=$actualUser?>">My Projects <span class="glyphicon glyphicon-book"></span></li></a>
+                                        <li><a href="editAccountPage.php?account_id=<?=$actualUser?>">Edit My Account <span class="glyphicon glyphicon-cog"></span></a></li>
+                                        <li><hr></li>
+                                        <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong> <span class="glyphicon glyphicon-log-out"></span></a></li>
+                                    </ul>
+
+                            </li>
+                                <br>
+                            <?php } else { ?>
+                            <li><a class="transition" href="<?=$sessionHref?>"><strong><?= $idSession?></strong></a></li><br>
+                            <?php } ?>
 	                    </ul>
 	                </div>
                 </div>
