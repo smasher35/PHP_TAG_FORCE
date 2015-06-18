@@ -63,7 +63,7 @@
         <?php foreach($projects as $project) {  ?>
             <div class="row ">
                 <div class="col-md-4 text-center">
-                    <td align="center"><img  class="img-circle img-project-thumbnail" src="<?=$projectController->getProjectImage($project->id)?>"></td>
+                    <td align="center"><img  class="img-circle lupdate-img img-project-thumbnail" src="<?=$projectController->getProjectImage($project->id)?>"></td>
                 </div>
                 <div class="col-md-8">
                     <h3><?= $project->name ?></h3>
