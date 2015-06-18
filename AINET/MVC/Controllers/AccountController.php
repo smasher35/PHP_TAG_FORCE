@@ -169,8 +169,15 @@ class AccountController
         return Account::getNumberOfActiveAndDisabledAccounts();
     }
 
-    public static function listActiveAndDisableAccounts($limit, $offset)
+    public static function listActiveAndDisableAccounts($limit, $offset, $orderBy,$sortOrder)
     {
-      return Account::getActiveAndDisabledAccounts($limit, $offset);
+      return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
+    }
+
+    public function sortAccountBrowsing($limit, $offset, $orderBy,$sortOrder)
+    {
+        return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
+        $redirect = urlHelper::urlBuilder("accountBrowsing.php");
+        header($redirect);
     }
 }

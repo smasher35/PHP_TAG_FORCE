@@ -53,9 +53,10 @@ else {
 $numberOfAccounts = $accountController->countActiveDisableAccounts();
 $lastPage = ceil($numberOfAccounts/10);
 
+$orderBy ='id';
+$sortOrder = 'ASC';
 
-
-$users = $accountController->listActiveAndDisableAccounts($limit, $offset);
+$users = $accountController->listActiveAndDisableAccounts($limit, $offset,$orderBy,$sortOrder);
 
 /*if ($orderBy == "name") {
     $accounts = $projectController->listProjectsOrderByOwner($order, $limit, $offset);

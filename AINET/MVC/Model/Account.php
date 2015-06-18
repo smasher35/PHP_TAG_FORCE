@@ -296,9 +296,9 @@ class Account extends AbstractModel
         return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 0 OR flags = 1"));
     }
 
-    public static function getActiveAndDisabledAccounts($limit, $offset)
+    public static function getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder)
     {
-        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 OR flags = 0 ORDER BY name ASC LIMIT $limit OFFSET $offset");
+        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 OR flags = 0 ORDER BY '$orderBy' '$sortOrder' LIMIT $limit OFFSET $offset");
         $users = [];
         if($result){
             while($user = $result->fetch_object('AINET\MVC\Model\Account')){
