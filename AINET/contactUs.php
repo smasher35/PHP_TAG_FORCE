@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 
     $body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
-    
+
 
     // Check if name has been entered
     if (!$_POST['contactName']) {
