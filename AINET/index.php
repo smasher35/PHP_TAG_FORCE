@@ -25,6 +25,7 @@ use AINET\MVC\Controllers\AccountController;
 
 $owner_id=0;
 
+$accountController = new AccountController();
 $projectController = new ProjectController();
 $recentProjects = $projectController->listRecentProjects();
 $lastUpdatedProjects = $projectController->listLastUpdatedProjects();

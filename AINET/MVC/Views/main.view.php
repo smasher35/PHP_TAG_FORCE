@@ -169,44 +169,75 @@
 <!-- LAST UPDATE PROJECTS - 2 COLUMNS
  =====================================================================================-->
 	<!-- TODO: query à base de dados e recolher 3 projectos indicados pelo Editor -->
-<div class="alt5" id="tf-lastUpdated">
-<a class="padding" id="lastUpdate"></a>
-	<div class="center">
-		<h2 class="text-center">Last Updated <strong>Projects</strong></h2>
-		<div class="line">
-			<hr>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-<div class="container" >
-    <?php foreach ($lastUpdatedProjects as $project) { ?>
-	<div class="row padding">
-        <div class="col-md-2">
-           <p></p>
+<div class="alt5 padding" id="lastUpdate">
+    <section >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="center">
+                        <h2 class="text-center">Last Updated <strong>Projects</strong></h2>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
             </div>
-		<div class="col-md-4">
-            <div class="thumbnail">
-			    <img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle lupdate-img img-responsive" alt="<?=$project->name?>">
-             </div>
-		</div>
-		<div class="col-md-4">
-			<p class="text-justify">
-                <h3><strong><?=$project->name?></strong></h3>
-                <hr>
-				<?= $project->description ?>
-                <form action="projectDetails.php" method="get">
-                <input type="hidden" name="project_id" id="project_id" value="<?=$project->id?>">
-                <button type="submit" class="btn btn-primary button-padding">View Project</button>
-            </form>
-			</p>
-		</div>
-        <div class="col-md-2">
-            <p></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <?php $countUpdatedProjects =1?>
+                        <?php foreach ($lastUpdatedProjects as $project) { ?>
+
+                            <?php if ($countUpdatedProjects != 2) {?>
+                                <li>
+                                    <div class="timeline-image">
+                                        <img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle img-responsive lupdate-img" alt="<?=$project->name?>">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3><strong><?=$project->name?></strong></h3>
+                                            <h4 class="subheading"><?= $accountController->getUserName($project->id)?></h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted"><?= $project->description ?></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php } else {?>
+
+                                <li class="timeline-inverted">
+                                    <div class="timeline-image">
+                                        <img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle img-responsive" alt="<?=$project->name?>">
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h3><strong><?=$project->name?></strong></h3>
+                                            <h4 class="subheading">An Agency is Born</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php } ?>
+
+                        <?php } ?>
+
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-	</div>
-    <?php } ?>
+    </section>
 </div>
-</div>
+
 
 <!-- Contact Section
     ==========================================-->
