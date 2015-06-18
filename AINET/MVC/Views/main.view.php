@@ -169,7 +169,7 @@
 <!-- LAST UPDATE PROJECTS - 2 COLUMNS
  =====================================================================================-->
 	<!-- TODO: query à base de dados e recolher 3 projectos indicados pelo Editor -->
-<div class="alt5">
+<div class="alt5" id="tf-lastUpdated">
 <a class="padding" id="lastUpdate"></a>
 	<div class="center">
 		<h2 class="text-center">Last Updated <strong>Projects</strong></h2>
@@ -185,7 +185,9 @@
            <p></p>
             </div>
 		<div class="col-md-4">
-			<img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle img-responsive img-block img-large-thumbnail" alt="<?=$project->name?>">
+            <div class="thumbnail">
+			    <img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle lupdate-img img-responsive" alt="<?=$project->name?>">
+             </div>
 		</div>
 		<div class="col-md-4">
 			<p class="text-justify">

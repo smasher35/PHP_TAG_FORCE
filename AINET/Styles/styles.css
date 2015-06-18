@@ -409,6 +409,18 @@ img.img-circle.team-img {
     transition: all 0.5s;
 }
 
+img.img-circle.lupdate-img {
+    width: 200px;
+    height: 200px;
+    border: 8px solid transparent !important;
+    transition: all 0.5s !important;
+}
+
+#tf-lastUpdated .thumbnail:hover>img.img-circle.lupdate-img{
+    border: 8px solid #245580;
+}
+
+
 img.img-circle.techSheet-img {
     width: 300px;
     height:300px;
