@@ -50,9 +50,7 @@
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
 						<th class="text-center">Thumb</th>
-                        <form method="get" action="accountsBrowsing.php">
-						    <th class="text-center"><button type="submit" name='orderBy' class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Name</th>
-                        </form>
+						<th class="text-center"> <a href="accountsBrowsing.php?orderBy=<?='name'?>" > <button type="submit" name='orderBy' class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Institution</th>
 						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Position</th>
                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Role</th>
