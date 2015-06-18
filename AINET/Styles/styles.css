@@ -479,11 +479,16 @@ img.img-circle.techSheet-img {
     max-width: 150px;
 }
 
-.img-project-details{
+img.img-circle.img-project-details{
     max-height: 450px;
     max-width: 400px;
 }
 .img-large-thumbnail{
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.img-thumbnail{
     max-height: 200px;
     max-width: 200px;
 }
@@ -737,6 +742,19 @@ img.img-circle.techSheet-img {
 
     .timeline>li.timeline-inverted>.timeline-panel {
         padding: 0 100px 20px 20px;
+    }
+
+    .myBorderleft {
+        border-left: 2px groove #5e5e5e;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    .myBorderbottom {
+        border-bottom: 2px groove #333;
+        border-bottom-style: groove;
+        padding-top: 3px;
+        padding-bottom: 3px;
     }
 }
 

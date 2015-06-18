@@ -60,7 +60,7 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects Pending Aproval </strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                        <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
+                                                        <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
                                                         <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> Aprove Selected</a>
                                                         <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
                                                         <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
@@ -130,7 +130,7 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects Aproved </strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                        <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
+                                                        <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
                                                         <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
                                                         <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
@@ -195,7 +195,7 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects Rejected </strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                        <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
+                                                        <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
                                                         <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> Aprove Selected</a>
                                                         <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
@@ -260,7 +260,7 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects Deleted </strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                        <a href="#"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
+                                                        <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
                                                         <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> Aprove Selected</a>
                                                     <hr>
                                                 </div>

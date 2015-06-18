@@ -46,7 +46,7 @@
                                             <div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects Pending Aproval </strong></h3></div>
                                             <div class="col-md-12 align-center inline">
                                                 <br>
-                                                <a href="#"  class="btn btn-success btn-lg"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
+                                                <a href="addProjectPage.php"  class="btn btn-success btn-lg"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
                                                 <hr>
                                             </div>
                                             <!-- Table -->
@@ -109,7 +109,7 @@
                                             <div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects Aproved </strong></h3></div>
                                             <div class="col-md-12 align-center inline">
                                                 <br>
-                                                <a href="#"  class="btn btn-success btn-lg"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
+                                                <a href="addProjectPage.php"  class="btn btn-success btn-lg"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
                                                 <hr>
                                             </div>
                                             <!-- Table -->
@@ -168,7 +168,7 @@
                                             <div class="panel-heading"><h3 class="panel-title text-center"><strong>Projects Rejected </strong></h3></div>
                                             <div class="col-md-12 align-center inline">
                                                 <br>
-                                                <a href="#"  class="btn btn-success btn-lg"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
+                                                <a href="addProjectPage.php"  class="btn btn-success btn-lg"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
                                                 <hr>
                                             </div>
                                             <!-- Table -->
@@ -218,8 +218,6 @@
                                             </div><!-- fecha panel footer -->
                                         </div><!-- Fecha Painel Projects Rejected-->
                                     </div><!-- Fecha o Tab-pane Projects Rejected-->
-
-
                                 </div> <!-- Fecha o Tab-content projectos Aproved rejected e deleted-->
                             </div> <!-- Fecha div class Container -->
                         </div><!-- Fecha div class row -->
