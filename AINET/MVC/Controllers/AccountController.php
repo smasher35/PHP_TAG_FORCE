@@ -166,7 +166,7 @@ class AccountController
         return Account::getNumberOfActiveAndDisabledAccounts();
     }
 
-    public static function listActiveAndDisableAccounts($limit, $offset, $orderBy,$sortOrder)
+    public function listActiveAndDisableAccounts($limit, $offset, $orderBy,$sortOrder="ASC")
     {
       return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
 

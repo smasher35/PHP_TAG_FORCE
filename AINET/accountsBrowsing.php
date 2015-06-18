@@ -10,14 +10,15 @@
 require 'bootstrap.php';
 
 
-use AINET\MVC\Controllers;
+use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\InstitutionController;
+use AINET\MVC\Controllers\ProjectController;
 
 global $owner_id;
 
 
-$projectController= new Controllers\ProjectController();
-$accountController = new Controllers\AccountController();
+$projectController= new ProjectController();
+$accountController = new AccountController();
 
 $institutionController = new InstitutionController();
 
@@ -36,18 +37,11 @@ else {
 //------------Parametro Order By-------------------//
 if (isset ($_GET['orderBy'])) {
     $orderBy = $_GET['orderBy'];
-
 }
 else {
     $orderBy = "name";
 }
 //------------Parametro Order-------------------//
-if (isset ($_GET['order'])) {
-    $order = $_GET['order'];
-}
-else {
-    $order = "ASC";
-}
 
 
 $numberOfAccounts = $accountController->countActiveDisableAccounts();
@@ -55,7 +49,7 @@ $lastPage = ceil($numberOfAccounts/10);
 
 
 
-$users = $accountController->listActiveAndDisableAccounts($limit, $offset,$orderBy,$order);
+$users = $accountController->listActiveAndDisableAccounts($limit, $offset, $orderBy);
 
 /*if ($orderBy == "name") {
     $accounts = $projectController->listProjectsOrderByOwner($order, $limit, $offset);

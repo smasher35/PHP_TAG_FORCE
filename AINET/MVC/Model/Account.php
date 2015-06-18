@@ -298,7 +298,7 @@ class Account extends AbstractModel
 
     public static function getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder)
     {
-        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 OR flags = 0 ORDER BY '$orderBy' '$sortOrder' LIMIT $limit OFFSET $offset");
+        $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 OR flags = 0 ORDER BY $orderBy $sortOrder LIMIT $limit OFFSET $offset");
         $users = [];
         if($result){
             while($user = $result->fetch_object('AINET\MVC\Model\Account')){
