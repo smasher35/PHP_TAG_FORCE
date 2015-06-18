@@ -39,7 +39,7 @@
 		<li data-target="#myCarousel" data-slide-to ="1"></li>
 		<li data-target="#myCarousel" data-slide-to ="2"></li>
 		<li data-target="#myCarousel" data-slide-to ="3"></li>
-		
+
 	</ol>
 
         <div class="carousel-inner">
@@ -188,8 +188,8 @@
 
                         <?php foreach ($lastUpdatedProjects as $project) { ?>
                                 <li>
-                                    <div class="timeline-image">
-                                        <img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle img-responsive lupdate-img" alt="<?=$project->name?>">
+                                    <div class="  timeline-image">
+                                        <img src="<?=$projectController->getProjectImage($project->id)?>" class=" img-circle lupdate-img img-responsive" alt="<?=$project->name?>">
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
