@@ -153,7 +153,7 @@ class AccountController
         {
             $password = password_hash($password, PASSWORD_BCRYPT);
             Account::setPassword($password, $accountId);
-            header("Location: editAccountPage.php?account_id=$accountId");
+            header("Location: editAccountPage.php?account_id=$accountId" . "&code=0");
         }
         else {
             $redirect = urlHelper::urlBuilder("changePasswordPage.php?account_id=") . $accountId . "&code=-1";

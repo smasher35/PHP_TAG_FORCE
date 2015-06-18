@@ -1,4 +1,7 @@
 <?php namespace AINET\MVC\Model;
+
+use Ainet\Support\urlHelper;
+
 /**
  * Created by PhpStorm.
  * User: Paulo
@@ -97,7 +100,7 @@ class Comment extends AbstractModel {
             $stm->bind_param("sisi", $comment, $projectId, $name, $currentUserId );
             if ($stm->execute()) {
 
-                $redirect = urlHelper::urlBuilder("projectDetails.php?project_id=") . $projectId;
+                $redirect = urlHelper::urlBuilder("projectDetails.php?project_id=" . $projectId);
                 header($redirect);
                 exit(0);
             }else {

@@ -21,6 +21,12 @@ class HtmlHelper
 			return '<div class="alert alert-danger" role="alert"><span class="error">'.$errors[$key].'</span></div>';
 		}
 	}
+    public static function success($key, $success)
+    {
+        if($success && array_key_exists($key, $success)) {
+            return '<div class="alert alert-success" role="alert"><span class="error">'.$success[$key].'</span></div>';
+        }
+    }
 
 	// TODO: feel free to add more methods
 }

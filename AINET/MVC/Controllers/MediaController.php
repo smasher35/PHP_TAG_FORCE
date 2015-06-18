@@ -1,5 +1,9 @@
 <?php namespace AINET\MVC\Controllers;
 
+use AINET\MVC\Model\Media;
+use Ainet\Support\urlHelper;
+
+
 /**
  * Created by PhpStorm.
  * User: Ruben
@@ -7,8 +11,6 @@
  * Time: 12:45
  */
 
-use AINET\MVC\Model\Media;
-use Ainet\Support\urlHelper;
 
 class MediaController {
 

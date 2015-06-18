@@ -13,6 +13,7 @@ use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\InstitutionController;
 
 
+
 //valida autenticação no site
 $authController = new AuthenticationController();
 if(!$authController->isAuthenticated()) {
@@ -27,7 +28,13 @@ $institutionController = new InstitutionController();
 $institutions = $institutionController->listInstitutions();
 
 $account=$accountController->getUserById($_GET['account_id']);
+$success = [];
+if (isset($_GET['code'])) {
+    if ($_GET['code'] == 0) {
+        $success = ['changePassSuccess' => 'Password successfully changed!'];
+    }
 
+}
 $title = "Edit Account";
 
 

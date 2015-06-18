@@ -204,11 +204,17 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <div class="text-left">
-
-                                <label for="inputYourName">Name</label>
-                            </div>
                                 <input type="hidden" name="project_id" value="<?=$actualproject->id?>" />
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Input Your Name">
+                                <?php if ($authController->isAuthenticated()) { ?>
+                                    <input type="hidden" name="name" value="<?=$accountController->getUserName($actualUser)?>">
+                                <?php } else { ?>
+                                    <label for="inputYourName">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Input Your Name">
+
+                                <?php } ?>
+                            </div>
+
+
 
                         </div>
                     </div>

@@ -1,14 +1,14 @@
 <?php namespace AINET\MVC\Controllers;
+
+use AINET\MVC\Model\Comment;
+use Ainet\Support\urlHelper;
+
 /**
  * Created by PhpStorm.
  * User: Paulo
  * Date: 08/06/2015
  * Time: 02:30
  */
-
-use AINET\MVC\Model\Comment;
-use Ainet\Support\urlHelper;
-
 
 class CommentController {
 

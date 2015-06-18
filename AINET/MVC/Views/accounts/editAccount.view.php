@@ -1,3 +1,4 @@
+<?php use Ainet\Support\HtmlHelper;?>
 <?php require('MVC/Views/headerFooter/header.view.php');?>
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias-->
 <div class="row" id="subNavBar">
@@ -51,6 +52,8 @@
                                     </div>
                                 </div>
                                 <a href="changePasswordPage.php?account_id=<?=$account->id?>"><div class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span>Change Password</div></a>
+                                <br>
+                                <?=HtmlHelper::success('changePassSuccess',$success)?>
                             </div>
                             <!-- FIM AREA ESQUERDA -->
 

@@ -1,4 +1,7 @@
 <?php namespace AINET\MVC\Model;
+
+use Ainet\Support\urlHelper;
+
 /**
  * Created by PhpStorm.
  * User: Paulo

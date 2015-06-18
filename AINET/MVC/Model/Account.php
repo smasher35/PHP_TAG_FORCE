@@ -281,7 +281,7 @@ class Account extends AbstractModel
             $stm->bind_param("sssisssii", $account['name'], $account['email'], $altEmail, $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
             if ($stm->execute()) {
 
-                $redirect = urlHelper::urlBuilder("editAccountPage.php?account_id=") .  $accountId;
+                $redirect = urlHelper::urlBuilder("editAccountPage.php?account_id=") . $accountId ;
                 header($redirect);
                 exit(0);
             }else {

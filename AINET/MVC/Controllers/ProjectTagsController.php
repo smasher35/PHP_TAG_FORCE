@@ -1,14 +1,14 @@
 <?php namespace AINET\MVC\Controllers;
+
+use AINET\MVC\Model\ProjectTag;
+use Ainet\Support\urlHelper;
+
 /**
  * Created by PhpStorm.
  * User: Paulo
  * Date: 13/06/2015
  * Time: 15:19
  */
-
-use AINET\MVC\Model\ProjectTag;
-use Ainet\Support\urlHelper;
-
 
 class ProjectTagsController {
 

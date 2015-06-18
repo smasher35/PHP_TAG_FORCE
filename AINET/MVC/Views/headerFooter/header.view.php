@@ -101,7 +101,7 @@ use \AINET\MVC\Controllers\AuthenticationController;
                             </li>
                                 <br>
                             <?php } else { ?>
-                            <li><a class="transition" href="<?=$sessionHref?>"><strong><?=$idSession?></strong></a></li><br>
+                            <li><a class="transition navbar-links" href="<?=$sessionHref?>"><strong><?=$idSession?></strong></a></li><br>
                             <?php } ?>
 	                    </ul>
 	                </div>

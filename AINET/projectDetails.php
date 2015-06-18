@@ -8,6 +8,7 @@
 
 require 'bootstrap.php';
 
+use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\CommentController;
@@ -17,7 +18,7 @@ use AINET\MVC\Controllers\ProjectTeamMembersController;
 use AINET\MVC\Controllers\TagsController;
 use Ainet\Support\TimeHelper;
 
-
+$authenticationController = new AuthenticationController();
 $projectController = new ProjectController();
 $accountController = new AccountController();
 $commentController = new CommentController();

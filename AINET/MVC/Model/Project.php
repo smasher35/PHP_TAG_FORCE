@@ -1,5 +1,6 @@
 <?php namespace AINET\MVC\Model;
 
+use Ainet\Support\urlHelper;
 
 class Project extends AbstractModel {
 
