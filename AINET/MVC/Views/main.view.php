@@ -198,6 +198,8 @@
                                         </div>
                                         <div class="timeline-body">
                                             <p class="text-muted"><?= $project->description ?></p>
+                                            <br>
+                                            <a href="projectDetails.php?project_id=<?=$project->id?>" class="btn btn-primary button-padding">View Project</a>
                                         </div>
                                     </div>
                                 </li>

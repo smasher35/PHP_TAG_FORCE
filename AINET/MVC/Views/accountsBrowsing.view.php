@@ -50,8 +50,10 @@
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
 						<th class="text-center">Thumb</th>
-						<th class="text-center"><a href="AccountsBrowsing.php?orderBy=<?='name'?>" ><button type="submit" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
-						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Institution</th>
+                        <?php if(isset($_GET['search'])) { ?>
+						    <th class="text-center"><a href="AccountsBrowsing.php?orderBy=<?='name'?>" ><button type="submit" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
+						<?php }?>
+                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Institution</th>
 						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Position</th>
                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Role</th>
 						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Website</th>

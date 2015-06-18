@@ -159,9 +159,6 @@ class AccountController
             $redirect = urlHelper::urlBuilder("changePasswordPage.php?account_id=") . $accountId . "&code=-1";
             header($redirect);
         }
-
-
-
     }
 
     public function countActiveDisableAccounts()
@@ -172,7 +169,8 @@ class AccountController
     public static function listActiveAndDisableAccounts($limit, $offset, $orderBy,$sortOrder)
     {
       return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
+
     }
 
-    
+
 }
