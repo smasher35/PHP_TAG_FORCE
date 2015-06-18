@@ -12,6 +12,7 @@ use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\InstitutionController;
 use AINET\MVC\Controllers\ProjectController;
+use AINET\MVC\Controllers\TagsController;
 
 
 
@@ -23,11 +24,12 @@ if(!$authController->isAuthenticated()) {
 
 $authenticated = true;
 
+$tagController = new TagsController();
 $accountController = new AccountController();
 $institutionController = new InstitutionController();
 $projectController = new ProjectController();
 //list($user,$errors)=$accountController->addUser();
-$institutions = $institutionController->listInstitutions();
+$allTags = $tagController->listAll();
 
 $title = "Add Account";
 

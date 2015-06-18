@@ -17,6 +17,10 @@ class TagsController {
         return Tag::getTagtName($id);
     }
 
+    public function listAll()
+    {
+        return Tag::all();
+    }
 
 
 }

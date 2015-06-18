@@ -24,6 +24,18 @@ class Tag extends AbstractModel {
         return $tag->tag;
     }
 
+    public static function all()
+    {
 
+        $result = AbstractModel::dbQuery('select * from tags');
+        $tags = [];
+        if($result){
+            while($tag = $result->fetch_object('AINET\MVC\Model\Institution')){
+                array_push($tags,$tag);
+            }
+        }
+        return $tags;
+
+    }
 
 }
