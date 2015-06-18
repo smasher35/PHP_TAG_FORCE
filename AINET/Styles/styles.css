@@ -756,6 +756,9 @@ img.img-circle.img-project-details{
         padding-top: 3px;
         padding-bottom: 3px;
     }
+    .dropDownMaxWith {
+        max-width: 240px;
+    }
 }
 
 

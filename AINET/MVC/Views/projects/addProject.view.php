@@ -83,14 +83,14 @@
                                             <label for="inputTag"><span><b class="asterisco">*</b> Tags</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-tags"></i></span></span>
-                                                <select class="form-control" name="tag" id="inputTag">
+                                                <select class="form-control dropDownMaxWith" name="tag" id="inputTag">
                                                     <?php foreach ($allTags as $tag) { ?>
                                                         <option value="<?= $tag->id?>"><?= $tag->tag?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="input-group">
-                                                <a href="#"><button  class="btn btn-info noPadding"><span class="glyphicon glyphicon-plus-sign"></span> Add Tags</button></a>
+                                                <a href="#"><button  class="btn btn-info noPadding"><span class="glyphicon glyphicon-plus-sign"></span> Tags</button></a>
                                             </div>
 
                                      </div>
