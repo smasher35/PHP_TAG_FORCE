@@ -111,6 +111,10 @@
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-cogs"></i></span></span>
                                                 <textarea type="textArea" class="form-control" rows="4" name="hardware" id="inputHardware" placeholder="Enter Hardware"></textarea>
                                             </div>
+
+                                            <p class="text-center"><strong>Insert Team Elements</strong></p>
+                                            <a href="#"><button  class="btn btn-info noPadding btn-block"><span class="glyphicon glyphicon-plus-sign"></span> Team Elements</button></a>
+
                                     </div><!-- Fecha class FORM-GROUP -->
                                 </div><!-- Fecha class col-md-8 MARGEM DIREITA -->
 
