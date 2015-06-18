@@ -52,9 +52,9 @@
 						<th class="text-center">Thumb</th>
 						<th class="text-center"> <a href="accountsBrowsing.php?orderBy=<?='name'?>" > <button type="submit" name='orderBy' class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Institution</th>
-						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Position</th>
+						<th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='position'?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Position</th>
                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Role</th>
-						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Website</th>
+						<th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='profile_url'?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Website</th>
 						<th class="text-center">Show Projects</th>
 						<th class="text-center">Contact Me</th>
                         <th class="text-center">Details</th>
