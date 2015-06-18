@@ -174,10 +174,5 @@ class AccountController
       return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
     }
 
-    public function sortAccountBrowsing($limit, $offset, $orderBy,$sortOrder)
-    {
-        return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
-        $redirect = urlHelper::urlBuilder("accountBrowsing.php");
-        header($redirect);
-    }
+    
 }

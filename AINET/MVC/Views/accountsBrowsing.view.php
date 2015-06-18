@@ -50,7 +50,7 @@
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
 						<th class="text-center">Thumb</th>
-						<th class="text-center"><a href="sortAccountBrowsing.php?limit=<?=$limit?>&offset=<?=$offset?>&sort_by=<?='name'?>&order_by=<?='ASC'?>" ><button type="submit" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
+						<th class="text-center"><a href="AccountsBrowsing.php?orderBy=<?='name'?>" ><button type="submit" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
 						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Institution</th>
 						<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Position</th>
                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Role</th>
