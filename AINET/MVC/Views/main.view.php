@@ -39,8 +39,7 @@
 		<li data-target="#myCarousel" data-slide-to ="1"></li>
 		<li data-target="#myCarousel" data-slide-to ="2"></li>
 		<li data-target="#myCarousel" data-slide-to ="3"></li>
-		<li data-target="#myCarousel" data-slide-to ="4"></li>
-		<li data-target="#myCarousel" data-slide-to ="5"></li>
+		
 	</ol>
 
         <div class="carousel-inner">
@@ -169,7 +168,7 @@
 <!-- LAST UPDATE PROJECTS - 2 COLUMNS
  =====================================================================================-->
 	<!-- TODO: query à base de dados e recolher 3 projectos indicados pelo Editor -->
-<div class="alt5 padding" id="lastUpdate">
+<div class="alt5 padding-Top" id="lastUpdate">
     <section >
         <div class="container">
             <div class="row">
@@ -186,10 +185,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
-                        <?php $countUpdatedProjects =1?>
-                        <?php foreach ($lastUpdatedProjects as $project) { ?>
 
-                            <?php if ($countUpdatedProjects != 2) {?>
+                        <?php foreach ($lastUpdatedProjects as $project) { ?>
                                 <li>
                                     <div class="timeline-image">
                                         <img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle img-responsive lupdate-img" alt="<?=$project->name?>">
@@ -204,31 +201,13 @@
                                         </div>
                                     </div>
                                 </li>
-                            <?php } else {?>
-
-                                <li class="timeline-inverted">
-                                    <div class="timeline-image">
-                                        <img src="<?=$projectController->getProjectImage($project->id)?>" class="img-circle img-responsive" alt="<?=$project->name?>">
-                                    </div>
-                                    <div class="timeline-panel">
-                                        <div class="timeline-heading">
-                                            <h3><strong><?=$project->name?></strong></h3>
-                                            <h4 class="subheading">An Agency is Born</h4>
-                                        </div>
-                                        <div class="timeline-body">
-                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            <?php } ?>
-
                         <?php } ?>
 
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
+                                <h4>PHP
+                                    <br>TAG
+                                    <br>FORCE</h4>
                             </div>
                         </li>
                     </ul>
