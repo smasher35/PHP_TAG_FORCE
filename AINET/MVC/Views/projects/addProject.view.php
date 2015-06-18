@@ -32,19 +32,19 @@
                                 <div class="row container">
                                     <div class="col-md-12 col-md-offset-1 noPadding">
                                          <div class="form-group form-inline">
-                                            <label for="inputAcronym"><span><b class="asterisco">*</b> Acronym</h3></span></label>
+                                            <label for="inputAcronym"><span>Acronym</h3></span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-quote-right"></i></span></span>
                                                 <input type="text" class="form-control" name="acronym" id="inputAcronym" placeholder="Enter Acronym">
                                             </div>
 
-                                            <label for="inputTheme"><span><b class="asterisco">*</b> Theme</span></label>
+                                            <label for="inputTheme"><span> Theme</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-desktop"></i></span></span>
                                                 <input type="text" class="form-control" name="theme" id="inputTheme" placeholder="Enter Theme">
                                             </div>
 
-                                             <label for="inputType"><span><b class="asterisco">*</b> Type</span></label>
+                                             <label for="inputType"><span> Type</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-th-large"></i></span></span>
                                                 <input type="text" class="form-control" name="type" id="inputType" placeholder="Enter Type">
@@ -74,13 +74,13 @@
 
                                     </div><!-- Fecha class FORM-GROUP -->
                                      <div class="form-group form-inline">
-                                            <label for="inputKeyword"><span><b class="asterisco">*</b> Keywords</span></label>
+                                            <label for="inputKeyword"><span> Keywords</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-key"></i></span></span>
                                                 <input type="text" class="form-control" name="keyword" id="inputKeyword" placeholder="Enter Keywords">
                                             </div>
 
-                                            <label for="inputTag"><span><b class="asterisco">*</b> Tags</span></label>
+                                            <label for="inputTag"><span> Tags</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-tags"></i></span></span>
                                                 <select class="form-control dropDownMaxWith" name="tag" id="inputTag">
@@ -100,13 +100,13 @@
                                 <!-- FORM AREA DIREITA -->
                                 <div class="col-md-4 myBorderleft">
                                     <div class="form-group">
-                                        <label for="inputSoftware"><span><b class="asterisco">*</b> Software</span></label>
+                                        <label for="inputSoftware"><span> Software</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-laptop"></i></span></span>
                                                 <textarea type="textArea" class="form-control" rows="4" name="software" id="inputSoftware" placeholder="Enter Software"></textarea>
                                             </div>
 
-                                            <label for="inputHardware"><span><b class="asterisco">*</b> Hardware</span></label>
+                                            <label for="inputHardware"><span> Hardware</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-cogs"></i></span></span>
                                                 <textarea type="textArea" class="form-control" rows="4" name="hardware" id="inputHardware" placeholder="Enter Hardware"></textarea>
@@ -122,7 +122,7 @@
                                 <!-- FORM AREA INFERIOR -->
                                 <div class="row container">
                                     <div class="col-md-10 col-md-offset-1">
-                                         <label for="inputObservations"><span><b class="asterisco">*</b> Observations</span></label>
+                                         <label for="inputObservations"><span> Observations</span></label>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-bars"></i></span></span>
                                                 <textarea type="textArea" class="form-control" rows="4" name="observations" id="inputObservations" placeholder="Enter Observations"></textarea>
