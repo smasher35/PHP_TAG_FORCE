@@ -237,33 +237,33 @@
 						<small><em>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</em></small>
 					</div>
 
-					<form>
+					<form action="contactUs.php" method="post">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
 									<div class="text-left">
-										<label class="align-left" for="inputEmail1">Email address</label>
+										<label class="align-left" for="contactEmail1">Email address</label>
 									</div>
-									<input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
+									<input type="email" class="form-control" id="contactEmail1" name="contactEmail" placeholder="Enter email">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<div class="text-left">
-										<label for="inputName">Name</label>
+										<label for="contactName">Name</label>
 									</div>
-									<input type="text" class="form-control" id="inputName" placeholder="Name">
+									<input type="text" class="form-control" id="contactName" name="contactName" placeholder="Name">
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="text-left">
-								<label for="exampleInputEmail1">Message</label>
+								<label for="contactMessage">Message</label>
 							<div class="text-left">
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea class="form-control" id="contactMessage" name="contactMessage"rows="3"></textarea>
 						</div>
 						<div class="text-right button-padding">
-							<button type="submit" class="btn tf-btn btn-success">Submit</button>
+							<button type="submit" name="submit" id="submit" class="btn tf-btn btn-success">Submit</button>
 						</div>
 					</form>
 				</div>
