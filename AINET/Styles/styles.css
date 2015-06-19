@@ -476,9 +476,9 @@ img.img-circle.techSheet-img {
     max-width: 150px;
 }
 
-img.img-circle.img-project-details {
-    max-height: 450px;
-    max-width: 400px;
+.img-project-details {
+    max-height:400px !important;
+    max-width: 500px !important;
 }
 
 .img-large-thumbnail {

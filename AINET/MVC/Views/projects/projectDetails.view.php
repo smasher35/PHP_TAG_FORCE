@@ -76,7 +76,7 @@
         <div class="row align-center padding">
             <!-- imagem, keywords e tags -->
             <div class="col-md-6">
-                 <td align="center"><img  class="img-circle img-project-details" src="<?= $projectController->getProjectImage($actualproject->id) ?>"></td>
+                 <td align="center "><img  class=" text-center thumbnail img-project-details" src="<?= $projectController->getProjectImage($actualproject->id) ?>"></td>
                 <hr>
                 <div class="row align-left tagsKeywords">
                     <p>
@@ -90,14 +90,11 @@
                             <div class="panel-heading"><strong>Tags</strong> </div>
                                 <div class="panel-body">
                                    <?php $tags = $projectTagsController->listTagsByProject($actualproject->id) ?>
-<?php foreach ($tags as $tag) { ?>
-    #<?= $tagsController->getTagName($tag->tag_id) ?>,
-<?php } ?>
+                                    <?php foreach ($tags as $tag) { ?>
+                                        #<?= $tagsController->getTagName($tag->tag_id) ?>,
+                                    <?php } ?>
                                 </div>
                          </div>
-
-
-
                     </p>
                 </div>
             </div>
