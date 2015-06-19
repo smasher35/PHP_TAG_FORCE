@@ -37,6 +37,13 @@
                                                 data-placement="bottom" title="View Project"><span
                                                 class="glyphicon glyphicon-book"></span></button>
                                     </a>
+                                    <a href="editProjectPage.php?project_id=<?= $project2->id ?>">
+                                        <button class="btn btn-primary btn-xs"
+                                                data-toggle="tooltip" data-placement="bottom"
+                                                title="Edit Project"><span
+                                                class="glyphicon glyphicon-edit"></span>
+                                        </button>
+                                    </a>
                                 </td>
                             </tr>
 
