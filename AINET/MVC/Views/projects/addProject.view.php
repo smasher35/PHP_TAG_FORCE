@@ -133,6 +133,7 @@
                                 <div class="col-md-6-rightAlign">
                                     <a class="btn btn-success" href="dashBoards.php"><span class="glyphicon glyphicon-arrow-left" ></span> Cancel</a>
                                     <!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
+                                    <?php if ("inputnÑame" == "") { var_dump("name  required");}?>
                                     <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span> Submit</button>
                                 </div>
                         </form><!-- Fecha class form -->
