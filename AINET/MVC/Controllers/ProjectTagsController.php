@@ -61,6 +61,11 @@ class ProjectTagsController {
         return ProjectTag::listTagsByOwnerAproved($currentUserID, $limit, $offset);
     }
 
+    public function listTagsByOwnerAll($currentUserID, $limit, $offset)
+    {
+        return ProjectTag::listTagsByOwnerAll($currentUserID, $limit, $offset);
+    }
+
     public function listTagsByOwnerRejected($currentUserID, $limit, $offset)
     {
        return ProjectTag::listTagsByOwnerRejected($currentUserID, $limit, $offset);

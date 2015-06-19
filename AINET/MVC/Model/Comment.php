@@ -167,6 +167,20 @@ class Comment extends AbstractModel {
 
     }
 
+    public static function listCommentsByOwner($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID'");
+        $comments = [];
+        if ($result) {
+            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+                array_push($comments, $comment);
+            }
+        }
+        return $comments;
+
+    }
+
+
     public static function listCommentsByOwnerRejected($currentUserID, $limit, $offset)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID' AND state = 2");

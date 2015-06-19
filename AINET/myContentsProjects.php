@@ -40,8 +40,8 @@ if(!$authController->isAuthenticated()) {
     }
 
     //----------------PROJECTS--------------//
-    $projects = $projectControler->listProjects($orderBy, $order,$limit, $offset);
-    $projectsByOwnerAproved = $projectControler->listProjectsByOwnerAproved($currentUserID,$limit,$offset);
+    //$projects = $projectControler->listProjects($orderBy, $order,$limit, $offset);
+    $projectsByOwner = $projectControler->listProjectsByOwnerAll($currentUserID,$limit,$offset);
 
 
     $title = "PHP TAG FORCE - My Projects";

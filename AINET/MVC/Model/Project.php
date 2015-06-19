@@ -76,6 +76,18 @@ class Project extends AbstractModel {
         return $projects;
     }
 
+    public static function listProjectsByOwnerAll($owner_id, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' LIMIT $limit OFFSET $offset");
+        $projects = [];
+        if ($result) {
+            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+                array_push($projects, $project);
+            }
+        }
+        return $projects;
+    }
+
     public static function listProjectsByOwnerRejected($owner_id, $limit, $offset)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' AND state=2 LIMIT $limit OFFSET $offset");

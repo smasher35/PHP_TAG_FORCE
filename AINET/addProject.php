@@ -66,6 +66,7 @@ if (isset($_POST['name']) && isset($_POST['description'])) {
     }
 
 
+
     $project = compact("name", "description", "acronym", "type", "theme", "keywords", "usedSoftware", "usedHardware", "observations", "accountId" , "state", "finishedAt", "startedAt", "aprovedBy");
     $projectController->createProject($project);
 }

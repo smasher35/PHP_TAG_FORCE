@@ -759,6 +759,10 @@ img.img-circle.img-project-details{
     .dropDownMaxWith {
         max-width: 240px;
     }
+
+    .btnFormat{
+       width: 150px;
+    }
 }
 
 

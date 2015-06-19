@@ -78,14 +78,23 @@
                 <hr>
                 <div class="row align-left tagsKeywords">
                     <p>
-                        Keywords:<?=$actualproject->keywords?>
-                        <br>
-                        <br>
-                        <?php $tags = $projectTagsController->listTagsByProject($actualproject->id)?>
-                        <strong> Tags: </strong>
-                        <?php foreach ($tags as $tag) { ?>
-                            #<?=$tagsController->getTagName($tag->tag_id)?>,
-                        <?php }?>
+                         <div class="panel panel-default">
+                            <div class="panel-heading"><strong>Keywords</strong> </div>
+                                <div class="panel-body">
+                                    <?=$actualproject->keywords?>
+                                </div>
+                         </div>
+                         <div class="panel panel-default">
+                            <div class="panel-heading"><strong>Tags</strong> </div>
+                                <div class="panel-body">
+                                   <?php $tags = $projectTagsController->listTagsByProject($actualproject->id)?>
+                                    <?php foreach ($tags as $tag) { ?>
+                                        #<?=$tagsController->getTagName($tag->tag_id)?>,
+                                    <?php }?>
+                                </div>
+                         </div>
+
+
 
                     </p>
                 </div>
@@ -95,13 +104,33 @@
             <div class="col-md-6">
                 <div class="left">
                     <p class="techSheetDetails">
-                        Acronym: <?=$actualproject->acronym?> <br>
-                        Theme: <?=$actualproject->theme?> <br>
-                        Type: <?=$actualproject->type?> <br>
-                        Name: <h3><strong><?=$actualproject->name?><br></strong></h3>
-                        Author: <?=$accountController->getUserName($actualproject->created_by)?><br>
-                        <hr>
-                        Description: <?=$actualproject->description?><br>
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><strong>Keywords</strong> </div>
+                                <div class="panel-body text-left">
+                                    <h4 ><strong>Acronym: </strong> <span><?=$actualproject->acronym?></span></h4>
+                                    <h4><strong>Theme: </strong><span><?=$actualproject->theme?></span></h4>
+                                    <h4><strong>Type: </strong><span><?=$actualproject->type?></span></h4>
+                                </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><strong>Project Name</strong> </div>
+                                <div class="panel-body">
+                                    <h3><strong><?=$actualproject->name?></strong></h3>
+                                </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><strong>Author</strong> </div>
+                                <div class="panel-body">
+                                    <h4><?=$accountController->getUserName($actualproject->created_by)?></h4>
+                                </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><strong>Desciption</strong> </div>
+                                <div class="panel-body">
+                                    <p><?=$actualproject->description?><br></p>
+                                </div>
+                        </div>
                     </p>
                 </div><!-- fecha center --->
             </div><!-- fecha dados gerais --->

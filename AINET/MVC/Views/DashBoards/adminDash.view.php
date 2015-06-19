@@ -38,6 +38,20 @@
 
 <div class="alt5">
 	<div class="row">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading text-center"><strong>My Personal Area</strong></div>
+                    <div class="panel-body text-center align-center">
+                        <a href="myContentsProjects.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-primary btnFormat">My Projects</button></a>
+                        <a href="myContentsComments.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-success btnFormat">My Comments</button></a>
+                        <a href=""><button class="btn btn-warning btnFormat">My Tags</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
 		<div class="container padding-Top">
 				<div class="row">
 					<ul class="nav nav-tabs nav-justified">
@@ -93,7 +107,7 @@
                                                                     <a href="editAccountPage.php?account_id=<?=$user->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                                     <a href="disableAccount.php?account_id=<?=$user->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Disable"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
                                                                     <a href="deleteAccount.php?account_id=<?=$user->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
-                                                                    <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
+                                                                    <a href="accountDetails.php?owner_id=<?=$user->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button></a>
 
                                                                 </td>
                                                             </tr>
@@ -155,7 +169,7 @@
                                                                     <a href="editAccountPage.php?account_id=<?=$user->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                                     <a href="enableAccount.php?account_id=<?=$user->id?>"> <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Activate"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                                     <a href="deleteAccount.phpAccount.php?account_id=<?=$user->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
-                                                                    <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
+                                                                    <a href="accountDetails.php?owner_id=<?=$user->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button></a>
 
                                                                 </td>
                                                             </tr>
@@ -215,7 +229,7 @@
                                                                 <td align="center"><?=$user->position?></td>
                                                                 <td align="center"><?=$accountController->getRoleName($user->role)?></td>
                                                                 <td align="center">
-                                                                    <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button>
+                                                                    <a href="accountDetails.php?owner_id=<?=$user->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="Details"><span class="glyphicon glyphicon-book"></span></button></a>
 
                                                                 </td>
                                                             </tr>
@@ -299,6 +313,7 @@
                                                                 <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                                 <a href="rejectProjectForm.php?project_id=<?=$project->id?>"><button onclick="<?php$project->id?>" class="btn btn-warning btn-xs" data-toggle="tooltip"   data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
                                                                 <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
+                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
                                                                 <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
                                                             </td>
                                                         </tr>
@@ -362,6 +377,7 @@
                                                                 <a href="editProjectPage.php?project_id=<?=$project2->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit Project"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                                 <a href="rejectProjectForm.php?project_id=<?=$project2->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip"  data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
                                                                 <a href="deleteProject.php?project_id=<?=$project2->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
+                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
                                                                 <a href="projectDetails.php?project_id=<?=$project2->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
                                                             </td>
                                                         </tr>
@@ -423,6 +439,7 @@
                                                                 <a href="editProjectPage.php?project_id=<?=$project->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit Project"><span class="glyphicon glyphicon-edit"></span></button></a>
                                                                 <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
                                                                 <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
+                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
                                                                 <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
                                                             </td>
                                                         </tr>

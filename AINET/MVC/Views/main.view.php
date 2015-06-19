@@ -168,7 +168,7 @@
 <!-- LAST UPDATE PROJECTS - 2 COLUMNS
  =====================================================================================-->
 	<!-- TODO: query à base de dados e recolher 3 projectos indicados pelo Editor -->
-<div class="alt5 padding-Top" id="lastUpdate">
+<div class="alt5 padding-Top " id="lastUpdate">
     <section >
         <div class="container">
             <div class="row">
@@ -185,7 +185,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
-
                         <?php foreach ($lastUpdatedProjects as $project) { ?>
                                 <li>
                                     <div class="  timeline-image">
