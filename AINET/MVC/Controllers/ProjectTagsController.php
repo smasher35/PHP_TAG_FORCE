@@ -70,4 +70,9 @@ class ProjectTagsController
     {
         return ProjectTag::listTagsByOwnerRejected($currentUserID, $limit, $offset);
     }
+
+    public function countTagsByOwner($userId)
+    {
+        return ProjectTag::countTagsByOwner($userId);
+    }
 }

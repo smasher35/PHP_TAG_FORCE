@@ -41,6 +41,9 @@ if (!$authController->isAuthenticated()) {
     //----------------TAGS--------------//
     $tagsByOwner = $projectTagsController->listTagsByOwnerAll($currentUserID, $limit, $offset);
 
+    $numberOfTags = $projectTagsController->countTagsByOwner($accountController->getUserId($_SESSION['email']));
+    $lastPage = ceil($numberOfTags / 10);
+
 
     $title = "PHP TAG FORCE - My Comments";
     require 'MVC\Views\myContents\myContentsTags.view.php';

@@ -17,7 +17,7 @@ if (!$authController->isAuthenticated()) {
 } else {
 
     $institutionController = new InstitutionController();
-    $projectControler = new ProjectController();
+    $projectController = new ProjectController();
     $commentsController = new CommentController();
     $tagsController = new TagsController();
     $projectTagsController = new ProjectTagsController();
@@ -39,9 +39,12 @@ if (!$authController->isAuthenticated()) {
     }
 
     //----------------PROJECTS--------------//
-    //$projects = $projectControler->listProjects($orderBy, $order,$limit, $offset);
-    $projectsByOwner = $projectControler->listProjectsByOwnerAll($currentUserID, $limit, $offset);
 
+    $projectsByOwner = $projectController->listProjectsByOwnerAll($currentUserID, $limit, $offset);
+
+
+    $numberOfProjects = $projectController->countProjectsByOwner($accountController->getUserId($_SESSION['email']));
+    $lastPage = ceil($numberOfProjects / 10);
 
     $title = "PHP TAG FORCE - My Projects";
     require 'MVC\Views\myContents\myContentsProjects.view.php';

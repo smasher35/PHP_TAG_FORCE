@@ -12,18 +12,15 @@
                     <table class="table table-stripped table-hover table-responsive">
                         <tr>
                             <th class="text-center">
-                                <button type="button"
-                                        class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button>
+
                                 Project Name
                             </th>
                             <th class="text-center">
-                                <button type="button"
-                                        class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button>
+
                                 Type
                             </th>
                             <th class="text-center">
-                                <button type="button"
-                                        class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button>
+
                                 Theme
                             </th>
                             <th class="text-center">Operations</th>
@@ -51,21 +48,21 @@
                             <div class="col-lg-12">
                                 <ul class="pagination">
                                     <li>
-                                        <a href="accountsBrowsing.php?page=<?= $page - 1 ?>&orderBy=<?= $orderBy ?>">&laquo;</a>
+                                        <a href="myContentsProjects.php?page=<?= $page - 1 ?>&owner_id=<?= $currentUserID ?>">&laquo;</a>
                                     </li>
                                     <?php for ($i = 1; $i <= $lastPage; $i++) { ?>
                                         <?php if ($i == $page) { ?>
                                             <li class="active"><a
-                                                    href="accountsBrowsing.php?page=<?= $i ?>&orderBy=<?= $orderBy ?>"><?= $i ?></a>
+                                                    href="myContentsProjects.php?page=<?= $i ?>&owner_id=<?= $currentUserID ?>"><?= $i ?></a>
                                             </li>
                                         <?php } else { ?>
                                             <li>
-                                                <a href="accountsBrowsing.php?page=<?= $i ?>&orderBy=<?= $orderBy ?>"><?= $i ?></a>
+                                                <a href="myContentsProjects.php?page=<?= $i ?>&owner_id=<?= $currentUserID ?>"><?= $i ?></a>
                                             </li>
                                         <?php } ?>
                                     <?php } ?>
                                     <li>
-                                        <a href="accountsBrowsing.php?page=<?= $page + 1 ?>&orderBy=<?= $orderBy ?>">&raquo;</a>
+                                        <a href="myContentsProjects.php?page=<?= $page + 1 ?>&owner_id=<?= $currentUserID ?>">&raquo;</a>
                                     </li>
                                 </ul>
                                 <!-- Fecha div class pagination -->

@@ -53,8 +53,6 @@ if ($orderBy == "institution") {
 }
 
 
-
-
 $title = "PHP TAG FORCE - Accounts Browsing";
 
 require('MVC/Views/accounts/accountsBrowsing.view.php');

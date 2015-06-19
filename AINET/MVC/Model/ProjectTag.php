@@ -159,4 +159,9 @@ class ProjectTag extends AbstractModel
         return $tags;
     }
 
+    public static function countTagsByOwner($userId)
+    {
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM project_tag WHERE added_by = '$userId' "));
+    }
+
 }

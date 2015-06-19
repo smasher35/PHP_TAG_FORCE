@@ -22,5 +22,10 @@ class TagsController
         return Tag::all();
     }
 
+    public function countTagsByOwner($userId)
+    {
+        Tag::countTagsByOwner($userId);
+    }
+
 
 }

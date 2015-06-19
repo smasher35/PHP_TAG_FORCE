@@ -12,13 +12,11 @@
                     <table class="table table-stripped table-hover table-responsive">
                         <tr>
                             <th class="text-center">
-                                <button type="button"
-                                        class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button>
+
                                 Comment
                             </th>
                             <th class="text-center">
-                                <button type="button"
-                                        class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button>
+
                                 Project
                             </th>
                         </tr>
@@ -38,21 +36,21 @@
                             <div class="col-lg-12">
                                 <ul class="pagination">
                                     <li>
-                                        <a href="myContentsComments.php?page=<?= $page - 1 ?>">&laquo;</a>
+                                        <a href="myContentsComments.php?page=<?= $page - 1 ?>&owner_id=<?= $currentUserID ?>">&laquo;</a>
                                     </li>
                                     <?php for ($i = 1; $i <= $lastPage; $i++) { ?>
                                         <?php if ($i == $page) { ?>
                                             <li class="active"><a
-                                                    href="myContentsComments.php?page=<?= $i ?>"><?= $i ?></a>
+                                                    href="myContentsComments.php?page=<?= $i ?>&owner_id=<?= $currentUserID ?>"><?= $i ?></a>
                                             </li>
                                         <?php } else { ?>
                                             <li>
-                                                <a href="myContentsComments.php?page=<?= $i ?>&"><?= $i ?></a>
+                                                <a href="myContentsComments.php?page=<?= $i ?>&owner_id=<?= $currentUserID ?>"><?= $i ?></a>
                                             </li>
                                         <?php } ?>
                                     <?php } ?>
                                     <li>
-                                        <a href="myContentsComments.php?page=<?= $page + 1 ?>&orderBy=">&raquo;</a>
+                                        <a href="myContentsComments.php?page=<?= $page + 1 ?>&owner_id=<?= $currentUserID ?>">&raquo;</a>
                                     </li>
                                 </ul>
                                 <!-- Fecha div class pagination -->
