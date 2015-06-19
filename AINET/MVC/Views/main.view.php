@@ -185,7 +185,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="timeline">
-
                         <?php foreach ($lastUpdatedProjects as $project) { ?>
                                 <li>
                                     <div class="  timeline-image">
