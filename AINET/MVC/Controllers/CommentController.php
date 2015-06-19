@@ -33,9 +33,9 @@ class CommentController
         return Comment::listDeletedComments();
     }
 
-    public function leaveComment($projectId, $name, $comment, $currentUserId)
+    public function leaveComment($projectId, $name, $comment, $currentUserId, $state)
     {
-        Comment::setComment($projectId, $name, $comment, $currentUserId);
+        Comment::setComment($projectId, $name, $comment, $currentUserId, $state);
     }
 
     public function listAprovedCommentsByProject($projectId)
@@ -87,6 +87,16 @@ class CommentController
     public function  getCommentText($id)
     {
         return Comment::getComment($id);
+    }
+
+    public function getNumberOfCommentsByUserId($id)
+    {
+        return Comment::countComments($id);
+    }
+
+    public function setDeletedComment($commentId)
+    {
+        Comment::setDeletedState($commentId);
     }
 
 }

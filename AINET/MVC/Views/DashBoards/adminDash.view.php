@@ -166,29 +166,7 @@
                                                     <?php } ?>
                                                 </table>
                                                 <div class="panel-footer">
-                                                    <!-- Pagination -->
-                                                    <div class="row text-center">
-                                                        <div class="col-lg-12">
-                                                            <ul class="pagination">
-                                                                <li><a href="#">&laquo;</a></li>
-                                                                <li class="active"><a href="#">1</a></li>
-                                                                <li><a href="#">2</a></li>
-                                                                <li><a href="#">3</a></li>
-                                                                <li><a href="#">4</a></li>
-                                                                <li><a href="#">5</a></li>
-                                                                <li><a href="#">6</a></li>
-                                                                <li><a href="#">7</a></li>
-                                                                <li><a href="#">8</a></li>
-                                                                <li><a href="#">9</a></li>
-                                                                <li><a href="#">10</a></li>
-                                                                <li><a href="#">&raquo;</a></li>
-                                                            </ul>
-                                                            <!-- Fecha div class pagination -->
-                                                        </div>
-                                                        <!-- Fecha div class col-md-12 -->
-                                                    </div>
-                                                    <!-- Fecha div class row text-center -->
-                                                    <!-- /.row -->
+
                                                 </div>
                                                 <!-- fecha panel footer -->
                                             </div>
@@ -277,29 +255,7 @@
                                                     <?php } ?>
                                                 </table>
                                                 <div class="panel-footer">
-                                                    <!-- Pagination -->
-                                                    <div class="row text-center">
-                                                        <div class="col-lg-12">
-                                                            <ul class="pagination">
-                                                                <li><a href="#">&laquo;</a></li>
-                                                                <li class="active"><a href="#">1</a></li>
-                                                                <li><a href="#">2</a></li>
-                                                                <li><a href="#">3</a></li>
-                                                                <li><a href="#">4</a></li>
-                                                                <li><a href="#">5</a></li>
-                                                                <li><a href="#">6</a></li>
-                                                                <li><a href="#">7</a></li>
-                                                                <li><a href="#">8</a></li>
-                                                                <li><a href="#">9</a></li>
-                                                                <li><a href="#">10</a></li>
-                                                                <li><a href="#">&raquo;</a></li>
-                                                            </ul>
-                                                            <!-- Fecha div class pagination -->
-                                                        </div>
-                                                        <!-- Fecha div class col-md-12 -->
-                                                    </div>
-                                                    <!-- Fecha div class row text-center -->
-                                                    <!-- /.row -->
+
                                                 </div>
                                                 <!-- fecha panel footer -->
                                             </div>
@@ -368,29 +324,7 @@
                                                     <?php } ?>
                                                 </table>
                                                 <div class="panel-footer">
-                                                    <!-- Pagination -->
-                                                    <div class="row text-center">
-                                                        <div class="col-lg-12">
-                                                            <ul class="pagination">
-                                                                <li><a href="#">&laquo;</a></li>
-                                                                <li class="active"><a href="#">1</a></li>
-                                                                <li><a href="#">2</a></li>
-                                                                <li><a href="#">3</a></li>
-                                                                <li><a href="#">4</a></li>
-                                                                <li><a href="#">5</a></li>
-                                                                <li><a href="#">6</a></li>
-                                                                <li><a href="#">7</a></li>
-                                                                <li><a href="#">8</a></li>
-                                                                <li><a href="#">9</a></li>
-                                                                <li><a href="#">10</a></li>
-                                                                <li><a href="#">&raquo;</a></li>
-                                                            </ul>
-                                                            <!-- Fecha div class pagination -->
-                                                        </div>
-                                                        <!-- Fecha div class col-md-12 -->
-                                                    </div>
-                                                    <!-- Fecha div class row text-center -->
-                                                    <!-- /.row -->
+
                                                 </div>
                                                 <!-- fecha panel footer -->
                                             </div>
@@ -515,29 +449,7 @@
 
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -628,29 +540,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -738,29 +628,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -825,29 +693,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -942,29 +788,7 @@
 
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -1027,29 +851,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -1109,29 +911,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -1188,29 +968,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -1297,29 +1055,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -1377,29 +1113,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -1459,29 +1173,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>
@@ -1538,29 +1230,7 @@
                                                 <?php } ?>
                                             </table>
                                             <div class="panel-footer">
-                                                <!-- Pagination -->
-                                                <div class="row text-center">
-                                                    <div class="col-lg-12">
-                                                        <ul class="pagination">
-                                                            <li><a href="#">&laquo;</a></li>
-                                                            <li class="active"><a href="#">1</a></li>
-                                                            <li><a href="#">2</a></li>
-                                                            <li><a href="#">3</a></li>
-                                                            <li><a href="#">4</a></li>
-                                                            <li><a href="#">5</a></li>
-                                                            <li><a href="#">6</a></li>
-                                                            <li><a href="#">7</a></li>
-                                                            <li><a href="#">8</a></li>
-                                                            <li><a href="#">9</a></li>
-                                                            <li><a href="#">10</a></li>
-                                                            <li><a href="#">&raquo;</a></li>
-                                                        </ul>
-                                                        <!-- Fecha div class pagination -->
-                                                    </div>
-                                                    <!-- Fecha div class col-md-12 -->
-                                                </div>
-                                                <!-- Fecha div class row text-center -->
-                                                <!-- /.row -->
+
                                             </div>
                                             <!-- fecha panel footer -->
                                         </div>

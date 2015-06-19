@@ -26,13 +26,15 @@ if (isset($_POST['name'])) {
 } else {
     $name = null;
 }
-/*if ($authenticationController->isAuthenticated()) {
-    $currentUser = $authenticationController->getAuthenticatedUser();
-    $curretUserId = $currentUser->id;
-}
-else {
+if ($authenticationController->isAuthenticated()) {
+    $currentUserId = $accountController->getUserId($_SESSION['email']);
+    if ($accountController->getRole($_SESSION['email']) == 2) {
+        $state = 0;
+    } else {
+        $state = 1;
+    }
+} else {
     $currentUserId = null;
-} */
-
-$currentUserId = null;
-$commentController->leaveComment($projectId, $name, $comment, $currentUserId);
+    $state = 0;
+}
+$commentController->leaveComment($projectId, $name, $comment, $currentUserId, $state);

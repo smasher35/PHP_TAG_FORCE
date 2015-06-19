@@ -41,6 +41,9 @@ if (!$authController->isAuthenticated()) {
     //----------------COMMENTS--------------//
     $commentsByOwner = $commentsController->listCommentsByOwner($currentUserID, $limit, $offset);
 
+    $numberOfComments = $commentsController->getNumberOfCommentsByUserId($accountController->getUserId($_SESSION['email']));
+    $lastPage = ceil($numberOfComments / 10);
+
 
     $title = "PHP TAG FORCE - My Comments";
     require 'MVC\Views\myContents\myContentsComments.view.php';

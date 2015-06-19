@@ -91,21 +91,17 @@ class Comment extends AbstractModel
 
     }
 
-    public static function setComment($projectId, $name, $comment, $currentUserId)
+    public static function setComment($projectId, $name, $comment, $currentUserId, $state)
     {
-
-        //AbstractModel::dbQuery("INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES ('$comment', '$projectId', '$name', '$userId', null, null, 0, null, NOW(), NOW())");
-
         //INSERIR NA BD
-        /* $query = "INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES (?,?,?,?,null,null,0,null,NOW(),NOW())";*/
-        $query = "INSERT INTO comments (comment, project_id, user_name, user_id, state, created_at, updated_at) VALUES (?,?,?,?,0,NOW(), NOW())";
+
+        $query = "INSERT INTO comments (comment, project_id, user_name, user_id, state, created_at, updated_at) VALUES (?,?,?,?,?,NOW(), NOW())";
         $conn = AbstractModel::dbConnection();
         $stm = $conn->prepare($query);
         //FALTA DAQUI PARA BAIXO
         if ($stm) {
-            $stm->bind_param("sisi", $comment, $projectId, $name, $currentUserId);
+            $stm->bind_param("sisii", $comment, $projectId, $name, $currentUserId, $state);
             if ($stm->execute()) {
-
                 $redirect = urlHelper::urlBuilder("projectDetails.php?project_id=" . $projectId);
                 header($redirect);
                 exit(0);
@@ -210,6 +206,16 @@ class Comment extends AbstractModel
         $comment = $result->fetch_object('AINET\MVC\Model\Comment');
 
         return $comment->comment;
+    }
+
+    public static function countComments($id)
+    {
+        return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$id'"));
+    }
+
+    public static function setDeletedState($commentId)
+    {
+        AbstractModel::dbQuery("UPDATE comments SET state = 3 WHERE id = '$commentId'");
     }
 
 

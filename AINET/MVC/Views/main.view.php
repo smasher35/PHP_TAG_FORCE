@@ -37,10 +37,13 @@
 
     <div id="myCarousel" class="carousel slide">
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <?php $i = 0 ?>
+            <?php foreach ($recentProjects as $project) { ?>
+                <li data-target="#myCarousel" data-slide-to="<?= $i ?>" class="<?php if ($i == 0) {
+                    echo "active";
+                } ?>"></li>
+                <?php $i++ ?>
+            <?php } ?>
 
         </ol>
 

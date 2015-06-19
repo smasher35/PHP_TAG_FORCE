@@ -223,7 +223,9 @@ class Project extends AbstractModel
         $projectImgName = mysqli_fetch_row($projectImgName);
         $projectImgName = $projectImgName[0];
 
-
+        if ($projectImgName == "" || $projectImgName == null) {
+            $projectImgName = "/projects/default_image.jpg";
+        }
         $projectImgURL = $projectImgURL . $projectImgName;
 
         return $projectImgURL;

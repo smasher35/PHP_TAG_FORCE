@@ -53,15 +53,6 @@ if ($orderBy == "institution") {
 }
 
 
-/*if ($orderBy == "name") {
-    $accounts = $projectController->listProjectsOrderByOwner($order, $limit, $offset);
-}
-else {
-    $projects = $projectController->listProjects($orderBy, $order, $limit, $offset);
-}
-
-$numberOfProjects = $projectController->countAprovedProjects();
-$lastPage = ceil($numberOfProjects/10);*/
 
 
 $title = "PHP TAG FORCE - Accounts Browsing";
