@@ -15,6 +15,4 @@ class urlHelper {
         global $baseUrl;
         return "Location: " . $baseUrl . $path;
     }
-
-
 }

@@ -61,15 +61,11 @@
 												<div class="col-md-12 align-center inline">
                                                     <br>
                                                         <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
-                                                        <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> Aprove Selected</a>
-                                                        <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
-                                                        <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
                                                 </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Type</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Theme</th>
@@ -80,7 +76,6 @@
 
 													<?php foreach ($projectsPending as $project) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
                                                             <td><?=$project->type?></td>
                                                             <td><?=$project->theme?></td>
@@ -131,14 +126,11 @@
 												<div class="col-md-12 align-center inline">
                                                     <br>
                                                         <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
-                                                        <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
-                                                        <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
                                                 </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Type</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Theme</th>
@@ -149,7 +141,6 @@
 
 													<?php foreach ($projectsAproved as $project) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
                                                             <td><?=$project->type?></td>
                                                             <td><?=$project->theme?></td>
@@ -196,14 +187,11 @@
 												<div class="col-md-12 align-center inline">
                                                     <br>
                                                         <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
-                                                        <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> Aprove Selected</a>
-                                                        <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
                                                 </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Type</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Theme</th>
@@ -214,7 +202,6 @@
 
 													<?php foreach ($projectsRejected as $project) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
                                                             <td><?=$project->type?></td>
                                                             <td><?=$project->theme?></td>
@@ -261,13 +248,11 @@
 												<div class="col-md-12 align-center inline">
                                                     <br>
                                                         <a href="addProjectPage.php"  class="btn btn-info btn-sm"><span class="glyphicon glyphicon-new-window"></span> New Project</a>
-                                                        <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window"></span> Aprove Selected</a>
                                                     <hr>
                                                 </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Type</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Theme</th>
@@ -278,7 +263,6 @@
 
 													<?php foreach ($projectsDeleted as $project) { ?>
                                                         <tr>
-                                                            <td align="center"><input type="checkbox"></td>
                                                             <td><?=$project->name?></td>
                                                             <td><?=$project->type?></td>
                                                             <td><?=$project->theme?></td>
@@ -340,15 +324,11 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Comments Pending Aproval</strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
-                                                    <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
-                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
                                                  </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -357,7 +337,6 @@
 
 													<?php foreach ($commentsPending as $comment) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
@@ -402,14 +381,11 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Comments Aproved </strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                     <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
-                                                     <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove Selected</a>
                                                     <hr>
                                                  </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -419,7 +395,6 @@
 													
 													<?php foreach ($commentsApproved as $comment) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
@@ -463,14 +438,11 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Comments Rejected </strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
-                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
                                                  </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -479,7 +451,6 @@
 
 													<?php foreach ($commentsRejected as $comment) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
@@ -523,13 +494,11 @@
 												<div class="panel-heading"><h3 class="panel-title text-center"><strong>Comments Deleted </strong></h3></div>
 												<div class="col-md-12 align-center inline">
                                                     <br>
-                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
                                                     <hr>
                                                  </div>
 												<!-- Table -->
 												<table class="table table-stripped table-hover table-responsive">
 													<tr>
-														<th class="text-center"><input type="checkbox"> Select</th>
 														<th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -538,7 +507,6 @@
 
 													<?php foreach ($commentsDeleted as $comment) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$comment->comment?></td>
                                                             <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                             <td><?=$comment->user_name?></td>
@@ -599,15 +567,11 @@
                                                 <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Pending Aproval</strong></h3></div>
                                                 <div class="col-md-12 align-center inline">
                                                     <br>
-                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
-                                                    <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
-                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
                                                 </div>
                                                 <!-- Table -->
                                                 <table class="table table-stripped table-hover table-responsive">
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"> Select</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -617,7 +581,6 @@
 
                                                     <?php foreach ($tagsPending as $tag) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$tagsController->getTagName($tag->tag_id)?></td>
                                                             <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                             <td><?=$accountController->getUserName($tag->added_by)?></td>
@@ -662,14 +625,11 @@
                                                 <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Aproved </strong></h3></div>
                                                 <div class="col-md-12 align-center inline">
                                                     <br>
-                                                    <a href="#"  class="btn btn-warning btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Reject Selected</a>
-                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove Selected</a>
                                                     <hr>
                                                 </div>
                                                 <!-- Table -->
                                                 <table class="table table-stripped table-hover table-responsive">
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"> Select</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -678,7 +638,6 @@
 
                                                     <?php foreach ($tagsApproved as $tag) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$tagsController->getTagName($tag->tag_id)?></td>
                                                             <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                             <td><?=$accountController->getUserName($tag->added_by)?></td>
@@ -722,14 +681,11 @@
                                                 <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Rejected </strong></h3></div>
                                                 <div class="col-md-12 align-center inline">
                                                     <br>
-                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
-                                                    <a href="#"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove"></span> Delete Selected</a>
                                                     <hr>
                                                 </div>
                                                 <!-- Table -->
                                                 <table class="table table-stripped table-hover table-responsive">
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"> Select</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -738,7 +694,6 @@
 
                                                     <?php foreach ($tagsRejected as $tag) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$tagsController->getTagName($tag->tag_id)?></td>
                                                             <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                             <td><?=$accountController->getUserName($tag->added_by)?></td>
@@ -782,13 +737,11 @@
                                                 <div class="panel-heading"><h3 class="panel-title text-center"><strong>Tags Deleted </strong></h3></div>
                                                 <div class="col-md-12 align-center inline">
                                                     <br>
-                                                    <a href="#"  class="btn btn-success btn-sm"><span class="glyphicon glyphicon-ok"></span> Aprove Selected</a>
                                                     <hr>
                                                 </div>
                                                 <!-- Table -->
                                                 <table class="table table-stripped table-hover table-responsive">
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"> Select</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> User</th>
@@ -797,7 +750,6 @@
 
                                                     <?php foreach ($tagsDeleted as $tag) { ?>
                                                         <tr>
-                                                            <th class="text-center"><input type="checkbox"></th>
                                                             <td><?=$tagsController->getTagName($tag->tag_id)?></td>
                                                             <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                             <td><?=$accountController->getUserName($tag->added_by)?></td>

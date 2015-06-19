@@ -26,7 +26,6 @@ use \AINET\MVC\Controllers\AuthenticationController;
 			$sessionHref = 'login.php';
 		}
 	?>
-    <!--teste -->
     <!-- Personal Styles -->
     <link rel="stylesheet" type="text/css" href="Styles/styles.css">
 

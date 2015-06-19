@@ -52,7 +52,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Type</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Theme</th>
@@ -62,7 +61,6 @@
 
                                                 <?php foreach ($projectsByOwnerPending as $project) { ?>
                                                     <tr>
-                                                        <td align="center"><input type="checkbox"></td>
                                                         <td><?=$project->name?></td>
                                                         <td><?=$project->type?></td>
                                                         <td><?=$project->theme?></td>
@@ -115,7 +113,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Type</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Theme</th>
@@ -125,7 +122,6 @@
 
                                                 <?php foreach ($projectsByOwnerAproved as $project) { ?>
                                                     <tr>
-                                                        <td align="center"><input type="checkbox"></td>
                                                         <td><?=$project->name?></td>
                                                         <td><?=$project->type?></td>
                                                         <td><?=$project->theme?></td>
@@ -174,7 +170,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project Name</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Refusal Message</th>
                                                     <th class="text-center">Operations</th>
@@ -183,7 +178,6 @@
 
                                                 <?php foreach ($projectsByOwnerRejected as $project) { ?>
                                                     <tr>
-                                                        <td align="center"><input type="checkbox"></td>
                                                         <td><?=$project->name?></td>
                                                         <td><?=$project->refusal_msg?></td>
                                                         <td align="center">
@@ -246,7 +240,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                     <th class="text-center">Operations</th>
@@ -254,7 +247,6 @@
 
                                                 <?php foreach ($commentsByOwnerPending as $comment) { ?>
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$comment->comment?></td>
                                                         <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                         <td align="center">
@@ -299,7 +291,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                     <th class="text-center">Operations</th>
@@ -308,7 +299,6 @@
 
                                                 <?php foreach ($commentsByOwnerAproved as $comment) { ?>
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$comment->comment?></td>
                                                         <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                         <td align="center">
@@ -352,7 +342,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Refusal Message</th>
@@ -361,7 +350,6 @@
 
                                                 <?php foreach ($commentsByOwnerRejected as $comment) { ?>
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$comment->comment?></td>
                                                         <td><?=$projectControler->getProjectName($comment->project_id)?></td>
                                                         <td><?=$comment->refusal_msg?></td>
@@ -426,7 +414,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                     <th class="text-center">Operations</th>
@@ -434,7 +421,6 @@
 
                                                 <?php foreach ($tagsByOwnerPending as $tag) { ?>
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$tagsController->getTagName($tag->tag_id)?></td>
                                                         <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                         <td align="center">
@@ -479,7 +465,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                     <th class="text-center">Operations</th>
@@ -487,7 +472,6 @@
 
                                                 <?php foreach ($tagsByOwnerAproved as $tag) { ?>
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$tagsController->getTagName($tag->tag_id)?></td>
                                                         <td><?=$projectControler->getProjectName($tag->project_id)?></td>
                                                         <td align="center">
@@ -531,7 +515,6 @@
                                             <!-- Table -->
                                             <table class="table table-stripped table-hover table-responsive">
                                                 <tr>
-                                                    <th class="text-center"><input type="checkbox"> Select</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                                                     <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Refusal Message</th>
@@ -540,7 +523,6 @@
 
                                                 <?php foreach ($tagsByOwnerRejected as $tag) { ?>
                                                     <tr>
-                                                        <th class="text-center"><input type="checkbox"></th>
                                                         <td><?=$tagsController->getTagName($tag->tag_id)?></td>
                                                         <td><?=$projectControler->getProjectName($tag->project_id)?></td>
 
