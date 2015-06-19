@@ -126,6 +126,7 @@ class ProjectTag  extends AbstractModel {
 
     }
 
+
     public static function listTagsByOwnerRejected($currentUserID, $limit, $offset)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM project_tag where added_by='$currentUserID' AND state=2");

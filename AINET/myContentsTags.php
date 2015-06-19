@@ -39,10 +39,10 @@ if(!$authController->isAuthenticated()) {
         $currentUserID = $_GET['owner_id'];
     }
 
-    //----------------COMMENTS--------------//
-    $commentsByOwner = $commentsController->listCommentsByOwner($currentUserID,$limit,$offset);
+    //----------------TAGS--------------//
+    $tagsByOwner = $projectTagsController->listTagsByOwnerAll($currentUserID,$limit,$offset);
 
 
     $title = "PHP TAG FORCE - My Comments";
-    require 'MVC\Views\myContents\myContentsComments.view.php';
+    require 'MVC\Views\myContents\myContentsTags.view.php';
 }

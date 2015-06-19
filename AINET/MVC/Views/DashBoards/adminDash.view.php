@@ -45,7 +45,7 @@
                     <div class="panel-body text-center align-center">
                         <a href="myContentsProjects.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-primary btnFormat">My Projects</button></a>
                         <a href="myContentsComments.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-success btnFormat">My Comments</button></a>
-                        <a href=""><button class="btn btn-warning btnFormat">My Tags</button></a>
+                        <a href="myContentsTags.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-warning btnFormat">My Tags</button></a>
                     </div>
 
                 </div>

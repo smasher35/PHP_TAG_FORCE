@@ -6,19 +6,19 @@
         <div class="container">
             <div class="panel panel-primary panel-responsive" id="panelProjectsAproved">
                 <!-- Default panel contents -->
-                <div class="panel-heading"><h3 class="panel-title text-center"><strong>My Comments</strong></h3></div>
+                <div class="panel-heading"><h3 class="panel-title text-center"><strong>My Tags</strong></h3></div>
                 <!-- Table -->
                 <table class="table table-stripped table-hover table-responsive">
                     <tr>
-                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Comment</th>
+                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Tag</th>
                         <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Project</th>
                     </tr>
 
 
-                    <?php foreach ($commentsByOwner as $comment) { ?>
+                    <?php foreach ($tagsByOwner as $tag) { ?>
                         <tr>
-                            <td class="text-center"><?=$comment->comment?></td>
-                            <td class="text-center"><?=$projectControler->getProjectName($comment->project_id)?></td>
+                            <td class="text-center"><?=$tagsController->getTagName($tag->id)?></td>
+                            <td class="text-center"><?=$projectControler->getProjectName($tag->project_id)?></td>
                         </tr>
 
                     <?php } ?>
