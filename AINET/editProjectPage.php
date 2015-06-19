@@ -15,11 +15,10 @@ use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\TagsController;
 
 
-
 //valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
-	$authController->redirectToLogin();
+if (!$authController->isAuthenticated()) {
+    $authController->redirectToLogin();
 }
 
 $authenticated = true;

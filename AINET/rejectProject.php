@@ -14,7 +14,7 @@ use AINET\MVC\Controllers\ProjectController;
 
 //valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
+if (!$authController->isAuthenticated()) {
     $authController->redirectToLogin();
 }
 
@@ -26,5 +26,5 @@ $projectController = new ProjectController();
 $projectId = $_POST['project_id'];
 $refusal_msg = $_POST['refusalMessage'];
 
-$projectController->setRejectedProject($projectId,$refusal_msg);
+$projectController->setRejectedProject($projectId, $refusal_msg);
 

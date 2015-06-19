@@ -8,11 +8,8 @@ use Ainet\Support\urlHelper;
  * Date: 08/06/2015
  * Time: 02:30
  */
-
-
-
-
-class Comment extends AbstractModel {
+class Comment extends AbstractModel
+{
     public $id; //int (10) NOT NULL
     public $comment; //varchar(255) NOT NULL
     public $project_id; //int (10) NOT NULL
@@ -30,57 +27,66 @@ class Comment extends AbstractModel {
         $result = AbstractModel::dbQuery('SELECT * FROM comments');
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
     }
 
-    public static function listPendingComments(){
+    public static function listPendingComments()
+    {
         $result = AbstractModel::dbQuery('SELECT * FROM comments WHERE state = 0');
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
 
-    public static function listAprovedComments(){
+    public static function listAprovedComments()
+    {
         $result = AbstractModel::dbQuery('SELECT * FROM comments WHERE state = 1');
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
 
-    public static function listRejectedComments(){
+    public static function listRejectedComments()
+    {
         $result = AbstractModel::dbQuery('SELECT * FROM comments WHERE state = 2');
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
 
-    public static function listDeletedComments(){
+    public static function listDeletedComments()
+    {
         $result = AbstractModel::dbQuery('SELECT * FROM comments WHERE state = 3');
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
@@ -91,26 +97,25 @@ class Comment extends AbstractModel {
         //AbstractModel::dbQuery("INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES ('$comment', '$projectId', '$name', '$userId', null, null, 0, null, NOW(), NOW())");
 
         //INSERIR NA BD
-       /* $query = "INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES (?,?,?,?,null,null,0,null,NOW(),NOW())";*/
+        /* $query = "INSERT INTO comments (comment, project_id, user_name, user_id, approved_by, replaces_id, state, refusal_msg, created_at, updated_at) VALUES (?,?,?,?,null,null,0,null,NOW(),NOW())";*/
         $query = "INSERT INTO comments (comment, project_id, user_name, user_id, state, created_at, updated_at) VALUES (?,?,?,?,0,NOW(), NOW())";
         $conn = AbstractModel::dbConnection();
         $stm = $conn->prepare($query);
         //FALTA DAQUI PARA BAIXO
         if ($stm) {
-            $stm->bind_param("sisi", $comment, $projectId, $name, $currentUserId );
+            $stm->bind_param("sisi", $comment, $projectId, $name, $currentUserId);
             if ($stm->execute()) {
 
                 $redirect = urlHelper::urlBuilder("projectDetails.php?project_id=" . $projectId);
                 header($redirect);
                 exit(0);
-            }else {
+            } else {
                 $redirect = urlHelper::urlBuilder("errorPage.php");
                 header($redirect);
                 //return error
             }
 
-        }
-        else {
+        } else {
             $redirect = urlHelper::urlBuilder("errorPage.php");
             header($redirect);
         }
@@ -122,14 +127,15 @@ class Comment extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE state = 1 AND project_id ='$projectId' ");
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
     }
 
-    public static function setState($id, $state, $refusalMsg,$userId)
+    public static function setState($id, $state, $refusalMsg, $userId)
     {
 
         AbstractModel::dbQuery("UPDATE comments SET state = '$state', refusal_msg='$refusalMsg', approved_by='$userId' WHERE id = '$id'");
@@ -146,10 +152,11 @@ class Comment extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID' AND state = 0");
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
@@ -159,10 +166,11 @@ class Comment extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID' AND state=1");
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
@@ -172,10 +180,11 @@ class Comment extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID'");
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
@@ -186,10 +195,11 @@ class Comment extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE user_id='$currentUserID' AND state = 2");
         $comments = [];
         if ($result) {
-            while($comment = $result -> fetch_object('AINET\MVC\Model\Comment')) {
+            while ($comment = $result->fetch_object('AINET\MVC\Model\Comment')) {
                 array_push($comments, $comment);
             }
         }
+
         return $comments;
 
     }
@@ -197,7 +207,8 @@ class Comment extends AbstractModel {
     public static function getComment($id)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM comments WHERE id = '$id'");
-        $comment=$result->fetch_object('AINET\MVC\Model\Comment');
+        $comment = $result->fetch_object('AINET\MVC\Model\Comment');
+
         return $comment->comment;
     }
 

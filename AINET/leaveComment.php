@@ -8,14 +8,13 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\CommentController;
 use AINET\MVC\Controllers\AccountController;
 use AINET\MVC\Controllers\AuthenticationController;
+use AINET\MVC\Controllers\CommentController;
 
 $commentController = new CommentController();
 $accountController = new AccountController();
 $authenticationController = new AuthenticationController();
-
 
 
 $projectId = $_POST['project_id'];
@@ -24,8 +23,7 @@ $comment = $_POST['comment'];
 
 if (isset($_POST['name'])) {
     $name = $_POST['name'];
-}
-else {
+} else {
     $name = null;
 }
 /*if ($authenticationController->isAuthenticated()) {

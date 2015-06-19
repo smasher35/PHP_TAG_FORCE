@@ -6,11 +6,11 @@
  * Time: 10:47
  * script que pertite uma navegação mais suave entre páginas
  */
-$(document).ready(function() {
+$(document).ready(function () {
     $("body").css("display", "none");
     $("body").fadeIn(500);
 
-    $("a.transition").click(function(event){
+    $("a.transition").click(function (event) {
         event.preventDefault();
         linkLocation = this.href;
         $("body").fadeOut(500, redirectPage);

@@ -17,7 +17,7 @@ use AINET\MVC\Controllers\ProjectController;
 global $owner_id;
 
 
-$projectController= new ProjectController();
+$projectController = new ProjectController();
 $accountController = new AccountController();
 
 $institutionController = new InstitutionController();
@@ -27,8 +27,7 @@ if (isset ($_GET['page'])) {
     $page = $_GET['page'];
     $limit = 10;
     $offset = $page * $limit - 10;
-}
-else {
+} else {
     $page = 1;
     $limit = 10;
     $offset = $page * $limit - 10;
@@ -37,20 +36,18 @@ else {
 //------------Parametro Order By-------------------//
 if (isset ($_GET['orderBy'])) {
     $orderBy = $_GET['orderBy'];
-}
-else {
+} else {
     $orderBy = "name";
 }
 //------------Parametro Order-------------------//
 
 
 $numberOfAccounts = $accountController->countActiveDisableAccounts();
-$lastPage = ceil($numberOfAccounts/10);
+$lastPage = ceil($numberOfAccounts / 10);
 
 if ($orderBy == "institution") {
     $users = $accountController->listActiveAndDisableAccountsOrderByInstitution($limit, $offset, $orderBy);
-}
-else {
+} else {
 
     $users = $accountController->listActiveAndDisableAccounts($limit, $offset, $orderBy);
 }
@@ -65,8 +62,6 @@ else {
 
 $numberOfProjects = $projectController->countAprovedProjects();
 $lastPage = ceil($numberOfProjects/10);*/
-
-
 
 
 $title = "PHP TAG FORCE - Accounts Browsing";

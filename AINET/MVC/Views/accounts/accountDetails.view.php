@@ -1,5 +1,5 @@
-<?php use Ainet\Support\HtmlHelper;?>
-<?php require('MVC/Views/headerFooter/header.view.php');?>
+<?php ?>
+<?php require('MVC/Views/headerFooter/header.view.php'); ?>
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias-->
 <div class="row" id="subNavBar">
 	<div class="container">
@@ -41,40 +41,40 @@
 
 
 						</div>
-						<input type="hidden" name="account_id" id="account_id" value="<?=$account->id?>"/>
+						<input type="hidden" name="account_id" id="account_id" value="<?= $account->id ?>"/>
                             <!-- FORM AREA ESQUERDA -->
                             <div class="col-md-5">
                                     <div class="panel panel-default">
                                         <div class="panel-heading"><strong>Name</strong> </div>
                                         <div class="panel-body">
-                                             <p><?= $account->name?></p>
+                                             <p><?= $account->name ?></p>
                                           </div>
                                     </div>
 
                                     <div class="panel panel-default">
                                         <div class="panel-heading"><strong>Email</strong> </div>
                                         <div class="panel-body">
-                                             <?= $account->email?>
+                                             <?= $account->email ?>
                                           </div>
                                     </div>
 
                                     <div class="panel panel-default">
                                         <div class="panel-heading"><strong>Position</strong> </div>
                                         <div class="panel-body">
-                                             <?= $account->position?>
+                                             <?= $account->position ?>
                                           </div>
                                     </div>
 
                                     <div class="panel panel-default">
                                         <div class="panel-heading"><strong>Role</strong> </div>
                                         <div class="panel-body">
-                                                <?php if($account->role == 1) { ?>
-                                                            <p>Editor</p>
-                                                <?php } elseif ($account->role == 4){?>
-                                                            <p>Administrator</p>
-                                                <?php } else { ?>
-                                                            <p>Author</p>
-                                                <?php } ?>
+                                                <?php if ($account->role == 1) { ?>
+    <p>Editor</p>
+<?php } elseif ($account->role == 4) { ?>
+    <p>Administrator</p>
+<?php } else { ?>
+    <p>Author</p>
+<?php } ?>
                                         </div>
                                     </div><!-- Fecha Panel-Body -->
                             </div><!-- Fecha col-md-5 -->
@@ -86,7 +86,7 @@
                                         <div class="panel panel-default">
                                         <div class="panel-heading"><strong>Institution</strong> </div>
                                         <div class="panel-body">
-                                             <?= $institutionController->getInstitutionName($account->institution_id)?>
+                                             <?= $institutionController->getInstitutionName($account->institution_id) ?>
                                           </div>
                                     </div>
 
@@ -94,13 +94,13 @@
                                         <div class="panel-heading"><strong>Personal Data</strong> </div>
                                         <div class="panel-body">
                                             <h3><span class="label label-default">Photo URL</span><br></h3>
-                                             <?= $account->photo_url?>
+                                             <?= $account->photo_url ?>
                                              <hr>
                                              <h3><span class="label label-default ">Personal Webpage</span><br></h3>
-                                             <?= $account->profile_url?>
+                                             <?= $account->profile_url ?>
                                              <hr>
                                              <h3><span class="label label-default">Alternative Email</span><br></h3>
-                                             <?= $account->alt_email?>
+                                             <?= $account->alt_email ?>
 
                                         </div>
                                     </div>
@@ -112,13 +112,13 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading"><strong>Account Status</strong> </div>
                                         <div class="panel-body">
-                                            <?php if($account->flags == 0) { ?>
-                                                <button class="btn btn-warning btn-block">Inactive</button>
-                                            <?php } elseif ($account->flags == 1){?>
-                                                <button class="btn btn-success btn-block">Active</button>
-                                            <?php } else { ?>
-                                                <button class="btn btn-danger btn-block">Deleted</button>
-                                            <?php } ?>
+                                            <?php if ($account->flags == 0) { ?>
+    <button class="btn btn-warning btn-block">Inactive</button>
+<?php } elseif ($account->flags == 1) { ?>
+    <button class="btn btn-success btn-block">Active</button>
+<?php } else { ?>
+    <button class="btn btn-danger btn-block">Deleted</button>
+<?php } ?>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                                 <div class="row">
                                  <p><h4><span>Profile Image</span></h4></p>
                                     <div class="input-group">
-                                        <img src="<?= $accountController->getProfileImgUrl($account->id)?>" class="img-thumbnail">
+                                        <img src="<?= $accountController->getProfileImgUrl($account->id) ?>" class="img-thumbnail">
                                     </div>
                                 </div>
                             </div>
@@ -157,4 +157,4 @@
 </div>
 
 
-<?php require('MVC/Views/headerFooter/footer.view.php');?>
+<?php require('MVC/Views/headerFooter/footer.view.php'); ?>

@@ -1,4 +1,5 @@
 <?php namespace AINET\MVC\Model;
+
 use Ainet\Support\urlHelper;
 
 /**
@@ -7,73 +8,75 @@ use Ainet\Support\urlHelper;
  * Date: 11/05/2015
  * Time: 14:56
  */
-
-
-
 class Account extends AbstractModel
 {
-	public $id; //int
-	public $name;//varchar(255)
-	public $email;//varchar(255)
-	public $alt_email;//varchar(255)NULL
-	public $password;//varchar(255)
-	public $institution_id;//int(10)unsigned
-	public $position;//varchar(255)
-	public $photo_url;//int(11)NULL
-	public $profile_url;//varchar(255)NULL
-	public $flags;//smallint(6)
-	public $role;//int(10)unsigned
-	public $remember_token;//varchar(100)NULL
-	public $created_at;//timestamp[0000-00-00 00:00:00]
-	public $updated_at;//timestamp[0000-00-00 00:00:00]
+    public $id; //int
+    public $name;//varchar(255)
+    public $email;//varchar(255)
+    public $alt_email;//varchar(255)NULL
+    public $password;//varchar(255)
+    public $institution_id;//int(10)unsigned
+    public $position;//varchar(255)
+    public $photo_url;//int(11)NULL
+    public $profile_url;//varchar(255)NULL
+    public $flags;//smallint(6)
+    public $role;//int(10)unsigned
+    public $remember_token;//varchar(100)NULL
+    public $created_at;//timestamp[0000-00-00 00:00:00]
+    public $updated_at;//timestamp[0000-00-00 00:00:00]
 
 
-	public static function all()
-	{
+    public static function all()
+    {
 
-		$result = AbstractModel::dbQuery("select * from users");
-		$users = [];
-		if($result){
-			while($user = $result->fetch_object('AINET\MVC\Model\Account')){
-				array_push($users,$user);
-			}
-		}
-		return $users;
+        $result = AbstractModel::dbQuery("select * from users");
+        $users = [];
+        if ($result) {
+            while ($user = $result->fetch_object('AINET\MVC\Model\Account')) {
+                array_push($users, $user);
+            }
+        }
 
-	}
-	public static function find($id)
-	{
-		$users = self::all();
-		if (array_key_exists($id, $users)) {
-			return $users[$id];
-		}
-		return null;
-	}
+        return $users;
 
-	public static function findByEmail($email,$pass)
-	{
+    }
+
+    public static function find($id)
+    {
+        $users = self::all();
+        if (array_key_exists($id, $users)) {
+            return $users[$id];
+        }
+
+        return null;
+    }
+
+    public static function findByEmail($email, $pass)
+    {
         $user = self::getUserbyMail($email);
 
-        if ($user != null){
+        if ($user != null) {
             $storedPass = $user->password;
 
-            if(password_verify($pass,$storedPass)) {
+            if (password_verify($pass, $storedPass)) {
                 return $user;
             }
         }
-		return null;
-	}
+
+        return null;
+    }
 
     public static function getUserId($email)
     {
         $user = self::getUserbyMail($email);
 
-        if ($user != null){
-                return $user->id;
+        if ($user != null) {
+            return $user->id;
         }
     }
 
-    private static function  getUserbyMail($mail){
+    private static function  getUserbyMail($mail)
+    {
 
         $row = AbstractModel::dbQuery("SELECT * FROM users WHERE email = '$mail'");
 
@@ -83,26 +86,26 @@ class Account extends AbstractModel
         return $user;
     }
 
-	public static function getAccountRole($account)
-	{
-		//Query à base de dados combase no email do user logado
-		$result = AbstractModel::dbQuery("select id,email,role from users WHERE email ='$account' ");
+    public static function getAccountRole($account)
+    {
+        //Query à base de dados combase no email do user logado
+        $result = AbstractModel::dbQuery("select id,email,role from users WHERE email ='$account' ");
 
-		//caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
-		if(!$result){
-			echo 'Bad Connection';
-			exit;
-		}
+        //caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
+        if (!$result) {
+            echo 'Bad Connection';
+            exit;
+        }
 
-		//devolve a linha do user encontrado
-		$row = mysqli_fetch_row($result);
+        //devolve a linha do user encontrado
+        $row = mysqli_fetch_row($result);
 
-		//devolve apenas o role do user
-		return $row[2];
-	}
+        //devolve apenas o role do user
+        return $row[2];
+    }
 
-	public static function add($account)
-	{
+    public static function add($account)
+    {
         $photoUrl = $account['photoUrl'];
         $altEmail = $account['altEmail'];
         $profileUrl = $account['inputUrl'];
@@ -116,29 +119,30 @@ class Account extends AbstractModel
         if ($profileUrl == "") {
             $profileUrl = null;
         }
-		//INSERIR NA BD
-		$query = 'INSERT INTO users (name,email,alt_email,password,institution_id,position,photo_url,profile_url,flags,role,remember_token,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,null,NOW(),NOW())';
-		$conn = self::dbConnection();
-		$stm = $conn->prepare($query);
-		if ($stm) {
-            $stm->bind_param("ssssisssii", $account['name'], $account['email'], $altEmail, $account['password'], $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
-			if ($stm->execute()) {
+        //INSERIR NA BD
+        $query = 'INSERT INTO users (name,email,alt_email,password,institution_id,position,photo_url,profile_url,flags,role,remember_token,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,null,NOW(),NOW())';
+        $conn = self::dbConnection();
+        $stm = $conn->prepare($query);
+        if ($stm) {
+            $stm->bind_param("ssssisssii", $account['name'], $account['email'], $altEmail, $account['password'],
+                $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'],
+                $account['role']);
+            if ($stm->execute()) {
                 $redirect = urlHelper::urlBuilder("dashBoards.php");
-				header($redirect);
-				exit(0);
-			}else {
+                header($redirect);
+                exit(0);
+            } else {
                 $redirect = urlHelper::urlBuilder("errorPage.php");
                 header($redirect);
                 //return error
             }
 
-        }
-        else {
+        } else {
             $redirect = urlHelper::urlBuilder("errorPage.php");
             header($redirect);
         }
 
-	}
+    }
 
     //devolve o nome do user mediante a respectiva ID
     public static function getName($id)
@@ -147,7 +151,7 @@ class Account extends AbstractModel
         $result = AbstractModel::dbQuery("select id, name from users WHERE id ='$id' ");
 
         //caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
-        if(!$result){
+        if (!$result) {
             echo 'Bad Connection';
             exit;
         }
@@ -158,9 +162,10 @@ class Account extends AbstractModel
         //devolve apenas o role do user
         return $row[1];
     }
+
     public static function getAccountRoleName($id)
     {
-        switch($id) {
+        switch ($id) {
             case 4:
                 return "Administrator";
                 break;
@@ -179,10 +184,11 @@ class Account extends AbstractModel
         $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 0");
         $users = [];
         if ($result) {
-            while($user = $result -> fetch_object('AINET\MVC\Model\Account')) {
+            while ($user = $result->fetch_object('AINET\MVC\Model\Account')) {
                 array_push($users, $user);
             }
         }
+
         return $users;
     }
 
@@ -193,10 +199,11 @@ class Account extends AbstractModel
         $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 AND email != '$currentUser'");
         $users = [];
         if ($result) {
-            while($user = $result -> fetch_object('AINET\MVC\Model\Account')) {
+            while ($user = $result->fetch_object('AINET\MVC\Model\Account')) {
                 array_push($users, $user);
             }
         }
+
         return $users;
     }
 
@@ -206,10 +213,11 @@ class Account extends AbstractModel
         $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 2");
         $users = [];
         if ($result) {
-            while($user = $result -> fetch_object('AINET\MVC\Model\Account')) {
+            while ($user = $result->fetch_object('AINET\MVC\Model\Account')) {
                 array_push($users, $user);
             }
         }
+
         return $users;
     }
 
@@ -221,7 +229,7 @@ class Account extends AbstractModel
     public static function getProfileImg($id)
     {
         $profileImgURL = './Storage/app/profiles/';
-        $profileImgName =  AbstractModel::dbQuery("SELECT photo_url FROM users WHERE id = '$id'");
+        $profileImgName = AbstractModel::dbQuery("SELECT photo_url FROM users WHERE id = '$id'");
 
         $profileImgName = mysqli_fetch_row($profileImgName);
         $profileImgName = $profileImgName[0];
@@ -238,7 +246,7 @@ class Account extends AbstractModel
         $result = AbstractModel::dbQuery("select id,institution_id, name from users WHERE id ='$id' ");
 
         //caso não consiga ligar dá mensagem de erro TODO:passar a mensagem para formatação bootstrap
-        if(!$result){
+        if (!$result) {
             echo 'Bad Connection';
             exit;
         }
@@ -255,6 +263,7 @@ class Account extends AbstractModel
     {
         $result = AbstractModel::dbQuery("SELECT * FROM users WHERE id ='$account_id'");
         $account = $result->fetch_object('AINET\MVC\Model\Account');
+
         return $account;
     }
 
@@ -284,20 +293,20 @@ class Account extends AbstractModel
         $conn = self::dbConnection();
         $stm = $conn->prepare($query);
         if ($stm) {
-            $stm->bind_param("sssisssii", $account['name'], $account['email'], $altEmail, $account['institution'], $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
+            $stm->bind_param("sssisssii", $account['name'], $account['email'], $altEmail, $account['institution'],
+                $account['position'], $photoUrl, $profileUrl, $account['status'], $account['role']);
             if ($stm->execute()) {
 
-                $redirect = urlHelper::urlBuilder("editAccountPage.php?account_id=") . $accountId ;
+                $redirect = urlHelper::urlBuilder("editAccountPage.php?account_id=") . $accountId;
                 header($redirect);
                 exit(0);
-            }else {
+            } else {
                 $redirect = urlHelper::urlBuilder("errorPage.php");
                 header($redirect);
                 //return error
             }
 
-        }
-        else {
+        } else {
             $redirect = urlHelper::urlBuilder("errorPage.php");
             header($redirect);
         }
@@ -308,15 +317,16 @@ class Account extends AbstractModel
         return mysqli_num_rows(AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 0 OR flags = 1"));
     }
 
-    public static function getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder)
+    public static function getActiveAndDisabledAccounts($limit, $offset, $orderBy, $sortOrder)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM users WHERE flags = 1 OR flags = 0 ORDER BY $orderBy $sortOrder LIMIT $limit OFFSET $offset");
         $users = [];
-        if($result){
-            while($user = $result->fetch_object('AINET\MVC\Model\Account')){
-                array_push($users,$user);
+        if ($result) {
+            while ($user = $result->fetch_object('AINET\MVC\Model\Account')) {
+                array_push($users, $user);
             }
         }
+
         return $users;
     }
 
@@ -324,11 +334,12 @@ class Account extends AbstractModel
     {
         $result = AbstractModel::dbQuery("SELECT u.* FROM users u JOIN institutions i ON u.institution_id = i.id WHERE u.flags = 1 OR u.flags = 0 ORDER BY i.name $sortOrder LIMIT $limit OFFSET $offset");
         $users = [];
-        if($result){
-            while($user = $result->fetch_object('AINET\MVC\Model\Account')){
-                array_push($users,$user);
+        if ($result) {
+            while ($user = $result->fetch_object('AINET\MVC\Model\Account')) {
+                array_push($users, $user);
             }
         }
+
         return $users;
     }
 }

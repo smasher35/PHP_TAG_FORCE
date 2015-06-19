@@ -13,11 +13,10 @@ use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\InstitutionController;
 
 
-
 //valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
-	$authController->redirectToLogin();
+if (!$authController->isAuthenticated()) {
+    $authController->redirectToLogin();
 }
 
 $authenticated = true;
@@ -27,15 +26,16 @@ $institutionController = new InstitutionController();
 //list($user,$errors)=$accountController->addUser();
 $institutions = $institutionController->listInstitutions();
 
-$account=$accountController->getUserById($_GET['account_id']);
+$account = $accountController->getUserById($_GET['account_id']);
 
 $success = [];
 if (isset($_GET['result_code'])) {
     if ($_GET['result_code'] == 0) {
         $success = ['changePassSuccess' => 'Password successfully changed!'];
-    }
-    else if ($_GET['result_code'] == -1) {
-        $errors = ['requiredFields' => 'Please fill all required fields(*)'];
+    } else {
+        if ($_GET['result_code'] == -1) {
+            $errors = ['requiredFields' => 'Please fill all required fields(*)'];
+        }
     }
 
 }

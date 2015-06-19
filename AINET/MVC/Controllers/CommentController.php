@@ -3,39 +3,49 @@
 use AINET\MVC\Model\Comment;
 use Ainet\Support\urlHelper;
 
-class CommentController {
+class CommentController
+{
 
-    public function listComments() {
+    public function listComments()
+    {
         return Comment::all();
     }
 
 
-    public function listPendingComments() {
+    public function listPendingComments()
+    {
         return Comment::listPendingComments();
     }
 
-    public function listAprovedComments() {
+    public function listAprovedComments()
+    {
         return Comment::listAprovedComments();
     }
 
-    public function listRejectedComments() {
+    public function listRejectedComments()
+    {
 
         return Comment::listRejectedComments();
     }
 
-    public function listDeletedComments() {
-         return Comment::listDeletedComments();
+    public function listDeletedComments()
+    {
+        return Comment::listDeletedComments();
     }
-    public function leaveComment($projectId, $name, $comment, $currentUserId){
+
+    public function leaveComment($projectId, $name, $comment, $currentUserId)
+    {
         Comment::setComment($projectId, $name, $comment, $currentUserId);
     }
-    public function listAprovedCommentsByProject($projectId) {
+
+    public function listAprovedCommentsByProject($projectId)
+    {
         return Comment::getAprovedCommentsByProject($projectId);
     }
 
     public function setAprovedComments($id, $userId)
     {
-        Comment::setState($id, 1, null,$userId);
+        Comment::setState($id, 1, null, $userId);
         $redirect = urlHelper::urlBuilder("dashBoards.php");
         header($redirect);
     }
@@ -63,6 +73,7 @@ class CommentController {
     {
         return Comment::listCommentsByOwnerAproved($currentUserID, $limit, $offset);
     }
+
     public function listCommentsByOwner($currentUserID, $limit, $offset)
     {
         return Comment::listCommentsByOwner($currentUserID, $limit, $offset);

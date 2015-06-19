@@ -8,15 +8,14 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\AuthenticationController;
 use AINET\Support\urlHelper;
-
 
 
 //valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
+if (!$authController->isAuthenticated()) {
     $authController->redirectToLogin();
 }
 
@@ -26,7 +25,7 @@ $authController = new AuthenticationController();
 $accountController = new AccountController();
 $role = $accountController->getRole($_SESSION['email']);
 
-if ($_POST['name'] != "" && $_POST['email'] != "" && $_POST['password'] != "" && $_POST['retypePass'] != "" && $_POST['institution'] != "" && $_POST['position'] != "" && $_POST['role'] != "" && $_POST['statusRadio']  != "" ) {
+if ($_POST['name'] != "" && $_POST['email'] != "" && $_POST['password'] != "" && $_POST['retypePass'] != "" && $_POST['institution'] != "" && $_POST['position'] != "" && $_POST['role'] != "" && $_POST['statusRadio'] != "") {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -40,18 +39,13 @@ if ($_POST['name'] != "" && $_POST['email'] != "" && $_POST['password'] != "" &&
     $altEmail = $_POST['altEmail'];
 
 
-
-
-
-
-
-
     if ($role == 4) {
         if ($password == $retypePass) {
             $password = password_hash($password, PASSWORD_BCRYPT);
             $role = intval($role);
             $status = intval($status);
-            $account = compact("name", "email", "password", "institution", "position", "role", "status", "photoUrl", "inputUrl", "altEmail");
+            $account = compact("name", "email", "password", "institution", "position", "role", "status", "photoUrl",
+                "inputUrl", "altEmail");
             $accountController->addAccount($account);
         } else {
             $redirect = urlHelper::urlBuilder("addAccountPage.php?result_code=-2");
@@ -59,8 +53,7 @@ if ($_POST['name'] != "" && $_POST['email'] != "" && $_POST['password'] != "" &&
         }
     }
 
-}
-else {
-        $redirect = urlHelper::urlBuilder("addAccountPage.php?result_code=-1");
-        header($redirect);
+} else {
+    $redirect = urlHelper::urlBuilder("addAccountPage.php?result_code=-1");
+    header($redirect);
 }

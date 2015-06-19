@@ -1,5 +1,5 @@
 <?php use Ainet\Support\HtmlHelper; ?>
-<?php require('MVC/Views/headerFooter/header.view.php');?>
+<?php require('MVC/Views/headerFooter/header.view.php'); ?>
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias-->
 <div class="row" id="subNavBar">
     <div class="container">
@@ -26,7 +26,7 @@
 					<div class="panel-body">
 						<div class="page-header">
 							<h3 class="inline">New Project  </h3><span>(<b class="asterisco">  *</b> - Required Fields )</span>
-							<?=HtmlHelper::error('requiredFields',$errors)?>
+							<?= HtmlHelper::error('requiredFields', $errors) ?>
 						</div>
 
                         <form action="addProject.php" method="post" >
@@ -135,7 +135,9 @@
                                 <div class="col-md-6-rightAlign">
                                     <a class="btn btn-success" href="dashBoards.php"><span class="glyphicon glyphicon-arrow-left" ></span> Cancel</a>
                                     <!-- <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span> Back</button> -->
-                                    <?php if ("inputnÑame" == "") { var_dump("name  required");}?>
+                                    <?php if ("inputnÑame" == "") {
+    var_dump("name  required");
+} ?>
                                     <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span> Submit</button>
                                 </div>
                         </form><!-- Fecha class form -->
@@ -161,4 +163,4 @@
 
 
 
-<?php require('MVC/Views/headerFooter/footer.view.php');?>
+<?php require('MVC/Views/headerFooter/footer.view.php'); ?>

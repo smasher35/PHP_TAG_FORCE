@@ -1,4 +1,4 @@
-<?php require('MVC/Views/headerFooter/header.view.php');?>
+<?php require('MVC/Views/headerFooter/header.view.php'); ?>
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 <div class="row" id="subNavBar">
 	<div class="container">
@@ -23,7 +23,7 @@
     <div class="row techSheetHeader">
         <div class="container">
             <div class="col-md-12 col-md-offset-2">
-                <p>Created: <?=$actualproject->created_at?> | Updated At: <?=$actualproject->updated_at?> | Started at: <?=$actualproject->started_at?>  | Finished at: <?=$actualproject->finished_at?> | Aproved by: <?=$accountController->getUserName($actualproject->approved_by) ?> </p>
+                <p>Created: <?= $actualproject->created_at ?> | Updated At: <?= $actualproject->updated_at ?> | Started at: <?= $actualproject->started_at ?>  | Finished at: <?= $actualproject->finished_at ?> | Aproved by: <?= $accountController->getUserName($actualproject->approved_by) ?> </p>
             </div>
         </div>
     </div>
@@ -43,13 +43,15 @@
                 </div>
             </div><!-- fecha col-md-12 -->
             <div class="col-md-12 padding-Top">
-                <?php if ($actualproject->state == 0 && ($actualUserRole == 1 || $actualUserRole == 4)) {?>
-                    <button class="btn btn-block btn-warning btn-lg">PROJECT PENDING APROVAL</button>
-                <?php } elseif ($actualproject->state == 1 && ($actualUserRole == 1 || $actualUserRole == 4)) { ?>
-                    <button class="btn btn-block btn-success btn-lg">PROJECT APROVED</button>
-                <?php } else if ($actualUserRole == 1 || $actualUserRole == 4) {?>
-                    <button class="btn btn-block btn-danger btn-lg">PROJECT REJECTED OR DELETED</button>
-                <?php }?>
+                <?php if ($actualproject->state == 0 && ($actualUserRole == 1 || $actualUserRole == 4)) { ?>
+    <button class="btn btn-block btn-warning btn-lg">PROJECT PENDING APROVAL</button>
+<?php } elseif ($actualproject->state == 1 && ($actualUserRole == 1 || $actualUserRole == 4)) { ?>
+    <button class="btn btn-block btn-success btn-lg">PROJECT APROVED</button>
+<?php } else {
+    if ($actualUserRole == 1 || $actualUserRole == 4) { ?>
+        <button class="btn btn-block btn-danger btn-lg">PROJECT REJECTED OR DELETED</button>
+    <?php }
+} ?>
             </div>
 
         </div><!-- fecha row titulo -->
@@ -74,23 +76,23 @@
         <div class="row align-center padding">
             <!-- imagem, keywords e tags -->
             <div class="col-md-6">
-                 <td align="center"><img  class="img-circle img-project-details" src="<?=$projectController->getProjectImage($actualproject->id)?>"></td>
+                 <td align="center"><img  class="img-circle img-project-details" src="<?= $projectController->getProjectImage($actualproject->id) ?>"></td>
                 <hr>
                 <div class="row align-left tagsKeywords">
                     <p>
                          <div class="panel panel-default">
                             <div class="panel-heading"><strong>Keywords</strong> </div>
                                 <div class="panel-body">
-                                    <?=$actualproject->keywords?>
+                                    <?= $actualproject->keywords ?>
                                 </div>
                          </div>
                          <div class="panel panel-default">
                             <div class="panel-heading"><strong>Tags</strong> </div>
                                 <div class="panel-body">
-                                   <?php $tags = $projectTagsController->listTagsByProject($actualproject->id)?>
-                                    <?php foreach ($tags as $tag) { ?>
-                                        #<?=$tagsController->getTagName($tag->tag_id)?>,
-                                    <?php }?>
+                                   <?php $tags = $projectTagsController->listTagsByProject($actualproject->id) ?>
+<?php foreach ($tags as $tag) { ?>
+    #<?= $tagsController->getTagName($tag->tag_id) ?>,
+<?php } ?>
                                 </div>
                          </div>
 
@@ -107,28 +109,28 @@
                         <div class="panel panel-default">
                             <div class="panel-heading"><strong>Keywords</strong> </div>
                                 <div class="panel-body text-left">
-                                    <h4 ><strong>Acronym: </strong> <span><?=$actualproject->acronym?></span></h4>
-                                    <h4><strong>Theme: </strong><span><?=$actualproject->theme?></span></h4>
-                                    <h4><strong>Type: </strong><span><?=$actualproject->type?></span></h4>
+                                    <h4 ><strong>Acronym: </strong> <span><?= $actualproject->acronym ?></span></h4>
+                                    <h4><strong>Theme: </strong><span><?= $actualproject->theme ?></span></h4>
+                                    <h4><strong>Type: </strong><span><?= $actualproject->type ?></span></h4>
                                 </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading"><strong>Project Name</strong> </div>
                                 <div class="panel-body">
-                                    <h3><strong><?=$actualproject->name?></strong></h3>
+                                    <h3><strong><?= $actualproject->name ?></strong></h3>
                                 </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading"><strong>Author</strong> </div>
                                 <div class="panel-body">
-                                    <h4><?=$accountController->getUserName($actualproject->created_by)?></h4>
+                                    <h4><?= $accountController->getUserName($actualproject->created_by) ?></h4>
                                 </div>
                         </div>
 
                         <div class="panel panel-default">
                             <div class="panel-heading"><strong>Desciption</strong> </div>
                                 <div class="panel-body">
-                                    <p><?=$actualproject->description?><br></p>
+                                    <p><?= $actualproject->description ?><br></p>
                                 </div>
                         </div>
                     </p>
@@ -165,7 +167,7 @@
                     <!----------------- SOFTWARE ------------------------------>
                     <div class="tab-pane fade in active" id="software">
                         <p class="padding">
-                            <?=$actualproject->used_software?>
+                            <?= $actualproject->used_software ?>
                         </p>
 
                     </div><!-- fecha tab-pane software --->
@@ -173,7 +175,7 @@
                      <!----------------- HARDWARE ------------------------------>
                     <div class="tab-pane fade in " id="hardware">
                         <p class="padding">
-                            <?=$actualproject->used_hardware?>
+                            <?= $actualproject->used_hardware ?>
                         </p>
 
                     </div><!-- fecha tab-pane hardware --->
@@ -185,15 +187,15 @@
                                 <th><h3><strong>Name</strong></h3></th>
                                 <th><h3><strong>Institution</strong></h3></th>
                             </tr>
-                            <?php $teamMembers = $projectTeamMembersController->listTeamMembersByProject($actualproject->id)?>
-                            <?php foreach ($teamMembers as $user) {?>
-                                <tr>
-                                    <td><?=$accountController->getUserName($user->user_id)?></td>
-                                    <?php $insitutionID = $accountController->getUserInstitutionId($user->user_id)?>
-                                    <td><?=$institutionController->getInstitutionName($insitutionID)?></td>
+                            <?php $teamMembers = $projectTeamMembersController->listTeamMembersByProject($actualproject->id) ?>
+<?php foreach ($teamMembers as $user) { ?>
+    <tr>
+        <td><?= $accountController->getUserName($user->user_id) ?></td>
+        <?php $insitutionID = $accountController->getUserInstitutionId($user->user_id) ?>
+        <td><?= $institutionController->getInstitutionName($insitutionID) ?></td>
 
-                                </tr>
-                            <?php }?>
+    </tr>
+<?php } ?>
 
                         </table>
 
@@ -204,7 +206,7 @@
                      <!----------------- OBSERVATIONS ------------------------------>
                     <div class="tab-pane fade in" id="observations">
                         <p class="padding">
-                            <?=$actualproject->observations?>
+                            <?= $actualproject->observations ?>
                         </p>
                     </div><!-- fecha tab-pane observations--->
                 </div><!-- fecha tab-container --->
@@ -233,14 +235,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <div class="text-left">
-                                <input type="hidden" name="project_id" value="<?=$actualproject->id?>" />
+                                <input type="hidden" name="project_id" value="<?= $actualproject->id ?>" />
                                 <?php if ($authController->isAuthenticated()) { ?>
-                                    <input type="hidden" name="name" value="<?=$accountController->getUserName($actualUser)?>">
-                                <?php } else { ?>
-                                    <label for="inputYourName">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Input Your Name">
+    <input type="hidden" name="name" value="<?= $accountController->getUserName($actualUser) ?>">
+<?php } else { ?>
+    <label for="inputYourName">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Input Your Name">
 
-                                <?php } ?>
+<?php } ?>
                             </div>
 
 
@@ -271,24 +273,23 @@
                     <div class="panel-heading"><h3 class="panel-title text-center"><strong>List of Comments</strong></h3></div>
                         <!-- Table -->
                         <?php foreach ($commentsList as $comment) { ?>
-                            <?php
-                                if($comment->user_name == null) {
-                                    $userName = "Anonymous";
-                                }
-                                else {
-                                    $userName = $comment->user_name;
-                                }
-                                ?>
-                            <div class="container">
-                                <div class="row">
-                                    <p>(<?=$timeHelper->humanTiming(strtotime($comment->created_at))?> ago) <b><?=$userName?></b>  said:</p>
-                                </div>
-                                <div class="row">
-                                    <p><?= $comment->comment ?></p>
-                                </div>
-                            </div>
-                            <hr>
-                        <?php } ?>
+    <?php
+    if ($comment->user_name == null) {
+        $userName = "Anonymous";
+    } else {
+        $userName = $comment->user_name;
+    }
+    ?>
+    <div class="container">
+        <div class="row">
+            <p>(<?= $timeHelper->humanTiming(strtotime($comment->created_at)) ?> ago) <b><?= $userName ?></b> said:</p>
+        </div>
+        <div class="row">
+            <p><?= $comment->comment ?></p>
+        </div>
+    </div>
+    <hr>
+<?php } ?>
                 </div>
             </div><!-- Fecha Painel Comments pending-->
         </div><!-- fecha row -->
@@ -300,4 +301,4 @@
 
 
 
-<?php require('MVC/Views/headerFooter/footer.view.php');?>
+<?php require('MVC/Views/headerFooter/footer.view.php'); ?>

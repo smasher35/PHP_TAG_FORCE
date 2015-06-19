@@ -1,8 +1,5 @@
 <?php namespace AINET\MVC\Controllers;
 
-use AINET\MVC\Model\Media;
-use Ainet\Support\urlHelper;
-
 
 /**
  * Created by PhpStorm.
@@ -10,20 +7,19 @@ use Ainet\Support\urlHelper;
  * Date: 08-06-2015
  * Time: 12:45
  */
-
-
-class MediaController {
+class MediaController
+{
 
     public function uploadFile()
     {
         $target_dir = "Storage/app";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
-        $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
-        if(isset($_POST["submit"])) {
+        if (isset($_POST["submit"])) {
             $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-            if($check !== false) {
+            if ($check !== false) {
                 echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
@@ -42,8 +38,9 @@ class MediaController {
             $uploadOk = 0;
         }
 // Allow certain file formats
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-            && $imageFileType != "gif" ) {
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif"
+        ) {
             echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
@@ -53,7 +50,8 @@ class MediaController {
 // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+
                 return $target_file;
             } else {
                 echo "Sorry, there was an error uploading your file.";

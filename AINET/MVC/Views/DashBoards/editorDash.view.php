@@ -1,4 +1,4 @@
-<?php require('MVC/Views/headerFooter/header.view.php');?>
+<?php require('MVC/Views/headerFooter/header.view.php'); ?>
 
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 <div class="row" id="subNavBar">
@@ -36,9 +36,9 @@
                 <div class="panel panel-info">
                     <div class="panel-heading text-center"><strong>My Personal Area</strong></div>
                     <div class="panel-body text-center align-center">
-                        <a href="myContentsProjects.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-primary btnFormat">My Projects</button></a>
-                        <a href="myContentsComments.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-success btnFormat">My Comments</button></a>
-                        <a href="myContentsTags.php?owner_id=<?=$accountController->getUserId($_SESSION['email'])?>"><button class="btn btn-warning btnFormat">My Tags</button></a>
+                        <a href="myContentsProjects.php?owner_id=<?= $accountController->getUserId($_SESSION['email']) ?>"><button class="btn btn-primary btnFormat">My Projects</button></a>
+                        <a href="myContentsComments.php?owner_id=<?= $accountController->getUserId($_SESSION['email']) ?>"><button class="btn btn-success btnFormat">My Comments</button></a>
+                        <a href="myContentsTags.php?owner_id=<?= $accountController->getUserId($_SESSION['email']) ?>"><button class="btn btn-warning btnFormat">My Tags</button></a>
                     </div>
 
                 </div>
@@ -88,21 +88,34 @@
 
 
 													<?php foreach ($projectsPending as $project) { ?>
-                                                        <tr>
-                                                            <td><?=$project->name?></td>
-                                                            <td><?=$project->type?></td>
-                                                            <td><?=$project->theme?></td>
-                                                            <td><?=$accountController->getUserName($project->created_by)?></td>
-                                                            <td align="center">
-                                                                <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <a href="rejectProjectForm.php?project_id=<?=$project->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip"  data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
-                                                                <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
-                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-                                                                <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
-                                                            </td>
-                                                        </tr>
+    <tr>
+        <td><?= $project->name ?></td>
+        <td><?= $project->type ?></td>
+        <td><?= $project->theme ?></td>
+        <td><?= $accountController->getUserName($project->created_by) ?></td>
+        <td align="center">
+            <a href="aproveProject.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+            <a href="rejectProjectForm.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject">
+                    <span class="glyphicon glyphicon-ban-circle"></span></button>
+            </a>
+            <a href="deleteProject.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+            </a>
+            <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span
+                    class="glyphicon glyphicon-edit"></span></button>
+            <a href="projectDetails.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project">
+                    <span class="glyphicon glyphicon-book"></span></button>
+            </a>
+        </td>
+    </tr>
 
-                                                    <?php } ?>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -154,20 +167,30 @@
 
 
 													<?php foreach ($projectsAproved as $project) { ?>
-                                                        <tr>
-                                                            <td><?=$project->name?></td>
-                                                            <td><?=$project->type?></td>
-                                                            <td><?=$project->theme?></td>
-                                                            <td><?=$accountController->getUserName($project->created_by)?></td>
-                                                            <td align="center">
-                                                                <a href="rejectProjectForm.php?project_id=<?=$project->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip"  data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
-                                                                <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
-                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-                                                                <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
-                                                            </td>
-                                                        </tr>
+    <tr>
+        <td><?= $project->name ?></td>
+        <td><?= $project->type ?></td>
+        <td><?= $project->theme ?></td>
+        <td><?= $accountController->getUserName($project->created_by) ?></td>
+        <td align="center">
+            <a href="rejectProjectForm.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject">
+                    <span class="glyphicon glyphicon-ban-circle"></span></button>
+            </a>
+            <a href="deleteProject.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+            </a>
+            <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span
+                    class="glyphicon glyphicon-edit"></span></button>
+            <a href="projectDetails.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project">
+                    <span class="glyphicon glyphicon-book"></span></button>
+            </a>
+        </td>
+    </tr>
 
-                                                    <?php } ?>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -216,19 +239,29 @@
 
 
 													<?php foreach ($projectsRejected as $project) { ?>
-                                                        <tr>
-                                                            <td><?=$project->name?></td>
-                                                            <td><?=$project->type?></td>
-                                                            <td><?=$project->theme?></td>
-                                                            <td><?=$accountController->getUserName($project->created_by)?></td>
-                                                            <td align="center">
-                                                                <a href="aproveProject.php?project_id=<?=$project->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <a href="deleteProject.php?project_id=<?=$project->id?>"><button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button></a>
-                                                                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-                                                                <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-book"></span></button></a>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $project->name ?></td>
+        <td><?= $project->type ?></td>
+        <td><?= $project->theme ?></td>
+        <td><?= $accountController->getUserName($project->created_by) ?></td>
+        <td align="center">
+            <a href="aproveProject.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+            <a href="deleteProject.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                        class="glyphicon glyphicon-remove"></span></button>
+            </a>
+            <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span
+                    class="glyphicon glyphicon-edit"></span></button>
+            <a href="projectDetails.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project">
+                    <span class="glyphicon glyphicon-book"></span></button>
+            </a>
+        </td>
+    </tr>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -278,16 +311,19 @@
 
 
 													<?php foreach ($projectsDeleted as $project) { ?>
-                                                        <tr>
-                                                            <td><?=$project->name?></td>
-                                                            <td><?=$project->type?></td>
-                                                            <td><?=$project->theme?></td>
-                                                            <td><?=$accountController->getUserName($project->created_by)?></td>
-                                                            <td align="center">
-                                                                <a href="projectDetails.php?project_id=<?=$project->id?>"><button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project"><span class="glyphicon glyphicon-edit"></span></button></a>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $project->name ?></td>
+        <td><?= $project->type ?></td>
+        <td><?= $project->theme ?></td>
+        <td><?= $accountController->getUserName($project->created_by) ?></td>
+        <td align="center">
+            <a href="projectDetails.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom"
+                        title="View Project"><span class="glyphicon glyphicon-edit"></span></button>
+            </a>
+        </td>
+    </tr>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -352,17 +388,24 @@
 													</tr>
 
 													<?php foreach ($commentsPending as $comment) { ?>
-                                                        <tr>
-                                                            <td><?=$comment->comment?></td>
-                                                            <td><?=$projectControler->getProjectName($comment->project_id)?></td>
-                                                            <td><?=$comment->user_name?></td>
-                                                            <td align="center">
-                                                                <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <a href="rejectCommentForm.php?comment_id=<?=$comment->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $comment->comment ?></td>
+        <td><?= $projectControler->getProjectName($comment->project_id) ?></td>
+        <td><?= $comment->user_name ?></td>
+        <td align="center">
+            <a href="aproveComment.php?comment_id=<?= $comment->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+            <a href="rejectCommentForm.php?comment_id=<?= $comment->id ?>">
+                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject">
+                    <span class="glyphicon glyphicon-ban-circle"></span></button>
+            </a>
+            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                    class="glyphicon glyphicon-remove"></span></button>
+        </td>
+    </tr>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -410,16 +453,20 @@
 
 													
 													<?php foreach ($commentsApproved as $comment) { ?>
-                                                        <tr>
-                                                            <td><?=$comment->comment?></td>
-                                                            <td><?=$projectControler->getProjectName($comment->project_id)?></td>
-                                                            <td><?=$comment->user_name?></td>
-                                                            <td align="center">
-                                                                <a href="rejectCommentForm.php?comment_id=<?=$comment->id?>"><button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button></a>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $comment->comment ?></td>
+        <td><?= $projectControler->getProjectName($comment->project_id) ?></td>
+        <td><?= $comment->user_name ?></td>
+        <td align="center">
+            <a href="rejectCommentForm.php?comment_id=<?= $comment->id ?>">
+                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject">
+                    <span class="glyphicon glyphicon-ban-circle"></span></button>
+            </a>
+            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                    class="glyphicon glyphicon-remove"></span></button>
+        </td>
+    </tr>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -466,16 +513,20 @@
 													</tr>
 
 													<?php foreach ($commentsRejected as $comment) { ?>
-                                                        <tr>
-                                                            <td><?=$comment->comment?></td>
-                                                            <td><?=$projectControler->getProjectName($comment->project_id)?></td>
-                                                            <td><?=$comment->user_name?></td>
-                                                            <td align="center">
-                                                                <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $comment->comment ?></td>
+        <td><?= $projectControler->getProjectName($comment->project_id) ?></td>
+        <td><?= $comment->user_name ?></td>
+        <td align="center">
+            <a href="aproveComment.php?comment_id=<?= $comment->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                    class="glyphicon glyphicon-remove"></span></button>
+        </td>
+    </tr>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -522,15 +573,18 @@
 													</tr>
 
 													<?php foreach ($commentsDeleted as $comment) { ?>
-                                                        <tr>
-                                                            <td><?=$comment->comment?></td>
-                                                            <td><?=$projectControler->getProjectName($comment->project_id)?></td>
-                                                            <td><?=$comment->user_name?></td>
-                                                            <td align="center">
-                                                                <a href="aproveComment.php?comment_id=<?=$comment->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $comment->comment ?></td>
+        <td><?= $projectControler->getProjectName($comment->project_id) ?></td>
+        <td><?= $comment->user_name ?></td>
+        <td align="center">
+            <a href="aproveComment.php?comment_id=<?= $comment->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+        </td>
+    </tr>
+<?php } ?>
 												</table>
 												<div class="panel-footer">
 													<!-- Pagination -->
@@ -596,17 +650,22 @@
 
 
                                                     <?php foreach ($tagsPending as $tag) { ?>
-                                                        <tr>
-                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
-                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
-                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
-                                                            <td align="center">
-                                                                <a href="aproveTag.php?tag_id=<?=$tag->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $tagsController->getTagName($tag->tag_id) ?></td>
+        <td><?= $projectControler->getProjectName($tag->project_id) ?></td>
+        <td><?= $accountController->getUserName($tag->added_by) ?></td>
+        <td align="center">
+            <a href="aproveTag.php?tag_id=<?= $tag->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+            <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span
+                    class="glyphicon glyphicon-ban-circle"></span></button>
+            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                    class="glyphicon glyphicon-remove"></span></button>
+        </td>
+    </tr>
+<?php } ?>
                                                 </table>
                                                 <div class="panel-footer">
                                                     <!-- Pagination -->
@@ -653,16 +712,18 @@
                                                     </tr>
 
                                                     <?php foreach ($tagsApproved as $tag) { ?>
-                                                        <tr>
-                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
-                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
-                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
-                                                            <td align="center">
-                                                                <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $tagsController->getTagName($tag->tag_id) ?></td>
+        <td><?= $projectControler->getProjectName($tag->project_id) ?></td>
+        <td><?= $accountController->getUserName($tag->added_by) ?></td>
+        <td align="center">
+            <button class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="bottom" title="Reject"><span
+                    class="glyphicon glyphicon-ban-circle"></span></button>
+            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                    class="glyphicon glyphicon-remove"></span></button>
+        </td>
+    </tr>
+<?php } ?>
                                                 </table>
                                                 <div class="panel-footer">
                                                     <!-- Pagination -->
@@ -709,16 +770,20 @@
                                                     </tr>
 
                                                     <?php foreach ($tagsRejected as $tag) { ?>
-                                                        <tr>
-                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
-                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
-                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
-                                                            <td align="center">
-                                                                <a href="aproveTag.php?tag_id=<?=$tag->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $tagsController->getTagName($tag->tag_id) ?></td>
+        <td><?= $projectControler->getProjectName($tag->project_id) ?></td>
+        <td><?= $accountController->getUserName($tag->added_by) ?></td>
+        <td align="center">
+            <a href="aproveTag.php?tag_id=<?= $tag->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+            <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
+                    class="glyphicon glyphicon-remove"></span></button>
+        </td>
+    </tr>
+<?php } ?>
                                                 </table>
                                                 <div class="panel-footer">
                                                     <!-- Pagination -->
@@ -765,15 +830,18 @@
                                                     </tr>
 
                                                     <?php foreach ($tagsDeleted as $tag) { ?>
-                                                        <tr>
-                                                            <td><?=$tagsController->getTagName($tag->tag_id)?></td>
-                                                            <td><?=$projectControler->getProjectName($tag->project_id)?></td>
-                                                            <td><?=$accountController->getUserName($tag->added_by)?></td>
-                                                            <td align="center">
-                                                                <a href="aproveTag.php?tag_id=<?=$tag->id?>"><button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove"><span class="glyphicon glyphicon-ok"></span></button></a>
-                                                            </td>
-                                                        </tr>
-                                                    <?php } ?>
+    <tr>
+        <td><?= $tagsController->getTagName($tag->tag_id) ?></td>
+        <td><?= $projectControler->getProjectName($tag->project_id) ?></td>
+        <td><?= $accountController->getUserName($tag->added_by) ?></td>
+        <td align="center">
+            <a href="aproveTag.php?tag_id=<?= $tag->id ?>">
+                <button class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="bottom" title="Aprove">
+                    <span class="glyphicon glyphicon-ok"></span></button>
+            </a>
+        </td>
+    </tr>
+<?php } ?>
                                                 </table>
                                                 <div class="panel-footer">
                                                     <!-- Pagination -->
@@ -811,4 +879,4 @@
 	</div><!-- FECHA div class Row fora do container -->
 </div><!-- FECHA  div class alt5 do corpo do projects and Comment Management -->
 
-<?php require('MVC/Views/headerFooter/footer.view.php');?>
+<?php require('MVC/Views/headerFooter/footer.view.php'); ?>

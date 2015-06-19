@@ -8,17 +8,15 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\ProjectController;
-use AINET\MVC\Controllers\TagsController;
 use Ainet\Support\urlHelper;
-
 
 
 //valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
+if (!$authController->isAuthenticated()) {
     $authController->redirectToLogin();
 }
 
@@ -32,7 +30,6 @@ $role = $accountController->getRole($_SESSION['email']);
 
 
 //TODO: Alterar para os campos do formulário do NEW PROJECT
-
 
 
 //TODO retornar os erros
@@ -60,17 +57,16 @@ if ($_POST['name'] != "" && $_POST['description'] != "" && $_POST['started_at'] 
     if ($accountId == 2) { // Autor
         $state = 0; //Estado pendente
         $aprovedBy = null;
-    }
-    else { //Admin e Editor
+    } else { //Admin e Editor
         $state = 1; //Estado aprovado
         $aprovedBy = $accountId;
     }
 
 
-    $project = compact("projectId", "name", "description", "acronym", "type", "theme", "keywords", "usedSoftware", "usedHardware", "observations", "accountId" , "state", "finishedAt", "startedAt", "aprovedBy");
+    $project = compact("projectId", "name", "description", "acronym", "type", "theme", "keywords", "usedSoftware",
+        "usedHardware", "observations", "accountId", "state", "finishedAt", "startedAt", "aprovedBy");
     $projectController->editProject($project);
-}
-else {
-    $redirect = urlHelper::urlBuilder("editProjectPage.php?project_id=").$projectId."&result_code=-1";
+} else {
+    $redirect = urlHelper::urlBuilder("editProjectPage.php?project_id=") . $projectId . "&result_code=-1";
     header($redirect);
 }

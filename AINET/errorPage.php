@@ -8,15 +8,14 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\InstitutionController;
 
 
 $authenticationController = new AuthenticationController();
 $accountController = new AccountController();
 $institutionController = new InstitutionController();
-
 
 
 $title = "ERROR";

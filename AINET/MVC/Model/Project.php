@@ -2,7 +2,8 @@
 
 use Ainet\Support\urlHelper;
 
-class Project extends AbstractModel {
+class Project extends AbstractModel
+{
 
     public $id; //int (10) NOT NULL
     public $name; //varchar(255) NOT NULL
@@ -33,10 +34,11 @@ class Project extends AbstractModel {
 
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -45,10 +47,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' ORDER BY $orderBy $order LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -57,10 +60,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' AND state=0 LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -69,10 +73,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' AND state=1 LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -81,10 +86,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -93,10 +99,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE created_by ='$owner_id' AND state=2 LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -105,10 +112,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 1 ORDER BY created_at DESC LIMIT 4 OFFSET 0');
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -118,10 +126,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 0');
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -131,10 +140,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 1');
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -144,10 +154,11 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 2');
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
@@ -157,24 +168,27 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery('SELECT * FROM projects WHERE state = 3');
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
+
         return $projects;
     }
 
     public static function getState($id)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE id = '$id'");
-        $project=$result->fetch_object('AINET\MVC\Model\Project');
+        $project = $result->fetch_object('AINET\MVC\Model\Project');
+
         return $project->state;
     }
 
     public static function getProjectName($id)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE id = '$id'");
-        $project=$result->fetch_object('AINET\MVC\Model\Project');
+        $project = $result->fetch_object('AINET\MVC\Model\Project');
+
         return $project->name;
     }
 
@@ -196,14 +210,15 @@ class Project extends AbstractModel {
     public static function getListProjectById($id)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE id = '$id'");
-        $project=$result->fetch_object('AINET\MVC\Model\Project');
+        $project = $result->fetch_object('AINET\MVC\Model\Project');
+
         return $project;
     }
 
     public static function getProjectImg($id)
     {
         $projectImgURL = './Storage/app/';
-        $projectImgName =  AbstractModel::dbQuery("SELECT int_file FROM media WHERE project_id = '$id'");
+        $projectImgName = AbstractModel::dbQuery("SELECT int_file FROM media WHERE project_id = '$id'");
 
         $projectImgName = mysqli_fetch_row($projectImgName);
         $projectImgName = $projectImgName[0];
@@ -219,7 +234,7 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE  state = 1 ORDER BY updated_at DESC LIMIT 3 OFFSET 0");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
@@ -230,11 +245,11 @@ class Project extends AbstractModel {
 
     public static function searchProject($searchString, $limit, $offset)
     {
-        $searchString = "%".$searchString."%";
+        $searchString = "%" . $searchString . "%";
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE state=1 AND (name LIKE '$searchString' OR acronym LIKE '$searchString' OR description LIKE '$searchString' OR type LIKE '$searchString' OR theme LIKE '$searchString' OR keywords LIKE '$searchString' OR used_software LIKE '$searchString') LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
@@ -263,7 +278,7 @@ class Project extends AbstractModel {
         $result = AbstractModel::dbQuery("SELECT p.* FROM projects p JOIN users u ON p.created_by=u.id WHERE p.state = 1  ORDER BY u.name $order LIMIT $limit OFFSET $offset");
         $projects = [];
         if ($result) {
-            while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
+            while ($project = $result->fetch_object('AINET\MVC\Model\Project')) {
                 array_push($projects, $project);
             }
         }
@@ -282,8 +297,8 @@ class Project extends AbstractModel {
         $usedSoftware = $project['usedSoftware'];
         $usedHardware = $project['usedHardware'];
         $observations = $project['observations'];
-        $finishedAt =  $project['observations'];
-        $startedAt =  $project['startedAt'];
+        $finishedAt = $project['observations'];
+        $startedAt = $project['startedAt'];
         $createdBy = $project['accountId'];
         $updatedBy = $project['accountId'];
         $aprovedBy = $project['aprovedBy'];
@@ -318,8 +333,7 @@ class Project extends AbstractModel {
         if ($finishedAt != "") {
             $finishedAt = strtotime($finishedAt);
             $finishedAt = date("Y-m-d", $finishedAt);
-        }
-        else {
+        } else {
             $finishedAt = null;
         }
 
@@ -332,18 +346,19 @@ class Project extends AbstractModel {
         $conn = self::dbConnection();
         $stm = $conn->prepare($query);
         if ($stm) {
-            $stm->bind_param("ssssssssiiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt, $finishedAt, $createdBy, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations, $featuredUntil, $replacesId, $state);
+            $stm->bind_param("ssssssssiiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt,
+                $finishedAt, $createdBy, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations,
+                $featuredUntil, $replacesId, $state);
             if ($stm->execute()) {
                 $redirect = urlHelper::urlBuilder("dashBoards.php");
                 header($redirect);
                 exit(0);
-            }else {
+            } else {
                 $redirect = urlHelper::urlBuilder("errorPage.php");
                 header($redirect);
             }
 
-        }
-        else {
+        } else {
             $redirect = urlHelper::urlBuilder("errorPage.php");
             header($redirect);
         }
@@ -361,8 +376,8 @@ class Project extends AbstractModel {
         $usedSoftware = $project['usedSoftware'];
         $usedHardware = $project['usedHardware'];
         $observations = $project['observations'];
-        $finishedAt =  $project['finishedAt'];
-        $startedAt =  $project['startedAt'];
+        $finishedAt = $project['finishedAt'];
+        $startedAt = $project['startedAt'];
         $state = $project['state'];
 
         $updatedBy = $project['accountId'];
@@ -396,8 +411,7 @@ class Project extends AbstractModel {
         if ($finishedAt != "") {
             $finishedAt = strtotime($finishedAt);
             $finishedAt = date("Y-m-d", $finishedAt);
-        }
-        else {
+        } else {
             $finishedAt = null;
         }
         $startedAt = strtotime($startedAt);
@@ -411,18 +425,19 @@ class Project extends AbstractModel {
         $stm = $conn->prepare($query);
         if ($stm) {
 
-            $stm->bind_param("ssssssssiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt, $finishedAt, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations, $featuredUntil, $replacesId, $state);
+            $stm->bind_param("ssssssssiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt,
+                $finishedAt, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations, $featuredUntil,
+                $replacesId, $state);
             if ($stm->execute()) {
                 $redirect = urlHelper::urlBuilder("dashBoards.php");
                 header($redirect);
                 exit(0);
-            }else {
+            } else {
                 $redirect = urlHelper::urlBuilder("errorPage.php");
                 header($redirect);
             }
 
-        }
-        else {
+        } else {
             $redirect = urlHelper::urlBuilder("errorPage.php");
             header($redirect);
         }

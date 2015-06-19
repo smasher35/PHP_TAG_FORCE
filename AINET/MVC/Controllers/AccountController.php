@@ -1,7 +1,7 @@
 <?php namespace AINET\MVC\Controllers;
 
-use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
+use AINET\support\InputHelper;
 use Ainet\Support\urlHelper;
 
 class AccountController
@@ -9,65 +9,65 @@ class AccountController
     public $errorsPass = false;
 
 
-	public function listUsers ()
-	{
-		return Account::all();
-	}
-
-	public function getRole($mail){
-		return Account::getAccountRole($mail);
-	}
-
-	public function addAccount($account)
-	{
-		Account::add($account);
-	}
-
-	public function editAccount($account)
+    public function listUsers()
     {
-			Account::save($account);
-	}
+        return Account::all();
+    }
 
-	public function validateInput ($account, $validatepassword= true)
-	{
-		$account->name = InputHelper::post('name');
-		$account->email = InputHelper::post('email');
-		$account->password = InputHelper::post('password');
-		$passwordConfirmation = InputHelper::post('retypePass'); //*Variavel local com o mesmo nome (podia ser diferente) da variavel global password */
-		$account->institution = InputHelper::post('institution');
-		$account->position = InputHelper::post('position');
-		$account->photo_url = InputHelper::post('photoUrl');
-		$account->profile_url = InputHelper::post('inputUrl');
-		$account->flags = InputHelper::post('statusRadio');
-		$account->role = InputHelper::post('role');
+    public function getRole($mail)
+    {
+        return Account::getAccountRole($mail);
+    }
 
-		$errors = [];
+    public function addAccount($account)
+    {
+        Account::add($account);
+    }
 
-		if ($account->name) {
-			if (!preg_match("/^[a-zA-Z ]+$/",$account->name)) {
-				$errors['fullname'] = 'Invalid Name';
-			}
-		}
+    public function editAccount($account)
+    {
+        Account::save($account);
+    }
 
-		if ($account->email) {
-			$validemail = filter_var($account->email, FILTER_VALIDATE_EMAIL);
-			if(!$validemail) {
-				$errors['email'] = 'Invalid Email Format';
-			}
-		} else {
-			$errors['email'] = 'Email is Required';
+    public function validateInput($account, $validatepassword = true)
+    {
+        $account->name = InputHelper::post('name');
+        $account->email = InputHelper::post('email');
+        $account->password = InputHelper::post('password');
+        $passwordConfirmation = InputHelper::post('retypePass'); //*Variavel local com o mesmo nome (podia ser diferente) da variavel global password */
+        $account->institution = InputHelper::post('institution');
+        $account->position = InputHelper::post('position');
+        $account->photo_url = InputHelper::post('photoUrl');
+        $account->profile_url = InputHelper::post('inputUrl');
+        $account->flags = InputHelper::post('statusRadio');
+        $account->role = InputHelper::post('role');
+
+        $errors = [];
+
+        if ($account->name) {
+            if (!preg_match("/^[a-zA-Z ]+$/", $account->name)) {
+                $errors['fullname'] = 'Invalid Name';
+            }
+        }
+        if ($account->email) {
+            $validemail = filter_var($account->email, FILTER_VALIDATE_EMAIL);
+            if (!$validemail) {
+                $errors['email'] = 'Invalid Email Format';
+            }
+        } else {
+            $errors['email'] = 'Email is Required';
         }
 
-		if ($validatepassword) {
-			if (strlen($account->password)<5) {
-				$errors['password'] = 'Password must have at least 5 characters';
-			} elseif ($account->password != $passwordConfirmation) {
-				$errors['password'] = 'Passwords don\'t match';
-			}
-		}
+        if ($validatepassword) {
+            if (strlen($account->password) < 5) {
+                $errors['password'] = 'Password must have at least 5 characters';
+            } elseif ($account->password != $passwordConfirmation) {
+                $errors['password'] = 'Passwords don\'t match';
+            }
+        }
 
-		return $errors;
-	}
+        return $errors;
+    }
 
     public function getUserName($id)
     {
@@ -155,14 +155,14 @@ class AccountController
         return Account::getNumberOfActiveAndDisabledAccounts();
     }
 
-    public function listActiveAndDisableAccounts($limit, $offset, $orderBy,$sortOrder="ASC")
+    public function listActiveAndDisableAccounts($limit, $offset, $orderBy, $sortOrder = "ASC")
     {
-        return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
+        return Account::getActiveAndDisabledAccounts($limit, $offset, $orderBy, $sortOrder);
 
     }
 
     public function listActiveAndDisableAccountsOrderByInstitution($limit, $offset, $orderBy, $sortOrder = "ASC")
     {
-        return Account::getActiveAndDisabledAccountsOrderByInstitution($limit, $offset,$orderBy,$sortOrder);
+        return Account::getActiveAndDisabledAccountsOrderByInstitution($limit, $offset, $orderBy, $sortOrder);
     }
 }

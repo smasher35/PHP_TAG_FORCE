@@ -1,7 +1,6 @@
 <?php namespace AINET\MVC\Controllers;
 
 use AINET\MVC\Model\ProjectTeamMember;
-use Ainet\Support\urlHelper;
 
 /**
  * Created by PhpStorm.
@@ -9,11 +8,8 @@ use Ainet\Support\urlHelper;
  * Date: 13/06/2015
  * Time: 22:25
  */
-
-
-
-
-class ProjectTeamMembersController {
+class ProjectTeamMembersController
+{
 
     public function listTeamMembersByProject($project_id)
     {

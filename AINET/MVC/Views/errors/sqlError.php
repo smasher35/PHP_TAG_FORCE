@@ -1,4 +1,5 @@
-<?php use \AINET\MVC\Controllers\AuthenticationController;
+<?php use AINET\MVC\Controllers\AuthenticationController;
+
 /**
  * Created by PhpStorm.
  * User: Ruben
@@ -11,7 +12,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- por causa das resoluções dos ecrãs móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- por causa das resoluções dos ecrãs móveis -->
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title><?= $title ?></title>
 
@@ -21,10 +23,10 @@
     $isAuthenticated = $controller->isAuthenticated();
 
 
-    if($isAuthenticated){
+    if ($isAuthenticated) {
         $idSession = 'Logout';
         $sessionHref = 'logout.php';
-    }else {
+    } else {
         $idSession = 'Login';
         $sessionHref = 'login.php';
     }
@@ -58,6 +60,7 @@
     <div class="col-md-12">
         <div class="alert-warning">
             <h2>ERROR</h2>
+
             <p>Your request cannot be completed. Please try again later!</p>
         </div>
     </div>

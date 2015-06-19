@@ -9,7 +9,7 @@ use AINET\MVC\Controllers\ProjectController;
 
 //valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
+if (!$authController->isAuthenticated()) {
     $authController->redirectToLogin();
 }
 

@@ -1,5 +1,5 @@
-<?php use Ainet\Support\HtmlHelper;?>
-<?php require('MVC/Views/headerFooter/header.view.php');?>
+<?php use Ainet\Support\HtmlHelper; ?>
+<?php require('MVC/Views/headerFooter/header.view.php'); ?>
 <!--/**
  * Created by PhpStorm.
  * User: Ruben
@@ -18,10 +18,10 @@
 				<div class="panel panel-primary" id="logPanel">
 					<div class="panel-body">
 						<div class="page-header">
-							<h3>Change <?=$account->name?> password</h3>
+							<h3>Change <?= $account->name ?> password</h3>
 						</div>
 						<form action="changePassword.php" method="post">
-                            <input type="hidden" value="<?=$account->id?>" name="account_id" id="account_id"/>
+                            <input type="hidden" value="<?= $account->id ?>" name="account_id" id="account_id"/>
                             <label for="inputPassword"><span><b class="asterisco">*</b> Password</span></label>
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
@@ -32,7 +32,7 @@
                                     <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
                                     <input type="password" class="form-control" name="retypePass" id="inputretypePassword" placeholder="retype Password">
                                 </div>
-                                <?=HtmlHelper::error('missMatchPassword',$errorsPass)?>
+                                <?= HtmlHelper::error('missMatchPassword', $errorsPass) ?>
                                 <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span>Change Password</button>
                         </form>
 					</div> <!-- Fecha <div Panel Body> -->
@@ -46,4 +46,4 @@
 	</div> <!-- Fecha <div Container> -->
 </div> <!-- Fecha <div Alt1> -->
 
-<?php require('AINET/MVC/Views/headerFooter/footer.view.php');?>
+<?php require('AINET/MVC/Views/headerFooter/footer.view.php'); ?>

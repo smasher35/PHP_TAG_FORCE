@@ -6,8 +6,8 @@
  * Time: 15:47
  * script que vai permitir que o scroll dentro das âncoras do site seja feito de uma forma suave
  */
-$(document).ready(function() {
-    $('a[href^="#"]').on('click',function (e) {
+$(document).ready(function () {
+    $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
 
         var target = this.hash;

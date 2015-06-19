@@ -1,4 +1,4 @@
-<?php require('MVC/Views/headerFooter/header.view.php');?>
+<?php require('MVC/Views/headerFooter/header.view.php'); ?>
 
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias -->
 <div class="row" id="subNavBar" xmlns="http://www.w3.org/1999/html">
@@ -28,7 +28,7 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     <h4 class="modal-title" id="myModalLabel">Refusal Reason</h4>
                                     <hr>
-                                    <p class="section-title"><h3><strong>Comment: </strong></h3> <h4><?=$commentController->getCommentText($commentId)?></h4></p>
+                                    <p class="section-title"><h3><strong>Comment: </strong></h3> <h4><?= $commentController->getCommentText($commentId) ?></h4></p>
                                 </div>
                                 <div class="panel-body">
                                     <label for="refusalMessage" >Refusal Message</label>
@@ -47,4 +47,4 @@
     </div><!-- Fecha class Row -->
 </div><!-- Fecha class Alt1 -->
 
-<?php require('MVC/Views/headerFooter/footer.view.php');?>
+<?php require('MVC/Views/headerFooter/footer.view.php'); ?>

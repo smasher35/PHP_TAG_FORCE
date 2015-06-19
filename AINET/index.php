@@ -17,13 +17,11 @@
 require 'bootstrap.php';
 
 
-use AINET\MVC\Controllers\ProjectController;
-use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\ProjectController;
 
 
-
-$owner_id=0;
+$owner_id = 0;
 
 $accountController = new AccountController();
 $projectController = new ProjectController();

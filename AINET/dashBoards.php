@@ -8,44 +8,41 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\AuthenticationController;
+use AINET\MVC\Controllers\CommentController;
 use AINET\MVC\Controllers\InstitutionController;
 use AINET\MVC\Controllers\ProjectController;
-use AINET\MVC\Controllers\CommentController;
-use AINET\MVC\Controllers\TagsController;
 use AINET\MVC\Controllers\ProjectTagsController;
+use AINET\MVC\Controllers\TagsController;
 
 if (isset ($_GET['page'])) {
     $page = $_GET['page'];
     $limit = $page * 10;
     $offset = $limit - 10;
-}
-else {
+} else {
     $page = 1;
     $limit = $page * 10;
     $offset = $limit - 10;
 }
 if (isset($_GET['order_by'])) {
     $orderBy = $_GET['order_by'];
-}
-else {
+} else {
     $orderBy = "name";
 }
 if (isset($_GET['order'])) {
     $order = $_GET['order'];
-}
-else {
+} else {
     $order = "ASC";
 }
 
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
-	$authController->redirectToLogin();
-}else {
+if (!$authController->isAuthenticated()) {
+    $authController->redirectToLogin();
+} else {
 
-	$institutionController = new InstitutionController();
-	$accountController = new AccountController();
+    $institutionController = new InstitutionController();
+    $accountController = new AccountController();
     $projectControler = new ProjectController();
     $commentsController = new CommentController();
     $tagsController = new TagsController();
@@ -55,8 +52,7 @@ if(!$authController->isAuthenticated()) {
         $page = $_GET['page'];
         $limit = $page * 10;
         $offset = $limit - 10;
-    }
-    else {
+    } else {
         $page = 1;
         $limit = $page * 10;
         $offset = $limit - 10;
@@ -64,24 +60,23 @@ if(!$authController->isAuthenticated()) {
 
 
     //----------------ACCOUNTS--------------//
-	$role = $accountController->getRole($_SESSION['email']);
-	$users = $accountController->listUsers();
+    $role = $accountController->getRole($_SESSION['email']);
+    $users = $accountController->listUsers();
     $usersActive = $accountController->getListActiveAcounts();
     $usersDisabled = $accountController->getListDisabledAccounts();
     $usersDeleted = $accountController->getListDeletedAccounts();
     $currentUserID = $accountController->getUserId($_SESSION['email']);
 
 
-
     //----------------PROJECTS--------------//
-    $projects = $projectControler->listProjects($orderBy, $order,$limit, $offset);
+    $projects = $projectControler->listProjects($orderBy, $order, $limit, $offset);
     $projectsRejected = $projectControler->listRejectedProjects();
     $projectsDeleted = $projectControler->listDeletedProjects();
     $projectsPending = $projectControler->listPendingProjects();
     $projectsAproved = $projectControler->listAprovedProjects();
-    $projectsByOwnerPending = $projectControler->listProjectsByOwnerPending($currentUserID,$limit,$offset);
-    $projectsByOwnerAproved = $projectControler->listProjectsByOwnerAproved($currentUserID,$limit,$offset);
-    $projectsByOwnerRejected = $projectControler->listProjectsByOwnerRejected($currentUserID,$limit,$offset);
+    $projectsByOwnerPending = $projectControler->listProjectsByOwnerPending($currentUserID, $limit, $offset);
+    $projectsByOwnerAproved = $projectControler->listProjectsByOwnerAproved($currentUserID, $limit, $offset);
+    $projectsByOwnerRejected = $projectControler->listProjectsByOwnerRejected($currentUserID, $limit, $offset);
 
     //---------------- COMMENTS --------------//
     $comments = $commentsController->listComments();
@@ -89,9 +84,9 @@ if(!$authController->isAuthenticated()) {
     $commentsPending = $commentsController->listPendingComments();
     $commentsRejected = $commentsController->listRejectedComments();
     $commentsDeleted = $commentsController->listDeletedComments();
-    $commentsByOwnerPending = $commentsController->listCommentsByOwnerPending($currentUserID,$limit,$offset);
-    $commentsByOwnerAproved = $commentsController->listCommentsByOwnerAproved($currentUserID,$limit,$offset);
-    $commentsByOwnerRejected = $commentsController->listCommentsByOwnerRejected($currentUserID,$limit,$offset);
+    $commentsByOwnerPending = $commentsController->listCommentsByOwnerPending($currentUserID, $limit, $offset);
+    $commentsByOwnerAproved = $commentsController->listCommentsByOwnerAproved($currentUserID, $limit, $offset);
+    $commentsByOwnerRejected = $commentsController->listCommentsByOwnerRejected($currentUserID, $limit, $offset);
 
     //---------------- TAGS --------------//
 
@@ -102,25 +97,25 @@ if(!$authController->isAuthenticated()) {
     $tagsPending = $projectTagsController->listPendingTags();
     $tagsRejected = $projectTagsController->listRejectedTags();
     $tagsDeleted = $projectTagsController->listDeletedTags();
-    $tagsByOwnerPending = $projectTagsController->listTagsByOwnerPending($currentUserID,$limit,$offset);
-    $tagsByOwnerAproved = $projectTagsController->listTagsByOwnerAproved($currentUserID,$limit,$offset);
-    $tagsByOwnerRejected = $projectTagsController->listTagsByOwnerRejected($currentUserID,$limit,$offset);
+    $tagsByOwnerPending = $projectTagsController->listTagsByOwnerPending($currentUserID, $limit, $offset);
+    $tagsByOwnerAproved = $projectTagsController->listTagsByOwnerAproved($currentUserID, $limit, $offset);
+    $tagsByOwnerRejected = $projectTagsController->listTagsByOwnerRejected($currentUserID, $limit, $offset);
 
 
     $title = "PHP TAG FORCE - DashBoard";
 
 
-	if ($role == 4){
-		require('MVC\Views\DashBoards\adminDash.view.php');
-	}
+    if ($role == 4) {
+        require('MVC\Views\DashBoards\adminDash.view.php');
+    }
 
-	if ($role == 1) {
-		require('MVC\Views\DashBoards\editorDash.view.php');
-	}
+    if ($role == 1) {
+        require('MVC\Views\DashBoards\editorDash.view.php');
+    }
 
-	if ($role == 2) {
-		require('MVC\Views\DashBoards\authorDash.view.php');
-	}
+    if ($role == 2) {
+        require('MVC\Views\DashBoards\authorDash.view.php');
+    }
 
 
 }

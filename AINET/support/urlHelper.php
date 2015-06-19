@@ -9,10 +9,13 @@
 namespace Ainet\Support;
 
 
-class urlHelper {
+class urlHelper
+{
 
-    public static function urlBuilder($path){
+    public static function urlBuilder($path)
+    {
         global $baseUrl;
+
         return "Location: " . $baseUrl . $path;
     }
 }

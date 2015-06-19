@@ -1,4 +1,5 @@
 <?php namespace Ainet\Support;
+
 /**
  * Created by PhpStorm.
  * User: Ruben
@@ -7,12 +8,12 @@
  */
 class TimeHelper
 {
-    function humanTiming ($time)
+    function humanTiming($time)
     {
 
         $time = time() - $time; // to get the time since that moment
 
-        $tokens = array (
+        $tokens = array(
             31536000 => 'year',
             2592000 => 'month',
             604800 => 'week',
@@ -23,13 +24,15 @@ class TimeHelper
         );
 
         foreach ($tokens as $unit => $text) {
-            if ($time < $unit) continue;
+            if ($time < $unit) {
+                continue;
+            }
             $numberOfUnits = floor($time / $unit);
-            return $numberOfUnits.' '.$text.(($numberOfUnits>1)?'s':'');
+
+            return $numberOfUnits . ' ' . $text . (($numberOfUnits > 1) ? 's' : '');
         }
 
     }
-
 
 
 }

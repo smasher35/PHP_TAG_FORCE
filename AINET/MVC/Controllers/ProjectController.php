@@ -4,8 +4,8 @@ use AINET\MVC\Model\Project;
 use Ainet\Support\urlHelper;
 
 
-
-class ProjectController {
+class ProjectController
+{
 
     /**********Criar novo Projeto**********/
     public function createProject($project)
@@ -24,30 +24,31 @@ class ProjectController {
         return Project::listProjectsByOwner($owner_id, $orderBy, $order, $limit, $offset);
     }
 
-    public function listProjectsByOwnerPending($owner_id,$limit,$offset)
+    public function listProjectsByOwnerPending($owner_id, $limit, $offset)
     {
-        return Project::listProjectsByOwnerPending($owner_id,$limit,$offset);
+        return Project::listProjectsByOwnerPending($owner_id, $limit, $offset);
     }
 
-    public function listProjectsByOwnerAproved($owner_id,$limit,$offset)
+    public function listProjectsByOwnerAproved($owner_id, $limit, $offset)
     {
-        return Project::listProjectsByOwnerAproved($owner_id,$limit,$offset);
+        return Project::listProjectsByOwnerAproved($owner_id, $limit, $offset);
     }
 
-    public function listProjectsByOwnerAll($owner_id,$limit,$offset)
+    public function listProjectsByOwnerAll($owner_id, $limit, $offset)
     {
-        return Project::listProjectsByOwnerAll($owner_id,$limit,$offset);
+        return Project::listProjectsByOwnerAll($owner_id, $limit, $offset);
     }
 
-    public function listProjectsByOwnerRejected($owner_id,$limit,$offset)
+    public function listProjectsByOwnerRejected($owner_id, $limit, $offset)
     {
-        return Project::listProjectsByOwnerRejected($owner_id,$limit,$offset);
+        return Project::listProjectsByOwnerRejected($owner_id, $limit, $offset);
     }
 
     public function listRejectedProjects()
     {
         return Project::getListRejectedProjects();
     }
+
     public function listDeletedProjects()
     {
         return Project::getListDeletedProjects();
@@ -67,6 +68,7 @@ class ProjectController {
     {
         return Project::getListAprovedProjects();
     }
+
     public function getProjctState($id)
     {
         return Project::getState($id);
@@ -79,7 +81,7 @@ class ProjectController {
 
     public function setAprovedProject($id, $userId)
     {
-        Project::setState($id, 1, null,$userId);
+        Project::setState($id, 1, null, $userId);
         $redirect = urlHelper::urlBuilder("dashBoards.php");
         header($redirect);
     }

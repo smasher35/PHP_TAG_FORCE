@@ -7,6 +7,5 @@ $mediaController = new MediaController();
 $projectController = new ProjectController();
 
 
-
 $uploadedFile = $mediaController->uploadFile();
 $projectController->createProject($uploadedFile);

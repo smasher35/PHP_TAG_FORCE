@@ -9,8 +9,8 @@ use Ainet\Support\urlHelper;
  * Date: 13/06/2015
  * Time: 15:19
  */
-
-class ProjectTagsController {
+class ProjectTagsController
+{
 
     public function listTagsByProject($projectId)
     {
@@ -46,7 +46,7 @@ class ProjectTagsController {
 
     public function setAprovedTags($id, $userId)
     {
-        ProjectTag::setState($id, 1,$userId);
+        ProjectTag::setState($id, 1, $userId);
         $redirect = urlHelper::urlBuilder("dashBoards.php");
         header($redirect);
     }
@@ -68,6 +68,6 @@ class ProjectTagsController {
 
     public function listTagsByOwnerRejected($currentUserID, $limit, $offset)
     {
-       return ProjectTag::listTagsByOwnerRejected($currentUserID, $limit, $offset);
+        return ProjectTag::listTagsByOwnerRejected($currentUserID, $limit, $offset);
     }
 }

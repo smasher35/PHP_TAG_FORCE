@@ -13,11 +13,10 @@ use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\InstitutionController;
 
 
-
 //valida autenticação no site
 $authController = new AuthenticationController();
-if(!$authController->isAuthenticated()) {
-	$authController->redirectToLogin();
+if (!$authController->isAuthenticated()) {
+    $authController->redirectToLogin();
 }
 
 $authenticated = true;
@@ -33,12 +32,12 @@ $title = "Add Account";
 if (isset($_GET['result_code'])) {
     if ($_GET['result_code'] == -1) {
         $errors = ['requiredFields' => 'Please fill all required fields(*)'];
-    }
-    else if ($_GET['result_code'] == -2) {
-        $errors = ['missmatchPasswords' => 'Passwords don\' match'];
+    } else {
+        if ($_GET['result_code'] == -2) {
+            $errors = ['missmatchPasswords' => 'Passwords don\' match'];
+        }
     }
 }
-
 
 
 require('MVC/Views\accounts\addAccount.view.php');

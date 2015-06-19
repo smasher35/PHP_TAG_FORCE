@@ -8,8 +8,8 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\InstitutionController;
 
 
@@ -18,9 +18,9 @@ $accountController = new AccountController();
 $institutionController = new InstitutionController();
 
 
-$account=$accountController->getUserById($_GET['owner_id']);
+$account = $accountController->getUserById($_GET['owner_id']);
 
-if($account == null){
+if ($account == null) {
 
     $authenticationController->redirectToAccountBrowsing();
 }

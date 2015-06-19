@@ -8,11 +8,11 @@
 
 require 'bootstrap.php';
 
-use AINET\MVC\Controllers\AuthenticationController;
-use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\AccountController;
+use AINET\MVC\Controllers\AuthenticationController;
 use AINET\MVC\Controllers\CommentController;
 use AINET\MVC\Controllers\InstitutionController;
+use AINET\MVC\Controllers\ProjectController;
 use AINET\MVC\Controllers\ProjectTagsController;
 use AINET\MVC\Controllers\ProjectTeamMembersController;
 use AINET\MVC\Controllers\TagsController;
@@ -30,7 +30,7 @@ $timeHelper = new TimeHelper();
 
 $projectid = $_GET['project_id'];
 
-if ($projectid == null){
+if ($projectid == null) {
     $authenticationController->redirectToProjectsBrowser();
 }
 

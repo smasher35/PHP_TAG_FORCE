@@ -12,8 +12,8 @@ use AINET\MVC\Controllers\AuthenticationController;
 
 $controller = new AuthenticationController();
 
-if($controller->isAuthenticated()) {
-	$controller->redirectToDashBoard();
+if ($controller->isAuthenticated()) {
+    $controller->redirectToDashBoard();
 }
 
 $user = $controller->account;
