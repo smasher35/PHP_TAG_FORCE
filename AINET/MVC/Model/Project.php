@@ -219,7 +219,7 @@ class Project extends AbstractModel {
 
     public static function getLastUpdatedProjects()
     {
-        $result = AbstractModel::dbQuery("SELECT * FROM projects ORDER BY updated_at DESC LIMIT 3 OFFSET 0");
+        $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE  state = 1 ORDER BY updated_at DESC LIMIT 3 OFFSET 0");
         $projects = [];
         if ($result) {
             while($project = $result -> fetch_object('AINET\MVC\Model\Project')) {
