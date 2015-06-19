@@ -1,19 +1,8 @@
 <?php namespace AINET\MVC\Controllers;
 
-use AINET\MVC\Model\AbstractModel;
-use AINET\MVC\Model\Project;
 use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
 use Ainet\Support\urlHelper;
-
-
-/**
- * Created by PhpStorm.
- * User: Paulo
- * Date: 11/05/2015
- * Time: 15:35
- */
-
 
 class AccountController
 {
@@ -34,7 +23,8 @@ class AccountController
 		Account::add($account);
 	}
 
-	public function editAccount($account){
+	public function editAccount($account)
+    {
 			Account::save($account);
 	}
 
@@ -51,38 +41,39 @@ class AccountController
 		$account->flags = InputHelper::post('statusRadio');
 		$account->role = InputHelper::post('role');
 
-
 		$errors = [];
 
-		if($account->name) {
-			if(!preg_match("/^[a-zA-Z ]+$/",$account->name)) {
+		if ($account->name) {
+			if (!preg_match("/^[a-zA-Z ]+$/",$account->name)) {
 				$errors['fullname'] = 'Invalid Name';
 			}
 		}
-		if($account->email) {
+
+		if ($account->email) {
 			$validemail = filter_var($account->email, FILTER_VALIDATE_EMAIL);
 			if(!$validemail) {
 				$errors['email'] = 'Invalid Email Format';
 			}
-		}else {
+		} else {
 			$errors['email'] = 'Email is Required';
-		}
+        }
 
-		if($validatepassword){
-			if(strlen($account->password)<5) {
+		if ($validatepassword) {
+			if (strlen($account->password)<5) {
 				$errors['password'] = 'Password must have at least 5 characters';
-			}
-			elseif($account->password != $passwordConfirmation) {
+			} elseif ($account->password != $passwordConfirmation) {
 				$errors['password'] = 'Passwords don\'t match';
 			}
 		}
 
 		return $errors;
 	}
+
     public function getUserName($id)
     {
         return Account::getName($id);
     }
+
     public function getRoleName($roleId)
     {
         return Account::getAccountRoleName($roleId);
@@ -149,13 +140,11 @@ class AccountController
 
     public function changePassword($password, $retypePassword, $accountId)
     {
-        if ($password == $retypePassword)
-        {
+        if ($password == $retypePassword) {
             $password = password_hash($password, PASSWORD_BCRYPT);
             Account::setPassword($password, $accountId);
             header("Location: editAccountPage.php?account_id=$accountId" . "&code=0");
-        }
-        else {
+        } else {
             $redirect = urlHelper::urlBuilder("changePasswordPage.php?account_id=") . $accountId . "&result_code=-1";
             header($redirect);
         }
@@ -168,7 +157,7 @@ class AccountController
 
     public function listActiveAndDisableAccounts($limit, $offset, $orderBy,$sortOrder="ASC")
     {
-      return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
+        return Account::getActiveAndDisabledAccounts($limit, $offset,$orderBy,$sortOrder);
 
     }
 
@@ -176,6 +165,4 @@ class AccountController
     {
         return Account::getActiveAndDisabledAccountsOrderByInstitution($limit, $offset,$orderBy,$sortOrder);
     }
-
-
 }

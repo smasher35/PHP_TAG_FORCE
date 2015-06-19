@@ -4,7 +4,8 @@ use AINET\support\InputHelper;
 use AINET\MVC\Model\Account;
 use Ainet\Support\urlHelper;
 
-class AuthenticationController {
+class AuthenticationController
+{
 	public $account;
 	private $authenticated = false;
 	public $errors = false;
@@ -12,11 +13,10 @@ class AuthenticationController {
 	function __construct()
 	{
 
-		if(isset($_SESSION['authenticated'])) {
+		if (isset($_SESSION['authenticated'])) {
 			$user = Account::findByEmail($_SESSION['email'],$_SESSION['password']);
 			$this->authenticated=true;
-		}
-		elseif(!empty($_POST)) {
+		} elseif (!empty($_POST)) {
 			$mail = InputHelper::post('email');
 			$pass = InputHelper::post('password');
 			$user = Account::findByEmail($mail,$pass);
@@ -27,10 +27,9 @@ class AuthenticationController {
 				$this->account->password = $pass;
 				$this->errors = ['email' => 'Invalid user or password'];
 				return;
-			}
-			else {
+			} else {
 
-                if($user->flags != 1){
+                if ($user->flags != 1) {
                     $this->errors = ['flags' => 'Disabled User - Contact the Administrator'];
                     $this->account = new Account();
                     $this->account->email = $mail;
@@ -99,10 +98,4 @@ class AuthenticationController {
 		session_destroy();
 		self::redirectToHome();
 	}
-
-
-
-
-
-
 }
