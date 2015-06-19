@@ -1,3 +1,4 @@
+<?php use Ainet\Support\HtmlHelper; ?>
 <?php require('MVC/Views/headerFooter/header.view.php');?>
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias-->
 <div class="row" id="subNavBar">
@@ -25,6 +26,7 @@
 					<div class="panel-body">
 						<div class="page-header">
 							<h3 class="inline">New Project  </h3><span>(<b class="asterisco">  *</b> - Required Fields )</span>
+							<?=HtmlHelper::error('requiredFields',$errors)?>
 						</div>
 
                         <form action="addProject.php" method="post" >

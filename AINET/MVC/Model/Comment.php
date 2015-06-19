@@ -104,10 +104,16 @@ class Comment extends AbstractModel {
                 header($redirect);
                 exit(0);
             }else {
+                $redirect = urlHelper::urlBuilder("errorPage.php");
+                header($redirect);
                 //return error
             }
 
-     }
+        }
+        else {
+            $redirect = urlHelper::urlBuilder("errorPage.php");
+            header($redirect);
+        }
 
     }
 

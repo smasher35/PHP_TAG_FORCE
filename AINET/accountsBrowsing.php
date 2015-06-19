@@ -71,4 +71,4 @@ $lastPage = ceil($numberOfProjects/10);*/
 
 $title = "PHP TAG FORCE - Accounts Browsing";
 
-require('MVC/Views/accountsBrowsing.view.php');
+require('MVC/Views/accounts/accountsBrowsing.view.php');

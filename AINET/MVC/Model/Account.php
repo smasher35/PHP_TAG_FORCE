@@ -127,10 +127,16 @@ class Account extends AbstractModel
 				header($redirect);
 				exit(0);
 			}else {
-                echo $stm->error;
-				//return error
-			}
-		}
+                $redirect = urlHelper::urlBuilder("errorPage.php");
+                header($redirect);
+                //return error
+            }
+
+        }
+        else {
+            $redirect = urlHelper::urlBuilder("errorPage.php");
+            header($redirect);
+        }
 
 	}
 
@@ -285,9 +291,15 @@ class Account extends AbstractModel
                 header($redirect);
                 exit(0);
             }else {
-                echo $stm->error;
+                $redirect = urlHelper::urlBuilder("errorPage.php");
+                header($redirect);
                 //return error
             }
+
+        }
+        else {
+            $redirect = urlHelper::urlBuilder("errorPage.php");
+            header($redirect);
         }
     }
 

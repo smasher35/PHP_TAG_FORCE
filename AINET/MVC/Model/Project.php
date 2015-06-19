@@ -265,7 +265,7 @@ class Project extends AbstractModel {
     public static function addProject($project)
     {
         $name = $project['name'];
-        $description = $project['name'];
+        $description = $project['description'];
         $acronym = $project['acronym'];
         $type = $project['type'];
         $theme = $project['theme'];
@@ -327,10 +327,99 @@ class Project extends AbstractModel {
                 header($redirect);
                 exit(0);
             }else {
-                echo $stm->error;
+                $redirect = urlHelper::urlBuilder("errorPage.php");
+                header($redirect);
                 //return error
             }
+
         }
+        else {
+            $redirect = urlHelper::urlBuilder("errorPage.php");
+            header($redirect);
+        }
+    }
+
+    public static function saveProject($project)
+    {
+        $projectId = $project['projectId'];
+        $name = $project['name'];
+        $description = $project['description'];
+        $acronym = $project['acronym'];
+        $type = $project['type'];
+        $theme = $project['theme'];
+        $keywords = $project['keywords'];
+        $usedSoftware = $project['usedSoftware'];
+        $usedHardware = $project['usedHardware'];
+        $observations = $project['observations'];
+        $finishedAt =  $project['finishedAt'];
+        $startedAt =  $project['startedAt'];
+        $state = $project['state'];
+
+        $updatedBy = $project['accountId'];
+        $aprovedBy = null;
+
+        $replacesId = null;
+        $featuredUntil = null;
+
+
+        if ($acronym == "") {
+            $acronym = null;
+        }
+        if ($type == "") {
+            $type = null;
+        }
+        if ($theme == "") {
+            $theme = null;
+        }
+        if ($keywords == "") {
+            $keywords = null;
+        }
+        if ($usedSoftware == "") {
+            $usedSoftware = null;
+        }
+        if ($usedHardware == "") {
+            $usedHardware = null;
+        }
+        if ($observations == "") {
+            $observations = null;
+        }
+        if ($finishedAt == "") {
+            $finishedAt = null;
+        }
+        $startedAt = strtotime($startedAt);
+        $startedAt = date("Y-m-d", $startedAt);
+
+        $finishedAt = strtotime($finishedAt);
+        $finishedAt = date("Y-m-d", $finishedAt);
+
+
+
+
+        //INSERIR NA BD
+        $query = "UPDATE projects SET name = ?, acronym = ?, description = ?, type = ?, theme = ?, keywords = ?, started_at = ?, finished_at = ?, updated_by = ?, approved_by = ?, used_software = ?, used_hardware = ?, observations = ?, featured_until = ?, replaces_id = ?, state = ?, updated_at = NOW() WHERE id='$projectId'";
+        //$query = null;
+        $conn = self::dbConnection();
+        $stm = $conn->prepare($query);
+        if ($stm) {
+
+            $stm->bind_param("ssssssssiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt, $finishedAt, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations, $featuredUntil, $replacesId, $state);
+            if ($stm->execute()) {
+                $redirect = urlHelper::urlBuilder("dashBoards.php");
+                header($redirect);
+                exit(0);
+            }else {
+                $redirect = urlHelper::urlBuilder("errorPage.php");
+                header($redirect);
+                //return error
+            }
+
+        }
+        else {
+            $redirect = urlHelper::urlBuilder("errorPage.php");
+            header($redirect);
+        }
+
+
     }
 
 }

@@ -26,8 +26,19 @@ $accountController = new AccountController();
 $institutionController = new InstitutionController();
 //list($user,$errors)=$accountController->addUser();
 $institutions = $institutionController->listInstitutions();
+$errors = false;
 
 $title = "Add Account";
+
+if (isset($_GET['result_code'])) {
+    if ($_GET['result_code'] == -1) {
+        $errors = ['requiredFields' => 'Please fill all required fields(*)'];
+    }
+    else if ($_GET['result_code'] == -2) {
+        $errors = ['missmatchPasswords' => 'Passwords don\' match'];
+    }
+}
+
 
 
 require('MVC/Views\accounts\addAccount.view.php');

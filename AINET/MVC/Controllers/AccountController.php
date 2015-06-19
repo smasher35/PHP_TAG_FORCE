@@ -156,7 +156,7 @@ class AccountController
             header("Location: editAccountPage.php?account_id=$accountId" . "&code=0");
         }
         else {
-            $redirect = urlHelper::urlBuilder("changePasswordPage.php?account_id=") . $accountId . "&code=-1";
+            $redirect = urlHelper::urlBuilder("changePasswordPage.php?account_id=") . $accountId . "&result_code=-1";
             header($redirect);
         }
     }

@@ -29,10 +29,12 @@ $accountController = new AccountController();
 $institutionController = new InstitutionController();
 $projectController = new ProjectController();
 //list($user,$errors)=$accountController->addUser();
+$projectId = $_GET['project_id'];
+$actualProject = $projectController->listProjectByid($projectId);
 $allTags = $tagController->listAll();
-
-$title = "Add Project";
 $errors = false;
+
+$title = "Edit Project";
 
 if (isset($_GET['result_code'])) {
     if ($_GET['result_code'] == -1) {
@@ -40,5 +42,4 @@ if (isset($_GET['result_code'])) {
     }
 }
 
-
-require('MVC\Views\Projects\addProject.view.php');
+require('MVC\Views\Projects\editProject.view.php');

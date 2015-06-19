@@ -39,8 +39,10 @@ $role = $accountController->getRole($_SESSION['email']);
 
 //created_by = user autenticado
 //updated_by = user autenticado
+$projectId = $_POST['project_id'];
 
-if (isset($_POST['name']) && isset($_POST['description'])) {
+if ($_POST['name'] != "" && $_POST['description'] != "" && $_POST['started_at'] != "") {
+
     $name = $_POST['name'];
     $description = $_POST['description'];
 
@@ -55,7 +57,6 @@ if (isset($_POST['name']) && isset($_POST['description'])) {
     $finishedAt = $_POST['finished_at'];
     $accountId = $accountController->getUserId($_SESSION['email']);
 
-
     if ($accountId == 2) { // Autor
         $state = 0; //Estado pendente
         $aprovedBy = null;
@@ -66,10 +67,10 @@ if (isset($_POST['name']) && isset($_POST['description'])) {
     }
 
 
-    $project = compact("name", "description", "acronym", "type", "theme", "keywords", "usedSoftware", "usedHardware", "observations", "accountId" , "state", "finishedAt", "startedAt", "aprovedBy");
-    $projectController->createProject($project);
+    $project = compact("projectId", "name", "description", "acronym", "type", "theme", "keywords", "usedSoftware", "usedHardware", "observations", "accountId" , "state", "finishedAt", "startedAt", "aprovedBy");
+    $projectController->editProject($project);
 }
 else {
-    $redirect = urlHelper::urlBuilder("addProjectPage.php?result_code=-1");
+    $redirect = urlHelper::urlBuilder("editProjectPage.php?project_id=").$projectId."&result_code=-1";
     header($redirect);
 }

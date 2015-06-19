@@ -32,9 +32,7 @@
                                     <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
                                     <input type="password" class="form-control" name="retypePass" id="inputretypePassword" placeholder="retype Password">
                                 </div>
-
-                                <div class="alert-warning"><?=HtmlHelper::error('missMatchPassword',$errorsPass)?></div>
-
+                                <?=HtmlHelper::error('missMatchPassword',$errorsPass)?>
                                 <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock"></span>Change Password</button>
                         </form>
 					</div> <!-- Fecha <div Panel Body> -->

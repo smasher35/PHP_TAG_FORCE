@@ -135,5 +135,10 @@ class ProjectController {
         return Project::getProjectsOrderByOwner($order, $limit, $offset);
     }
 
+    public function editProject($project)
+    {
+        Project::saveProject($project);
+    }
+
 
 }

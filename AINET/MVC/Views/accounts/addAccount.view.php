@@ -1,3 +1,6 @@
+
+<?php use Ainet\Support\HtmlHelper;?>
+<?php require('MVC/Views/headerFooter/header.view.php');?>
 <!--
 	/**
 	 * Created by PhpStorm.
@@ -6,7 +9,6 @@
 	 * Time: 10:26
 	 */
 -->
-<?php require('MVC/Views/headerFooter/header.view.php');?>
 <!-- SUBNAVBAR  permite assim cada pasta ter as suas subseccões próprias-->
 <div class="row" id="subNavBar">
 	<div class="container">
@@ -36,6 +38,7 @@
 					<div class="panel-body">
 						<div class="page-header">
 							<h3>New Account</h3>
+                            <?=HtmlHelper::error('requiredFields', $errors)?>
 						</div>
 						<form action="addAccount.php" method="post" >
                             <!-- FORM AREA ESQUERDA -->
@@ -65,6 +68,7 @@
                                     <div class="input-group">
                                         <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-asterisk"></span></span>
                                         <input type="password" class="form-control" name="retypePass" id="inputretypePassword" placeholder="retype Password">
+                                        <?=HtmlHelper::error('missmatchPasswords', $errors)?>
                                     </div>
                                 </div>
 

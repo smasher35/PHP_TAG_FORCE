@@ -25,7 +25,7 @@ $authController = new AuthenticationController();
 $accountController = new AccountController();
 $role = $accountController->getRole($_SESSION['email']);
 
-if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['retypePass']) && isset($_POST['institution']) && isset($_POST['position']) && isset($_POST['role']) && isset($_POST['statusRadio'])) {
+if ($_POST['name'] != "" && $_POST['email'] != "" && $_POST['password'] != "" && $_POST['retypePass'] != "" && $_POST['institution'] != "" && $_POST['position'] != "" && $_POST['role'] != "" && $_POST['statusRadio']  != "" ) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -34,14 +34,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
     $position = $_POST['position'];
     $role = $_POST['role'];
     $status = $_POST['statusRadio'];
-
-
-//TODO retornar os erros
-
-
-        $photoUrl = $_POST['photoUrl'];
-        $inputUrl = $_POST['inputUrl'];
-        $altEmail = $_POST['altEmail'];
+    $photoUrl = $_POST['photoUrl'];
+    $inputUrl = $_POST['inputUrl'];
+    $altEmail = $_POST['altEmail'];
 
 
 
@@ -58,9 +53,13 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
             $account = compact("name", "email", "password", "institution", "position", "role", "status", "photoUrl", "inputUrl", "altEmail");
             $accountController->addAccount($account);
         } else {
-            echo "Passwords nao coincidem";
-            //TODO Mensagem de que as passwords nao coincidem
+            $redirect = urlHelper::urlBuilder("addAccountPage.php?result_code=-2");
+            header($redirect);
         }
     }
 
+}
+else {
+        $redirect = urlHelper::urlBuilder("addAccountPage.php?result_code=-1");
+        header($redirect);
 }

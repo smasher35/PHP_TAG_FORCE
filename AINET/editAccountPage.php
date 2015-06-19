@@ -28,13 +28,18 @@ $institutionController = new InstitutionController();
 $institutions = $institutionController->listInstitutions();
 
 $account=$accountController->getUserById($_GET['account_id']);
+
 $success = [];
-if (isset($_GET['code'])) {
-    if ($_GET['code'] == 0) {
+if (isset($_GET['result_code'])) {
+    if ($_GET['result_code'] == 0) {
         $success = ['changePassSuccess' => 'Password successfully changed!'];
+    }
+    else if ($_GET['result_code'] == -1) {
+        $errors = ['requiredFields' => 'Please fill all required fields(*)'];
     }
 
 }
+
 $title = "Edit Account";
 
 
