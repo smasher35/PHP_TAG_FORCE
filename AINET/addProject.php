@@ -40,7 +40,7 @@ $role = $accountController->getRole($_SESSION['email']);
 //created_by = user autenticado
 //updated_by = user autenticado
 
-if (isset($_POST['name']) && isset($_POST['description'])) {
+if ($_POST['name'] != "" && $_POST['description'] != "" && $_POST['started_at'] != ""){
     $name = $_POST['name'];
     $description = $_POST['description'];
 

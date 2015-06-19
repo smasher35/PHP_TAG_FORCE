@@ -324,7 +324,11 @@ class Project extends AbstractModel {
         if ($startedAt == "") {
             $startedAt = null;
         }
+        $startedAt = strtotime($startedAt);
+        $startedAt = date("Y-m-d", $startedAt);
 
+        $finishedAt = strtotime($finishedAt);
+        $finishedAt = date("Y-m-d", $finishedAt);
 
 
 
@@ -333,7 +337,7 @@ class Project extends AbstractModel {
         $conn = self::dbConnection();
         $stm = $conn->prepare($query);
         if ($stm) {
-            $stm->bind_param("ssssssddiiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt, $finishedAt, $createdBy, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations, $featuredUntil, $replacesId, $state);
+            $stm->bind_param("ssssssssiiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt, $finishedAt, $createdBy, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations, $featuredUntil, $replacesId, $state);
             if ($stm->execute()) {
                 $redirect = urlHelper::urlBuilder("dashBoards.php");
                 header($redirect);
