@@ -19,7 +19,7 @@ class Project extends AbstractModel {
     public $used_software;// text
     public $used_hardware; //text
     public $observations; //text  NOT NULL
-    public $featured_until; //date NOT NULL
+    public $featured_until; //date NULL
     public $replaces_id; //int(10) DEFAULT NULL
     public $state; //int(10) NOT NULL
     public $refusal_msg; //varchar(255)  DEFAULT NULL
@@ -262,21 +262,75 @@ class Project extends AbstractModel {
         return $projects;
     }
 
-    /*public static function addProject($uploadedFile)
+    public static function addProject($project)
     {
+        $name = $project['name'];
+        $description = $project['name'];
+        $acronym = $project['acronym'];
+        $type = $project['type'];
+        $theme = $project['theme'];
+        $keywords = $project['keywords'];
+        $usedSoftware = $project['usedSoftware'];
+        $usedHardware = $project['usedHardware'];
+        $observations = $project['observations'];
+        $finishedAt =  $project['observations'];
+        $startedAt =  $project['startedAt'];
+        $createdBy = $project['accountId'];
+        $updatedBy = $project['accountId'];
+        $aprovedBy = $project['aprovedBy'];
+
+        $state = $project['state'];
+
+        $replacesId = null;
+        $featuredUntil = null;
+
+
+        if ($acronym == "") {
+            $acronym = null;
+        }
+        if ($type == "") {
+            $type = null;
+        }
+        if ($theme == "") {
+            $theme = null;
+        }
+        if ($keywords == "") {
+            $keywords = null;
+        }
+        if ($usedSoftware == "") {
+            $usedSoftware = null;
+        }
+        if ($usedHardware == "") {
+            $usedHardware = null;
+        }
+        if ($observations == "") {
+            $observations = null;
+        }
+        if ($finishedAt == "") {
+            $finishedAt = null;
+        }
+        if ($startedAt == "") {
+            $startedAt = null;
+        }
+
+
+
+
         //INSERIR NA BD
-        $query = 'insert into projets (name,acronym,description,type,theme,keywords,started_at,finished_at,created_by,updated_by,approved_by,used_software,used_hardware,observations,featured_until,replaces_id,state,refusal_msg,deleted_at,created_at,updated_at) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+        $query = 'INSERT INTO projects (name, acronym, description, type, theme, keywords, started_at, finished_at, created_by, updated_by, approved_by, used_software, used_hardware, observations, featured_until, replaces_id, state, refusal_msg ,deleted_at, created_at, updated_at) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,null, null, NOW(), NOW())';
         $conn = self::dbConnection();
         $stm = $conn->prepare($query);
         if ($stm) {
-            $stm->bind_param("ssssssddiiisssdiisddd",$account->name,$account->email,$account->al_email,$account->password,$account->institution_id,$account->position,$account->photo_url,$account->profile_url,$account->flags,$account->role,$account->remember_token,$account->created_at,$account->updated_at);
+            $stm->bind_param("ssssssddiiisssdii", $name, $acronym, $description, $type, $theme, $keywords, $startedAt, $finishedAt, $createdBy, $updatedBy, $aprovedBy, $usedSoftware, $usedHardware, $observations, $featuredUntil, $replacesId, $state);
             if ($stm->execute()) {
-                header('Location: http://192.168.56.101/php_tag_force/AINET/dashBoards.php');
+                $redirect = urlHelper::urlBuilder("dashBoards.php");
+                header($redirect);
                 exit(0);
             }else {
+                echo $stm->error;
                 //return error
             }
         }
-    }*/
+    }
 
 }

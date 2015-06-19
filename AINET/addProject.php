@@ -31,44 +31,44 @@ $role = $accountController->getRole($_SESSION['email']);
 
 
 //TODO: Alterar para os campos do formulário do NEW PROJECT
-if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['retypePass']) && isset($_POST['institution']) && isset($_POST['position']) && isset($_POST['role']) && isset($_POST['statusRadio'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $retypePass = $_POST['retypePass'];
-    $institution = $_POST['institution'];
-    $position = $_POST['position'];
-    $role = $_POST['role'];
-    $status = $_POST['statusRadio'];
+
 
 
 //TODO retornar os erros
 
-    if (isset($_POST['photoUrl'])) {
-        $photoUrl = $_POST['photoUrl'];
+//created_by = user autenticado
+//updated_by = user autenticado
+
+if (isset($_POST['name']) && isset($_POST['description'])) {
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+
+    $acronym = $_POST['acronym'];
+    $type = $_POST['type'];
+    $theme = $_POST['theme'];
+    $keywords = $_POST['keywords'];
+    $usedSoftware = $_POST['software'];
+    $usedHardware = $_POST['hardware'];
+    $observations = $_POST['observations'];
+    $startedAt = $_POST['started_at'];
+    $finishedAt = $_POST['finished_at'];
+    $accountId = $accountController->getUserId($_SESSION['email']);
+
+
+    if ($accountId == 2) { // Autor
+        $state = 0; //Estado pendente
+        $aprovedBy = null;
     }
-    if (isset($_POST['inputUrl'])) {
-        $inputUrl = $_POST['inputUrl'];
-
-    }
-    if (isset($_POST['altEmail'])) {
-        $altEmail = $_POST['altEmail'];
-
+    else { //Admin e Editor
+        $state = 1; //Estado aprovado
+        $aprovedBy = $accountId;
     }
 
 
-
-    if ($role == 4) {
-        if ($password == $retypePass) {
-            $password = password_hash($password, PASSWORD_BCRYPT);
-            $role = intval($role);
-            $status = intval($status);
-            $account = compact("name", "email", "password", "institution", "position", "role", "status", "photoUrl", "inputUrl", "altEmail");
-            $accountController->addAccount($account);
-        } else {
-            echo "Passwords nao coincidem";
-            //TODO Mensagem de que as passwords nao coincidem
-        }
-    }
-
+    $project = compact("name", "description", "acronym", "type", "theme", "keywords", "usedSoftware", "usedHardware", "observations", "accountId" , "state", "finishedAt", "startedAt", "aprovedBy");
+    $projectController->createProject($project);
+}
+else {
+    //TODO gerar erros
+    //TODO reencaminhar para add project
 }

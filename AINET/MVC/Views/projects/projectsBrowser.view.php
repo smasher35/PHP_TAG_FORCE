@@ -78,15 +78,15 @@
         <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
-                    <li><a href="projects.php?page=<?=$page-1?>">&laquo;</a></li>
+                    <li><a href="projects.php?page=<?=$page-1?>&orderBy=<?=$orderBy?>">&laquo;</a></li>
                     <?php for($i=1 ; $i <= $lastPage ; $i++) {?>
                         <?php if ($i == $page) { ?>
-                            <li class="active"><a href="projects.php?page=<?=$i?>"><?=$i?></a></li>
+                            <li class="active"><a href="projects.php?page=<?=$i?>&orderBy=<?=$orderBy?>"><?=$i?></a></li>
                         <?php } else {?>
-                            <li><a href="projects.php?page=<?=$i?>"><?=$i?></a></li>
+                            <li><a href="projects.php?page=<?=$i?>&orderBy=<?=$orderBy?>"><?=$i?></a></li>
                         <?php } ?>
                     <?php } ?>
-                    <li><a href="projects.php?page=<?=$page+1?>">&raquo;</a></li>
+                    <li><a href="projects.php?page=<?=$page+1?>&orderBy=<?=$orderBy?>">&raquo;</a></li>
                 </ul>
             </div>
         </div>

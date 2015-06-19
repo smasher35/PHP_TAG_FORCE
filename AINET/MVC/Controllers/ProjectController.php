@@ -8,9 +8,9 @@ use Ainet\Support\urlHelper;
 class ProjectController {
 
     /**********Criar novo Projeto**********/
-    public function createProject($uploadedFile)
+    public function createProject($project)
     {
-        Project::addProject($uploadedFile);
+        Project::addProject($project);
     }
 
 

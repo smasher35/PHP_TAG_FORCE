@@ -38,17 +38,12 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
 
 //TODO retornar os erros
 
-    if (isset($_POST['photoUrl'])) {
-        $photoUrl = $_POST['photoUrl'];
-    }
-    if (isset($_POST['inputUrl'])) {
-        $inputUrl = $_POST['inputUrl'];
 
-    }
-    if (isset($_POST['altEmail'])) {
+        $photoUrl = $_POST['photoUrl'];
+        $inputUrl = $_POST['inputUrl'];
         $altEmail = $_POST['altEmail'];
 
-    }
+
 
 
 

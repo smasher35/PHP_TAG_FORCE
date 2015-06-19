@@ -50,11 +50,11 @@
 				<table class="table table-stripped table-hover table-responsive">
 					<tr>
 						<th class="text-center">Thumb</th>
-						<th class="text-center"> <a href="accountsBrowsing.php?orderBy=<?='name'?>" > <button type="submit" name='orderBy' class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
-                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Institution</th>
-						<th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='position'?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Position</th>
-                        <th class="text-center"><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button> Role</th>
-						<th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='profile_url'?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Website</th>
+						<th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='name'?>&page=<?=$page?>" > <button type="submit" name='orderBy' class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Name</th>
+                        <th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='institution'?>&page=<?=$page?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Institution</th>
+						<th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='position'?>&page=<?=$page?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Position</th>
+                        <th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='role'?>&page=<?=$page?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Role</th>
+						<th class="text-center"><a href="accountsBrowsing.php?orderBy=<?='profile_url'?>&page=<?=$page?>" ><button type="button" class="btn btn-default btn-xs glyphicon glyphicon glyphicon-sort"></button></a> Website</th>
 						<th class="text-center">Show Projects</th>
 						<th class="text-center">Contact Me</th>
                         <th class="text-center">Details</th>
@@ -81,15 +81,15 @@
 					<div class="row text-center">
 						<div class="col-lg-12">
 							<ul class="pagination">
-                                <li><a href="accountsBrowsing.php?page=<?=$page-1?>">&laquo;</a></li>
+                                <li><a href="accountsBrowsing.php?page=<?=$page-1?>&orderBy=<?=$orderBy?>">&laquo;</a></li>
                                 <?php for($i=1 ; $i <= $lastPage ; $i++) {?>
                                     <?php if ($i == $page) { ?>
-                                        <li class="active"><a href="accountsBrowsing.php?page=<?=$i?>"><?=$i?></a></li>
+                                        <li class="active"><a href="accountsBrowsing.php?page=<?=$i?>&orderBy=<?=$orderBy?>"><?=$i?></a></li>
                                     <?php } else {?>
-                                        <li><a href="accountsBrowsing.php?page=<?=$i?>"><?=$i?></a></li>
+                                        <li><a href="accountsBrowsing.php?page=<?=$i?>&orderBy=<?=$orderBy?>"><?=$i?></a></li>
                                     <?php } ?>
                                 <?php } ?>
-                                <li><a href="accountsBrowsing.php?page=<?=$page+1?>">&raquo;</a></li>
+                                <li><a href="accountsBrowsing.php?page=<?=$page+1?>&orderBy=<?=$orderBy?>">&raquo;</a></li>
 							</ul>
 						</div>
 					</div>

@@ -47,9 +47,14 @@ else {
 $numberOfAccounts = $accountController->countActiveDisableAccounts();
 $lastPage = ceil($numberOfAccounts/10);
 
+if ($orderBy == "institution") {
+    $users = $accountController->listActiveAndDisableAccountsOrderByInstitution($limit, $offset, $orderBy);
+}
+else {
 
+    $users = $accountController->listActiveAndDisableAccounts($limit, $offset, $orderBy);
+}
 
-$users = $accountController->listActiveAndDisableAccounts($limit, $offset, $orderBy);
 
 /*if ($orderBy == "name") {
     $accounts = $projectController->listProjectsOrderByOwner($order, $limit, $offset);

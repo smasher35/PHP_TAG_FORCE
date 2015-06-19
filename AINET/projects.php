@@ -88,14 +88,5 @@ if(isset($_GET['search'])) {
 
 }
 
-
-
-
-
-
-
-
-
-
 $title = "PHP TAG FORCE - Projects Browser";
 require('MVC/Views/projects/projectsBrowser.view.php');

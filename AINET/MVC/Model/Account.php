@@ -307,4 +307,16 @@ class Account extends AbstractModel
         }
         return $users;
     }
+
+    public static function getActiveAndDisabledAccountsOrderByInstitution($limit, $offset, $orderBy, $sortOrder)
+    {
+        $result = AbstractModel::dbQuery("SELECT u.* FROM users u JOIN institutions i ON u.institution_id = i.id WHERE u.flags = 1 OR u.flags = 0 ORDER BY i.name $sortOrder LIMIT $limit OFFSET $offset");
+        $users = [];
+        if($result){
+            while($user = $result->fetch_object('AINET\MVC\Model\Account')){
+                array_push($users,$user);
+            }
+        }
+        return $users;
+    }
 }

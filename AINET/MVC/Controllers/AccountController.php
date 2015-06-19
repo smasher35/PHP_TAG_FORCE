@@ -172,5 +172,10 @@ class AccountController
 
     }
 
+    public function listActiveAndDisableAccountsOrderByInstitution($limit, $offset, $orderBy, $sortOrder = "ASC")
+    {
+        return Account::getActiveAndDisabledAccountsOrderByInstitution($limit, $offset,$orderBy,$sortOrder);
+    }
+
 
 }

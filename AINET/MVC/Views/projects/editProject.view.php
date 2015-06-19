@@ -74,17 +74,23 @@
 
                                     </div><!-- Fecha class FORM-GROUP -->
                                      <div class="form-group form-inline">
-
-                                            <label for="inputStartedAt"><span><b class="asterisco">*</b> Start Date </span></label>
+                                            <label for="inputKeyword"><span> Keywords</span></label>
                                             <div class="input-group">
-                                                <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-calendar"></i></span></span>
-                                                <input type="date" class="form-control" name="started_at" id="inputStartedAt">
+                                                <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-key"></i></span></span>
+                                                <input type="text" class="form-control" name="keyword" id="inputKeyword" placeholder="Enter Keywords">
                                             </div>
 
-                                            <label for="inputFinishedAt"><span>Finish Date </span></label>
+                                            <label for="inputTag"><span> Tags</span></label>
                                             <div class="input-group">
-                                                <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-calendar"></i></span></span>
-                                                <input type="date" class="form-control" name="finished_at" id="inputFinishedAt">
+                                                <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-tags"></i></span></span>
+                                                <select class="form-control dropDownMaxWith" name="tag" id="inputTag">
+                                                    <?php foreach ($allTags as $tag) { ?>
+                                                        <option value="<?= $tag->id?>"><?= $tag->tag?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="input-group">
+                                                <a href="#"><button  class="btn btn-info noPadding"><span class="glyphicon glyphicon-plus-sign"></span> Tags</button></a>
                                             </div>
 
                                      </div>
@@ -106,12 +112,8 @@
                                                 <textarea type="textArea" class="form-control" rows="4" name="hardware" id="inputHardware" placeholder="Enter Hardware"></textarea>
                                             </div>
 
-                                            <label for="inputKeyword"><span> Keywords</span></label>
-                                            <div class="input-group">
-                                                <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-key"></i></span></span>
-                                                <input type="text" class="form-control" name="keywords" id="inputKeyword" placeholder="Enter Keywords">
-                                            </div>
-
+                                            <p class="text-center"><strong>Insert Team Elements</strong></p>
+                                            <a href="#"><button  class="btn btn-info noPadding btn-block"><span class="glyphicon glyphicon-plus-sign"></span> Team Elements</button></a>
 
                                     </div><!-- Fecha class FORM-GROUP -->
                                 </div><!-- Fecha class col-md-8 MARGEM DIREITA -->
