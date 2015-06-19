@@ -102,7 +102,7 @@
 
                                             <label for="inputHardware"><span> Hardware</span></label>
                                             <div class="input-group">
-                                                <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-cogs"></i></span></span>
+                                                <span class="input-group-addon" id="basic-addon1"><span <i class="fa fa-cogs fa-spin"></i></span></span>
                                                 <textarea type="textArea" class="form-control" rows="4" name="hardware" id="inputHardware" placeholder="Enter Hardware"></textarea>
                                             </div>
 
