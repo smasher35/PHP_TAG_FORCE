@@ -77,6 +77,22 @@ class AuthenticationController {
         exit();
 	}
 
+    static function redirectToAccountBrowsing()
+    {
+
+        $redirect = urlHelper::urlBuilder("accountsBrowsing.php");
+        header($redirect);
+        exit();
+    }
+
+    static function redirectToProjectsBrowser()
+    {
+
+        $redirect = urlHelper::urlBuilder("projects.php");
+        header($redirect);
+        exit();
+    }
+
 	public static function  logout()
 	{
 		$_SESSION=[];

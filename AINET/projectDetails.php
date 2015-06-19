@@ -30,6 +30,10 @@ $timeHelper = new TimeHelper();
 
 $projectid = $_GET['project_id'];
 
+if ($projectid == null){
+    $authenticationController->redirectToProjectsBrowser();
+}
+
 $commentsList = $commentController->listAprovedCommentsByProject($projectid);
 $actualproject = $projectController->listProjectByid($projectid);
 $title = "PHP TAG FORCE - Projects Technical Sheet";
