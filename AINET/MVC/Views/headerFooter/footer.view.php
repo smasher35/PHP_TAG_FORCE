@@ -35,8 +35,8 @@
                 <div class="input-group">
                     <input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
 						<span class="input-group-btn">
-				                    <button class="btn btn-success"><span class="glyphicon glyphicon-hand-right"></span>
-                                    </button>
+				                    <a href="MVC/Views/errors/404.html"><button class="btn btn-success"><span class="glyphicon glyphicon-hand-right"></span>
+                                    </button></a>
 						</span>
                 </div>
             </div>

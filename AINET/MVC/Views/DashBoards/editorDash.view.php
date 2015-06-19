@@ -106,8 +106,13 @@
                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
                         class="glyphicon glyphicon-remove"></span></button>
             </a>
-            <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span
-                    class="glyphicon glyphicon-edit"></span></button>
+            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-primary btn-xs"
+                        data-toggle="tooltip" data-placement="bottom"
+                        title="Edit Project"><span
+                        class="glyphicon glyphicon-edit"></span>
+                </button>
+            </a>
             <a href="projectDetails.php?project_id=<?= $project->id ?>">
                 <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project">
                     <span class="glyphicon glyphicon-book"></span></button>
@@ -162,8 +167,13 @@
                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
                         class="glyphicon glyphicon-remove"></span></button>
             </a>
-            <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span
-                    class="glyphicon glyphicon-edit"></span></button>
+            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-primary btn-xs"
+                        data-toggle="tooltip" data-placement="bottom"
+                        title="Edit Project"><span
+                        class="glyphicon glyphicon-edit"></span>
+                </button>
+            </a>
             <a href="projectDetails.php?project_id=<?= $project->id ?>">
                 <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project">
                     <span class="glyphicon glyphicon-book"></span></button>
@@ -215,8 +225,13 @@
                 <button class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" title="Delete"><span
                         class="glyphicon glyphicon-remove"></span></button>
             </a>
-            <button class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" title="Edit"><span
-                    class="glyphicon glyphicon-edit"></span></button>
+            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                <button class="btn btn-primary btn-xs"
+                        data-toggle="tooltip" data-placement="bottom"
+                        title="Edit Project"><span
+                        class="glyphicon glyphicon-edit"></span>
+                </button>
+            </a>
             <a href="projectDetails.php?project_id=<?= $project->id ?>">
                 <button class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="bottom" title="View Project">
                     <span class="glyphicon glyphicon-book"></span></button>

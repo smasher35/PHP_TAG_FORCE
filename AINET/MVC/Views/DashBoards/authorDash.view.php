@@ -82,9 +82,13 @@
                                                         <td><?= $project->type ?></td>
                                                         <td><?= $project->theme ?></td>
                                                         <td align="center">
-                                                            <button class="btn btn-primary btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Edit"><span
-                                                                    class="glyphicon glyphicon-edit"></span></button>
+                                                            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                                                                <button class="btn btn-primary btn-xs"
+                                                                        data-toggle="tooltip" data-placement="bottom"
+                                                                        title="Edit Project"><span
+                                                                        class="glyphicon glyphicon-edit"></span>
+                                                                </button>
+                                                            </a>
                                                             <button class="btn btn-danger btn-xs" data-toggle="tooltip"
                                                                     data-placement="bottom" title="Delete"><span
                                                                     class="glyphicon glyphicon-remove"></span></button>
@@ -149,9 +153,13 @@
                                                         <td><?= $project->type ?></td>
                                                         <td><?= $project->theme ?></td>
                                                         <td align="center">
-                                                            <button class="btn btn-primary btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Edit"><span
-                                                                    class="glyphicon glyphicon-edit"></span></button>
+                                                            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                                                                <button class="btn btn-primary btn-xs"
+                                                                        data-toggle="tooltip" data-placement="bottom"
+                                                                        title="Edit Project"><span
+                                                                        class="glyphicon glyphicon-edit"></span>
+                                                                </button>
+                                                            </a>
                                                             <a href="projectDetails.php?project_id=<?= $project->id ?>">
                                                                 <button class="btn btn-info btn-xs"
                                                                         data-toggle="tooltip" data-placement="bottom"
@@ -206,9 +214,13 @@
                                                         <td><?= $project->name ?></td>
                                                         <td><?= $project->refusal_msg ?></td>
                                                         <td align="center">
-                                                            <button class="btn btn-primary btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Edit"><span
-                                                                    class="glyphicon glyphicon-edit"></span></button>
+                                                            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                                                                <button class="btn btn-primary btn-xs"
+                                                                        data-toggle="tooltip" data-placement="bottom"
+                                                                        title="Edit Project"><span
+                                                                        class="glyphicon glyphicon-edit"></span>
+                                                                </button>
+                                                            </a>
                                                             <button class="btn btn-danger btn-xs" data-toggle="tooltip"
                                                                     data-placement="bottom" title="Delete"><span
                                                                     class="glyphicon glyphicon-remove"></span></button>

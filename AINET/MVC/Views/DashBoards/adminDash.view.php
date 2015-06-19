@@ -503,13 +503,7 @@
                                                         <td><?= $project2->theme ?></td>
                                                         <td><?= $accountController->getUserName($project2->created_by) ?></td>
                                                         <td align="center">
-                                                            <a href="editProjectPage.php?project_id=<?= $project2->id ?>">
-                                                                <button class="btn btn-primary btn-xs"
-                                                                        data-toggle="tooltip" data-placement="bottom"
-                                                                        title="Edit Project"><span
-                                                                        class="glyphicon glyphicon-edit"></span>
-                                                                </button>
-                                                            </a>
+
                                                             <a href="rejectProjectForm.php?project_id=<?= $project2->id ?>">
                                                                 <button class="btn btn-warning btn-xs"
                                                                         data-toggle="tooltip" data-placement="bottom"
@@ -524,8 +518,13 @@
                                                                         class="glyphicon glyphicon-remove"></span>
                                                                 </button>
                                                             </a>
-                                                            <button class="btn btn-primary btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Edit"><span
+                                                            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                                                                <button class="btn btn-primary btn-xs"
+                                                                        data-toggle="tooltip" data-placement="bottom"
+                                                                        title="Edit Project"><span
+                                                                        class="glyphicon glyphicon-edit"></span>
+                                                                </button>
+                                                            </a>
                                                                     class="glyphicon glyphicon-edit"></span></button>
                                                             <a href="projectDetails.php?project_id=<?= $project2->id ?>">
                                                                 <button class="btn btn-info btn-xs"
@@ -593,13 +592,7 @@
                                                         <td><?= $project->theme ?></td>
                                                         <td><?= $accountController->getUserName($project->created_by) ?></td>
                                                         <td align="center">
-                                                            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
-                                                                <button class="btn btn-primary btn-xs"
-                                                                        data-toggle="tooltip" data-placement="bottom"
-                                                                        title="Edit Project"><span
-                                                                        class="glyphicon glyphicon-edit"></span>
-                                                                </button>
-                                                            </a>
+
                                                             <a href="aproveProject.php?project_id=<?= $project->id ?>">
                                                                 <button class="btn btn-success btn-xs"
                                                                         data-toggle="tooltip" data-placement="bottom"
@@ -613,9 +606,13 @@
                                                                         class="glyphicon glyphicon-remove"></span>
                                                                 </button>
                                                             </a>
-                                                            <button class="btn btn-primary btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Edit"><span
-                                                                    class="glyphicon glyphicon-edit"></span></button>
+                                                            <a href="editProjectPage.php?project_id=<?= $project->id ?>">
+                                                                <button class="btn btn-primary btn-xs"
+                                                                        data-toggle="tooltip" data-placement="bottom"
+                                                                        title="Edit Project"><span
+                                                                        class="glyphicon glyphicon-edit"></span>
+                                                                </button>
+                                                            </a>
                                                             <a href="projectDetails.php?project_id=<?= $project->id ?>">
                                                                 <button class="btn btn-info btn-xs"
                                                                         data-toggle="tooltip" data-placement="bottom"

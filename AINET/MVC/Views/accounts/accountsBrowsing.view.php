@@ -33,7 +33,7 @@
     <div class="container">
         <h1><b>Accounts Browser!</b></h1>
 
-        <p class="lead">Listagem das diversas contas existentes em base de dados</p>
+        <p class="lead">Summarized existing user accounts in database</p>
     </div>
 </div>
 
