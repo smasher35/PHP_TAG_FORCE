@@ -6,8 +6,8 @@
 						<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
 						<li role="presentation"><a href="#highlights"><strong id="subNavButtons">Highlights</strong></a></li>
 						<li role="presentation"><a href="#recentProjects"><strong id="subNavButtons">Recent Projects</strong></a></li>
+                        <li role="presentation"><a href="#theTeam"><strong id="subNavButtons">The Crew</strong></a></li>
 						<li role="presentation"><a href="#lastUpdate"><strong id="subNavButtons">Last Updates</strong></a></li>
-						<li role="presentation"><a href="#theTeam"><strong id="subNavButtons">The Crew</strong></a></li>
 						<li role="presentation"><a href="#contactUs"><strong id="subNavButtons">Contact</strong></a></li>
 					</ul>
 				</div>
