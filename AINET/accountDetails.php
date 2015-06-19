@@ -18,7 +18,7 @@ $accountController = new AccountController();
 $institutionController = new InstitutionController();
 
 
-$account=$accountController->getUserById($_GET['account_id']);
+$account=$accountController->getUserById($_GET['owner_id']);
 
 if($account == null){
 

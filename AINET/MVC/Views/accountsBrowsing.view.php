@@ -71,7 +71,7 @@
 
 							<td align="center"><a href="projects.php?owner_id=<?=$user->id?>" <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-book"></span></button></td>
 							<td align="center"><a href="mailto:'<?=$user->email?>'"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-envelope"></span></button></a></td>
-                            <td><button class="btn btn-info btn-xs align-center" data-toggle="tooltip" data-placement="bottom" title="View Account"><span class="glyphicon glyphicon-book"></span></button></td>
+                            <td><a href="accountDetails.php?owner_id=<?=$user->id?>"><button class="btn btn-info btn-xs align-center" data-toggle="tooltip" data-placement="bottom" title="View Account"><span class="glyphicon glyphicon-book"></span></button></a></td>
 						</tr>
 					<?php }?>
 				</table> <!-- Fim da TAbela -->
