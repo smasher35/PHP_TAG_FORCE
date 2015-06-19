@@ -164,9 +164,6 @@ class Project extends AbstractModel {
         return $projects;
     }
 
-    /**
-     * @return mixed
-     */
     public static function getState($id)
     {
         $result = AbstractModel::dbQuery("SELECT * FROM projects WHERE id = '$id'");
@@ -318,18 +315,16 @@ class Project extends AbstractModel {
         if ($observations == "") {
             $observations = null;
         }
-        if ($finishedAt == "") {
+        if ($finishedAt != "") {
+            $finishedAt = strtotime($finishedAt);
+            $finishedAt = date("Y-m-d", $finishedAt);
+        }
+        else {
             $finishedAt = null;
         }
-        if ($startedAt == "") {
-            $startedAt = null;
-        }
+
         $startedAt = strtotime($startedAt);
         $startedAt = date("Y-m-d", $startedAt);
-
-        $finishedAt = strtotime($finishedAt);
-        $finishedAt = date("Y-m-d", $finishedAt);
-
 
 
         //INSERIR NA BD
@@ -345,7 +340,6 @@ class Project extends AbstractModel {
             }else {
                 $redirect = urlHelper::urlBuilder("errorPage.php");
                 header($redirect);
-                //return error
             }
 
         }
@@ -399,16 +393,15 @@ class Project extends AbstractModel {
         if ($observations == "") {
             $observations = null;
         }
-        if ($finishedAt == "") {
+        if ($finishedAt != "") {
+            $finishedAt = strtotime($finishedAt);
+            $finishedAt = date("Y-m-d", $finishedAt);
+        }
+        else {
             $finishedAt = null;
         }
         $startedAt = strtotime($startedAt);
         $startedAt = date("Y-m-d", $startedAt);
-
-        $finishedAt = strtotime($finishedAt);
-        $finishedAt = date("Y-m-d", $finishedAt);
-
-
 
 
         //INSERIR NA BD
@@ -426,7 +419,6 @@ class Project extends AbstractModel {
             }else {
                 $redirect = urlHelper::urlBuilder("errorPage.php");
                 header($redirect);
-                //return error
             }
 
         }
@@ -434,8 +426,6 @@ class Project extends AbstractModel {
             $redirect = urlHelper::urlBuilder("errorPage.php");
             header($redirect);
         }
-
-
     }
 
 }
