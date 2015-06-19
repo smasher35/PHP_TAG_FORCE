@@ -1,5 +1,6 @@
 
 <?php use Ainet\Support\HtmlHelper;?>
+<?php use Ainet\Support\urlHelperr;?>
 <?php require('MVC/Views/headerFooter/header.view.php');?>
 <!--
 	/**
