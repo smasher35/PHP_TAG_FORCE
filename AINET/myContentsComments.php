@@ -40,7 +40,7 @@ if(!$authController->isAuthenticated()) {
     }
 
     //----------------COMMENTS--------------//
-    $commentsByOwnerAproved = $commentsController->listCommentsByOwnerAproved($currentUserID,$limit,$offset);
+    $commentsByOwnerAproved = $commentsController->listCommentsByOwner($currentUserID,$limit,$offset);
 
 
     $title = "PHP TAG FORCE - My Comments";

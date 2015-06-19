@@ -70,6 +70,10 @@ class CommentController {
     {
         return Comment::listCommentsByOwnerAproved($currentUserID, $limit, $offset);
     }
+    public function listCommentsByOwner($currentUserID, $limit, $offset)
+    {
+        return Comment::listCommentsByOwner($currentUserID, $limit, $offset);
+    }
 
     public function listCommentsByOwnerRejected($currentUserID, $limit, $offset)
     {

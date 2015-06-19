@@ -34,6 +34,11 @@ class ProjectController {
         return Project::listProjectsByOwnerAproved($owner_id,$limit,$offset);
     }
 
+    public function listProjectsByOwnerAll($owner_id,$limit,$offset)
+    {
+        return Project::listProjectsByOwnerAll($owner_id,$limit,$offset);
+    }
+
     public function listProjectsByOwnerRejected($owner_id,$limit,$offset)
     {
         return Project::listProjectsByOwnerRejected($owner_id,$limit,$offset);

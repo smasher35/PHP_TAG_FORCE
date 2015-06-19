@@ -16,7 +16,7 @@
                         <th class="text-center">Operations</th>
                     </tr>
 
-                    <?php foreach ($projectsByOwnerAproved as $project2) { ?>
+                    <?php foreach ($projectsByOwner as $project2) { ?>
                         <tr>
                             <td><?=$project2->name?></td>
                             <td><?=$project2->type?></td>

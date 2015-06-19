@@ -139,4 +139,16 @@ class ProjectTag  extends AbstractModel {
 
     }
 
+    public static function listTagsByOwnerAll($currentUserID, $limit, $offset)
+    {
+        $result = AbstractModel::dbQuery("SELECT * FROM project_tag where added_by='$currentUserID'");
+        $tags = [];
+        if ($result) {
+            while($tag = $result -> fetch_object('AINET\MVC\Model\ProjectTag')) {
+                array_push($tags, $tag);
+            }
+        }
+        return $tags;
+    }
+
 }
