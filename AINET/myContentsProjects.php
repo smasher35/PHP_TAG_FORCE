@@ -40,7 +40,7 @@ if(!$authController->isAuthenticated()) {
     }
 
     //----------------PROJECTS--------------//
-    $projects = $projectControler->listProjects($orderBy, $order,$limit, $offset);
+    //$projects = $projectControler->listProjects($orderBy, $order,$limit, $offset);
     $projectsByOwnerAproved = $projectControler->listProjectsByOwnerAproved($currentUserID,$limit,$offset);
 
 
