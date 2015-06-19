@@ -168,7 +168,7 @@
 <!-- LAST UPDATE PROJECTS - 2 COLUMNS
  =====================================================================================-->
 	<!-- TODO: query à base de dados e recolher 3 projectos indicados pelo Editor -->
-<div class="alt5 padding-Top" id="lastUpdate">
+<div class="alt5 padding-Top " id="lastUpdate">
     <section >
         <div class="container">
             <div class="row">

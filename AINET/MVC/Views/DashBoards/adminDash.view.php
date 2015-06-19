@@ -38,6 +38,20 @@
 
 <div class="alt5">
 	<div class="row">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading text-center"><strong>My Personal Area</strong></div>
+                    <div class="panel-body text-center align-center">
+                        <a href=""><button class="btn btn-primary btnFormat">My Projects</button></a>
+                        <a href=""><button class="btn btn-success btnFormat">My Comments</button></a>
+                        <a href=""><button class="btn btn-warning btnFormat">My Tags</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
 		<div class="container padding-Top">
 				<div class="row">
 					<ul class="nav nav-tabs nav-justified">

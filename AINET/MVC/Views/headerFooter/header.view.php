@@ -12,7 +12,7 @@ use \AINET\MVC\Controllers\AuthenticationController;
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title><?= $title ?></title>
 
-	<!-- Controla o menu superior caso esteja login passa a logou e vice-verça -->
+	<!-- Controla o menu superior caso esteja login passa a logout e vice-verça -->
 	<?php
 		$controller = new AuthenticationController();
 		$isAuthenticated = $controller->isAuthenticated();
