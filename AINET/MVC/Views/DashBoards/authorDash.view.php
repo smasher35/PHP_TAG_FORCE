@@ -286,9 +286,11 @@
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip"
                                                                     data-placement="bottom" title="Edit"><span
                                                                     class="glyphicon glyphicon-edit"></span></button>
-                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip"
+                                                            <a href="deleteComment.php?comment_id=<?= $comment->id ?>">
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip"
                                                                     data-placement="bottom" title="Delete"><span
                                                                     class="glyphicon glyphicon-remove"></span></button>
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
@@ -386,9 +388,11 @@
                                                             <button class="btn btn-primary btn-xs" data-toggle="tooltip"
                                                                     data-placement="bottom" title="Edit"><span
                                                                     class="glyphicon glyphicon-edit"></span></button>
-                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip"
+                                                            <a href="deleteComment.php?comment_id=<?= $comment->id ?>">
+                                                                <button class="btn btn-danger btn-xs" data-toggle="tooltip"
                                                                     data-placement="bottom" title="Delete"><span
                                                                     class="glyphicon glyphicon-remove"></span></button>
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>

@@ -97,6 +97,8 @@ class CommentController
     public function setDeletedComment($commentId)
     {
         Comment::setDeletedState($commentId);
+        $redirect = urlHelper::urlBuilder("dashBoards.php");
+        header($redirect);
     }
 
 }
