@@ -15,9 +15,9 @@
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 				<ul class="nav nav-pills">
-					<li role="presentation"><a href="#goTop"><strong id="subNavButtons">Top</strong></a></li>
-					<li role="presentation"><a href="#accountsList"><strong id="subNavButtons">Accounts</strong></a></li>
-					<li role="presentation"><a href="#contact"><strong id="subNavButtons">Contact</strong></a></li>
+					<li role="presentation"><a href="#goTop"><strong id="subNavButtons"> </strong></a></li>
+					<li role="presentation"><a href="#accountsList"><strong id="subNavButtons"> </strong></a></li>
+					<li role="presentation"><a href="#contact"><strong id="subNavButtons"> </strong></a></li>
 				</ul>
 			</div>
 			<div class="col-md-4"></div>
@@ -33,7 +33,6 @@
 	<div class="container">
 		<h1><b>Accounts Browser!</b></h1>
 		<p class="lead">Listagem das diversas contas existentes em base de dados</p>
-		<p class="lead">Alfredo Rosa - Paulo Penicheiro - Ruben Miguel</p>
 	</div>
 </div>
 
