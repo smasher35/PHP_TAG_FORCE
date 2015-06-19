@@ -525,7 +525,7 @@
                                                                         class="glyphicon glyphicon-edit"></span>
                                                                 </button>
                                                             </a>
-                                                                    class="glyphicon glyphicon-edit"></span></button>
+                                                            class="glyphicon glyphicon-edit"></span></button>
                                                             <a href="projectDetails.php?project_id=<?= $project2->id ?>">
                                                                 <button class="btn btn-info btn-xs"
                                                                         data-toggle="tooltip" data-placement="bottom"
@@ -774,9 +774,14 @@
                                                                         class="glyphicon glyphicon-ban-circle"></span>
                                                                 </button>
                                                             </a>
-                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Delete"><span
-                                                                    class="glyphicon glyphicon-remove"></span></button>
+                                                            <a href="deleteComment.php?comment_id=<?= $comment->id ?>">
+                                                                <button class="btn btn-danger btn-xs"
+                                                                        data-toggle="tooltip"
+                                                                        data-placement="bottom" title="Delete"><span
+                                                                        class="glyphicon glyphicon-remove"></span>
+                                                                </button>
+                                                            </a>
+
                                                         </td>
                                                     </tr>
 
@@ -839,9 +844,13 @@
                                                                         class="glyphicon glyphicon-ban-circle"></span>
                                                                 </button>
                                                             </a>
-                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Delete"><span
-                                                                    class="glyphicon glyphicon-remove"></span></button>
+                                                            <a href="deleteComment.php?comment_id=<?= $comment->id ?>">
+                                                                <button class="btn btn-danger btn-xs"
+                                                                        data-toggle="tooltip"
+                                                                        data-placement="bottom" title="Delete"><span
+                                                                        class="glyphicon glyphicon-remove"></span>
+                                                                </button>
+                                                            </a>
                                                         </td>
                                                     </tr>
 
@@ -900,9 +909,13 @@
                                                                         title="Aprove"><span
                                                                         class="glyphicon glyphicon-ok"></span></button>
                                                             </a>
-                                                            <button class="btn btn-danger btn-xs" data-toggle="tooltip"
-                                                                    data-placement="bottom" title="Delete"><span
-                                                                    class="glyphicon glyphicon-remove"></span></button>
+                                                            <a href="deleteComment.php?comment_id=<?= $comment->id ?>">
+                                                                <button class="btn btn-danger btn-xs"
+                                                                        data-toggle="tooltip"
+                                                                        data-placement="bottom" title="Delete"><span
+                                                                        class="glyphicon glyphicon-remove"></span>
+                                                                </button>
+                                                            </a>
                                                         </td>
                                                     </tr>
                                                 <?php } ?>
